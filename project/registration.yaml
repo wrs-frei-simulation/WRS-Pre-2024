@@ -1,0 +1,31 @@
+registrations:
+  -
+    name: T2-Drone
+    task_project: T2
+    robot_project: [ Drone ]
+    start_position: [ -8.0, -7.0, 0.0 ]
+    simulator_project: [ AGXSimulator, AISTSimulator ]
+    view_project: DebugView
+    enable_cfd: true
+    enable_vision: true
+    enable_ros: false
+  -
+    name: T2-AizuSpiderSA
+    task_project: T2
+    robot_project: [ AizuSpiderSA ]
+    start_position: [ -8.0, -7.0, 0.0 ]
+    simulator_project: [ AGXSimulator ]
+    view_project: DebugView
+    enable_cfd: true
+    enable_vision: true
+    enable_ros: false
+  -
+    name: T2-Drone+AizuSpiderSA
+    task_project: T2
+    robot_project: [ Drone, AizuSpiderSA ]
+    start_position: [ -8.0, -7.0, 0.0 ]
+    simulator_project: [ AGXSimulator ]
+    view_project: DebugView
+    enable_cfd: true
+    enable_vision: true
+    enable_ros: false

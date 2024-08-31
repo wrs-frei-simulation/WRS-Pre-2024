@@ -1,0 +1,212 @@
+format: ChoreonoidBody
+format_version: 2.0
+angle_unit: degree
+name: MockupPlant
+root_link: Root
+
+links:
+  -
+    name: Root
+    translation: [ 0, 0, -0.1 ]
+    joint_type: fixed
+    elements:
+      -
+        type: SpotLight
+        name: Light1
+        translation: [ -7.0, -7.0, 2.9 ]
+        beamWidth: 90
+        cutOffAngle: 120
+        cutOffExponent: 6
+        attenuation: [ 1, 0, 0.01 ]
+        on: false
+        elements:
+          - &Light
+            type: Shape
+            rotation: [ 1, 0, 0, 90 ]
+            geometry: { type: Cone, height: 0.1, radius: 0.05 }
+            appearance: { material: { diffuseColor: [ 1.0, 1.0, 0.4 ] } }
+      -
+        type: SpotLight
+        name: Light2
+        translation: [ 7.0, -7.0, 2.9 ]
+        beamWidth: 90
+        cutOffAngle: 120
+        cutOffExponent: 6
+        attenuation: [ 1, 0, 0.01 ]
+        on: false
+        elements:
+          - *Light
+      -
+        type: SpotLight
+        name: Light3
+        translation: [ 7.0, 7.0, 2.9 ]
+        beamWidth: 90
+        cutOffAngle: 120
+        cutOffExponent: 6
+        attenuation: [ 1, 0, 0.01 ]
+        on: false
+        elements:
+          - *Light
+      -
+        type: SpotLight
+        name: Light4
+        translation: [ -7.0, 7.0, 2.9 ]
+        beamWidth: 90
+        cutOffAngle: 120
+        cutOffExponent: 6
+        attenuation: [ 1, 0, 0.01 ]
+        on: false
+        elements:
+          - *Light
+      -
+        type: FountainDevice
+        name: Fountain1
+        translation: [ 5.9, -5.0, 2.7 ]
+      -
+        type: FountainDevice
+        name: Fountain2
+        translation: [ 9.0, -11.1, 2.0 ]
+      -
+        type: SmokeDevice
+        name: Smoke1
+        translation: [ 6.0, 7.0, 1.8 ]
+      -
+        type: SmokeDevice
+        name: Smoke2
+        translation: [ 6.0, 9.5, 1.0 ]
+  -
+    type: SubBody
+    uri: "subbody/vessel.body"
+    parent: Root
+    prefix: SB1_
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/floor.body"
+    parent: Root
+    prefix: SB2_
+    translation: [ -7.0, -7.0, -0.1 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/floor.body"
+    parent: Root
+    prefix: SB3_
+    translation: [ 7.0, -7.0, -0.1 ]
+    rotation: [ 0, 0, 1, 180 ]
+    joint_type: fixed
+    joint_id_offset: 2
+  -
+    type: SubBody
+    uri: "subbody/floor.body"
+    parent: Root
+    prefix: SB4_
+    translation: [ 7.0, 7.0, -0.1 ]
+    rotation: [ 0, 0, 1, 180 ]
+    joint_type: fixed
+    joint_id_offset: 4
+  -
+    type: SubBody
+    uri: "subbody/floor.body"
+    parent: Root
+    prefix: SB5_
+    translation: [ -7.0, 7.0, -0.1 ]
+    joint_type: fixed
+    joint_id_offset: 6
+  -
+    type: SubBody
+    uri: "subbody/path.body"
+    parent: Root
+    prefix: SB6_
+    translation: [ 0, -7.0, 0 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/path.body"
+    parent: Root
+    prefix: SB7_
+    translation: [ 7.0, 0, 0 ]
+    rotation: [ 0, 0, 1, 90 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/path.body"
+    parent: Root
+    prefix: SB8_
+    translation: [ 0, 7.0, 0 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/duct.body"
+    parent: Root
+    prefix: SB9_
+    translation: [ -3.0, 3.0, 2.5 ]
+    rotation: [ 0, 0, 1, 135 ]
+    joint_type: fixed
+  -
+    name: POWER_PANEL
+    parent: Root
+    translation: [ -7.0, -11.85.0, 1.0 ]
+    rotation: [ 0, 0, 1, 90 ]
+    joint_type: fixed
+    center_of_mass: [ 0, 0, 0 ]
+    mass: 10.0
+    inertia: [
+      0.1, 0, 0,
+      0, 0.1, 0,
+      0, 0, 0.1 ]
+    elements:
+      -
+        type: Shape
+        geometry: { type: Box, size: [ 0.1, 0.4, 0.4 ] }
+        appearance: { material: { diffuseColor: [ 1.0, 1.0, 0.4 ] } }
+      -
+        type: Shape
+        translation: [ 0.075, 0, 0 ]
+        geometry: { type: Box, size: [ 0.05, 0.3, 0.3 ] }
+        appearance: { material: { diffuseColor: [ 0.1, 0.1, 0.1 ] } }
+  -
+    name: BREAKER_R
+    parent: POWER_PANEL
+    translation: [ 0.1, -0.1, 0 ]
+    joint_type: revolute
+    joint_axis: -Y
+    joint_id: 8
+    joint_range: [ -45, 45 ]
+    mass: 3.0
+    inertia: [ 0.05, 0, 0,
+               0, 0.05, 0,
+               0, 0, 0.05 ]
+
+    # For the friction for AGX
+    jointMotor: true
+    jointMotorCompliance: 0.5
+    jointMotorSpookDamping: 0.01
+    elements: &BreakerShape
+      -
+        type: Shape
+        geometry: { type: Cylinder, radius: 0.03, height: 0.04 }
+        appearance: { material: { diffuseColor: [ 0.3, 0.3, 0.3 ] } }
+      -
+        type: Shape
+        translation: [ 0.05, 0, 0 ]
+        geometry: { type: Box, size: [ 0.1, 0.02, 0.02 ] }
+        appearance: { material: { diffuseColor: [ 0.3, 0.3, 0.3 ] } }
+  -
+    name: BREAKER_L
+    parent: POWER_PANEL
+    translation: [ 0.1, 0.1, 0 ]
+    joint_type: revolute
+    joint_axis: -Y
+    joint_id: 9
+    joint_range: [ -45, 45 ]
+    mass: 3.0
+    inertia: [ 0.05, 0, 0,
+               0, 0.05, 0,
+               0, 0, 0.05 ]
+
+    # For the friction for AGX
+    jointMotor: true
+    jointMotorCompliance: 0.5
+    jointMotorSpookDamping: 0.01
+    elements: *BreakerShape

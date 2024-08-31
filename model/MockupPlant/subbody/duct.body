@@ -1,0 +1,32 @@
+format: ChoreonoidBody
+formatVersion: 2.0
+name: Duct
+links:
+  -
+    name: Root
+    translation: [ 0, 0, 0 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "pipe.body"
+    parent: Root
+    prefix: SB1_
+    translation: [ 0, 0, 0 ]
+    rotation: [ 0, 0, 1, -90 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "bent_pipe.body"
+    parent: Root
+    prefix: SB2_
+    translation: [ 1.0, 0, -0.5 ]
+    rotation: [ 1, 0, 0, 90 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "bent_pipe.body"
+    parent: Root
+    prefix: SB3_
+    translation: [ 2.0, 0, -0.5 ]
+    rotation: [ [ 1, 0, 0, 90 ], [ 0, 0, 1, 180 ] ]
+    joint_type: fixed
