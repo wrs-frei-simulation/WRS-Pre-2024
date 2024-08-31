@@ -8,10 +8,10 @@
 
 using namespace cnoid;
 
-class WRSUtilPluginPlugin : public Plugin
+class WRSUtilPlugin : public Plugin
 {
 public:
-    WRSUtilPluginPlugin() : Plugin("WRSUtilPlugin")
+    WRSUtilPlugin() : Plugin("WRSUtil")
     {
         require("Body");
     }
@@ -25,7 +25,7 @@ public:
     virtual const char* description() const override
     {
         static std::string text =
-            formatC("WRSUtilPlugin Plugin Version {}\n", CNOID_FULL_VERSION_STRING) +
+            formatC("WRSUtil Plugin Version {}\n", CNOID_FULL_VERSION_STRING) +
             "\n" +
             "Copyright (c) 2024 Japan Atomic Energy Agency.\n"
             "\n" +
@@ -34,4 +34,4 @@ public:
     }
 };
 
-CNOID_IMPLEMENT_PLUGIN_ENTRY(WRSUtilPluginPlugin)
+CNOID_IMPLEMENT_PLUGIN_ENTRY(WRSUtilPlugin)
