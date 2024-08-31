@@ -1,0 +1,359 @@
+items:
+  id: 0
+  name: "RootItem"
+  plugin: Base
+  class: RootItem
+  is_builtin_item: true
+  children:
+    -
+      id: 1
+      name: "Tank"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/model/Tank/Tank.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 0, 0, 0.1 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        jointDisplacements: [ 0, 0, 0, 0 ]
+        initialRootPosition: [ -2, -0.5, 0.1 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: false
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+        zmp: [ 0, 0, 0 ]
+      children:
+        -
+          id: 2
+          name: "JoystickController"
+          plugin: Body
+          class: SimpleControllerItem
+          data:
+            isNoDelayMode: false
+            controllerOptions: ""
+            controller: "TankJoystickController"
+            base_directory: "Controller directory"
+            reloading: true
+            export_symbols: false
+        -
+          id: 3
+          name: "SensorVisualizer"
+          plugin: Body
+          class: SensorVisualizerItem
+          data:
+            sub_items:
+              -
+                class: AccelerationSensorVisualizerItem
+                name: AccelerationSensor
+                ratio: 0.1
+                threshold: 0.05
+                offset: [ 0, 0, -9.8 ]
+              -
+                class: RateGyroSensorVisualizerItem
+                name: RateGyro
+                ratio: 0.4
+                threshold: 0.01
+                offset: [ 0, 0, 0 ]
+              -
+                class: CameraImageVisualizerItem
+                name: Kinect-Image
+                is_checked: true
+              -
+                class: CameraImageVisualizerItem
+                name: Theta
+                is_checked: true
+              -
+                class: PointCloudVisualizerItem
+                name: Kinect
+                is_checked: true
+                translation: [ -0.01, 0, 0.43 ]
+                rotation: [ 1, 0, 0, 0 ]
+                angle_unit: degree
+                rendering_mode: Point
+                point_size: 0
+                voxel_size: 0.01
+                is_editable: false
+              -
+                class: RangeSensorVisualizerItem
+                name: VLP-16
+                is_checked: true
+                translation: [ -0.01, 0, 0.53 ]
+                rotation: [ 1, 0, 0, 0 ]
+                angle_unit: degree
+                rendering_mode: Point
+                point_size: 0
+                voxel_size: 0.01
+                is_editable: false
+views:
+  -
+    id: 0
+    plugin: Base
+    class: GeneralSliderView
+  -
+    id: 1
+    name: "Kinect Image"
+    plugin: Base
+    class: ImageView
+    mounted: true
+    state:
+      imageable_item: [ 3, "Kinect-Image" ]
+  -
+    id: 2
+    name: "Theta Image"
+    plugin: Base
+    class: ImageView
+    mounted: true
+    state:
+      imageable_item: [ 3, "Theta" ]
+  -
+    id: 3
+    plugin: Base
+    class: ItemPropertyView
+    mounted: true
+  -
+    id: 4
+    plugin: Base
+    class: ItemTreeView
+    mounted: true
+    state:
+      expanded: [ 1, 3 ]
+  -
+    id: 5
+    plugin: Base
+    class: LocationView
+    state:
+      show_rpy: true
+      unique_rpy: false
+      show_quaternion: false
+      show_rotation_matrix: false
+      coordinate: parent
+  -
+    id: 6
+    plugin: Base
+    class: MessageView
+    mounted: true
+  -
+    id: 7
+    plugin: Base
+    class: SceneView
+    mounted: true
+    state:
+      editMode: false
+      viewpointOperationMode: thirdPerson
+      visible_polygon_elements: [ face ]
+      highlighting: false
+      collisionLines: false
+      cameras:
+        -
+          camera: [ System, Perspective ]
+          isCurrent: true
+          eye: [ -7.55, -3.78401, 3.39381 ]
+          direction: [ 0.8446, 0.410131, -0.344157 ]
+          up: [ 0.309587, 0.150333, 0.938912 ]
+        -
+          camera: [ System, Orthographic ]
+          orthoHeight: 20
+      lighting_mode: normal
+      culling_mode: enabled
+      shading_mode: smooth
+      world_light: false
+      world_light_intensity: 0.1
+      ambient_light: true
+      ambient_light_intensity: 0
+      head_light: true
+      head_light_intensity: 0.75
+      world_light_shadow: true
+      shadow_lights:
+        - { index: 0, enabled: false }
+        - { index: 1, enabled: false }
+      background_color: [ 0, 0, 0 ]
+      line_width: 1
+      point_size: 2
+      field_of_view: 39.981
+      clip_distances: [ 0.01, 10000 ]
+      floorGrid: false
+      floorGridSpan: 10
+      floorGridInterval: 0.5
+      xzGrid: false
+      xzGridSpan: 10
+      xzGridInterval: 0.5
+      yzGrid: false
+      yzGridSpan: 10
+      yzGridInterval: 0.5
+      xy_grid_color: [ 0.9, 0.9, 0.9 ]
+      xz_grid_color: [ 0.9, 0.9, 0.9 ]
+      yz_grid_color: [ 0.9, 0.9, 0.9 ]
+  -
+    id: 8
+    plugin: Base
+    class: VirtualJoystickView
+    mounted: true
+  -
+    id: 9
+    plugin: Body
+    class: JointDisplacementView
+    mounted: true
+    state:
+      show_joint_ids: false
+      show_joint_names: true
+      overlap_joint_names: false
+      show_sliders: true
+      show_dials: false
+      show_phases: true
+      limit_ranges: false
+      show_selected_joints: false
+  -
+    id: 10
+    plugin: Body
+    class: LinkDeviceListView
+    mounted: true
+    state:
+      element_type: link
+      listing_mode: list
+  -
+    id: 11
+    plugin: Body
+    class: LinkPositionView
+    mounted: true
+    state:
+      coordinate_mode: world
+      preferred_coordinate_mode: base
+      show_rpy: true
+      unique_rpy: false
+      show_quaternion: false
+      show_rotation_matrix: false
+      target_link_type: root_or_ik_link
+  -
+    id: 12
+    plugin: Body
+    class: LinkPropertyView
+  -
+    id: 13
+    plugin: Python
+    class: PythonConsoleView
+    mounted: true
+toolbars:
+  "TimeBar":
+    current_time: 0
+    min_time: 0
+    max_time: 30
+    frame_rate: 1000
+    playback_frame_rate: 60
+    idle_loop_driven_mode: false
+    playback_speed_ratio: 1
+    sync_to_ongoing_updates: true
+    auto_expansion: true
+  "LeggedBodyBar":
+    stanceWidth: 0.15
+  "KinematicsBar":
+    forward_kinematics: true
+    inverse_kinematics: true
+    preset_kinematics: true
+    enablePositionDragger: true
+    penetrationBlock: false
+    collisionLinkHighlight: false
+    snapDistance: 0.025
+    penetrationBlockDepth: 0.0005
+    lazyCollisionDetectionMode: true
+Body:
+  "BodySelectionManager":
+    current_body_item: 1
+    current_link: "CHASSIS"
+  "KinematicFaultChecker":
+    checkJointPositions: true
+    angleMargin: 0
+    translationMargin: 0
+    checkJointVelocities: true
+    velocityLimitRatio: 100
+    targetJoints: all
+    checkSelfCollisions: true
+    onlyTimeBarRange: false
+  "OperableSceneBody":
+    scene_bodies:
+      -
+        body_item: 1
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+  "SplineFilterDialog":
+    isInputFrameRateSpecified: false
+    inputFrameRate: 200
+    isOutputFrameRateSpecified: false
+    outputFrameRate: 200
+viewAreas:
+  -
+    type: embedded
+    tabs: true
+    contents:
+      type: splitter
+      orientation: horizontal
+      sizes: [ 350, 1496 ]
+      children:
+        -
+          type: splitter
+          orientation: vertical
+          sizes: [ 519, 517 ]
+          children:
+            -
+              type: pane
+              views: [ 4 ]
+            -
+              type: pane
+              views: [ 3, 10 ]
+              current: 3
+        -
+          type: splitter
+          orientation: vertical
+          sizes: [ 803, 233 ]
+          children:
+            -
+              type: splitter
+              orientation: horizontal
+              sizes: [ 699, 793 ]
+              children:
+                -
+                  type: splitter
+                  orientation: vertical
+                  sizes: [ 400, 399 ]
+                  children:
+                    -
+                      type: pane
+                      views: [ 11, 9, 1 ]
+                      current: 11
+                    -
+                      type: pane
+                      views: [ 2 ]
+                -
+                  type: pane
+                  views: [ 7 ]
+            -
+              type: splitter
+              orientation: horizontal
+              sizes: [ 859, 633 ]
+              children:
+                -
+                  type: pane
+                  views: [ 6, 13 ]
+                  current: 6
+                -
+                  type: pane
+                  views: [ 8 ]
+layoutOfToolBars:
+  rows:
+    -
+      - { name: "FileBar", x: 0, priority: 0 }
+      - { name: "SimulationBar", x: 47, priority: 1 }
+      - { name: "ScriptBar", x: 47, priority: 0 }
+      - { name: "TimeBar", x: 94, priority: 0 }
+      - { name: "SceneBar", x: 1175, priority: 2 }
+      - { name: "KinematicsBar", x: 1540, priority: 3 }
+      - { name: "ImageViewBar", x: 1774, priority: 4 }

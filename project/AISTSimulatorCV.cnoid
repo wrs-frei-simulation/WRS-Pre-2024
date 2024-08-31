@@ -7,31 +7,63 @@ items:
   children:
     -
       id: 1
-      name: "AGXSimulator"
-      plugin: AGXDynamics
-      class: AGXSimulatorItem
+      name: "AISTSimulator"
+      plugin: Body
+      class: AISTSimulatorItem
       data:
-        time_step: 0.005
+        time_step: 0.001
         realtime_sync_mode: compensatory
         recording: full
         time_range_mode: unlimited
         time_length: 180
         is_active_control_time_range_mode: false
-        output_all_link_positions: true
+        output_all_link_positions: false
         output_device_states: true
         use_controller_threads: true
         record_collision_data: false
-        controller_options: "position"
+        controller_options: ""
         block_scene_view_edit_mode: false
-        Gravity: [ 0, 0, -9.80665 ]
-        NumThreads: 4
-        ContactReduction: true
-        ContactReductionBinResolution: 3
-        ContactReductionThreshhold: 12
-        ContactWarmstarting: true
-        AutoSleep: false
-        SaveToAGXFileOnStart: false
-        DebugMessageOnConsole: 4
+        dynamicsMode: "Forward dynamics"
+        integrationMode: semi-implicit_euler
+        gravity: [ 0, 0, -9.80665 ]
+        min_friction_coefficient: 0
+        max_friction_coefficient: 100
+        cullingThresh: 0.005
+        contactCullingDepth: 0.05
+        errorCriterion: 0.001
+        maxNumIterations: 25
+        contactCorrectionDepth: 0.00025
+        contactCorrectionVelocityRatio: 5
+        kinematicWalking: false
+        2Dmode: false
+        oldAccelSensorMode: false
+      children:
+        -
+          id: 2
+          name: "CFDSimulator"
+          plugin: CFD
+          class: CFDSimulatorItem
+          data:
+            enabled: true
+        -
+          id: 3
+          name: "VFXVisionSimulator"
+          plugin: VFX
+          class: VFXVisionSimulatorItem
+          data:
+            enabled: true
+            max_frame_rate: 1000
+            max_latency: 1
+            record_vision_data: false
+            thread_mode: Sensor
+            best_effort: true
+            all_scene_objects: true
+            range_sensor_precision_ratio: 2
+            depth_error: 0
+            enable_head_light: true
+            enable_additional_lights: true
+            antialiasing: false
+            dynamics_type: Random salt only
 views:
   -
     id: 0
