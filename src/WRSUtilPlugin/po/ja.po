@@ -23,11 +23,14 @@ msgstr "WRSUtilバー"
 msgid "Select project"
 msgstr "プロジェクトを選択"
 
-msgid "Open"
-msgstr ""
-
 msgid "Open the selected project"
 msgstr "プロジェクトを開く"
 
+msgid "Update projects"
+msgstr "プロジェクトを更新"
+
 msgid "Robots were not found."
 msgstr "ロボットが見つかりませんでした．"
+
+msgid "Projects were updated."
+msgstr "プロジェクトが更新されました．"

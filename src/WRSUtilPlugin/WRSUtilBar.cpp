@@ -21,8 +21,6 @@
 #include <cnoid/WorldItem>
 #include <cnoid/YAMLReader>
 #include <src/BodyPlugin/WorldLogFileItem.h>
-#include <cnoid/CFDSimulatorItem>
-#include <cnoid/VFXVisionSimulatorItem>
 #include <vector>
 #include "gettext.h"
 
@@ -38,8 +36,6 @@ struct ProjectInfo {
     vector<string> simulator_projects;
     vector<string> robot_projects;
     bool is_recording_enabled;
-    bool is_cfd_enabled;
-    bool is_vision_enabled;
     bool is_ros_enabled;
     Vector3 start_position;
 };
@@ -58,10 +54,13 @@ public:
     ComboBox* projectCombo;
 
     string project_dir;
+    string registration_file;
     vector<ProjectInfo> projectInfo;
 
     bool load(const string& filename, ostream& os = nullout());
+    void update();
     void onOpenButtonClicked();
+    void onUpdateButtonClicked();
 };
 
 }
@@ -100,24 +99,50 @@ WRSUtilBar::Impl::Impl(WRSUtilBar* self)
     projectCombo->setToolTip(_("Select project"));
     self->addWidget(projectCombo);
 
-    auto openButton = self->addButton(_("Open"));
+    auto updateButton = self->addButton(QIcon::fromTheme("view-refresh"));
+    updateButton->setToolTip(_("Update projects"));
+    updateButton->sigClicked().connect([&](){ onUpdateButtonClicked(); });
+
+    auto openButton = self->addButton(QIcon::fromTheme("window-new"));
     openButton->setToolTip(_("Open the selected project"));
     openButton->sigClicked().connect([&](){ onOpenButtonClicked(); });
 
     project_dir = shareDir() + "/WRS2024PRE/project";
-    string share_dir = shareDir() + "/WRS2024PRE/share/default";
-    string registration_file = share_dir + "/registration.yaml";
+    registration_file = shareDir() + "/WRS2024PRE/share/default/registration.yaml";
 
-    projectInfo.clear();
-    if(!registration_file.empty()) {
-        load(registration_file);
-    }
+    update();
 }
 
 
 WRSUtilBar::~WRSUtilBar()
 {
     delete impl;
+}
+
+
+void WRSUtilBar::setProjectDirectory(const std::string& directory)
+{
+    impl->project_dir = directory;
+}
+
+
+void WRSUtilBar::setRegistrationFile(const std::string& filename)
+{
+    impl->registration_file = filename;
+}
+
+
+void WRSUtilBar::update()
+{
+    impl->update();
+}
+
+
+void WRSUtilBar::Impl::update()
+{
+    if(!registration_file.empty()) {
+        load(registration_file);
+    }
 }
 
 
@@ -167,12 +192,6 @@ bool WRSUtilBar::Impl::load(const string& filename, ostream& os)
                     bool is_recording_enabled = node->get("enable_recording", true);
                     info.is_recording_enabled = is_recording_enabled;
 
-                    bool is_cfd_enabled = node->get("enable_cfd", false);
-                    info.is_cfd_enabled = is_cfd_enabled;
-
-                    bool is_vision_enabled = node->get("enable_vision", false);
-                    info.is_vision_enabled = is_vision_enabled;
-
                     bool is_ros_enabled = node->get("enable_ros", false);
                     info.is_ros_enabled = is_ros_enabled;
 
@@ -213,11 +232,13 @@ void WRSUtilBar::Impl::onOpenButtonClicked()
     worldItem->setName("World");
     rootItem->addChildItem(worldItem);
 
-    auto taskItem = new SubProjectItem();
-    taskItem->setName(info.task_project);
-    taskItem->load(project_dir + "/" + info.task_project + ".cnoid");
-    worldItem->addChildItem(taskItem);
-    itemTreeView->setExpanded(taskItem, false);
+    if(!info.task_project.empty()) {
+        auto taskItem = new SubProjectItem();
+        taskItem->setName(info.task_project);
+        taskItem->load(project_dir + "/" + info.task_project + ".cnoid");
+        worldItem->addChildItem(taskItem);
+        itemTreeView->setExpanded(taskItem, false);
+    }
 
     for(auto& project : info.simulator_projects) {
         projectManager->loadProject(project_dir + "/" + project + ".cnoid", worldItem);
@@ -248,40 +269,24 @@ void WRSUtilBar::Impl::onOpenButtonClicked()
             robotItem->storeInitialState();
             offset[1] += 1.5;
 
-            auto controllerItem = new SimpleControllerItem;
-            controllerItem->setName(robotItem->name() + "-JoystickInput");
-            auto mainControllerItem = robotItem->findItem<SimpleControllerItem>();
-            mainControllerItem->addChildItem(controllerItem);
-
             if(info.is_ros_enabled) {
+                auto controllerItem = new SimpleControllerItem;
+                controllerItem->setName(robotItem->name() + "-JoystickInput");
+                auto mainControllerItem = robotItem->findItem<SimpleControllerItem>();
+                mainControllerItem->addChildItem(controllerItem);
+
                 controllerItem->setController("JoyTopicSubscriberController");
             }
         }
     }
 
-    if(info.is_cfd_enabled) {
-        auto cfdSimulatoritem = new CFDSimulatorItem;
-        cfdSimulatoritem->setName("CFDSimulator");
-        for(auto& simulatorItem : worldItem->descendantItems<SimulatorItem>()) {
-            simulatorItem->addChildItem(cfdSimulatoritem->clone());
-        }
+    if(!info.view_project.empty()) {
+        auto viewItem = new SubProjectItem();
+        viewItem->setName(info.view_project);
+        viewItem->load(project_dir + "/" + info.view_project + ".cnoid");
+        rootItem->addChildItem(viewItem);
+        itemTreeView->setExpanded(viewItem, false);
     }
-
-    if(info.is_vision_enabled) {
-        auto visionSimulatorItem = new VFXVisionSimulatorItem;
-        visionSimulatorItem->setName("VFXVisionSimulator");
-        visionSimulatorItem->setTargetSensors("");
-        visionSimulatorItem->setBestEffortMode(true);
-        for(auto& simulatorItem : worldItem->descendantItems<SimulatorItem>()) {
-            simulatorItem->addChildItem(visionSimulatorItem->clone());
-        }
-    }
-
-    auto viewItem = new SubProjectItem();
-    viewItem->setName(info.view_project);
-    viewItem->load(project_dir + "/" + info.view_project + ".cnoid");
-    rootItem->addChildItem(viewItem);
-    itemTreeView->setExpanded(viewItem, false);
 
     if(info.is_recording_enabled) {
         auto logItem = new WorldLogFileItem;
@@ -291,6 +296,12 @@ void WRSUtilBar::Impl::onOpenButtonClicked()
         worldItem->addChildItem(logItem);
     }
 
-    
     projectManager->setCurrentProjectName(info.name);
+}
+
+
+void WRSUtilBar::Impl::onUpdateButtonClicked()
+{
+    update();
+    MessageView::instance()->putln(formatR(_("Projects were updated.")));
 }
