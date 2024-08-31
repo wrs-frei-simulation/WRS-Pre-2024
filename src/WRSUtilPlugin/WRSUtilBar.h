@@ -18,6 +18,10 @@ public:
     static void initialize(ExtensionManager* ext);
     static WRSUtilBar* instance();
 
+    void setProjectDirectory(const std::string& directory);
+    void setRegistrationFile(const std::string& filename);
+    void update();
+
 private:
     class Impl;
     Impl* impl;

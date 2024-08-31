@@ -37,6 +37,33 @@ items:
         kinematicWalking: false
         2Dmode: false
         oldAccelSensorMode: false
+      children:
+        -
+          id: 2
+          name: "CFDSimulator"
+          plugin: CFD
+          class: CFDSimulatorItem
+          data:
+            enabled: true
+        -
+          id: 3
+          name: "VFXVisionSimulator"
+          plugin: VFX
+          class: VFXVisionSimulatorItem
+          data:
+            enabled: true
+            max_frame_rate: 1000
+            max_latency: 1
+            record_vision_data: false
+            thread_mode: Sensor
+            best_effort: true
+            all_scene_objects: true
+            range_sensor_precision_ratio: 2
+            depth_error: 0
+            enable_head_light: true
+            enable_additional_lights: true
+            antialiasing: false
+            dynamics_type: Random salt only
 views:
   -
     id: 0
@@ -222,7 +249,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 518, 518 ]
+              sizes: [ 504, 504 ]
               children:
                 -
                   type: pane
@@ -234,7 +261,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 777, 259 ]
+              sizes: [ 756, 252 ]
               children:
                 -
                   type: pane
@@ -246,7 +273,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 228, 808 ]
+          sizes: [ 222, 786 ]
           children:
             -
               type: pane
@@ -254,7 +281,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 315, 489 ]
+              sizes: [ 306, 476 ]
               children:
                 -
                   type: pane
