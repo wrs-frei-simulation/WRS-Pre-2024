@@ -1,1 +1,1 @@
-add_subdirectory(WRSUtilPlugin)
+add_subdirectory(WRS2024PrePlugin)
