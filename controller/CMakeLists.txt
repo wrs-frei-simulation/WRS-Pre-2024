@@ -1,0 +1,7 @@
+choreonoid_add_simple_controller(PlantLightController PlantLightController.cpp)
+
+choreonoid_add_simple_controller(PlantFountainController PlantFountainController.cpp)
+target_link_libraries(PlantFountainController CnoidSceneEffectsPlugin)
+
+choreonoid_add_simple_controller(PlantSmokeController PlantSmokeController.cpp)
+target_link_libraries(PlantSmokeController CnoidSceneEffectsPlugin)
