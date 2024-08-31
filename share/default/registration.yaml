@@ -10,6 +10,16 @@ registrations:
     enable_vision: true
     enable_ros: false
   -
+    name: T2-AizuSpiderSS
+    task_project: T2
+    robot_project: [ AizuSpiderSS ]
+    start_position: [ -8.0, -7.0, 0.0 ]
+    simulator_project: [ AISTSimulator ]
+    view_project: DebugView
+    enable_cfd: true
+    enable_vision: true
+    enable_ros: false
+  -
     name: T2-AizuSpiderSA
     task_project: T2
     robot_project: [ AizuSpiderSA ]
