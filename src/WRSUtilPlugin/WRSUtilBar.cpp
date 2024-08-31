@@ -92,8 +92,7 @@ WRSUtilBar::WRSUtilBar()
 
 
 WRSUtilBar::Impl::Impl(WRSUtilBar* self)
-    : self(self),
-      project_dir()
+    : self(self)
 {
     self->setVisibleByDefault(true);
 
@@ -106,7 +105,8 @@ WRSUtilBar::Impl::Impl(WRSUtilBar* self)
     openButton->sigClicked().connect([&](){ onOpenButtonClicked(); });
 
     project_dir = shareDir() + "/WRS2024PRE/project";
-    string registration_file = project_dir + "/registration.yaml";
+    string share_dir = shareDir() + "/WRS2024PRE/share/default";
+    string registration_file = share_dir + "/registration.yaml";
 
     projectInfo.clear();
     if(!registration_file.empty()) {

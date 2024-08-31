@@ -2,6 +2,10 @@ if(NOT ENABLE_GUI)
   return()
 endif()
 
+if(NOT BUILD_AGX_DYNAMICS_PLUGIN AND NOT BUILD_SCENE_EFFECTS_PLUGIN AND NOT BUILD_HAIRO_WORLD_PLUGIN)
+  return()
+endif()
+
 option(BUILD_WRS2024PRE "Building the WRS2024PRE files" ON)
 if(NOT BUILD_WRS2024PRE)
   return()
@@ -18,6 +22,7 @@ install(DIRECTORY
   model
   project
   script
+  share
   DESTINATION ${CNOID_SHARE_SUBDIR}/WRS2024PRE)
 
 add_subdirectory(controller)
