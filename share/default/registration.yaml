@@ -4,7 +4,7 @@ registrations:
     task_project: T2
     robot_project: [ Drone ]
     start_position: [ -8.0, -7.0, 0.0 ]
-    simulator_project: [ AGXSimulator, AISTSimulator ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
     view_project: DebugView
     enable_recording: true
   -
@@ -12,19 +12,35 @@ registrations:
     task_project: T2
     robot_project: [ AizuSpiderSS ]
     start_position: [ -8.0, -7.0, 0.0 ]
-    simulator_project: [ AISTSimulator ]
+    simulator_project: [ AISTSimulatorCV ]
     view_project: DebugView
   -
     name: T2-AizuSpiderSA
     task_project: T2
     robot_project: [ AizuSpiderSA ]
     start_position: [ -8.0, -7.0, 0.0 ]
-    simulator_project: [ AGXSimulator ]
+    simulator_project: [ AGXSimulatorCV ]
     view_project: DebugView
   -
-    name: T2-Drone+AizuSpiderSA
+    name: T2-Drone-AizuSpiderSA
     task_project: T2
     robot_project: [ Drone, AizuSpiderSA ]
     start_position: [ -8.0, -7.0, 0.0 ]
-    simulator_project: [ AGXSimulator ]
+    simulator_project: [ AGXSimulatorCV ]
     view_project: DebugView
+  -
+    name: Tank-VisionSensors
+    task_project: Labo1
+    robot_project: [ Tank ]
+    start_position: [ -2.0, -0.5, 0.0 ]
+    simulator_project: [ AISTSimulator ]
+    view_project: VisionView
+    enable_recording: false
+  -
+    name: Tank-Husky-Jackal
+    task_project: Floor
+    robot_project: [ Tank, Husky, Jackal ]
+    start_position: [ -2.0, -0.5, 0.0 ]
+    simulator_project: [ AISTSimulator ]
+    view_project: JoystickView
+    enable_recording: false

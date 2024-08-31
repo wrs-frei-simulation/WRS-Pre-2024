@@ -2,7 +2,7 @@ if(NOT ENABLE_GUI)
   return()
 endif()
 
-if(NOT BUILD_SCENE_EFFECTS_PLUGIN AND NOT BUILD_HAIRO_WORLD_PLUGIN)
+if(NOT BUILD_SCENE_EFFECTS_PLUGIN OR NOT BUILD_WRS2018 OR NOT BUILD_HAIRO_WORLD_PLUGIN)
   return()
 endif()
 
@@ -21,7 +21,7 @@ endif()
 install(DIRECTORY
   model
   project
-  script
+#  script
   share
   DESTINATION ${CNOID_SHARE_SUBDIR}/WRS2024PRE)
 
