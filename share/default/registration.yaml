@@ -28,3 +28,11 @@ registrations:
     start_position: [ -8.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
     view_project: DebugView
+  -
+    name: T2-SampleDrone-ROS
+    task_project: T2
+    robot_project: [ SampleDrone-ROS ]
+    start_position: [ -8.0, -7.0, 0.0 ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
+    view_project: DebugView
+    enable_recording: true
