@@ -15,9 +15,9 @@ registrations:
     simulator_project: [ AISTSimulatorCV ]
     view_project: DebugView
   -
-    name: T2-AizuSpiderSA
+    name: T2-AizuSpiderSA-ROS
     task_project: T2
-    robot_project: [ AizuSpiderSA ]
+    robot_project: [ AizuSpiderSA-ROS ]
     start_position: [ -8.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
     view_project: DebugView
@@ -28,19 +28,3 @@ registrations:
     start_position: [ -8.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
     view_project: DebugView
-  -
-    name: Tank-VisionSensors
-    task_project: Labo1
-    robot_project: [ Tank ]
-    start_position: [ -2.0, -0.5, 0.0 ]
-    simulator_project: [ AISTSimulator ]
-    view_project: VisionView
-    enable_recording: false
-  -
-    name: Tank-Husky-Jackal
-    task_project: Floor
-    robot_project: [ Tank, Husky, Jackal ]
-    start_position: [ -2.0, -0.5, 0.0 ]
-    simulator_project: [ AISTSimulator ]
-    view_project: JoystickView
-    enable_recording: false

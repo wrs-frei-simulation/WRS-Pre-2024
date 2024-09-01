@@ -33,7 +33,6 @@ items:
         selfCollisionDetection: true
         lock_location: false
         scene_sensitive: true
-        zmp: [ 0, 0, 0 ]
       children:
         -
           id: 2
@@ -67,15 +66,15 @@ items:
           class: BodySyncCameraItem
           is_checked: true
           data:
-            target_link: ""
-            parallel_tracking: true
-            interactive_viewpoint_change: true
             camera_type: Perspective
-            near_clip_distance: 0.05
-            far_clip_distance: 200
-            field_of_view: 0.785398
             translation: [ -0.5435, -0.414704, 0.842134 ]
             rotation: [ 0.585982, -0.503027, -0.635287, 106.993 ]
+            field_of_view: 0.785398
+            near_clip_distance: 0.05
+            far_clip_distance: 200
+            interactive_viewpoint_change: true
+            target_link: ""
+            parallel_tracking: true
             local_translation: [ -1.5435, -0.414704, 0.807134 ]
             local_rotation: [ 0.585982, -0.503027, -0.635287, 106.993 ]
 views:
@@ -123,7 +122,7 @@ views:
           camera: [ System, Perspective ]
           eye: [ 3, 1.5, 1.2 ]
           direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787499, 0.984374 ]
+          up: [ -0.1575, -0.0787498, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -143,7 +142,7 @@ views:
       shadow_lights:
         - { index: 0, enabled: false }
         - { index: 1, enabled: false }
-      background_color: [ 0, 0, 0 ]
+      background_color: [ 0.100008, 0.100008, 0.300008 ]
       line_width: 1
       point_size: 1
       field_of_view: 45
@@ -176,7 +175,7 @@ views:
           camera: [ System, Perspective ]
           eye: [ 3, 1.5, 1.2 ]
           direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787499, 0.984374 ]
+          up: [ -0.1575, -0.0787498, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -320,7 +319,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 504, 504 ]
+              sizes: [ 487, 487 ]
               children:
                 -
                   type: pane
@@ -332,7 +331,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 756, 252 ]
+              sizes: [ 731, 243 ]
               children:
                 -
                   type: pane
@@ -344,7 +343,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 222, 786 ]
+          sizes: [ 215, 759 ]
           children:
             -
               type: pane
@@ -352,7 +351,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 306, 476 ]
+              sizes: [ 295, 460 ]
               children:
                 -
                   type: pane
