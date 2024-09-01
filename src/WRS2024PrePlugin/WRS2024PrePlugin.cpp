@@ -19,7 +19,7 @@ public:
     
     virtual bool initialize() override
     {
-        auto bar = new WRSUtilBar("WRS2024Pre");
+        auto bar = new WRSUtilBar("WRS2024PreBar");
         bar->setProjectDirectory(shareDir() + "/WRS2024PRE/project");
         bar->setRegistrationFile(shareDir() + "/WRS2024PRE/share/default/registration.yaml");
         bar->update();
