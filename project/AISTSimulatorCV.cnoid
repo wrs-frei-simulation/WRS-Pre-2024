@@ -63,7 +63,7 @@ items:
             enable_head_light: true
             enable_additional_lights: true
             antialiasing: false
-            dynamics_type: Random salt only
+            dynamics_type: All process
 views:
   -
     id: 0
