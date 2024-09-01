@@ -15,7 +15,7 @@ if(UNIX)
   add_custom_target(
     symlink_to_WRS2024PRE ALL
     COMMAND ${CMAKE_COMMAND} -E create_symlink
-    ${CMAKE_CURRENT_SOURCE_DIR} ${CNOID_BINARY_SHARE_DIR}/WRS2024PRE)
+    ${CMAKE_CURRENT_SOURCE_DIR} ${CHOREONOID_BINARY_SHARE_DIR}/WRS2024PRE)
 endif()
 
 install(DIRECTORY
@@ -23,7 +23,7 @@ install(DIRECTORY
   project
 #  script
   share
-  DESTINATION ${CNOID_SHARE_SUBDIR}/WRS2024PRE)
+  DESTINATION ${CHOREONOID_SHARE_SUBDIR}/WRS2024PRE)
 
 add_subdirectory(controller)
 add_subdirectory(src)
