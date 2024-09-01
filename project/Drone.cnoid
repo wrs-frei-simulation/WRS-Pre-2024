@@ -66,44 +66,6 @@ items:
                 class: CameraImageVisualizerItem
                 name: FrontCamera
                 is_checked: true
-        -
-          id: 4
-          name: "MultiCollider"
-          plugin: SimpleCollider
-          class: MultiColliderItem
-          data:
-            translation: [ 0, 0, 0.3 ]
-            rotation: [ 0, -0, 0 ]
-            size: [ 1, 1, 1 ]
-            diffuse_color: [ 1, 0, 1 ]
-            radius: 0.5
-            height: 1
-            specular_exponent: 25
-            transparency: 1
-            scene_type: Box
-            collider_type: VFX
-            density: 0
-            viscosity: 0
-            steady_flow: [ 0, 0, 0 ]
-            inbound_delay: 0
-            inbound_rate: 0
-            inbound_loss: 0
-            outbound_delay: 0
-            outbound_rate: 0
-            outbound_loss: 0
-            source: 0.0.0.0/0
-            destination: 0.0.0.0/0
-            hsv: [ 0, 0, 0 ]
-            rgb: [ 0, 0, 0 ]
-            coef_b: 0
-            coef_d: 0
-            std_dev: 0
-            salt_amount: 0.01
-            salt_chance: 0.1
-            pepper_amount: 0
-            pepper_chance: 1
-            mosaic_chance: 0.1
-            kernel: 16
 views:
   -
     id: 0
@@ -298,7 +260,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 518, 518 ]
+              sizes: [ 501, 501 ]
               children:
                 -
                   type: pane
@@ -310,7 +272,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 777, 259 ]
+              sizes: [ 752, 250 ]
               children:
                 -
                   type: pane
@@ -322,7 +284,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 228, 808 ]
+          sizes: [ 221, 781 ]
           children:
             -
               type: pane
@@ -330,7 +292,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 315, 489 ]
+              sizes: [ 304, 473 ]
               children:
                 -
                   type: pane
