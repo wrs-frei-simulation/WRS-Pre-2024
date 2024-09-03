@@ -10,7 +10,7 @@ registrations:
   -
     name: T2-AizuSpiderSA-ROS2
     task_project: [ T2 ]
-    robot_project: [ AizuSpiderSA ]
+    robot_project: [ AizuSpiderSA-ROS2 ]
     start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
     view_project: SingleSceneView
@@ -26,7 +26,7 @@ registrations:
   -
     name: T2-AizuSpiderSS-ROS2
     task_project: [ T2 ]
-    robot_project: [ AizuSpiderSS ]
+    robot_project: [ AizuSpiderSS-ROS2 ]
     start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AISTSimulatorCV ]
     view_project: SingleSceneView
@@ -35,15 +35,15 @@ registrations:
     name: T2-DoubleArmV7A
     task_project: [ T2 ]
     robot_project: [ DoubleArmV7A ]
-    start_position: [ -9.0, -7.0, 0.0 ]
+    start_position: [ -10.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
     name: T2-DoubleArmV7A-ROS2
     task_project: [ T2 ]
-    robot_project: [ DoubleArmV7A ]
-    start_position: [ -9.0, -7.0, 0.0 ]
+    robot_project: [ DoubleArmV7A-ROS2 ]
+    start_position: [ -10.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
@@ -51,15 +51,15 @@ registrations:
     name: T2-DoubleArmV7S
     task_project: [ T2 ]
     robot_project: [ DoubleArmV7S ]
-    start_position: [ -9.0, -7.0, 0.0 ]
+    start_position: [ -10.0, -7.0, 0.0 ]
     simulator_project: [ AISTSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
     name: T2-DoubleArmV7S-ROS2
     task_project: [ T2 ]
-    robot_project: [ DoubleArmV7S ]
-    start_position: [ -9.0, -7.0, 0.0 ]
+    robot_project: [ DoubleArmV7S-ROS2 ]
+    start_position: [ -10.0, -7.0, 0.0 ]
     simulator_project: [ AISTSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
@@ -71,7 +71,7 @@ registrations:
     simulator_project: [ AGXSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
-   -
+  -
     name: T2-SampleDroneA-ROS2
     task_project: [ T2 ]
     robot_project: [ SampleDrone-ROS2 ]
