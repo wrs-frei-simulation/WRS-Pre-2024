@@ -23,7 +23,6 @@ public:
         bar->setProjectDirectory(shareDir() + "/WRS2024PRE/project");
         bar->setRegistrationFile(shareDir() + "/WRS2024PRE/share/default/registration.yaml");
         bar->update();
-        bar->setVisibleByDefault(true);
         addToolBar(bar);
         return true;
     }
