@@ -64,8 +64,21 @@ items:
                 base_directory: "Controller directory"
                 reloading: true
                 export_symbols: false
+              children:
+                -
+                  id: 4
+                  name: "JoyTopicSubController"
+                  plugin: Body
+                  class: SimpleControllerItem
+                  data:
+                    isNoDelayMode: false
+                    controllerOptions: ""
+                    controller: "JoyTopicSubscriberController"
+                    base_directory: "Controller directory"
+                    reloading: false
+                    export_symbols: false
         -
-          id: 4
+          id: 5
           name: "BodyTrackingCamera"
           plugin: Body
           class: BodySyncCameraItem
@@ -83,7 +96,7 @@ items:
             local_translation: [ -1.5435, -0.414704, 0.807134 ]
             local_rotation: [ 0.585982, -0.503027, -0.635287, 106.993 ]
         -
-          id: 5
+          id: 6
           name: "BodyROS2"
           plugin: ROS2
           class: BodyROS2Item
@@ -106,7 +119,7 @@ views:
     class: ItemTreeView
     mounted: true
     state:
-      expanded: [ 1, 2 ]
+      expanded: [ 1, 2, 3 ]
   -
     id: 3
     plugin: Base
@@ -139,7 +152,7 @@ views:
           camera: [ System, Perspective ]
           eye: [ 3, 1.5, 1.2 ]
           direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787498, 0.984374 ]
+          up: [ -0.1575, -0.0787497, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -192,7 +205,7 @@ views:
           camera: [ System, Perspective ]
           eye: [ 3, 1.5, 1.2 ]
           direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787498, 0.984374 ]
+          up: [ -0.1575, -0.0787497, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
