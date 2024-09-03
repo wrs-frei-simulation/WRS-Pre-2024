@@ -122,7 +122,7 @@ views:
           camera: [ System, Perspective ]
           eye: [ 3, 1.5, 1.2 ]
           direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787498, 0.984374 ]
+          up: [ -0.1575, -0.0787499, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -175,7 +175,7 @@ views:
           camera: [ System, Perspective ]
           eye: [ 3, 1.5, 1.2 ]
           direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787498, 0.984374 ]
+          up: [ -0.1575, -0.0787499, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -319,7 +319,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 487, 487 ]
+              sizes: [ 504, 504 ]
               children:
                 -
                   type: pane
@@ -331,7 +331,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 731, 243 ]
+              sizes: [ 756, 252 ]
               children:
                 -
                   type: pane
@@ -343,7 +343,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 215, 759 ]
+          sizes: [ 222, 786 ]
           children:
             -
               type: pane
@@ -351,7 +351,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 295, 460 ]
+              sizes: [ 306, 476 ]
               children:
                 -
                   type: pane

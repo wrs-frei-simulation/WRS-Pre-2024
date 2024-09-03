@@ -34,7 +34,6 @@ items:
         selfCollisionDetection: true
         lock_location: false
         scene_sensitive: true
-        zmp: [ 0, 0, 0 ]
       children:
         -
           id: 2
@@ -68,15 +67,15 @@ items:
           class: BodySyncCameraItem
           is_checked: true
           data:
-            target_link: ""
-            parallel_tracking: true
-            interactive_viewpoint_change: true
             camera_type: Perspective
-            near_clip_distance: 0.05
-            far_clip_distance: 200
-            field_of_view: 0.785398
             translation: [ -0.5435, -0.414704, 0.842134 ]
             rotation: [ 0.585982, -0.503027, -0.635287, 106.993 ]
+            field_of_view: 0.785398
+            near_clip_distance: 0.05
+            far_clip_distance: 200
+            interactive_viewpoint_change: true
+            target_link: ""
+            parallel_tracking: true
             local_translation: [ -1.5435, -0.414704, 0.807134 ]
             local_rotation: [ 0.585982, -0.503027, -0.635287, 106.993 ]
 views:

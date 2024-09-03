@@ -1,38 +1,97 @@
 registrations:
   -
-    name: T2-Drone
-    task_project: T2
-    robot_project: [ Drone ]
-    start_position: [ -8.0, -7.0, 0.0 ]
-    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
-    view_project: DebugView
+    name: T2-AizuSpiderSA
+    task_project: [ T2 ]
+    robot_project: [ AizuSpiderSA ]
+    start_position: [ -9.0, -7.0, 0.0 ]
+    simulator_project: [ AGXSimulatorCV ]
+    view_project: SingleSceneView
+    enable_recording: true
+  -
+    name: T2-AizuSpiderSA-ROS2
+    task_project: [ T2 ]
+    robot_project: [ AizuSpiderSA ]
+    start_position: [ -9.0, -7.0, 0.0 ]
+    simulator_project: [ AGXSimulatorCV ]
+    view_project: SingleSceneView
     enable_recording: true
   -
     name: T2-AizuSpiderSS
-    task_project: T2
+    task_project: [ T2 ]
     robot_project: [ AizuSpiderSS ]
-    start_position: [ -8.0, -7.0, 0.0 ]
+    start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AISTSimulatorCV ]
-    view_project: DebugView
+    view_project: SingleSceneView
+    enable_recording: true
   -
-    name: T2-AizuSpiderSA-ROS
-    task_project: T2
-    robot_project: [ AizuSpiderSA-ROS ]
-    start_position: [ -8.0, -7.0, 0.0 ]
+    name: T2-AizuSpiderSS-ROS2
+    task_project: [ T2 ]
+    robot_project: [ AizuSpiderSS ]
+    start_position: [ -9.0, -7.0, 0.0 ]
+    simulator_project: [ AISTSimulatorCV ]
+    view_project: SingleSceneView
+    enable_recording: true
+  -
+    name: T2-DoubleArmV7A
+    task_project: [ T2 ]
+    robot_project: [ DoubleArmV7A ]
+    start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
-    view_project: DebugView
+    view_project: SingleSceneView
+    enable_recording: true
   -
-    name: T2-Drone-AizuSpiderSA
-    task_project: T2
-    robot_project: [ Drone, AizuSpiderSA ]
-    start_position: [ -8.0, -7.0, 0.0 ]
+    name: T2-DoubleArmV7A-ROS2
+    task_project: [ T2 ]
+    robot_project: [ DoubleArmV7A ]
+    start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
-    view_project: DebugView
+    view_project: SingleSceneView
+    enable_recording: true
   -
-    name: T2-SampleDrone-ROS
-    task_project: T2
-    robot_project: [ SampleDrone-ROS ]
-    start_position: [ -8.0, -7.0, 0.0 ]
-    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
-    view_project: DebugView
+    name: T2-DoubleArmV7S
+    task_project: [ T2 ]
+    robot_project: [ DoubleArmV7S ]
+    start_position: [ -9.0, -7.0, 0.0 ]
+    simulator_project: [ AISTSimulatorCV ]
+    view_project: SingleSceneView
+    enable_recording: true
+  -
+    name: T2-DoubleArmV7S-ROS2
+    task_project: [ T2 ]
+    robot_project: [ DoubleArmV7S ]
+    start_position: [ -9.0, -7.0, 0.0 ]
+    simulator_project: [ AISTSimulatorCV ]
+    view_project: SingleSceneView
+    enable_recording: true
+  -
+    name: T2-SampleDroneA
+    task_project: [ T2 ]
+    robot_project: [ SampleDrone ]
+    start_position: [ -9.0, -7.0, 0.0 ]
+    simulator_project: [ AGXSimulatorCV ]
+    view_project: SingleSceneView
+    enable_recording: true
+   -
+    name: T2-SampleDroneA-ROS2
+    task_project: [ T2 ]
+    robot_project: [ SampleDrone-ROS2 ]
+    start_position: [ -9.0, -7.0, 0.0 ]
+    simulator_project: [ AGXSimulatorCV ]
+    view_project: SingleSceneView
+    enable_recording: true
+  -
+    name: T2-SampleDroneS
+    task_project: [ T2 ]
+    robot_project: [ SampleDrone ]
+    start_position: [ -9.0, -7.0, 0.0 ]
+    simulator_project: [ AISTSimulatorCV ]
+    view_project: SingleSceneView
+    enable_recording: true
+  -
+    name: T2-SampleDroneS-ROS2
+    task_project: [ T2 ]
+    robot_project: [ SampleDrone-ROS2 ]
+    start_position: [ -9.0, -7.0, 0.0 ]
+    simulator_project: [ AISTSimulatorCV ]
+    view_project: SingleSceneView
     enable_recording: true
