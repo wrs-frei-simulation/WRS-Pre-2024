@@ -7,19 +7,19 @@ items:
   children:
     -
       id: 1
-      name: "MockupPlant"
+      name: "T2-3"
       plugin: Body
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/MockupPlant/mockup_plant.body"
+        file: "${SHARE}/WRS2024PRE/model/MockupPlant/T2-3.body"
         format: CHOREONOID-BODY
         rootPosition: [ 0, 0, 0 ]
         rootAttitude: [
           1, 0, 0,
           0, 1, 0,
           0, 0, 1 ]
-        jointDisplacements: [ 180, 0, 180, 0, 180, 0, 180, 0, -45, -45 ]
+        jointDisplacements: [ 0, 0 ]
         initialRootPosition: [ 0, 0, 0 ]
         initialRootAttitude: [
           1, 0, 0,
@@ -33,30 +33,6 @@ items:
       children:
         -
           id: 2
-          name: "LightController"
-          plugin: Body
-          class: SimpleControllerItem
-          data:
-            isNoDelayMode: false
-            controllerOptions: ""
-            controller: "PlantLightController"
-            base_directory: "Controller directory"
-            reloading: false
-            export_symbols: false
-        -
-          id: 3
-          name: "FountainController"
-          plugin: Body
-          class: SimpleControllerItem
-          data:
-            isNoDelayMode: false
-            controllerOptions: ""
-            controller: "PlantFountainController"
-            base_directory: "Controller directory"
-            reloading: false
-            export_symbols: false
-        -
-          id: 4
           name: "SmokeController"
           plugin: Body
           class: SimpleControllerItem
@@ -68,37 +44,14 @@ items:
             reloading: false
             export_symbols: false
     -
-      id: 5
-      name: "Structures"
-      plugin: Body
-      class: BodyItem
-      data:
-        file: "${SHARE}/WRS2024PRE/model/MockupPlant/structures.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 0, 0, -0.1 ]
-        rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        initialRootPosition: [ 0, 0, -0.1 ]
-        initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 6
+      id: 3
       name: "MultiCollider"
       plugin: SimpleCollider
       class: MultiColliderItem
       data:
-        translation: [ 0, 0, 0 ]
+        translation: [ 7, 7, 0 ]
         rotation: [ 0, -0, 0 ]
-        size: [ 30, 30, 30 ]
+        size: [ 14, 14, 30 ]
         diffuse_color: [ 0, 1, 1 ]
         radius: 0.5
         height: 1
@@ -129,221 +82,7 @@ items:
         mosaic_chance: 1
         kernel: 16
     -
-      id: 7
-      name: "Fire"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
-      data:
-        file: "${SHARE}/WRS2018/model/Fire.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ -8, 7, 0 ]
-        rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        jointDisplacements: [ 4.58366 ]
-        initialRootPosition: [ -8, 7, 0 ]
-        initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-      children:
-        -
-          id: 8
-          name: "FireController"
-          plugin: Body
-          class: SimpleControllerItem
-          data:
-            isNoDelayMode: false
-            controllerOptions: ""
-            controller: "FireController"
-            base_directory: "Controller directory"
-            reloading: false
-            export_symbols: false
-    -
-      id: 9
-      name: "FireCabinet"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
-      data:
-        file: "${SHARE}/WRS2018/model/FullFeaturedFireCabinet.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ -4, 11.5, 0 ]
-        rootAttitude: [
-          6.123234e-17, 1, -0,
-          -1, 6.123234e-17, 0,
-          0, 0, 1 ]
-        jointDisplacements: [ 0, 0, 0, 0, 45, 0, 0, 0, 0 ]
-        initialRootPosition: [ -4, 11.5, 0 ]
-        initialRootAttitude: [
-          2.22044605e-16, 1, -0,
-          -1, 2.22044605e-16, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-      children:
-        -
-          id: 10
-          name: "HoseNozzleController"
-          plugin: Body
-          class: SimpleControllerItem
-          data:
-            isNoDelayMode: false
-            controllerOptions: ""
-            controller: "HoseNozzleController"
-            base_directory: "Controller directory"
-            reloading: false
-            export_symbols: false
-    -
-      id: 11
-      name: "FireCircle"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
-      data:
-        file: "${SHARE}/WRS2018/model/T5_NoEntryAreaCircle.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ -11, 7, 0 ]
-        rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        initialRootPosition: [ -11, 7, 0 ]
-        initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 12
-      name: "MultiCollider"
-      plugin: SimpleCollider
-      class: MultiColliderItem
-      data:
-        translation: [ -4, 4, 2 ]
-        rotation: [ 0, 0, 0 ]
-        size: [ 1, 1, 1 ]
-        diffuse_color: [ 0, 1, 1 ]
-        radius: 2
-        height: 1
-        specular_exponent: 25
-        transparency: 1
-        scene_type: Sphere
-        collider_type: CFD
-        density: 0
-        viscosity: 0
-        steady_flow: [ 0, 0.5, 0 ]
-        inbound_delay: 0
-        inbound_rate: 0
-        inbound_loss: 0
-        outbound_delay: 0
-        outbound_rate: 0
-        outbound_loss: 0
-        source: 0.0.0.0/0
-        destination: 0.0.0.0/0
-        hsv: [ 0, 0, 0 ]
-        rgb: [ 0, 0, 0 ]
-        coef_b: 0
-        coef_d: 0
-        std_dev: 0
-        salt_amount: 0
-        salt_chance: 1
-        pepper_amount: 0
-        pepper_chance: 1
-        mosaic_chance: 1
-        kernel: 16
-    -
-      id: 13
-      name: "VFXCollider1"
-      plugin: SimpleCollider
-      class: MultiColliderItem
-      data:
-        translation: [ -7, -7, 0 ]
-        rotation: [ 0, -0, 0 ]
-        size: [ 10, 10, 10 ]
-        diffuse_color: [ 1, 0, 1 ]
-        radius: 0.5
-        height: 1
-        specular_exponent: 25
-        transparency: 1
-        scene_type: Box
-        collider_type: VFX
-        density: 0
-        viscosity: 0
-        steady_flow: [ 0, 0, 0 ]
-        inbound_delay: 0
-        inbound_rate: 0
-        inbound_loss: 0
-        outbound_delay: 0
-        outbound_rate: 0
-        outbound_loss: 0
-        source: 0.0.0.0/0
-        destination: 0.0.0.0/0
-        hsv: [ 0, 0, 0 ]
-        rgb: [ 0, 0, 0 ]
-        coef_b: 0
-        coef_d: 0
-        std_dev: 0
-        salt_amount: 0
-        salt_chance: 1
-        pepper_amount: 0
-        pepper_chance: 1
-        mosaic_chance: 0
-        kernel: 16
-    -
-      id: 14
-      name: "VFXCollider2"
-      plugin: SimpleCollider
-      class: MultiColliderItem
-      data:
-        translation: [ 7, -7, 0 ]
-        rotation: [ 0, -0, 0 ]
-        size: [ 10, 10, 10 ]
-        diffuse_color: [ 1, 0, 1 ]
-        radius: 0.5
-        height: 1
-        specular_exponent: 25
-        transparency: 1
-        scene_type: Box
-        collider_type: VFX
-        density: 0
-        viscosity: 0
-        steady_flow: [ 0, 0, 0 ]
-        inbound_delay: 0
-        inbound_rate: 0
-        inbound_loss: 0
-        outbound_delay: 0
-        outbound_rate: 0
-        outbound_loss: 0
-        source: 0.0.0.0/0
-        destination: 0.0.0.0/0
-        hsv: [ 0, 0, 0 ]
-        rgb: [ 0, 0, 0 ]
-        coef_b: 0
-        coef_d: 0
-        std_dev: 0
-        salt_amount: 0.01
-        salt_chance: 0.1
-        pepper_amount: 0
-        pepper_chance: 1
-        mosaic_chance: 0
-        kernel: 16
-    -
-      id: 15
+      id: 4
       name: "VFXCollider3"
       plugin: SimpleCollider
       class: MultiColliderItem
@@ -380,44 +119,6 @@ items:
         pepper_chance: 1
         mosaic_chance: 0.1
         kernel: 16
-    -
-      id: 16
-      name: "VFXCollider4"
-      plugin: SimpleCollider
-      class: MultiColliderItem
-      data:
-        translation: [ -7, 7, 0 ]
-        rotation: [ 0, -0, 0 ]
-        size: [ 10, 10, 10 ]
-        diffuse_color: [ 1, 0, 1 ]
-        radius: 0.5
-        height: 1
-        specular_exponent: 25
-        transparency: 1
-        scene_type: Box
-        collider_type: VFX
-        density: 0
-        viscosity: 0
-        steady_flow: [ 0, 0, 0 ]
-        inbound_delay: 0
-        inbound_rate: 0
-        inbound_loss: 0
-        outbound_delay: 0
-        outbound_rate: 0
-        outbound_loss: 0
-        source: 0.0.0.0/0
-        destination: 0.0.0.0/0
-        hsv: [ 0, 0, 0 ]
-        rgb: [ 0, 0, 0 ]
-        coef_b: 0
-        coef_d: 0
-        std_dev: 0
-        salt_amount: 0.01
-        salt_chance: 0.1
-        pepper_amount: 0
-        pepper_chance: 1
-        mosaic_chance: 0.1
-        kernel: 16
 views:
   -
     id: 0
@@ -439,7 +140,7 @@ views:
     class: ItemTreeView
     mounted: true
     state:
-      expanded: [ 1, 7, 9 ]
+      expanded: [ 1 ]
   -
     id: 4
     plugin: Base
@@ -471,9 +172,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -11.9721, 37.1397, 20.7148 ]
-          direction: [ 0.281855, -0.842472, -0.459128 ]
-          up: [ 0.145668, -0.435407, 0.88837 ]
+          eye: [ -5.05092, 18.7811, 9.38728 ]
+          direction: [ 0.612086, -0.603029, -0.511572 ]
+          up: [ 0.364422, -0.35903, 0.85924 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -524,7 +225,7 @@ views:
           isCurrent: true
           eye: [ 3, 1.5, 1.2 ]
           direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787497, 0.984374 ]
+          up: [ -0.1575, -0.0787495, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -575,7 +276,7 @@ views:
           isCurrent: true
           eye: [ 3, 1.5, 1.2 ]
           direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787496, 0.984374 ]
+          up: [ -0.1575, -0.0787495, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -702,26 +403,6 @@ Body:
     scene_bodies:
       -
         body_item: 1
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 5
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 7
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 9
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 11
         show_cm: false
         show_cm_projection: false
         show_zmp: false

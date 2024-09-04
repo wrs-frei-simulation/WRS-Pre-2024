@@ -4,6 +4,30 @@ items:
   plugin: Base
   class: RootItem
   is_builtin_item: true
+  children:
+    -
+      id: 1
+      name: "Structures"
+      plugin: Body
+      class: BodyItem
+      data:
+        file: "${SHARE}/WRS2024PRE/model/MockupPlant/structures.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 0, 0, -0.1 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ 0, 0, -0.1 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
 views:
   -
     id: 0
@@ -48,9 +72,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ 3, 1.5, 1.2 ]
-          direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787499, 0.984374 ]
+          eye: [ 31.9581, 19.7083, 23.8864 ]
+          direction: [ -0.694635, -0.448822, -0.562175 ]
+          up: [ -0.472186, -0.305092, 0.827018 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -126,11 +150,6 @@ views:
     mounted: true
   -
     id: 9
-    plugin: JoystickStart
-    class: OnScreenJoystickView
-    mounted: true
-  -
-    id: 10
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -167,7 +186,13 @@ Body:
     targetJoints: all
     checkSelfCollisions: true
     onlyTimeBarRange: false
-  "OperableSceneBody": { }
+  "OperableSceneBody":
+    scene_bodies:
+      -
+        body_item: 1
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
   "SplineFilterDialog":
     isInputFrameRateSpecified: false
     inputFrameRate: 200
@@ -209,8 +234,8 @@ viewAreas:
                   views: [ 4 ]
                 -
                   type: pane
-                  views: [ 3, 10, 9 ]
-                  current: 9
+                  views: [ 3, 9 ]
+                  current: 3
         -
           type: splitter
           orientation: vertical
