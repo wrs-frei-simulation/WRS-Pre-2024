@@ -18,11 +18,11 @@ public:
     virtual bool initialize(SimpleControllerIO* io) override
     {
         auto ioBody = io->body();
-        valve = ioBody->link("SB4_SB3_PIPE1_VALVE_HANDLE");
+        valve = ioBody->link("SB1_SB3_PIPE1_VALVE_HANDLE");
         // fountains = ioBody->devices();
 
         if(!valve) {
-            (*os) << "SB4_SB3_PIPE1_VALVE_HANDLE is not found." << std::endl;
+            (*os) << "SB1_SB3_PIPE1_VALVE_HANDLE is not found." << std::endl;
         }
         io->enableInput(valve, Link::JointAngle);
 

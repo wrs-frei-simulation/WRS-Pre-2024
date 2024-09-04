@@ -1,0 +1,82 @@
+format: ChoreonoidBody
+format_version: 2.0
+angle_unit: degree
+name: T2-1
+
+links:
+  -
+    name: Root
+    translation: [ 0, 0, 0 ]
+    joint_type: fixed
+    elements:
+      -
+        type: SpotLight
+        name: Light1
+        translation: [ -7.0, -7.0, 2.9 ]
+        beamWidth: 90
+        cutOffAngle: 120
+        cutOffExponent: 6
+        attenuation: [ 1, 0, 0.01 ]
+        on: false
+        elements:
+          - &Light
+            type: Shape
+            rotation: [ 1, 0, 0, 90 ]
+            geometry: { type: Cone, height: 0.1, radius: 0.05 }
+            appearance: { material: { diffuseColor: [ 1.0, 1.0, 0.4 ] } }
+      -
+        type: SpotLight
+        name: Light2
+        translation: [ 7.0, -7.0, 2.9 ]
+        beamWidth: 90
+        cutOffAngle: 120
+        cutOffExponent: 6
+        attenuation: [ 1, 0, 0.01 ]
+        on: false
+        elements:
+          - *Light
+      -
+        type: SpotLight
+        name: Light3
+        translation: [ 7.0, 7.0, 2.9 ]
+        beamWidth: 90
+        cutOffAngle: 120
+        cutOffExponent: 6
+        attenuation: [ 1, 0, 0.01 ]
+        on: false
+        elements:
+          - *Light
+      -
+        type: SpotLight
+        name: Light4
+        translation: [ -7.0, 7.0, 2.9 ]
+        beamWidth: 90
+        cutOffAngle: 120
+        cutOffExponent: 6
+        attenuation: [ 1, 0, 0.01 ]
+        on: false
+        elements:
+          - *Light
+  -
+    type: SubBody
+    uri: "subbody/power_panel.body"
+    parent: Root
+    prefix: SB1_
+    translation: [ -7.0, -11.85, 1.0 ]
+    rotation: [ 0, 0, 1, 90 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/floor.body"
+    parent: Root
+    prefix: SB2_
+    translation: [ -7.0, -7.0, -0.1 ]
+    joint_type: fixed
+    joint_id_offset: 2
+  -
+    type: SubBody
+    uri: "subbody/path.body"
+    parent: Root
+    prefix: SB3_
+    translation: [ 0, -7.0, 0 ]
+    joint_type: fixed

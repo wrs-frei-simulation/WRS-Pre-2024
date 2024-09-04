@@ -1,7 +1,7 @@
 registrations:
   -
     name: T2-AizuSpiderSA
-    task_project: [ T2 ]
+    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
     robot_project: [ AizuSpiderSA ]
     start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
@@ -9,7 +9,8 @@ registrations:
     enable_recording: true
   -
     name: T2-AizuSpiderSA-ROS2
-    task_project: [ T2 ]
+    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    robot_project: [ AizuSpiderSA ]
     robot_project: [ AizuSpiderSA-ROS2 ]
     start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
@@ -17,7 +18,8 @@ registrations:
     enable_recording: true
   -
     name: T2-AizuSpiderSS
-    task_project: [ T2 ]
+    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    robot_project: [ AizuSpiderSA ]
     robot_project: [ AizuSpiderSS ]
     start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AISTSimulatorCV ]
@@ -25,7 +27,8 @@ registrations:
     enable_recording: true
   -
     name: T2-AizuSpiderSS-ROS2
-    task_project: [ T2 ]
+    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    robot_project: [ AizuSpiderSA ]
     robot_project: [ AizuSpiderSS-ROS2 ]
     start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AISTSimulatorCV ]
@@ -33,7 +36,8 @@ registrations:
     enable_recording: true
   -
     name: T2-DoubleArmV7A
-    task_project: [ T2 ]
+    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    robot_project: [ AizuSpiderSA ]
     robot_project: [ DoubleArmV7A ]
     start_position: [ -10.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
@@ -41,7 +45,8 @@ registrations:
     enable_recording: true
   -
     name: T2-DoubleArmV7A-ROS2
-    task_project: [ T2 ]
+    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    robot_project: [ AizuSpiderSA ]
     robot_project: [ DoubleArmV7A-ROS2 ]
     start_position: [ -10.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
@@ -49,7 +54,8 @@ registrations:
     enable_recording: true
   -
     name: T2-DoubleArmV7S
-    task_project: [ T2 ]
+    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    robot_project: [ AizuSpiderSA ]
     robot_project: [ DoubleArmV7S ]
     start_position: [ -10.0, -7.0, 0.0 ]
     simulator_project: [ AISTSimulatorCV ]
@@ -57,39 +63,25 @@ registrations:
     enable_recording: true
   -
     name: T2-DoubleArmV7S-ROS2
-    task_project: [ T2 ]
+    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    robot_project: [ AizuSpiderSA ]
     robot_project: [ DoubleArmV7S-ROS2 ]
     start_position: [ -10.0, -7.0, 0.0 ]
     simulator_project: [ AISTSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-SampleDroneA
-    task_project: [ T2 ]
-    robot_project: [ SampleDrone ]
-    start_position: [ -9.0, -7.0, 0.0 ]
-    simulator_project: [ AGXSimulatorCV ]
-    view_project: SingleSceneView
-    enable_recording: true
-  -
     name: T2-SampleDroneA-ROS2
-    task_project: [ T2 ]
+    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
     robot_project: [ SampleDrone-ROS2 ]
     start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-SampleDroneS
-    task_project: [ T2 ]
-    robot_project: [ SampleDrone ]
-    start_position: [ -9.0, -7.0, 0.0 ]
-    simulator_project: [ AISTSimulatorCV ]
-    view_project: SingleSceneView
-    enable_recording: true
-  -
     name: T2-SampleDroneS-ROS2
-    task_project: [ T2 ]
+    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    robot_project: [ AizuSpiderSA ]
     robot_project: [ SampleDrone-ROS2 ]
     start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AISTSimulatorCV ]

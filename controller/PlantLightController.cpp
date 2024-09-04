@@ -19,11 +19,11 @@ public:
     virtual bool initialize(SimpleControllerIO* io) override
     {
         auto ioBody = io->body();
-        breaker = ioBody->link("BREAKER_R");
+        breaker = ioBody->link("SB1_BREAKER_R");
         lights = ioBody->devices();
 
         if(!breaker) {
-            (*os) << "BREAKER_R is not found." << std::endl;
+            (*os) << "SB1_BREAKER_R is not found." << std::endl;
         }
         io->enableInput(breaker, Link::JointAngle);
 
