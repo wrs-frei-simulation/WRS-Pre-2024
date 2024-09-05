@@ -33,13 +33,13 @@ items:
       children:
         -
           id: 2
-          name: "SmokeController"
+          name: "ValveController"
           plugin: Body
           class: SimpleControllerItem
           data:
             isNoDelayMode: false
-            controllerOptions: ""
-            controller: "PlantSmokeController"
+            controllerOptions: "SB1_SB3_"
+            controller: "PlantValveController"
             base_directory: "Controller directory"
             reloading: false
             export_symbols: false
@@ -428,7 +428,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 504, 504 ]
+              sizes: [ 518, 518 ]
               children:
                 -
                   type: pane
@@ -440,7 +440,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 757, 251 ]
+              sizes: [ 778, 258 ]
               children:
                 -
                   type: pane
@@ -452,7 +452,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 222, 786 ]
+          sizes: [ 228, 808 ]
           children:
             -
               type: pane
@@ -460,7 +460,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 306, 476 ]
+              sizes: [ 315, 489 ]
               children:
                 -
                   type: pane
