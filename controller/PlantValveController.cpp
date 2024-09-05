@@ -1,5 +1,5 @@
 /**
-    Fountaiin Controller
+    Valve Controller
     @author Kenta Suzuki
 */
 
@@ -9,7 +9,7 @@
 
 using namespace cnoid;
 
-class PlantFountainController : public SimpleController
+class PlantValveController : public SimpleController
 {
     Link* valve;
     DeviceList<FountainDevice> fountains;
@@ -19,11 +19,19 @@ public:
     virtual bool initialize(SimpleControllerIO* io) override
     {
         auto ioBody = io->body();
-        valve = ioBody->link("SB1_SB3_PIPE1_VALVE_HANDLE");
+
+        std::string prefix;
+
+        for(auto& option : io->options()) {
+            prefix = option;
+            io->os() << "prefix: " << prefix << std::endl;
+        }
+
+        valve = ioBody->link(prefix + "PIPE1_VALVE_HANDLE");
         fountains = ioBody->devices();
 
         if(!valve) {
-            (*os) << "SB1_SB3_PIPE1_VALVE_HANDLE is not found." << std::endl;
+            (*os) << prefix << "PIPE1_VALVE_HANDLE is not found." << std::endl;
         }
         io->enableInput(valve, Link::JointAngle);
 
@@ -50,4 +58,4 @@ public:
     }
 };
 
-CNOID_IMPLEMENT_SIMPLE_CONTROLLER_FACTORY(PlantFountainController)
+CNOID_IMPLEMENT_SIMPLE_CONTROLLER_FACTORY(PlantValveController)
