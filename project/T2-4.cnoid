@@ -244,6 +244,54 @@ items:
         pepper_chance: 1
         mosaic_chance: 0.1
         kernel: 16
+    -
+      id: 10
+      name: "Target-LP"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/target-lp.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 0, -4, 7 ]
+        rootAttitude: [
+          1, 0, -0,
+          0, 0.707106781, 0.707106781,
+          0, -0.707106781, 0.707106781 ]
+        initialRootPosition: [ 0, -4, 7 ]
+        initialRootAttitude: [
+          1, 0, -0,
+          0, 0.707106781, 0.707106781,
+          0, -0.707106781, 0.707106781 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 11
+      name: "Target-SB"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/target-sb.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -8, 7, 0.1 ]
+        rootAttitude: [
+          1, -0, 0,
+          0, 6.123234e-17, -1,
+          0, 1, 6.123234e-17 ]
+        initialRootPosition: [ -8, 7, 0.1 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 2.22044605e-16, -1,
+          0, 1, 2.22044605e-16 ]
+        fix_root: false
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
 views:
   -
     id: 0
@@ -297,9 +345,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -4.60199, 26.342, 12.4705 ]
-          direction: [ 0.00255895, -0.897371, -0.44127 ]
-          up: [ 0.00125833, -0.441268, 0.897374 ]
+          eye: [ -6.36452, 23.0148, 9.51779 ]
+          direction: [ -0.0122732, -0.878925, -0.476802 ]
+          up: [ -0.00665735, -0.476756, 0.879011 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -513,8 +561,8 @@ toolbars:
     lazyCollisionDetectionMode: true
 Body:
   "BodySelectionManager":
-    current_body_item: 6
-    current_link: "root"
+    current_body_item: 1
+    current_link: "SB2_Floor"
   "KinematicFaultChecker":
     checkJointPositions: true
     angleMargin: 0
@@ -546,6 +594,16 @@ Body:
         show_cm: false
         show_cm_projection: false
         show_zmp: false
+      -
+        body_item: 10
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 11
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
   "SplineFilterDialog":
     isInputFrameRateSpecified: false
     inputFrameRate: 200
@@ -568,7 +626,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 504, 504 ]
+              sizes: [ 518, 518 ]
               children:
                 -
                   type: pane
@@ -580,7 +638,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 757, 251 ]
+              sizes: [ 778, 258 ]
               children:
                 -
                   type: pane
@@ -592,7 +650,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 222, 786 ]
+          sizes: [ 228, 808 ]
           children:
             -
               type: pane
@@ -600,7 +658,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 306, 476 ]
+              sizes: [ 315, 489 ]
               children:
                 -
                   type: pane

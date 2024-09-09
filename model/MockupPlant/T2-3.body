@@ -17,6 +17,14 @@ links:
         type: SmokeDevice
         name: Smoke2
         translation: [ 6.0, 9.5, 1.0 ]
+      -
+        type: FireDevice
+        name: Fire1
+        translation: [ 6.0, 7.0, 1.8 ]
+      -
+        type: FireDevice
+        name: Fire2
+        translation: [ 6.0, 9.5, 1.0 ]
   -
     type: SubBody
     uri: "subbody/floor.body"

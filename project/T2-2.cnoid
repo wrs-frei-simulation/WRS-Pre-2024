@@ -119,6 +119,54 @@ items:
         pepper_chance: 1
         mosaic_chance: 0
         kernel: 16
+    -
+      id: 5
+      name: "Target-MB"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/target-mb.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 8, -7, 0.06 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, -1, -1.2246468e-16,
+          0, 1.2246468e-16, -1 ]
+        initialRootPosition: [ 8, -7, 0.06 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, -1, -1.2246468e-16,
+          0, 1.2246468e-16, -1 ]
+        fix_root: false
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 6
+      name: "Target-LC"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/target-lc.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 8.74132278, -10.2768007, 0.777528916 ]
+        rootAttitude: [
+          1, 0, -0,
+          0, 0.707106781, 0.707106781,
+          0, -0.707106781, 0.707106781 ]
+        initialRootPosition: [ 8.74132278, -10.2768007, 0.777528916 ]
+        initialRootAttitude: [
+          1, 0, -0,
+          0, 0.707106781, 0.707106781,
+          0, -0.707106781, 0.707106781 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
 views:
   -
     id: 0
@@ -172,9 +220,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -5.00647, 3.49498, 7.73485 ]
-          direction: [ 0.653833, -0.594549, -0.467989 ]
-          up: [ 0.346243, -0.314848, 0.883734 ]
+          eye: [ -5.59702, 5.24587, 7.39462 ]
+          direction: [ 0.667457, -0.636389, -0.386666 ]
+          up: [ 0.27985, -0.266824, 0.92222 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -408,6 +456,16 @@ Body:
     scene_bodies:
       -
         body_item: 1
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 5
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 6
         show_cm: false
         show_cm_projection: false
         show_zmp: false
