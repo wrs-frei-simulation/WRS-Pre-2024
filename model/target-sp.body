@@ -1,0 +1,67 @@
+format: ChoreonoidBody
+format_version: 2.0
+angle_unit: degree
+name: Target-SP
+links:
+  -
+    name: Root
+    joint_type: free
+    center_of_mass: [ 0, 0, 0 ]
+    mass: 0.5
+    inertia: [ 0.000615635, 0, 0, 0, 0.000399437, 0, 0, 0, 0.000615635 ]
+    elements:
+      -
+        type: Visual
+        rotation: [ 1, 0, 0, -90 ]
+        elements:
+          -
+            type: Shape
+            geometry:
+              type: IndexedFaceSet
+              coordinate: [
+                 0.02,  0.02, 0.0,
+                -0.02,  0.02, 0.0,
+                -0.02, -0.02, 0.0,
+                 0.02, -0.02, 0.0 ]
+              coordIndex: [ 0, 1, 2, 3, -1 ]
+              texCoord: [
+                1, 1,
+                0, 1,
+                0, 0,
+                1, 0 ]
+              texCoordIndex: [ 0, 1, 2, 3, -1 ]
+            appearance: { texture: { url: "resource/QRT2_7.png" } }
+      -
+        type: Shape
+        geometry:
+          type: Extrusion
+          cross_section: [
+            0.04, 0,
+            0.034641, 0.02,
+            0.02, 0.034641,
+            2.44929e-18, 0.04,
+            -0.02, 0.034641,
+            -0.034641, 0.02,
+            -0.04, 4.89859e-18,
+            -0.034641, -0.02,
+            -0.02, -0.034641,
+            -7.34788e-18, -0.04,
+            0.02, -0.034641,
+            0.034641, -0.02,
+            0.04, -9.79717e-18,
+            0.03, -7.34788e-18,
+            0.0259808, -0.015,
+            0.015, -0.0259808,
+            -5.51091e-18, -0.03,
+            -0.015, -0.0259808,
+            -0.0259808, -0.015,
+            -0.03, 3.67394e-18,
+            -0.0259808, 0.015,
+            -0.015, 0.0259808,
+            1.83697e-18, 0.03,
+            0.015, 0.0259808,
+            0.0259808, 0.015,
+            0.03, 0,
+            0.04, 0 ]
+          spine: [ 0, -0.05, 0, 0, 0.05, 0 ]
+        appearance: { texture: { url: "resource/Polished_Concrete_New.jpg" } }

@@ -4,14 +4,16 @@
 */
 
 #include <cnoid/EigenUtil>
-#include <cnoid/SimpleController>
+#include <cnoid/FireDevice>
 #include <cnoid/FountainDevice>
+#include <cnoid/SimpleController>
 
 using namespace cnoid;
 
 class PlantValveController : public SimpleController
 {
     Link* valve;
+    DeviceList<FireDevice> fires;
     DeviceList<FountainDevice> fountains;
     std::ostream* os;
 
@@ -28,6 +30,7 @@ public:
         }
 
         valve = ioBody->link(prefix + "PIPE1_VALVE_HANDLE");
+        fires = ioBody->devices();
         fountains = ioBody->devices();
 
         if(!valve) {
@@ -36,6 +39,10 @@ public:
         io->enableInput(valve, Link::JointAngle);
 
         os = &io->os();
+        for(auto& fire : fires) {
+            fire->on(true);
+            fire->notifyStateChange();
+        }
         for(auto& fountain : fountains) {
             fountain->on(true);
             fountain->notifyStateChange();
@@ -46,6 +53,14 @@ public:
     virtual bool control() override
     {
         bool is_valve_opened = valve->q() > radian(0.0) ? true : false;
+        for(auto& fire : fires) {
+            if(is_valve_opened && !fire->on()) {
+                fire->on(true);
+            } else if(!is_valve_opened && fire->on()) {
+                fire->on(false);
+            }
+            fire->notifyStateChange();
+        }
         for(auto& fountain : fountains) {
             if(is_valve_opened && !fountain->on()) {
                 fountain->on(true);

@@ -119,6 +119,54 @@ items:
         pepper_chance: 1
         mosaic_chance: 0.1
         kernel: 16
+    -
+      id: 5
+      name: "Target-MC"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/target-mc.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 3, 10, 0 ]
+        rootAttitude: [
+          1, -0, 0,
+          0, 0.707106781, -0.707106781,
+          0, 0.707106781, 0.707106781 ]
+        initialRootPosition: [ 3, 10, 0 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 0.707106781, -0.707106781,
+          0, 0.707106781, 0.707106781 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 6
+      name: "Target-SP"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/target-sp.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 8, 8, 0.05 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ 8, 8, 0.05 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: false
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
 views:
   -
     id: 0
@@ -172,9 +220,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -5.05092, 18.7811, 9.38728 ]
-          direction: [ 0.612086, -0.603029, -0.511572 ]
-          up: [ 0.364422, -0.35903, 0.85924 ]
+          eye: [ -4.36444, 18.6405, 6.3645 ]
+          direction: [ 0.664917, -0.655078, -0.35883 ]
+          up: [ 0.255615, -0.251833, 0.933403 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -403,6 +451,16 @@ Body:
     scene_bodies:
       -
         body_item: 1
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 5
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 6
         show_cm: false
         show_cm_projection: false
         show_zmp: false

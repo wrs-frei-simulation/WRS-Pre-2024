@@ -119,6 +119,78 @@ items:
         pepper_chance: 1
         mosaic_chance: 0
         kernel: 16
+    -
+      id: 5
+      name: "Target-LB"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/target-lb.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -2.5, -5, 0.09 ]
+        rootAttitude: [
+          6.123234e-17, -1.32561289e-33, -1,
+          4.05851896e-50, 1, -1.32561289e-33,
+          1, 4.05851896e-50, 6.123234e-17 ]
+        initialRootPosition: [ -2.5, -5, 0.09 ]
+        initialRootAttitude: [
+          2.22044605e-16, -1.32561289e-33, -1,
+          8.55284707e-50, 1, -1.32561289e-33,
+          1, 8.55284707e-50, 2.22044605e-16 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 6
+      name: "Target-MP"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/target-mp.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -5, -9, 0.03 ]
+        rootAttitude: [
+          1, -0, 0,
+          0, 0.707106781, -0.707106781,
+          0, 0.707106781, 0.707106781 ]
+        initialRootPosition: [ -5, -9, 0.03 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 0.707106781, -0.707106781,
+          0, 0.707106781, 0.707106781 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 7
+      name: "Target-SC"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/target-sc.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -3, -10, 0 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ -3, -10, 0 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
 views:
   -
     id: 0
@@ -172,9 +244,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -10.86, 6.91713, 7.3383 ]
-          direction: [ 0.281855, -0.842472, -0.459128 ]
-          up: [ 0.145669, -0.435407, 0.88837 ]
+          eye: [ -15.0157, 6.62701, 7.7362 ]
+          direction: [ 0.471226, -0.763693, -0.44127 ]
+          up: [ 0.231718, -0.375534, 0.897374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -403,6 +475,21 @@ Body:
     scene_bodies:
       -
         body_item: 1
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 5
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 6
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 7
         show_cm: false
         show_cm_projection: false
         show_zmp: false
