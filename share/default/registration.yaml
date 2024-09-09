@@ -1,5 +1,35 @@
 registrations:
   -
+    name: T2
+    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    view_project: SingleSceneView
+    enable_recording: true
+  -
+    name: T2-1
+    task_project: [ T2-1 ]
+    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    view_project: SingleSceneView
+    enable_recording: true
+  -
+    name: T2-2
+    task_project: [ T2-2 ]
+    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    view_project: SingleSceneView
+    enable_recording: true
+  -
+    name: T2-3
+    task_project: [ T2-3 ]
+    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    view_project: SingleSceneView
+    enable_recording: true
+  -
+    name: T2-4
+    task_project: [ T2-4 ]
+    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    view_project: SingleSceneView
+    enable_recording: true
+  -
     name: T2-AizuSpiderSA
     task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
     robot_project: [ AizuSpiderSA ]
