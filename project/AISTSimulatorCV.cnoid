@@ -60,7 +60,9 @@ items:
             all_scene_objects: true
             range_sensor_precision_ratio: 2
             depth_error: 0
-            enable_head_light: true
+            background_color: [ 0, 0, 0 ]
+            enable_head_light: false
+            enable_world_light: false
             enable_additional_lights: true
             antialiasing: false
             dynamics_type: All process
@@ -249,7 +251,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 501, 501 ]
+              sizes: [ 518, 518 ]
               children:
                 -
                   type: pane
@@ -261,7 +263,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 752, 250 ]
+              sizes: [ 778, 258 ]
               children:
                 -
                   type: pane
@@ -273,7 +275,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 221, 781 ]
+          sizes: [ 228, 808 ]
           children:
             -
               type: pane
@@ -281,7 +283,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 304, 473 ]
+              sizes: [ 315, 489 ]
               children:
                 -
                   type: pane

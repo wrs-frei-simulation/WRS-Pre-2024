@@ -7,6 +7,7 @@
 #include <cnoid/FireDevice>
 #include <cnoid/FountainDevice>
 #include <cnoid/SimpleController>
+#include <cnoid/SmokeDevice>
 
 using namespace cnoid;
 
@@ -15,6 +16,7 @@ class PlantValveController : public SimpleController
     Link* valve;
     DeviceList<FireDevice> fires;
     DeviceList<FountainDevice> fountains;
+    DeviceList<SmokeDevice> smokes;
     std::ostream* os;
 
 public:
@@ -32,6 +34,7 @@ public:
         valve = ioBody->link(prefix + "PIPE1_VALVE_HANDLE");
         fires = ioBody->devices();
         fountains = ioBody->devices();
+        smokes = ioBody->devices();
 
         if(!valve) {
             (*os) << prefix << "PIPE1_VALVE_HANDLE is not found." << std::endl;
@@ -46,6 +49,10 @@ public:
         for(auto& fountain : fountains) {
             fountain->on(true);
             fountain->notifyStateChange();
+        }
+        for(auto& smoke : smokes) {
+            smoke->on(true);
+            smoke->notifyStateChange();
         }
         return true;
     }
@@ -68,6 +75,14 @@ public:
                 fountain->on(false);
             }
             fountain->notifyStateChange();
+        }
+        for(auto& smoke : smokes) {
+            if(is_valve_opened && !smoke->on()) {
+                smoke->on(true);
+            } else if(!is_valve_opened && smoke->on()) {
+                smoke->on(false);
+            }
+            smoke->notifyStateChange();
         }
         return true;
     }
