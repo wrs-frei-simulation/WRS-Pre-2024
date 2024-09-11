@@ -7,65 +7,60 @@ items:
   children:
     -
       id: 1
-      name: "AISTSimulator"
+      name: "Crawler"
       plugin: Body
-      class: AISTSimulatorItem
+      class: BodyItem
+      is_checked: true
       data:
-        time_step: 0.001
-        realtime_sync_mode: compensatory
-        recording: full
-        time_range_mode: unlimited
-        time_length: 180
-        is_active_control_time_range_mode: false
-        output_all_link_positions: false
-        output_device_states: true
-        use_controller_threads: true
-        record_collision_data: false
-        controller_options: ""
-        block_scene_view_edit_mode: false
-        dynamicsMode: "Forward dynamics"
-        integrationMode: semi-implicit_euler
-        gravity: [ 0, 0, -9.80665 ]
-        min_friction_coefficient: 0
-        max_friction_coefficient: 100
-        cullingThresh: 0.005
-        contactCullingDepth: 0.05
-        errorCriterion: 0.001
-        maxNumIterations: 25
-        contactCorrectionDepth: 0.00025
-        contactCorrectionVelocityRatio: 5
-        kinematicWalking: false
-        2Dmode: false
-        oldAccelSensorMode: false
+        file: "${SHARE}/WRS2024PRE/model/model_test/crawler.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 0, 0, 0.1 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        jointDisplacements: [ 0, 0 ]
+        initialRootPosition: [ 0, 0, 0.1 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: false
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
       children:
         -
           id: 2
-          name: "CFDSimulator"
-          plugin: CFD
-          class: CFDSimulatorItem
+          name: "JoystickController"
+          plugin: Body
+          class: SimpleControllerItem
           data:
-            enabled: true
+            isNoDelayMode: false
+            controllerOptions: ""
+            controller: "SampleCrawlerJoystickController"
+            base_directory: "Controller directory"
+            reloading: false
+            export_symbols: false
         -
           id: 3
-          name: "VFXVisionSimulator"
-          plugin: VFX
-          class: VFXVisionSimulatorItem
+          name: "BodySyncCamera"
+          plugin: Body
+          class: BodySyncCameraItem
+          is_checked: true
           data:
-            enabled: true
-            max_frame_rate: 1000
-            max_latency: 1
-            record_vision_data: false
-            thread_mode: Sensor
-            best_effort: true
-            all_scene_objects: true
-            range_sensor_precision_ratio: 2
-            depth_error: 0
-            background_color: [ 0, 0, 0 ]
-            enable_head_light: false
-            enable_world_light: false
-            enable_additional_lights: true
-            antialiasing: false
-            dynamics_type: All process
+            camera_type: Perspective
+            translation: [ -1.70498, -0.627839, 0.936448 ]
+            rotation: [ 0.575952, -0.489437, -0.654775, 104.77 ]
+            field_of_view: 0.785398
+            near_clip_distance: 0.04
+            far_clip_distance: 200
+            interactive_viewpoint_change: true
+            target_link: ""
+            parallel_tracking: false
+            local_translation: [ -1.70498, -0.627839, 0.836448 ]
+            local_rotation: [ 0.575952, -0.489437, -0.654775, 104.77 ]
 views:
   -
     id: 0
@@ -89,7 +84,7 @@ views:
       unique_rpy: false
       show_quaternion: false
       show_rotation_matrix: false
-      coordinate: parent
+      coordinate: world
   -
     id: 3
     plugin: Base
@@ -109,13 +104,15 @@ views:
       cameras:
         -
           camera: [ System, Perspective ]
-          isCurrent: true
           eye: [ 3, 1.5, 1.2 ]
           direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787495, 0.984374 ]
+          up: [ -0.1575, -0.0787498, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
+        -
+          camera: BodySyncCamera
+          isCurrent: true
       lighting_mode: normal
       culling_mode: enabled
       shading_mode: smooth
@@ -215,6 +212,9 @@ toolbars:
     penetrationBlockDepth: 0.0005
     lazyCollisionDetectionMode: true
 Body:
+  "BodySelectionManager":
+    current_body_item: 1
+    current_link: "BODY"
   "KinematicFaultChecker":
     checkJointPositions: true
     angleMargin: 0
@@ -224,7 +224,13 @@ Body:
     targetJoints: all
     checkSelfCollisions: true
     onlyTimeBarRange: false
-  "OperableSceneBody": { }
+  "OperableSceneBody":
+    scene_bodies:
+      -
+        body_item: 1
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
   "SplineFilterDialog":
     isInputFrameRateSpecified: false
     inputFrameRate: 200
@@ -259,7 +265,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 778, 258 ]
+              sizes: [ 777, 259 ]
               children:
                 -
                   type: pane

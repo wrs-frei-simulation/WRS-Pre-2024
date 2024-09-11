@@ -122,7 +122,7 @@ views:
           camera: [ System, Perspective ]
           eye: [ 3, 1.5, 1.2 ]
           direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787499, 0.984374 ]
+          up: [ -0.1575, -0.0787498, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -161,59 +161,6 @@ views:
       yz_grid_color: [ 0.9, 0.9, 0.9 ]
   -
     id: 5
-    name: "Camera Scene"
-    plugin: Base
-    class: SceneView
-    state:
-      editMode: false
-      viewpointOperationMode: thirdPerson
-      visible_polygon_elements: [ face ]
-      highlighting: false
-      collisionLines: false
-      cameras:
-        -
-          camera: [ System, Perspective ]
-          eye: [ 3, 1.5, 1.2 ]
-          direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787499, 0.984374 ]
-        -
-          camera: [ System, Orthographic ]
-          orthoHeight: 20
-        -
-          camera: [ AizuSpider, FRONT_CAMERA ]
-          isCurrent: true
-      lighting_mode: normal
-      culling_mode: enabled
-      shading_mode: smooth
-      world_light: true
-      world_light_intensity: 0.5
-      ambient_light: true
-      ambient_light_intensity: 0.5
-      head_light: true
-      head_light_intensity: 0.5
-      world_light_shadow: true
-      shadow_lights:
-        - { index: 0, enabled: false }
-        - { index: 1, enabled: false }
-      background_color: [ 0.1, 0.1, 0.3 ]
-      line_width: 1
-      point_size: 1
-      field_of_view: 45
-      clip_distances: [ 0.04, 200 ]
-      floorGrid: true
-      floorGridSpan: 10
-      floorGridInterval: 0.5
-      xzGrid: false
-      xzGridSpan: 10
-      xzGridInterval: 0.5
-      yzGrid: false
-      yzGridSpan: 10
-      yzGridInterval: 0.5
-      xy_grid_color: [ 0.9, 0.9, 0.9 ]
-      xz_grid_color: [ 0.9, 0.9, 0.9 ]
-      yz_grid_color: [ 0.9, 0.9, 0.9 ]
-  -
-    id: 6
     plugin: Body
     class: JointDisplacementView
     mounted: true
@@ -227,7 +174,7 @@ views:
       limit_ranges: false
       show_selected_joints: false
   -
-    id: 7
+    id: 6
     plugin: Body
     class: LinkDeviceListView
     mounted: true
@@ -235,7 +182,7 @@ views:
       element_type: all
       listing_mode: list
   -
-    id: 8
+    id: 7
     plugin: Body
     class: LinkPositionView
     mounted: true
@@ -248,12 +195,12 @@ views:
       show_rotation_matrix: false
       target_link_type: ik_link
   -
-    id: 9
+    id: 8
     plugin: Body
     class: LinkPropertyView
     mounted: true
   -
-    id: 10
+    id: 9
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -319,31 +266,31 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 504, 504 ]
+              sizes: [ 518, 518 ]
               children:
                 -
                   type: pane
                   views: [ 1 ]
                 -
                   type: pane
-                  views: [ 0, 9 ]
+                  views: [ 0, 8 ]
                   current: 0
             -
               type: splitter
               orientation: vertical
-              sizes: [ 756, 252 ]
+              sizes: [ 777, 259 ]
               children:
                 -
                   type: pane
                   views: [ 4 ]
                 -
                   type: pane
-                  views: [ 3, 10 ]
+                  views: [ 3, 9 ]
                   current: 3
         -
           type: splitter
           orientation: vertical
-          sizes: [ 222, 786 ]
+          sizes: [ 228, 808 ]
           children:
             -
               type: pane
@@ -351,15 +298,15 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 306, 476 ]
+              sizes: [ 315, 489 ]
               children:
                 -
                   type: pane
-                  views: [ 8 ]
+                  views: [ 7 ]
                 -
                   type: pane
-                  views: [ 7, 6 ]
-                  current: 6
+                  views: [ 6, 5 ]
+                  current: 5
 layoutOfToolBars:
   rows:
     -
