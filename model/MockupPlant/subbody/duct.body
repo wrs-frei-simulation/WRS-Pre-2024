@@ -1,5 +1,5 @@
 format: ChoreonoidBody
-formatVersion: 2.0
+format_version: 2.0
 name: Duct
 links:
   -

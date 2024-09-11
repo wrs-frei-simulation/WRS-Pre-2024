@@ -12,7 +12,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../../../../choreonoid_ros2_sample_drone_tutorial/model/sample_drone.body"
+        file: "${HOME}/ros2_ws/src/choreonoid_ros2_sample_drone_tutorial/model/sample_drone.body"
         format: CHOREONOID-BODY
         rootPosition: [ 0, 0, 0.1 ]
         rootAttitude: [

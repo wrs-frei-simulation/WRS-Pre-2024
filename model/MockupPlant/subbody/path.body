@@ -13449,59 +13449,53 @@ links:
         name: Smoke2
         translation: [ -1.0, 0.5, 0 ]
         tint_color: [ 0, 0, 0 ]
-  -
+  - &fence
     type: SubBody
     uri: "fence.body"
     parent: Root
     prefix: SB1_
     translation: [ 1.8, -0.8, 0 ]
     joint_type: fixed
-#  -
-#    type: SubBody
-#    uri: "fence.body"
-#    parent: Root
+#  - <<: *fence
 #    prefix: SB2_
 #    translation: [ 0.6, -0.8, 0 ]
-#    joint_type: fixed
-  -
-    type: SubBody
-    uri: "fence.body"
-    parent: Root
+  - <<: *fence
     prefix: SB3_
     translation: [ -0.6, -0.8, 0 ]
-    joint_type: fixed
-  -
-    type: SubBody
-    uri: "fence.body"
-    parent: Root
+  - <<: *fence
     prefix: SB4_
     translation: [ -1.8, -0.8, 0 ]
-    joint_type: fixed
-  -
-    type: SubBody
-    uri: "fence.body"
-    parent: Root
+  - <<: *fence
     prefix: SB5_
     translation: [ 1.8, 0.8, 0 ]
-    joint_type: fixed
-#  -
-#    type: SubBody
-#    uri: "fence.body"
-#    parent: Root
+#  - <<: *fence
 #    prefix: SB6_
 #    translation: [ 0.6, 0.8, 0 ]
-#    joint_type: fixed
-  -
-    type: SubBody
-    uri: "fence.body"
-    parent: Root
+  - <<: *fence
     prefix: SB7_
     translation: [ -0.6, 0.8, 0 ]
-    joint_type: fixed
-#  -
-#    type: SubBody
-#    uri: "fence.body"
-#    parent: Root
+#  - <<: *fence
 #    prefix: SB8_
 #    translation: [ -1.8, 0.8, 0 ]
-#    joint_type: fixed
+  - &debris
+    type: SubBody
+    uri: "debris.body"
+    parent: Root
+    prefix: SB9_
+    translation: [ 0, 0, 0.05 ]
+    joint_type: fixed
+  - <<: *debris
+    prefix: SB10_
+    translation: [ 0.8, 0.5, 0.05 ]
+    rotation: [ 0, 0, 1, -90 ]
+  - <<: *debris
+    type: SubBody
+    prefix: SB11_
+    translation: [ -0.8, 0.5, 0.05 ]
+  - <<: *debris
+    prefix: SB12_
+    translation: [ 1.3, -0.5, 0.05 ]
+  - <<: *debris
+    prefix: SB13_
+    translation: [ -1.3, -0.5, 0.05 ]
+    rotation: [ 0, 0, 1, -90 ]
