@@ -23,9 +23,17 @@ links:
     joint_type: fixed
   -
     type: SubBody
-    uri: "subbody/duct.body"
+    uri: "subbody/path.body"
     parent: Root
     prefix: SB3_
+    translation: [ -7.0, 0, 0 ]
+    rotation: [ 0, 0, 1, 90 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/duct.body"
+    parent: Root
+    prefix: SB4_
     translation: [ -3.0, 3.0, 2.5 ]
     rotation: [ 0, 0, 1, 135 ]
     joint_type: fixed

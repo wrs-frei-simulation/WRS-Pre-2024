@@ -13440,6 +13440,15 @@ links:
                 -2.005, 0.83,
                 -2.005, -0.83 ]
               spine: [ 0, 0, -0.019, 0, 0, 0.019 ]
+      -
+        type: SmokeDevice
+        name: Smoke1
+        translation: [ 1.0, -0.5, 0 ]
+      -
+        type: SmokeDevice
+        name: Smoke2
+        translation: [ -1.0, 0.5, 0 ]
+        tint_color: [ 0, 0, 0 ]
   -
     type: SubBody
     uri: "fence.body"
@@ -13447,13 +13456,13 @@ links:
     prefix: SB1_
     translation: [ 1.8, -0.8, 0 ]
     joint_type: fixed
-  -
-    type: SubBody
-    uri: "fence.body"
-    parent: Root
-    prefix: SB2_
-    translation: [ 0.6, -0.8, 0 ]
-    joint_type: fixed
+#  -
+#    type: SubBody
+#    uri: "fence.body"
+#    parent: Root
+#    prefix: SB2_
+#    translation: [ 0.6, -0.8, 0 ]
+#    joint_type: fixed
   -
     type: SubBody
     uri: "fence.body"
@@ -13475,13 +13484,13 @@ links:
     prefix: SB5_
     translation: [ 1.8, 0.8, 0 ]
     joint_type: fixed
-  -
-    type: SubBody
-    uri: "fence.body"
-    parent: Root
-    prefix: SB6_
-    translation: [ 0.6, 0.8, 0 ]
-    joint_type: fixed
+#  -
+#    type: SubBody
+#    uri: "fence.body"
+#    parent: Root
+#    prefix: SB6_
+#    translation: [ 0.6, 0.8, 0 ]
+#    joint_type: fixed
   -
     type: SubBody
     uri: "fence.body"
@@ -13489,10 +13498,10 @@ links:
     prefix: SB7_
     translation: [ -0.6, 0.8, 0 ]
     joint_type: fixed
-  -
-    type: SubBody
-    uri: "fence.body"
-    parent: Root
-    prefix: SB8_
-    translation: [ -1.8, 0.8, 0 ]
-    joint_type: fixed
+#  -
+#    type: SubBody
+#    uri: "fence.body"
+#    parent: Root
+#    prefix: SB8_
+#    translation: [ -1.8, 0.8, 0 ]
+#    joint_type: fixed

@@ -6,33 +6,47 @@ registrations:
     task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
     robot_project: *RobotList
     start_position: [ -10.0, -7.0, 0.0 ]
-    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
     enable_recording: true
   -
     name: T2-1
-    task_project: [ T2-1 ]
+    task_project: [ T2-1, Structures ]
     robot_project: *RobotList
     start_position: [ -10.0, -7.0, 0.0 ]
-    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
     enable_recording: true
   -
     name: T2-2
-    task_project: [ T2-2 ]
+    task_project: [ T2-2, Structures ]
     robot_project: *RobotList
     start_position: [ 4.0, -7.0, 0.0 ]
-    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
     enable_recording: true
   -
     name: T2-3
-    task_project: [ T2-3 ]
+    task_project: [ T2-3, Structures ]
     robot_project: *RobotList
     start_position: [ 4.0, 7.0, 0.0 ]
-    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
     enable_recording: true
   -
     name: T2-4
-    task_project: [ T2-4 ]
+    task_project: [ T2-4, Structures ]
     robot_project: *RobotList
     start_position: [ -10.0, 7.0, 0.0 ]
-    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
+    enable_recording: true
+  -
+    name: T2-12
+    task_project: [ T2-1, T2-2, Structures ]
+    robot_project: *RobotList
+    start_position: [ -10.0, -7.0, 0.0 ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
+    enable_recording: true
+  -
+    name: T2-34
+    task_project: [ T2-3, T2-4, Structures ]
+    robot_project: *RobotList
+    start_position: [ 4.0, 7.0, 0.0 ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
     enable_recording: true

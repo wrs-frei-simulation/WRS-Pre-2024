@@ -7,25 +7,37 @@ registrations:
     enable_recording: true
   -
     name: T2-1
-    task_project: [ T2-1 ]
+    task_project: [ T2-1, Structures ]
     simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
     name: T2-2
-    task_project: [ T2-2 ]
+    task_project: [ T2-2, Structures ]
     simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
     name: T2-3
-    task_project: [ T2-3 ]
+    task_project: [ T2-3, Structures ]
     simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
     name: T2-4
-    task_project: [ T2-4 ]
+    task_project: [ T2-4, Structures ]
+    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    view_project: SingleSceneView
+    enable_recording: true
+  -
+    name: T2-12
+    task_project: [ T2-1, T2-2, Structures ]
+    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    view_project: SingleSceneView
+    enable_recording: true
+  -
+    name: T2-34
+    task_project: [ T2-3, T2-4, Structures ]
     simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
