@@ -115,7 +115,9 @@ items:
                 all_scene_objects: true
                 range_sensor_precision_ratio: 2
                 depth_error: 0
+                background_color: [ 0, 0, 0 ]
                 enable_head_light: true
+                enable_world_light: true
                 enable_additional_lights: true
                 antialiasing: false
                 dynamics_type: All process
@@ -169,7 +171,9 @@ items:
                 all_scene_objects: true
                 range_sensor_precision_ratio: 2
                 depth_error: 0
+                background_color: [ 0, 0, 0 ]
                 enable_head_light: true
+                enable_world_light: true
                 enable_additional_lights: true
                 antialiasing: false
                 dynamics_type: All process
@@ -196,26 +200,17 @@ views:
   -
     id: 0
     plugin: Base
-    class: GeneralSliderView
-  -
-    id: 1
-    name: "Image"
-    plugin: Base
-    class: ImageView
-  -
-    id: 2
-    plugin: Base
     class: ItemPropertyView
     mounted: true
   -
-    id: 3
+    id: 1
     plugin: Base
     class: ItemTreeView
     mounted: true
     state:
-      expanded: [ 1, 3, 11, 18, 26, 28, 38, 41 ]
+      expanded: [ 1, 38, 41 ]
   -
-    id: 4
+    id: 2
     plugin: Base
     class: LocationView
     mounted: true
@@ -226,12 +221,12 @@ views:
       show_rotation_matrix: false
       coordinate: parent
   -
-    id: 5
+    id: 3
     plugin: Base
     class: MessageView
     mounted: true
   -
-    id: 6
+    id: 4
     plugin: Base
     class: SceneView
     mounted: true
@@ -245,9 +240,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -16.6733, -16.3864, 8.55586 ]
-          direction: [ 0.674257, 0.634767, -0.377424 ]
-          up: [ 0.274805, 0.25871, 0.926041 ]
+          eye: [ 3, 1.5, 1.2 ]
+          direction: [ -0.880451, -0.440225, -0.17609 ]
+          up: [ -0.1575, -0.0787498, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -282,113 +277,7 @@ views:
       xz_grid_color: [ 0.9, 0.9, 0.9 ]
       yz_grid_color: [ 0.9, 0.9, 0.9 ]
   -
-    id: 7
-    name: "シーン 2"
-    plugin: Base
-    class: SceneView
-    state:
-      editMode: false
-      viewpointOperationMode: thirdPerson
-      visible_polygon_elements: [ face ]
-      highlighting: false
-      collisionLines: false
-      cameras:
-        -
-          camera: [ System, Perspective ]
-          isCurrent: true
-          eye: [ 3, 1.5, 1.2 ]
-          direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787495, 0.984374 ]
-        -
-          camera: [ System, Orthographic ]
-          orthoHeight: 20
-      lighting_mode: normal
-      culling_mode: enabled
-      shading_mode: smooth
-      world_light: true
-      world_light_intensity: 0.5
-      ambient_light: true
-      ambient_light_intensity: 0.5
-      head_light: true
-      head_light_intensity: 0.5
-      world_light_shadow: true
-      shadow_lights:
-        - { index: 0, enabled: false }
-        - { index: 1, enabled: false }
-      background_color: [ 0.1, 0.1, 0.3 ]
-      line_width: 1
-      point_size: 1
-      field_of_view: 35
-      clip_distances: [ 0.04, 200 ]
-      floorGrid: true
-      floorGridSpan: 10
-      floorGridInterval: 0.5
-      xzGrid: false
-      xzGridSpan: 10
-      xzGridInterval: 0.5
-      yzGrid: false
-      yzGridSpan: 10
-      yzGridInterval: 0.5
-      xy_grid_color: [ 0.9, 0.9, 0.9 ]
-      xz_grid_color: [ 0.9, 0.9, 0.9 ]
-      yz_grid_color: [ 0.9, 0.9, 0.9 ]
-  -
-    id: 8
-    name: "Camera Scene"
-    plugin: Base
-    class: SceneView
-    state:
-      editMode: false
-      viewpointOperationMode: thirdPerson
-      visible_polygon_elements: [ face ]
-      highlighting: false
-      collisionLines: false
-      cameras:
-        -
-          camera: [ System, Perspective ]
-          isCurrent: true
-          eye: [ 3, 1.5, 1.2 ]
-          direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787495, 0.984374 ]
-        -
-          camera: [ System, Orthographic ]
-          orthoHeight: 20
-      lighting_mode: normal
-      culling_mode: enabled
-      shading_mode: smooth
-      world_light: true
-      world_light_intensity: 0.5
-      ambient_light: true
-      ambient_light_intensity: 0.5
-      head_light: true
-      head_light_intensity: 0.5
-      world_light_shadow: true
-      shadow_lights:
-        - { index: 0, enabled: false }
-        - { index: 1, enabled: false }
-      background_color: [ 0.1, 0.1, 0.3 ]
-      line_width: 1
-      point_size: 1
-      field_of_view: 45
-      clip_distances: [ 0.04, 200 ]
-      floorGrid: true
-      floorGridSpan: 10
-      floorGridInterval: 0.5
-      xzGrid: false
-      xzGridSpan: 10
-      xzGridInterval: 0.5
-      yzGrid: false
-      yzGridSpan: 10
-      yzGridInterval: 0.5
-      xy_grid_color: [ 0.9, 0.9, 0.9 ]
-      xz_grid_color: [ 0.9, 0.9, 0.9 ]
-      yz_grid_color: [ 0.9, 0.9, 0.9 ]
-  -
-    id: 9
-    plugin: Base
-    class: VirtualJoystickView
-  -
-    id: 10
+    id: 5
     plugin: Body
     class: JointDisplacementView
     mounted: true
@@ -402,7 +291,7 @@ views:
       limit_ranges: false
       show_selected_joints: false
   -
-    id: 11
+    id: 6
     plugin: Body
     class: LinkDeviceListView
     mounted: true
@@ -414,7 +303,7 @@ views:
           id: 11
           selected_links: [ 0 ]
   -
-    id: 12
+    id: 7
     plugin: Body
     class: LinkPositionView
     mounted: true
@@ -427,16 +316,12 @@ views:
       show_rotation_matrix: false
       target_link_type: ik_link
   -
-    id: 13
+    id: 8
     plugin: Body
     class: LinkPropertyView
     mounted: true
   -
-    id: 14
-    plugin: JoystickStart
-    class: OnScreenJoystickView
-  -
-    id: 15
+    id: 9
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -581,11 +466,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 3 ]
+                  views: [ 1 ]
                 -
                   type: pane
-                  views: [ 2, 13 ]
-                  current: 2
+                  views: [ 0, 8 ]
+                  current: 0
             -
               type: splitter
               orientation: vertical
@@ -593,11 +478,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 6 ]
+                  views: [ 4 ]
                 -
                   type: pane
-                  views: [ 5, 15 ]
-                  current: 5
+                  views: [ 3, 9 ]
+                  current: 3
         -
           type: splitter
           orientation: vertical
@@ -605,7 +490,7 @@ viewAreas:
           children:
             -
               type: pane
-              views: [ 4 ]
+              views: [ 2 ]
             -
               type: splitter
               orientation: vertical
@@ -613,11 +498,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 12 ]
+                  views: [ 7 ]
                 -
                   type: pane
-                  views: [ 11, 10 ]
-                  current: 10
+                  views: [ 6, 5 ]
+                  current: 5
 layoutOfToolBars:
   rows:
     -
