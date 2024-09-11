@@ -222,3 +222,47 @@ links:
     prefix: SB45_
     translation: [ 3.5, -2.0, 0.25 ]
     rotation: [ [ 0, 1, 0, 90 ], [ 1, 0, 0, -45 ] ]
+  - &ceiling
+    type: SubBody
+    uri: "ceiling_board.body"
+    parent: Floor
+    prefix: SB46_
+    translation: [ 1.5, 4.5, 0.5 ]
+    rotation: [ [ 0, 0, 1, -60 ], [ 0, 1, 0, 60 ] ]
+    joint_type: fixed
+  - <<: *ceiling
+    prefix: SB47_
+    translation: [ -3.0, 2.0, 0.5 ]
+    rotation: [ 0, 1, 0, 45 ]
+  - <<: *ceiling
+    prefix: SB48_
+    translation: [ 3.0, -4.0, 0.5 ]
+    rotation: [ [ 0, 0, 1, -45 ], [ 0, 1, 0, -45 ] ]
+  - &straight
+    type: SubBody
+    uri: "straight_pipe.body"
+    parent: Floor
+    prefix: SB49_
+    translation: [ 0, -1.0, 0.2 ]
+    rotation: [ [ 0, 0, 1, 45 ], [ 0, 1, 0, -45 ] ]
+    joint_type: fixed
+  - <<: *straight
+    prefix: SB50_
+    translation: [ 0, -1.0, 1.0 ]
+    rotation: [ [ 0, 0, 1, -90 ], [ 1, 0, 0, 60 ] ]
+  - <<: *straight
+    prefix: SB51_
+    translation: [ 4.0, 2.0, 1.0 ]
+    rotation: [ 1, 0, 0, 60 ]
+  - <<: *straight
+    prefix: SB52_
+    translation: [ 3.7, 1.0, 1.0 ]
+    rotation: [ 1, 0, 0, -60 ]
+  - <<: *straight
+    prefix: SB53_
+    translation: [ -2.0, 2.0, 1.0 ]
+    rotation: [ [ 0, 0, 1, -45 ], [ 1, 0, 0, -60 ] ]
+  - <<: *straight
+    prefix: SB54_
+    translation: [ -2.0, -4.0, 1.0 ]
+    rotation: [ [ 0, 0, 1, -60 ], [ 1, 0, 0, 45 ] ]
