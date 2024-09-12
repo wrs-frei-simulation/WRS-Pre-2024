@@ -143,6 +143,246 @@ items:
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
+    -
+      id: 6
+      name: "TargetTS4_35-50-C1"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-50-C1.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 5.76183523, 6.89752787, 1.57476365 ]
+        rootAttitude: [
+          2.22044605e-16, 0, -1,
+          0, 1, 0,
+          1, -0, 2.22044605e-16 ]
+        initialRootPosition: [ 5.76183523, 6.89752787, 1.57476365 ]
+        initialRootAttitude: [
+          2.22044605e-16, 0, -1,
+          0, 1, 0,
+          1, -0, 2.22044605e-16 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 7
+      name: "TargetTS4_35-50-C2"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-50-C2.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 4.80833596, 6.6987053, 0.0360027282 ]
+        rootAttitude: [
+          1, 0, -0,
+          0, 0.342020143, 0.939692621,
+          0, -0.939692621, 0.342020143 ]
+        initialRootPosition: [ 4.80833596, 6.6987053, 0.0360027282 ]
+        initialRootAttitude: [
+          1, 0, -0,
+          0, 0.342020143, 0.939692621,
+          0, -0.939692621, 0.342020143 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 8
+      name: "TargetTS4_35-50-C3"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-50-C3.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 9, 2.65146632, 0 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ 9, 2.65146632, 0 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 9
+      name: "TargetTS4_35-50-C4"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-50-C4.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 11, 9.41784954, 1.9 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ 11, 9.41784954, 1.9 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 10
+      name: "TargetTS4_35-50-C5"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-50-C5.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 5.83040487, 9.49085429, 1.5 ]
+        rootAttitude: [
+          6.123234e-17, 0, -1,
+          0, 1, 0,
+          1, -0, 6.123234e-17 ]
+        initialRootPosition: [ 5.83040487, 9.49085429, 1.5 ]
+        initialRootAttitude: [
+          2.22044605e-16, 0, -1,
+          0, 1, 0,
+          1, -0, 2.22044605e-16 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 11
+      name: "TargetTS4_35-100-C1"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-100-C1.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 9.26786095, 9.42060819, 0.0249681858 ]
+        rootAttitude: [
+          1, -0, 0,
+          0, 0.707106781, -0.707106781,
+          0, 0.707106781, 0.707106781 ]
+        initialRootPosition: [ 9.26786095, 9.42060819, 0.0249681858 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 0.707106781, -0.707106781,
+          0, 0.707106781, 0.707106781 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 12
+      name: "TargetTS4_35-100-C2"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-100-C2.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 3, 5.10739141, 0.946834163 ]
+        rootAttitude: [
+          1, 0, -0,
+          0, 0.5, 0.866025404,
+          0, -0.866025404, 0.5 ]
+        initialRootPosition: [ 3, 5.10739141, 0.946834163 ]
+        initialRootAttitude: [
+          1, 0, -0,
+          0, 0.5, 0.866025404,
+          0, -0.866025404, 0.5 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 13
+      name: "TargetTS4_35-100-C3"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-100-C3.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 3.67956436, 10.1098858, 0 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ 3.67956436, 10.1098858, 0 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 14
+      name: "TargetTS4_35-100-C4"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-100-C4.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -0.792262639, 7.54626074, 0.243343373 ]
+        rootAttitude: [
+          1, -0, 0,
+          0, 0.920868069, -0.389874339,
+          0, 0.389874339, 0.920868069 ]
+        initialRootPosition: [ -0.792262639, 7.54626074, 0.243343373 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 0.920868069, -0.389874339,
+          0, 0.389874339, 0.920868069 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 15
+      name: "TargetTS4_35-100-C5"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-100-C5.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -0.0385249389, 5.83702474, 0.854878177 ]
+        rootAttitude: [
+          6.123234e-17, 0, 1,
+          0, 1, -0,
+          -1, 0, 6.123234e-17 ]
+        initialRootPosition: [ -0.0385249389, 5.83702474, 0.854878177 ]
+        initialRootAttitude: [
+          2.22044605e-16, 0, 1,
+          0, 1, 0,
+          -1, 0, 2.22044605e-16 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
 views:
   -
     id: 0
@@ -191,9 +431,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -4.41731, 19.9938, 8.42828 ]
-          direction: [ 0.600336, -0.666991, -0.44127 ]
-          up: [ 0.295206, -0.327983, 0.897374 ]
+          eye: [ 1.56944, 6.55154, 1.33353 ]
+          direction: [ -0.817777, -0.408889, -0.405032 ]
+          up: [ -0.362271, -0.181136, 0.914303 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -317,6 +557,56 @@ Body:
         show_zmp: false
       -
         body_item: 5
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 6
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 7
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 8
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 9
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 10
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 11
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 12
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 13
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 14
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 15
         show_cm: false
         show_cm_projection: false
         show_zmp: false
