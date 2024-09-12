@@ -10,6 +10,7 @@ items:
       name: "Structures"
       plugin: Body
       class: BodyItem
+      is_checked: true
       data:
         file: "${SHARE}/WRS2024PRE/model/MockupPlant/structures.body"
         format: CHOREONOID-BODY
@@ -215,7 +216,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 504, 504 ]
+              sizes: [ 518, 518 ]
               children:
                 -
                   type: pane
@@ -227,7 +228,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 756, 252 ]
+              sizes: [ 777, 259 ]
               children:
                 -
                   type: pane
@@ -239,7 +240,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 222, 786 ]
+          sizes: [ 228, 808 ]
           children:
             -
               type: pane
@@ -247,7 +248,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 306, 476 ]
+              sizes: [ 315, 489 ]
               children:
                 -
                   type: pane

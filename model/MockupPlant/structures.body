@@ -11,7 +11,7 @@ links:
     type: SubBody
     uri: "subbody/roof.body"
     parent: Root
-    translation: [ 0, 0, 3.1 ]
+    translation: [ 0, 0, 4.7 ]
     joint_type: fixed
   - &Wall
     type: SubBody

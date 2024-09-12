@@ -137,7 +137,7 @@ items:
         collider_type: CFD
         density: 0
         viscosity: 0
-        steady_flow: [ 0, 0, -1 ]
+        steady_flow: [ 0, 0, -0.3 ]
         inbound_delay: 0
         inbound_rate: 0
         inbound_loss: 0

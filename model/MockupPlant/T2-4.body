@@ -13,6 +13,7 @@ links:
     uri: "subbody/vessel.body"
     parent: Root
     prefix: SB1_
+    rotation: [ 0, 0, 1, 180 ]
     joint_type: fixed
   -
     type: SubBody
@@ -34,6 +35,14 @@ links:
     uri: "subbody/duct.body"
     parent: Root
     prefix: SB4_
-    translation: [ -3.0, 3.0, 2.5 ]
+    translation: [ 3.0, -3.0, 2.5 ]
+    rotation: [ 0, 0, 1, -45 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/duct2.body"
+    parent: Root
+    prefix: SB5_
+    translation: [ -0.355, -0.355, 3.5 ]
     rotation: [ 0, 0, 1, 135 ]
     joint_type: fixed
