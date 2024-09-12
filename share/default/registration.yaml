@@ -1,57 +1,57 @@
 registrations:
   -
-    name: T2
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
-    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    name: M2
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-1
-    task_project: [ T2-1, Structures ]
-    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    name: M2-A1
+    task_project: [ M2-A1, Structures ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-2
-    task_project: [ T2-2, Structures ]
-    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    name: M2-A2
+    task_project: [ M2-A2, Structures ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-3
-    task_project: [ T2-3, Structures ]
-    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    name: M2-A3
+    task_project: [ M2-A3, Structures ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-4
-    task_project: [ T2-4, Structures ]
-    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    name: M2-A4
+    task_project: [ M2-A4, Structures ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-12
-    task_project: [ T2-1, T2-2, Structures ]
-    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    name: M2-A12
+    task_project: [ M2-A1, M2-A2, Structures ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-34
-    task_project: [ T2-3, T2-4, Structures ]
-    simulator_project: [ AISTSimulatorCV, AGXSimulatorCV ]
+    name: M2-A34
+    task_project: [ M2-A3, M2-A4, Structures ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-AizuSpiderSA
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    name: M2-AizuSpiderSA
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
     robot_project: [ AizuSpiderSA ]
     start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-AizuSpiderSA-ROS2
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    name: M2-AizuSpiderSA-ROS2
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
     robot_project: [ AizuSpiderSA ]
     robot_project: [ AizuSpiderSA-ROS2 ]
     start_position: [ -9.0, -7.0, 0.0 ]
@@ -59,8 +59,8 @@ registrations:
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-AizuSpiderSS
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    name: M2-AizuSpiderSS
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
     robot_project: [ AizuSpiderSA ]
     robot_project: [ AizuSpiderSS ]
     start_position: [ -9.0, -7.0, 0.0 ]
@@ -68,8 +68,8 @@ registrations:
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-AizuSpiderSS-ROS2
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    name: M2-AizuSpiderSS-ROS2
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
     robot_project: [ AizuSpiderSA ]
     robot_project: [ AizuSpiderSS-ROS2 ]
     start_position: [ -9.0, -7.0, 0.0 ]
@@ -77,8 +77,8 @@ registrations:
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-DoubleArmV7A
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    name: M2-DoubleArmV7A
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
     robot_project: [ AizuSpiderSA ]
     robot_project: [ DoubleArmV7A ]
     start_position: [ -10.0, -7.0, 0.0 ]
@@ -86,8 +86,8 @@ registrations:
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-DoubleArmV7A-ROS2
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    name: M2-DoubleArmV7A-ROS2
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
     robot_project: [ AizuSpiderSA ]
     robot_project: [ DoubleArmV7A-ROS2 ]
     start_position: [ -10.0, -7.0, 0.0 ]
@@ -95,8 +95,8 @@ registrations:
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-DoubleArmV7S
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    name: M2-DoubleArmV7S
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
     robot_project: [ AizuSpiderSA ]
     robot_project: [ DoubleArmV7S ]
     start_position: [ -10.0, -7.0, 0.0 ]
@@ -104,8 +104,8 @@ registrations:
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-DoubleArmV7S-ROS2
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    name: M2-DoubleArmV7S-ROS2
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
     robot_project: [ AizuSpiderSA ]
     robot_project: [ DoubleArmV7S-ROS2 ]
     start_position: [ -10.0, -7.0, 0.0 ]
@@ -113,16 +113,16 @@ registrations:
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-SampleDroneA-ROS2
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    name: M2-SampleDroneA-ROS2
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
     robot_project: [ SampleDrone-ROS2 ]
     start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-SampleDroneS-ROS2
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    name: M2-SampleDroneS-ROS2
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
     robot_project: [ AizuSpiderSA ]
     robot_project: [ SampleDrone-ROS2 ]
     start_position: [ -9.0, -7.0, 0.0 ]
@@ -130,32 +130,32 @@ registrations:
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-MonoCrawlerG3LS
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    name: M2-MonoCrawlerG3LS
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
     robot_project: [ MonoCrawlerG3LS ]
     start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AISTSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-MonoCrawlerG3LS-ROS2
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    name: M2-MonoCrawlerG3LS-ROS2
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
     robot_project: [ MonoCrawlerG3LS-ROS2 ]
     start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AISTSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-MonoCrawlerG3LA
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    name: M2-MonoCrawlerG3LA
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
     robot_project: [ MonoCrawlerG3LA ]
     start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
     view_project: SingleSceneView
     enable_recording: true
   -
-    name: T2-MonoCrawlerG3LA-ROS2
-    task_project: [ T2-1, T2-2, T2-3, T2-4, Structures ]
+    name: M2-MonoCrawlerG3LA-ROS2
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, Structures ]
     robot_project: [ MonoCrawlerG3LA-ROS2 ]
     start_position: [ -9.0, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]

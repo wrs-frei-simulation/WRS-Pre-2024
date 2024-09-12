@@ -17,38 +17,38 @@ items:
       children:
         -
           id: 2
-          name: "T2-1"
+          name: "M2-A1"
           plugin: Base
           class: SubProjectItem
           data:
-            file: "${SHARE}/WRS2024PRE/project/T2-1.cnoid"
+            file: "${SHARE}/WRS2024PRE/project/M2-A1.cnoid"
             format: PROJECT
             save_mode: "Manual save"
         -
           id: 10
-          name: "T2-2"
+          name: "M2-A2"
           plugin: Base
           class: SubProjectItem
           data:
-            file: "${SHARE}/WRS2024PRE/project/T2-2.cnoid"
+            file: "${SHARE}/WRS2024PRE/project/M2-A2.cnoid"
             format: PROJECT
             save_mode: "Manual save"
         -
           id: 17
-          name: "T2-3"
+          name: "M2-A3"
           plugin: Base
           class: SubProjectItem
           data:
-            file: "${SHARE}/WRS2024PRE/project/T2-3.cnoid"
+            file: "${SHARE}/WRS2024PRE/project/M2-A3.cnoid"
             format: PROJECT
             save_mode: "Manual save"
         -
           id: 24
-          name: "T2-4"
+          name: "M2-A4"
           plugin: Base
           class: SubProjectItem
           data:
-            file: "${SHARE}/WRS2024PRE/project/T2-4.cnoid"
+            file: "${SHARE}/WRS2024PRE/project/M2-A4.cnoid"
             format: PROJECT
             save_mode: "Manual save"
         -
@@ -183,7 +183,7 @@ items:
           plugin: Body
           class: WorldLogFileItem
           data:
-            file: "T2.log"
+            file: "M2.log"
             format: CNOID-WORLD-LOG
             timeStampSuffix: true
             recordingFrameRate: 100

@@ -7,12 +7,12 @@ items:
   children:
     -
       id: 1
-      name: "T2-4"
+      name: "M2-A4"
       plugin: Body
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/MockupPlant/T2-4.body"
+        file: "${SHARE}/WRS2024PRE/model/MockupPlant/M2-A4.body"
         format: CHOREONOID-BODY
         rootPosition: [ 0, 0, 0 ]
         rootAttitude: [
