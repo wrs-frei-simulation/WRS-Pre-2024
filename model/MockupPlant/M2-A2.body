@@ -1,7 +1,7 @@
 format: ChoreonoidBody
 format_version: 2.0
 angle_unit: degree
-name: T2-2
+name: M2-A2
 
 links:
   -
