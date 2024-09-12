@@ -121,48 +121,24 @@ items:
         kernel: 16
     -
       id: 5
-      name: "Target-MC"
+      name: "Block"
       plugin: Body
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/target-mc.body"
+        file: "${SHARE}/WRS2024PRE/model/MockupPlant/subbody/block.body"
         format: CHOREONOID-BODY
-        rootPosition: [ 3, 10, 0 ]
+        rootPosition: [ 5.3, 7, 0.1 ]
         rootAttitude: [
-          1, -0, 0,
-          0, 0.707106781, -0.707106781,
-          0, 0.707106781, 0.707106781 ]
-        initialRootPosition: [ 3, 10, 0 ]
+          6.123234e-17, -1, 0,
+          1, 6.123234e-17, -0,
+          0, 0, 1 ]
+        initialRootPosition: [ 5.3, 7, 0.1 ]
         initialRootAttitude: [
-          1, 0, 0,
-          0, 0.707106781, -0.707106781,
-          0, 0.707106781, 0.707106781 ]
+          2.22044605e-16, -1, 0,
+          1, 2.22044605e-16, 0,
+          0, 0, 1 ]
         fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 6
-      name: "Target-SP"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
-      data:
-        file: "${SHARE}/WRS2024PRE/model/target-sp.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 8, 8, 0.05 ]
-        rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        initialRootPosition: [ 8, 8, 0.05 ]
-        initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        fix_root: false
         collisionDetection: true
         selfCollisionDetection: false
         lock_location: false
@@ -171,17 +147,21 @@ views:
   -
     id: 0
     plugin: Base
+    class: GeneralSliderView
+  -
+    id: 1
+    plugin: Base
     class: ItemPropertyView
     mounted: true
   -
-    id: 1
+    id: 2
     plugin: Base
     class: ItemTreeView
     mounted: true
     state:
       expanded: [ 1 ]
   -
-    id: 2
+    id: 3
     plugin: Base
     class: LocationView
     mounted: true
@@ -192,12 +172,12 @@ views:
       show_rotation_matrix: false
       coordinate: world
   -
-    id: 3
+    id: 4
     plugin: Base
     class: MessageView
     mounted: true
   -
-    id: 4
+    id: 5
     plugin: Base
     class: SceneView
     mounted: true
@@ -211,9 +191,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -4.36444, 18.6405, 6.3645 ]
-          direction: [ 0.664917, -0.655078, -0.35883 ]
-          up: [ 0.255615, -0.251833, 0.933403 ]
+          eye: [ -4.41731, 19.9938, 8.42828 ]
+          direction: [ 0.600336, -0.666991, -0.44127 ]
+          up: [ 0.295206, -0.327983, 0.897374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -248,7 +228,7 @@ views:
       xz_grid_color: [ 0.9, 0.9, 0.9 ]
       yz_grid_color: [ 0.9, 0.9, 0.9 ]
   -
-    id: 5
+    id: 6
     plugin: Body
     class: JointDisplacementView
     mounted: true
@@ -262,7 +242,7 @@ views:
       limit_ranges: false
       show_selected_joints: false
   -
-    id: 6
+    id: 7
     plugin: Body
     class: LinkDeviceListView
     mounted: true
@@ -270,7 +250,7 @@ views:
       element_type: all
       listing_mode: list
   -
-    id: 7
+    id: 8
     plugin: Body
     class: LinkPositionView
     mounted: true
@@ -283,12 +263,12 @@ views:
       show_rotation_matrix: false
       target_link_type: ik_link
   -
-    id: 8
+    id: 9
     plugin: Body
     class: LinkPropertyView
     mounted: true
   -
-    id: 9
+    id: 10
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -340,11 +320,6 @@ Body:
         show_cm: false
         show_cm_projection: false
         show_zmp: false
-      -
-        body_item: 6
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
   "SplineFilterDialog":
     isInputFrameRateSpecified: false
     inputFrameRate: 200
@@ -371,11 +346,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 1 ]
+                  views: [ 2 ]
                 -
                   type: pane
-                  views: [ 0, 8 ]
-                  current: 0
+                  views: [ 1, 9 ]
+                  current: 1
             -
               type: splitter
               orientation: vertical
@@ -383,11 +358,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 4 ]
+                  views: [ 5 ]
                 -
                   type: pane
-                  views: [ 3, 9 ]
-                  current: 3
+                  views: [ 4, 10 ]
+                  current: 4
         -
           type: splitter
           orientation: vertical
@@ -395,7 +370,7 @@ viewAreas:
           children:
             -
               type: pane
-              views: [ 2 ]
+              views: [ 3 ]
             -
               type: splitter
               orientation: vertical
@@ -403,11 +378,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 7 ]
+                  views: [ 8 ]
                 -
                   type: pane
-                  views: [ 6, 5 ]
-                  current: 5
+                  views: [ 7, 6 ]
+                  current: 6
 layoutOfToolBars:
   rows:
     -
