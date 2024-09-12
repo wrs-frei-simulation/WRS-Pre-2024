@@ -53,7 +53,7 @@ links:
     uri: "1F/PipeL.body"
     parent: Floor
     prefix: SB6_
-    translation: [ 5.0, 0.5, 0.21 ]
+    translation: [ 5.0, 1.0, 0.68 ]
     rotation: [ 0, 0, 1, 90 ]
     joint_type: fixed
   - &fence
