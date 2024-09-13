@@ -90,7 +90,7 @@ items:
           0, 0, 1 ]
         fix_root: true
         collisionDetection: true
-        selfCollisionDetection: false
+        selfCollisionDetection: true
         lock_location: false
         scene_sensitive: true
       children:
@@ -115,7 +115,7 @@ items:
       data:
         file: "${SHARE}/WRS2018/model/T5_NoEntryAreaCircle.body"
         format: CHOREONOID-BODY
-        rootPosition: [ -11, 7, 0 ]
+        rootPosition: [ -8, 7, 0 ]
         rootAttitude: [
           1, 0, 0,
           0, 1, 0,
@@ -491,9 +491,9 @@ items:
           0, 1, 0 ]
         initialRootPosition: [ 3.43692008, 3.43692008, 5 ]
         initialRootAttitude: [
-          0.707106781, 6.40130171e-11, -0.707106781,
-          -0.707106781, 3.35597217e-10, -0.707106781,
-          6.40130171e-11, 1, 3.35597217e-10 ]
+          0.707106781, 1.39008915e-10, -0.707106781,
+          -0.707106781, 5.21202526e-10, -0.707106781,
+          1.39008915e-10, 1, 5.21202526e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -515,9 +515,9 @@ items:
           -0.0204433021, 0.942109017, -0.334682942 ]
         initialRootPosition: [ -3.14355066, 3.38946035, 7.45623217 ]
         initialRootAttitude: [
-          0.758446273, 0.232722241, 0.608768929,
-          0.651414861, -0.241393781, -0.719296684,
-          -0.0204433025, 0.942109017, -0.33468294 ]
+          0.758446274, 0.232722241, 0.608768928,
+          0.651414861, -0.241393779, -0.719296684,
+          -0.0204433032, 0.942109017, -0.334682938 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -587,9 +587,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ 1.48863, 18.1811, 9.37876 ]
-          direction: [ -0.511956, -0.627416, -0.586729 ]
-          up: [ -0.370938, -0.454594, 0.809784 ]
+          eye: [ 0.748198, 18.3093, 11.1633 ]
+          direction: [ -0.419033, -0.593954, -0.686754 ]
+          up: [ -0.395895, -0.561157, 0.72689 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -693,8 +693,8 @@ toolbars:
     lazyCollisionDetectionMode: true
 Body:
   "BodySelectionManager":
-    current_body_item: 1
-    current_link: "Root"
+    current_body_item: 6
+    current_link: "root"
   "KinematicFaultChecker":
     checkJointPositions: true
     angleMargin: 0

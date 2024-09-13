@@ -75,7 +75,7 @@ links:
     parent: Root
     prefix: SB3_
     translation: [ 0, -7.0, 0 ]
-    rotation: [ 1, 0, 0, -20 ]
+    rotation: [ 1, 0, 0, -5 ]
     joint_type: fixed
   - &board
     type: SubBody

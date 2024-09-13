@@ -344,16 +344,16 @@ items:
       data:
         file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-100-C4.body"
         format: CHOREONOID-BODY
-        rootPosition: [ -0.792262639, 7.54626074, 0.243343373 ]
+        rootPosition: [ -0.792262639, 7.5845225, 0.0854285639 ]
         rootAttitude: [
           1, -0, 0,
-          0, 0.920868069, -0.389874339,
-          0, 0.389874339, 0.920868069 ]
-        initialRootPosition: [ -0.792262639, 7.54626074, 0.243343373 ]
+          0, 0.996194698, -0.0871557427,
+          0, 0.0871557427, 0.996194698 ]
+        initialRootPosition: [ -0.792262639, 7.5845225, 0.0854285639 ]
         initialRootAttitude: [
           1, 0, 0,
-          0, 0.920868069, -0.389874339,
-          0, 0.389874339, 0.920868069 ]
+          0, 0.996194698, -0.0871557427,
+          0, 0.0871557427, 0.996194698 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -368,12 +368,12 @@ items:
       data:
         file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-100-C5.body"
         format: CHOREONOID-BODY
-        rootPosition: [ -0.0385249389, 5.83702474, 0.854878177 ]
+        rootPosition: [ -0.0385249389, 6.09762999, 1.12604401 ]
         rootAttitude: [
           6.123234e-17, 0, 1,
           0, 1, -0,
           -1, 0, 6.123234e-17 ]
-        initialRootPosition: [ -0.0385249389, 5.83702474, 0.854878177 ]
+        initialRootPosition: [ -0.0385249389, 6.09762999, 1.12604401 ]
         initialRootAttitude: [
           2.22044605e-16, 0, 1,
           0, 1, 0,
@@ -447,9 +447,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -4.23958, 2.72141, 8.61881 ]
-          direction: [ 0.7528, 0.2455, -0.610755 ]
-          up: [ 0.580658, 0.189362, 0.79182 ]
+          eye: [ -4.24582, -3.88764, 7.32689 ]
+          direction: [ 0.6472, 0.621621, -0.44127 ]
+          up: [ 0.318251, 0.305673, 0.897374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20

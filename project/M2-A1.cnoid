@@ -256,7 +256,7 @@ items:
         initialRootPosition: [ -6.15, -2.566, 1 ]
         initialRootAttitude: [
           0.866025404, 0.353553391, 0.353553391,
-          -2.28479818e-10, 0.707106781, -0.707106781,
+          -1.21855914e-10, 0.707106781, -0.707106781,
           -0.5, 0.612372436, 0.612372436 ]
         fix_root: true
         collisionDetection: true
@@ -320,16 +320,16 @@ items:
       data:
         file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-100-A4.body"
         format: CHOREONOID-BODY
-        rootPosition: [ -1.1, -7.381, 1.20305955 ]
+        rootPosition: [ -1.1, -7.65989778, 1.22745994 ]
         rootAttitude: [
           1, 0, 0,
-          0, -0.374606593, 0.927183855,
-          0, -0.927183855, -0.374606593 ]
-        initialRootPosition: [ -1.1, -7.381, 1.20305955 ]
+          0, -0.0871557427, 0.996194698,
+          0, -0.996194698, -0.0871557427 ]
+        initialRootPosition: [ -1.1, -7.65989778, 1.22745994 ]
         initialRootAttitude: [
           1, -0, 0,
-          0, -0.374606609, 0.927183855,
-          -0, -0.927183855, -0.374606609 ]
+          0, -0.0871557427, 0.996194698,
+          -0, -0.996194698, -0.0871557427 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -344,16 +344,16 @@ items:
       data:
         file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-100-A5.body"
         format: CHOREONOID-BODY
-        rootPosition: [ 1.51717983, -6.25214793, -0.234 ]
+        rootPosition: [ 1.51717983, -6.23449148, -0.0321858225 ]
         rootAttitude: [
           1, 0, -0,
-          0, 0.925062097, 0.379815899,
-          0, -0.379815899, 0.925062097 ]
-        initialRootPosition: [ 1.51717983, -6.25214793, -0.234 ]
+          0, 0.996194698, 0.0871557427,
+          0, -0.0871557427, 0.996194698 ]
+        initialRootPosition: [ 1.51717983, -6.23449148, -0.0321858225 ]
         initialRootAttitude: [
           1, 0, -0,
-          0, 0.925062097, 0.379815899,
-          0, -0.379815899, 0.925062097 ]
+          0, 0.996194698, 0.0871557427,
+          0, -0.0871557427, 0.996194698 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -423,9 +423,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -25.5015, 1.09717, 11.5724 ]
-          direction: [ 0.797892, -0.304672, -0.520138 ]
-          up: [ 0.485918, -0.185546, 0.854082 ]
+          eye: [ -25.6003, 2.21701, 12.3254 ]
+          direction: [ 0.794805, -0.312636, -0.520138 ]
+          up: [ 0.484038, -0.190396, 0.854082 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20

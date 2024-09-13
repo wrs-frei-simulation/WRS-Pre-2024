@@ -6,6 +6,7 @@ links:
     name: Floor
     translation: [ 0, 0, -0.1 ]
     joint_type: fixed
+    material: Ground
     elements:
       -
         type: Shape
