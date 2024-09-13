@@ -390,7 +390,7 @@ items:
       class: SimpleColliderItem
       is_checked: true
       data:
-        translation: [ 7, 3.5, -0.06 ]
+        translation: [ 7.5, 3.5, -0.06 ]
         rotation: [ 0, -0, 0 ]
         size: [ 3, 3, 0.2 ]
         diffuse_color: [ 0, 0, 1 ]
