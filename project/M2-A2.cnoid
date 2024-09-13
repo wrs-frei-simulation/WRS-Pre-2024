@@ -173,9 +173,9 @@ items:
           0, 1, 6.123234e-17 ]
         initialRootPosition: [ 7.70699307, -6.70699307, 0.0996171246 ]
         initialRootAttitude: [
-          0.707106781, 0, 0.707106781,
-          0.707106781, 0, -0.707106781,
-          0, 1, 0 ]
+          0.707106781, -6.40130171e-11, 0.707106781,
+          0.707106781, 3.35597217e-10, -0.707106781,
+          -6.40130171e-11, 1, 3.35597217e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -342,8 +342,8 @@ items:
         initialRootPosition: [ 6.1954317, -11.3827302, 0.666746827 ]
         initialRootAttitude: [
           -0.5, 5.55111512e-17, 0.866025404,
-          0.866025404, 0, 0.5,
-          -5.55111512e-17, 1, -2.22044605e-16 ]
+          0.866025404, -1.24454225e-10, 0.5,
+          -5.55111512e-17, 1, -1.24454447e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -397,6 +397,22 @@ items:
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
+    -
+      id: 16
+      name: "SimpleCollider"
+      plugin: SimpleCollider
+      class: SimpleColliderItem
+      is_checked: true
+      data:
+        translation: [ 7, 0.5, -0.06 ]
+        rotation: [ 0, -0, 0 ]
+        size: [ 3, 3, 0.2 ]
+        diffuse_color: [ 1, 0, 0 ]
+        radius: 0.5
+        height: 1
+        specular_exponent: 25
+        transparency: 0.5
+        scene_type: Box
 views:
   -
     id: 0
@@ -445,9 +461,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -7.6867, -11.6097, 8.94726 ]
-          direction: [ 0.815415, 0.286592, -0.502954 ]
-          up: [ 0.4745, 0.166771, 0.864313 ]
+          eye: [ -6.07317, -9.65762, 14.1358 ]
+          direction: [ 0.665107, 0.189802, -0.722225 ]
+          up: [ 0.694499, 0.19819, 0.691659 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20

@@ -256,7 +256,7 @@ items:
         initialRootPosition: [ -6.15, -2.566, 1 ]
         initialRootAttitude: [
           0.866025404, 0.353553391, 0.353553391,
-          0, 0.707106781, -0.707106781,
+          -2.28479818e-10, 0.707106781, -0.707106781,
           -0.5, 0.612372436, 0.612372436 ]
         fix_root: true
         collisionDetection: true
@@ -328,8 +328,8 @@ items:
         initialRootPosition: [ -1.1, -7.381, 1.20305955 ]
         initialRootAttitude: [
           1, -0, 0,
-          0, -0.374606593, 0.927183855,
-          -0, -0.927183855, -0.374606593 ]
+          0, -0.374606609, 0.927183855,
+          -0, -0.927183855, -0.374606609 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -359,6 +359,22 @@ items:
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
+    -
+      id: 15
+      name: "SimpleCollider"
+      plugin: SimpleCollider
+      class: SimpleColliderItem
+      is_checked: true
+      data:
+        translation: [ -9.196, -7.5, -0.06 ]
+        rotation: [ 0, -0, 0 ]
+        size: [ 3, 3, 0.2 ]
+        diffuse_color: [ 0, 0, 1 ]
+        radius: 0.5
+        height: 1
+        specular_exponent: 25
+        transparency: 0.5
+        scene_type: Box
 views:
   -
     id: 0
@@ -407,20 +423,20 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -23.4815, 4.35953, 9.65808 ]
-          direction: [ 0.776628, -0.449589, -0.44127 ]
-          up: [ 0.381895, -0.221078, 0.897374 ]
+          eye: [ -25.5015, 1.09717, 11.5724 ]
+          direction: [ 0.797892, -0.304672, -0.520138 ]
+          up: [ 0.485918, -0.185546, 0.854082 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
       lighting_mode: normal
       culling_mode: enabled
       shading_mode: smooth
-      world_light: false
+      world_light: true
       world_light_intensity: 0.5
-      ambient_light: false
+      ambient_light: true
       ambient_light_intensity: 0.5
-      head_light: false
+      head_light: true
       head_light_intensity: 0.5
       world_light_shadow: true
       shadow_lights:

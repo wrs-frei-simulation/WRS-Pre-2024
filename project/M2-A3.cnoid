@@ -383,6 +383,22 @@ items:
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
+    -
+      id: 16
+      name: "SimpleCollider"
+      plugin: SimpleCollider
+      class: SimpleColliderItem
+      is_checked: true
+      data:
+        translation: [ 7, 3.5, -0.06 ]
+        rotation: [ 0, -0, 0 ]
+        size: [ 3, 3, 0.2 ]
+        diffuse_color: [ 0, 0, 1 ]
+        radius: 0.5
+        height: 1
+        specular_exponent: 25
+        transparency: 0.5
+        scene_type: Box
 views:
   -
     id: 0
@@ -431,9 +447,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ 1.56944, 6.55154, 1.33353 ]
-          direction: [ -0.817777, -0.408889, -0.405032 ]
-          up: [ -0.362271, -0.181136, 0.914303 ]
+          eye: [ -4.23958, 2.72141, 8.61881 ]
+          direction: [ 0.7528, 0.2455, -0.610755 ]
+          up: [ 0.580658, 0.189362, 0.79182 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20

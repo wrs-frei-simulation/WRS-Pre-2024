@@ -420,8 +420,8 @@ items:
         initialRootPosition: [ -3, 4, 4 ]
         initialRootAttitude: [
           -0.844373954, 5.55111512e-17, -0.535754258,
-          -0.535754258, -2.22044605e-16, 0.844373954,
-          -5.55111512e-17, 1, 0 ]
+          -0.535754258, 2.28065122e-10, 0.844373954,
+          -5.55111512e-17, 1, 2.28065455e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -491,9 +491,9 @@ items:
           0, 1, 0 ]
         initialRootPosition: [ 3.43692008, 3.43692008, 5 ]
         initialRootAttitude: [
-          0.707106781, 0, -0.707106781,
-          -0.707106781, 0, -0.707106781,
-          0, 1, 0 ]
+          0.707106781, 6.40130171e-11, -0.707106781,
+          -0.707106781, 3.35597217e-10, -0.707106781,
+          6.40130171e-11, 1, 3.35597217e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -515,14 +515,30 @@ items:
           -0.0204433021, 0.942109017, -0.334682942 ]
         initialRootPosition: [ -3.14355066, 3.38946035, 7.45623217 ]
         initialRootAttitude: [
-          0.758446274, 0.232722241, 0.608768929,
-          0.651414861, -0.241393783, -0.719296684,
-          -0.0204433021, 0.942109017, -0.334682942 ]
+          0.758446273, 0.232722241, 0.608768929,
+          0.651414861, -0.241393781, -0.719296684,
+          -0.0204433025, 0.942109017, -0.33468294 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
+    -
+      id: 21
+      name: "SimpleCollider"
+      plugin: SimpleCollider
+      class: SimpleColliderItem
+      is_checked: true
+      data:
+        translation: [ -7.5, 3.5, -0.06 ]
+        rotation: [ 0, -0, 0 ]
+        size: [ 3, 3, 0.2 ]
+        diffuse_color: [ 1, 0, 0 ]
+        radius: 0.5
+        height: 1
+        specular_exponent: 25
+        transparency: 0.5
+        scene_type: Box
 views:
   -
     id: 0
@@ -571,9 +587,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -2.64702, -2.28016, 5.48057 ]
-          direction: [ -0.0969176, 0.95808, 0.269609 ]
-          up: [ 0.0271347, -0.26824, 0.96297 ]
+          eye: [ 1.48863, 18.1811, 9.37876 ]
+          direction: [ -0.511956, -0.627416, -0.586729 ]
+          up: [ -0.370938, -0.454594, 0.809784 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -678,7 +694,7 @@ toolbars:
 Body:
   "BodySelectionManager":
     current_body_item: 1
-    current_link: "SB2_Floor"
+    current_link: "Root"
   "KinematicFaultChecker":
     checkJointPositions: true
     angleMargin: 0
