@@ -120,7 +120,7 @@ items:
           1, 0, 0,
           0, 1, 0,
           0, 0, 1 ]
-        initialRootPosition: [ -11, 7, 0 ]
+        initialRootPosition: [ -8, 7, 0 ]
         initialRootAttitude: [
           1, 0, 0,
           0, 1, 0,
@@ -419,9 +419,9 @@ items:
           3.28054869e-17, 1, -5.1702993e-17 ]
         initialRootPosition: [ -3, 4, 4 ]
         initialRootAttitude: [
-          -0.844373954, 5.55111512e-17, -0.535754258,
-          -0.535754258, 2.28065122e-10, 0.844373954,
-          -5.55111512e-17, 1, 2.28065455e-10 ]
+          -0.844373954, -5.55111512e-17, -0.535754258,
+          -0.535754258, 2.28065455e-10, 0.844373954,
+          5.55111512e-17, 1, 2.28065122e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -491,9 +491,9 @@ items:
           0, 1, 0 ]
         initialRootPosition: [ 3.43692008, 3.43692008, 5 ]
         initialRootAttitude: [
-          0.707106781, 1.39008915e-10, -0.707106781,
-          -0.707106781, 5.21202526e-10, -0.707106781,
-          1.39008915e-10, 1, 5.21202526e-10 ]
+          0.707106781, 0, -0.707106781,
+          -0.707106781, 1.54541047e-10, -0.707106781,
+          0, 1, 1.54541047e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -515,9 +515,9 @@ items:
           -0.0204433021, 0.942109017, -0.334682942 ]
         initialRootPosition: [ -3.14355066, 3.38946035, 7.45623217 ]
         initialRootAttitude: [
-          0.758446274, 0.232722241, 0.608768928,
-          0.651414861, -0.241393779, -0.719296684,
-          -0.0204433032, 0.942109017, -0.334682938 ]
+          0.758446273, 0.232722242, 0.608768929,
+          0.651414862, -0.241393782, -0.719296684,
+          -0.0204433022, 0.942109017, -0.334682941 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -539,6 +539,31 @@ items:
         specular_exponent: 25
         transparency: 0.5
         scene_type: Box
+    -
+      id: 22
+      name: "robot1"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "../model/Obstacle/robot1.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -7, 10.5, 0.296699015 ]
+        rootAttitude: [
+          0.707106781, -0.663305325, -0.245002135,
+          -0.707106781, -0.663305325, -0.245002135,
+          0, 0.346485342, -0.938055386 ]
+        jointDisplacements: [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        initialRootPosition: [ -7, 10.5, 0.296699015 ]
+        initialRootAttitude: [
+          0.707106781, -0.663305325, -0.245002135,
+          -0.707106781, -0.663305325, -0.245002135,
+          -1.38777878e-17, 0.346485342, -0.938055386 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
 views:
   -
     id: 0
@@ -587,9 +612,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ 0.748198, 18.3093, 11.1633 ]
-          direction: [ -0.419033, -0.593954, -0.686754 ]
-          up: [ -0.395895, -0.561157, 0.72689 ]
+          eye: [ 0.659451, 18.447, 12.2293 ]
+          direction: [ -0.518598, -0.509338, -0.686754 ]
+          up: [ -0.489963, -0.481214, 0.72689 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -693,8 +718,8 @@ toolbars:
     lazyCollisionDetectionMode: true
 Body:
   "BodySelectionManager":
-    current_body_item: 6
-    current_link: "root"
+    current_body_item: 1
+    current_link: "Root"
   "KinematicFaultChecker":
     checkJointPositions: true
     angleMargin: 0
@@ -773,6 +798,11 @@ Body:
         show_zmp: false
       -
         body_item: 20
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 22
         show_cm: false
         show_cm_projection: false
         show_zmp: false

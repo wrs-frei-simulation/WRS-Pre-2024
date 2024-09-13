@@ -6,7 +6,7 @@ registrations:
     name: M2
     task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, ContainmentVessel, Structures ]
     robot_project: *RobotList
-    start_position: [ -10.0, -7.0, 0.0 ]
+    start_position: [ -9.5, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
 #    view_project: SingleSceneView
     enable_recording: true
@@ -14,7 +14,7 @@ registrations:
     name: M2-A1
     task_project: [ M2-A1, ContainmentVessel, Structures ]
     robot_project: *RobotList
-    start_position: [ -10.0, -7.0, 0.0 ]
+    start_position: [ -9.5, -7.0, 0.0 ]
   - <<: *Mission2
     name: M2-A2
     task_project: [ M2-A2, ContainmentVessel, Structures ]
@@ -30,12 +30,13 @@ registrations:
     name: M2-A4
     task_project: [ M2-A4, ContainmentVessel, Structures ]
     robot_project: *RobotList
-    start_position: [ -10.0, 7.0, 0.0 ]
+    robot_alignment: X-
+    start_position: [ -4.0, 7.0, 0.0 ]
   - <<: *Mission2
     name: M2-A12
     task_project: [ M2-A1, M2-A2, ContainmentVessel, Structures ]
     robot_project: *RobotList
-    start_position: [ -10.0, -7.0, 0.0 ]
+    start_position: [ -9.5, -7.0, 0.0 ]
   - <<: *Mission2
     name: M2-A34
     task_project: [ M2-A3, M2-A4, ContainmentVessel, Structures ]
