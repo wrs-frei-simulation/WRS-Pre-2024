@@ -399,6 +399,55 @@ items:
         specular_exponent: 25
         transparency: 0.5
         scene_type: Box
+    -
+      id: 17
+      name: "Rack2"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "../model/Obstacle/rack2.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 8.77142679, 6.34577417, 0 ]
+        rootAttitude: [
+          0.707106781, 0.707106781, -0,
+          -0.707106781, 0.707106781, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ 8.77142679, 6.34577417, 0 ]
+        initialRootAttitude: [
+          0.707106781, 0.707106781, -0,
+          -0.707106781, 0.707106781, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 18
+      name: "robot3"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "../model/Obstacle/robot3.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 7.61822239, 10.2372075, 0.1 ]
+        rootAttitude: [
+          0.707106781, 0.707106781, -0,
+          -0.707106781, 0.707106781, 0,
+          0, 0, 1 ]
+        jointDisplacements: [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        initialRootPosition: [ 7.61822239, 10.2372075, 0.1 ]
+        initialRootAttitude: [
+          0.707106781, 0.707106781, -0,
+          -0.707106781, 0.707106781, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
 views:
   -
     id: 0
@@ -447,9 +496,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -4.24582, -3.88764, 7.32689 ]
-          direction: [ 0.6472, 0.621621, -0.44127 ]
-          up: [ 0.318251, 0.305673, 0.897374 ]
+          eye: [ -4.53276, -6.4985, 12.6892 ]
+          direction: [ 0.498944, 0.62264, -0.602806 ]
+          up: [ 0.376953, 0.470406, 0.797888 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -623,6 +672,16 @@ Body:
         show_zmp: false
       -
         body_item: 15
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 17
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 18
         show_cm: false
         show_cm_projection: false
         show_zmp: false

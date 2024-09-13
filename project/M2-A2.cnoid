@@ -173,9 +173,9 @@ items:
           0, 1, 6.123234e-17 ]
         initialRootPosition: [ 7.70699307, -6.70699307, 0.0996171246 ]
         initialRootAttitude: [
-          0.707106781, -6.40130171e-11, 0.707106781,
-          0.707106781, 3.35597217e-10, -0.707106781,
-          -6.40130171e-11, 1, 3.35597217e-10 ]
+          0.707106781, 0, 0.707106781,
+          0.707106781, 1.54541047e-10, -0.707106781,
+          0, 1, 1.54541047e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -341,9 +341,9 @@ items:
           1.24597544e-17, 1, 6.123234e-17 ]
         initialRootPosition: [ 6.1954317, -11.3827302, 0.666746827 ]
         initialRootAttitude: [
-          -0.5, 5.55111512e-17, 0.866025404,
-          0.866025404, -1.24454225e-10, 0.5,
-          -5.55111512e-17, 1, -1.24454447e-10 ]
+          -0.5, 1.11022302e-16, 0.866025404,
+          0.866025404, -1.24454447e-10, 0.5,
+          -1.11022302e-16, 1, -1.24454669e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -413,6 +413,79 @@ items:
         specular_exponent: 25
         transparency: 0.5
         scene_type: Box
+    -
+      id: 17
+      name: "robot2"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "../model/Obstacle/robot2.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 5.00506435, -9.05904992, 0.199594372 ]
+        rootAttitude: [
+          0.696102949, 0.707106781, 0.124260548,
+          0.696102949, -0.707106781, 0.124260548,
+          0.175730952, 1.11022302e-16, -0.984438232 ]
+        jointDisplacements: [ 0, 0, 0, 0, 0, 0 ]
+        initialRootPosition: [ 5.00506435, -9.05904992, 0.199594372 ]
+        initialRootAttitude: [
+          0.69610295, 0.707106781, 0.124260548,
+          0.696102949, -0.707106781, 0.124260548,
+          0.175730952, -6.96512639e-11, -0.984438231 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 18
+      name: "Rack1"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "../model/Obstacle/rack1.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 7.41876018, -4.42825064, 0.3 ]
+        rootAttitude: [
+          -0.804109507, 0, 0.594481203,
+          -0.594481203, 6.123234e-17, -0.804109507,
+          -3.64014751e-17, -1, -4.92375067e-17 ]
+        initialRootPosition: [ 7.41876018, -4.42825064, 0.3 ]
+        initialRootAttitude: [
+          -0.804109507, 0, 0.594481203,
+          -0.594481203, 8.83815243e-12, -0.804109507,
+          0, -1, 8.83815243e-12 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 19
+      name: "Rack3"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "../model/Obstacle/rack3.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 7.70038756, -9.1369675, 0.1 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ 7.70038756, -9.1369675, 0.1 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
 views:
   -
     id: 0
@@ -461,9 +534,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -6.07317, -9.65762, 14.1358 ]
-          direction: [ 0.665107, 0.189802, -0.722225 ]
-          up: [ 0.694499, 0.19819, 0.691659 ]
+          eye: [ -6.83345, -10.692, 8.54427 ]
+          direction: [ 0.813882, 0.241085, -0.528654 ]
+          up: [ 0.506883, 0.150147, 0.848838 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -637,6 +710,21 @@ Body:
         show_zmp: false
       -
         body_item: 15
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 17
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 18
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 19
         show_cm: false
         show_cm_projection: false
         show_zmp: false
