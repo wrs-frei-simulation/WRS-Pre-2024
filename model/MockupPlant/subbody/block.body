@@ -7,6 +7,7 @@ links:
     name: Block
     translation: [ 0, 0, 0.1 ]
     joint_type: fixed
+    material: Ground
     elements:
       - &block
         type: Shape

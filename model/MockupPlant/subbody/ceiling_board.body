@@ -6,6 +6,7 @@ links:
     name: CeilingBoard
     translation: [ 0, 0, 0.05 ]
     joint_type: fixed
+    material: Ground
     elements:
       -
         type: Shape

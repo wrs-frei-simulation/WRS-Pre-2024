@@ -6,6 +6,7 @@ links:
     name: Wall
     translation: [ 0, 0, 0 ]
     joint_type: fixed
+    material: Ground
     elements:
       -
         type: Shape
