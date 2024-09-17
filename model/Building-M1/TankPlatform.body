@@ -1,0 +1,52 @@
+format: ChoreonoidBody
+formatVersion: 1.0
+angleUnit: degree
+name: TankPlatform
+rootLink: TANKPLATFORMBASE
+
+links:
+  -
+    name: TANKPLATFORMBASE
+    jointType: fixed
+  -
+    type: SubBody
+    parent: TANKPLATFORMBASE
+    uri: TankPlatformStage.body
+    #uri: ../../rtf-test-plant/model/1F/TankPlatformStage.body
+    translation: [ -5.56, -5.892, 0 ]
+#  -
+#    type: SubBody
+#    parent: TANKPLATFORMBASE
+#    uri: TankPlatformStageHandrails.body
+#    #uri: ../../rtf-test-plant/model/1F/TankPlatformStageHandrails.body
+#    translation: [ -5.56, -5.892, 0 ]
+#  -
+#    type: SubBody
+#    parent: TANKPLATFORMBASE
+#    uri: TankPlatformStairs.body
+#    #uri: ../../rtf-test-plant/model/1F/TankPlatformStairs.body
+#    prefix: STAIR1_
+#    translation: [ -1.5, -1.15, 0 ]
+#  -
+#    type: SubBody
+#    parent: TANKPLATFORMBASE
+#    uri: TankPlatformStairsHandrails.body
+#    #uri: ../../rtf-test-plant/model/1F/TankPlatformStairsHandrails.body
+#    prefix: STAIR1_
+#    translation: [ -1.5, -1.15, 0 ]
+#  -
+#    type: SubBody
+#    parent: TANKPLATFORMBASE
+#    uri: TankPlatformStairs.body
+#    #uri: ../../rtf-test-plant/model/1F/TankPlatformStairs.body
+#    prefix: STAIR2_
+#    translation: [ 1.5, 1.15, 0 ]
+#    rotation: [ 0, 0, 1, 180 ]
+#  -
+#    type: SubBody
+#    parent: TANKPLATFORMBASE
+#    uri: TankPlatformStairsHandrails.body
+#    #uri: ../../rtf-test-plant/model/1F/TankPlatformStairsHandrails.body
+#    prefix: STAIR2_
+#    translation: [ 1.5, 1.15, 0 ]
+#    rotation: [ 0, 0, 1, 180 ]

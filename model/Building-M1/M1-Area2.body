@@ -1,0 +1,30 @@
+format: ChoreonoidBody
+formatVersion: 1.0
+name: M1-Area2
+
+links:
+  -
+    name: Root
+    jointType: fixed
+  -
+    type: SubBody
+    uri: "floor.body"
+    parent: Root
+    prefix: A2_
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "Door.body"
+    parent: Root
+    prefix: A2_D1
+    joint_type: fixed
+    translation: [ -4.977, -0.435, -0.008 ]
+  -
+    type: SubBody
+    uri: "Door.body"
+    parent: Root
+    prefix: A2_D2_
+    joint_type: fixed
+    jointIdOffset: 1
+    translation: [ 0.435, -4.977, -0.008 ]
+    rotation: [ 0, 0, 1, 90 ]

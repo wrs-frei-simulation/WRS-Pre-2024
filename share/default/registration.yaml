@@ -1,4 +1,20 @@
 registrations:
+  -
+    name: M1-AizuSpiderSA
+    task_project: [ M1-A1, M1-A2, M1-A3 ]
+    robot_project: [ AizuSpiderSA ]
+    start_position: [ -2.0, 0.0, 0.0 ]
+    simulator_project: [ AGXSimulatorCV ]
+#    view_project: SingleSceneView
+#    enable_recording: true
+  -
+    name: M1-AizuSpiderSA-ROS2
+    task_project: [ M1-A1, M1-A2, M1-A3 ]
+    robot_project: [ AizuSpiderSA-ROS2 ]
+    start_position: [ -2.0, 0.0, 0.0 ]
+    simulator_project: [ AGXSimulatorCV ]
+#    view_project: SingleSceneView
+#    enable_recording: true
   - &Mission2
     name: M2
     task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, ContainmentVessel, Structures ]
