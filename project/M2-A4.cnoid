@@ -491,9 +491,9 @@ items:
           0, 1, 0 ]
         initialRootPosition: [ 3.43692008, 3.43692008, 5 ]
         initialRootAttitude: [
-          0.707106781, 0, -0.707106781,
-          -0.707106781, 1.54541047e-10, -0.707106781,
-          0, 1, 1.54541047e-10 ]
+          0.707106781, 6.40130171e-11, -0.707106781,
+          -0.707106781, 3.35597217e-10, -0.707106781,
+          6.40130171e-11, 1, 3.35597217e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -515,9 +515,9 @@ items:
           -0.0204433021, 0.942109017, -0.334682942 ]
         initialRootPosition: [ -3.14355066, 3.38946035, 7.45623217 ]
         initialRootAttitude: [
-          0.758446273, 0.232722242, 0.608768929,
-          0.651414862, -0.241393782, -0.719296684,
-          -0.0204433022, 0.942109017, -0.334682941 ]
+          0.758446273, 0.232722241, 0.608768929,
+          0.651414861, -0.241393781, -0.719296684,
+          -0.0204433025, 0.942109017, -0.33468294 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -525,22 +525,6 @@ items:
         scene_sensitive: true
     -
       id: 21
-      name: "SimpleCollider"
-      plugin: SimpleCollider
-      class: SimpleColliderItem
-      is_checked: true
-      data:
-        translation: [ -7.5, 3.5, -0.06 ]
-        rotation: [ 0, -0, 0 ]
-        size: [ 3, 3, 0.2 ]
-        diffuse_color: [ 1, 0, 0 ]
-        radius: 0.5
-        height: 1
-        specular_exponent: 25
-        transparency: 0.5
-        scene_type: Box
-    -
-      id: 22
       name: "robot1"
       plugin: Body
       class: BodyItem
@@ -558,7 +542,7 @@ items:
         initialRootAttitude: [
           0.707106781, -0.663305325, -0.245002135,
           -0.707106781, -0.663305325, -0.245002135,
-          -1.38777878e-17, 0.346485342, -0.938055386 ]
+          -1.35861739e-11, 0.346485342, -0.938055386 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -612,7 +596,7 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ 0.659451, 18.447, 12.2293 ]
+          eye: [ 2.72889, 16.7697, 11.9106 ]
           direction: [ -0.518598, -0.509338, -0.686754 ]
           up: [ -0.489963, -0.481214, 0.72689 ]
         -
@@ -802,7 +786,7 @@ Body:
         show_cm_projection: false
         show_zmp: false
       -
-        body_item: 22
+        body_item: 21
         show_cm: false
         show_cm_projection: false
         show_zmp: false
@@ -828,7 +812,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 518, 518 ]
+              sizes: [ 504, 504 ]
               children:
                 -
                   type: pane
@@ -840,7 +824,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 778, 258 ]
+              sizes: [ 757, 251 ]
               children:
                 -
                   type: pane
@@ -852,7 +836,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 228, 808 ]
+          sizes: [ 222, 786 ]
           children:
             -
               type: pane
@@ -860,7 +844,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 315, 489 ]
+              sizes: [ 306, 476 ]
               children:
                 -
                   type: pane
