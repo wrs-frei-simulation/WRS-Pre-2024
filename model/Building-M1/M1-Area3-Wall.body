@@ -1,0 +1,94 @@
+format: ChoreonoidBody
+formatVersion: 1.0
+name: M1_A3_Wall
+links:
+  -
+    name: Wall
+    translation: [ 0, 0, 0 ]
+    jointType: fixed
+    #material: Ground
+    AMOR: true
+    elements:
+      -
+        name: W1
+        type: Transform
+        parent: BASE
+        jointType: fixed
+        #translation: [ -4.95, 0, 2.5 ]
+        ##translation: [ -4.95, 0, 3.4 ] -0.045
+        #translation: [ -4.95, 0, 3.49 ]
+        translation: [ -4.95, 0, 0 ]
+        elements: &DoorWall
+          type: Transform
+          elements:
+            -
+              type: Shape
+              translation: [ 0, 0, 3.45 ]
+                #geometry: { type: Box, size: [ 0.1, 0.96, 5.0 ] }
+                ##geometry: { type: Box, size: [ 0.1, 0.96, 3.2 ] }
+              geometry: { type: Box, size: [ 0.1, 0.96, 3.1 ] }
+              appearance: { material: { diffuseColor: [ 0.7, 0.7, 0.7 ] }}
+            -
+              type: Shape
+              translation: [ 0, 2.725, 2.5 ]
+              geometry: { type: Box, size: [ 0.1, 4.5, 5 ] }
+              appearance: { material: { diffuseColor: [ 0.7, 0.7, 0.7 ] }}
+            -
+              type: Shape
+              translation: [ 0, -2.725, 2.5 ]
+              geometry: { type: Box, size: [ 0.1, 4.5, 5 ] }
+              appearance: { material: { diffuseColor: [ 0.7, 0.7, 0.7 ] }}
+      -
+        name: W2
+        type: Transform
+        parent: BASE
+        jointType: fixed
+        translation: [ 4.95, 0, 2.5 ]
+        elements:
+          Shape:
+            geometry: { type: Box, size: [ 0.1, 10, 5.0 ] }
+            appearance: { material: { diffuseColor: [ 0.7, 0.7, 0.7 ] }}
+      -
+        name: W3
+        type: Transform
+        parent: BASE
+        jointType: fixed
+        translation: [ 0, 4.95, 2.5 ]
+        rotation: [ 0, 0, 1, 90]
+        elements:
+          Shape:
+            geometry: { type: Box, size: [ 0.1, 10, 5.0 ] }
+            appearance: { material: { diffuseColor: [ 0.7, 0.7, 0.7 ] }}
+      -
+        name: W4
+        type: Transform
+        parent: BASE
+        jointType: fixed
+        translation: [ 0, -4.95, 2.5 ]
+        rotation: [ 0, 0, 1, 90]
+        elements:
+          Shape:
+            geometry: { type: Box, size: [ 0.1, 10, 5.0 ] }
+            appearance: { material: { diffuseColor: [ 0.7, 0.7, 0.7 ] }}
+      -
+        name: W5
+        type: Transform
+        parent: BASE
+        jointType: fixed
+        translation: [ 0, 1.95, 2.5 ]
+        rotation: [ 0, 0, 1, 90]
+        elements:
+          Shape:
+            geometry: { type: Box, size: [ 0.1, 10, 5.0 ] }
+            appearance: { material: { diffuseColor: [ 0.7, 0.7, 0.7 ] }}
+      -
+        name: W6
+        type: Transform
+        parent: BASE
+        jointType: fixed
+        translation: [ 0, -1.95, 2.5 ]
+        rotation: [ 0, 0, 1, 90]
+        elements:
+          Shape:
+            geometry: { type: Box, size: [ 0.1, 10, 5.0 ] }
+            appearance: { material: { diffuseColor: [ 0.7, 0.7, 0.7 ] }}
