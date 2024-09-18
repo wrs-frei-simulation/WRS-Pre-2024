@@ -10,10 +10,9 @@ items:
       name: "T1-Area2"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
-        file: "../model/Building-M1/T1-Area2.body"
+        file: "../model/Building-M1/M1-Area2.body"
         format: CHOREONOID-BODY
         rootPosition: [ 10, 0, 0 ]
         rootAttitude: [
@@ -37,7 +36,6 @@ items:
           name: "Floor"
           plugin: Body
           class: BodyItem
-          is_selected: true
           data:
             file: "../model/Building-M1/floor.body"
             format: CHOREONOID-BODY
@@ -61,7 +59,6 @@ items:
           name: "M1_A2_Wall"
           plugin: Body
           class: BodyItem
-          is_selected: true
           is_checked: true
           data:
             file: "../model/Building-M1/M1-Area2-Wall.body"
@@ -86,7 +83,6 @@ items:
           name: "TankPlatform"
           plugin: Body
           class: BodyItem
-          is_selected: true
           is_checked: true
           data:
             file: "../model/Building-M1/TankPlatform.body"
@@ -112,7 +108,6 @@ items:
               name: "TankPlatformHandrail"
               plugin: Body
               class: BodyItem
-              is_selected: true
               is_checked: true
               data:
                 file: "../model/Building-M1/TankPlatformHandlail.body"
@@ -137,7 +132,6 @@ items:
               name: "TankPlatformHandrailShort"
               plugin: Body
               class: BodyItem
-              is_selected: true
               is_checked: true
               data:
                 file: "../model/Building-M1/TankPlatformHandlailShort.body"
@@ -162,7 +156,6 @@ items:
               name: "TankPlatformHandrail"
               plugin: Body
               class: BodyItem
-              is_selected: true
               is_checked: true
               data:
                 file: "../model/Building-M1/TankPlatformHandlail.body"
@@ -187,7 +180,6 @@ items:
               name: "TankPlatformHandrailShort"
               plugin: Body
               class: BodyItem
-              is_selected: true
               is_checked: true
               data:
                 file: "../model/Building-M1/TankPlatformHandlailShort.body"
@@ -212,7 +204,6 @@ items:
               name: "TankPlatformStairs"
               plugin: Body
               class: BodyItem
-              is_selected: true
               is_checked: true
               data:
                 file: "../model/Building-M1/TankPlatformStairs.body"
@@ -237,7 +228,6 @@ items:
               name: "TankPlatformStairs"
               plugin: Body
               class: BodyItem
-              is_selected: true
               is_checked: true
               data:
                 file: "../model/Building-M1/TankPlatformStairs.body"
@@ -245,7 +235,7 @@ items:
                 rootPosition: [ 11, -1.5, 0 ]
                 rootAttitude: [
                   6.123234e-17, -1, 0,
-                  1, 6.123234e-17, -0,
+                  1, 6.123234e-17, 0,
                   0, 0, 1 ]
                 initialRootPosition: [ 11, -1.5, 0 ]
                 initialRootAttitude: [
@@ -262,7 +252,6 @@ items:
       name: "Debris1"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/Debris1.body"
@@ -274,8 +263,8 @@ items:
           0, 0, 1 ]
         initialRootPosition: [ 6.13153944, -2.21447664, 0 ]
         initialRootAttitude: [
-          -0.0631648676, -0.998003106, 0,
-          0.998003106, -0.0631648676, 0,
+          -0.0631648677, -0.998003106, 0,
+          0.998003106, -0.0631648677, 0,
           0, 0, 1 ]
         fix_root: true
         collisionDetection: true
@@ -287,7 +276,6 @@ items:
       name: "Debris1"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/Debris1.body"
@@ -312,7 +300,6 @@ items:
       name: "Debris1"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/Debris1.body"
@@ -337,7 +324,6 @@ items:
       name: "Rubble1"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/Rubble1.body"
@@ -349,7 +335,7 @@ items:
           0.179379726, 0.777384663, 0.602906294 ]
         initialRootPosition: [ 6.2020105, 1.93082058, 0.798239522 ]
         initialRootAttitude: [
-          0.95595284, -0.282466789, 0.0797914885,
+          0.95595284, -0.282466789, 0.0797914886,
           0.232329684, 0.562037009, -0.793811891,
           0.179379726, 0.777384663, 0.602906294 ]
         fix_root: true
@@ -362,7 +348,6 @@ items:
       name: "Debris1"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/Debris1.body"
@@ -387,7 +372,6 @@ items:
       name: "Debris1"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/Debris1.body"
@@ -412,7 +396,6 @@ items:
       name: "Rubble1"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/Rubble1.body"
@@ -424,7 +407,7 @@ items:
           0.179379726, -0.791528496, 0.58421362 ]
         initialRootPosition: [ 6.10183165, -1.17094324, 0.413623725 ]
         initialRootAttitude: [
-          0.95595284, -1.4690045e-10, -0.293520303,
+          0.95595284, -2.20350668e-10, -0.293520303,
           0.232329684, 0.611132261, 0.756663913,
           0.179379726, -0.791528496, 0.58421362 ]
         fix_root: true
@@ -434,60 +417,9 @@ items:
         scene_sensitive: true
     -
       id: 18
-      name: "Target1"
-      plugin: Body
-      class: BodyItem
-      is_selected: true
-      is_checked: true
-      data:
-        file: "../model/Building-M1/Target1.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 8.5, 0, 0 ]
-        rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        initialRootPosition: [ 8.5, 0, 0 ]
-        initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 19
-      name: "Target1"
-      plugin: Body
-      class: BodyItem
-      is_selected: true
-      is_checked: true
-      data:
-        file: "../model/Building-M1/Target1.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 9.86388622, -0.916704054, 1.3 ]
-        rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        initialRootPosition: [ 9.86388622, -0.916704054, 1.3 ]
-        initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 20
       name: "Debris1"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/Debris1.body"
@@ -501,18 +433,17 @@ items:
         initialRootAttitude: [
           -0.551686637, 0.799865472, -0.236341025,
           -0.83405147, -0.529074174, 0.156328704,
-          2.05568063e-10, 0.283365037, 0.959012125 ]
+          3.08352094e-10, 0.283365037, 0.959012125 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
     -
-      id: 21
+      id: 19
       name: "TankA"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/TankA.body"
@@ -533,11 +464,10 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 22
+      id: 20
       name: "Debris1"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/Debris1.body"
@@ -821,16 +751,6 @@ Body:
         show_zmp: false
       -
         body_item: 20
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 21
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 22
         show_cm: false
         show_cm_projection: false
         show_zmp: false
