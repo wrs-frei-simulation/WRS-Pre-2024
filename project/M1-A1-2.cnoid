@@ -10,6 +10,7 @@ items:
       name: "T1-Area1"
       plugin: Body
       class: BodyItem
+      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/M1-Area1.body"
@@ -38,15 +39,15 @@ items:
       data:
         file: "../model/Building-M1/Debris1.body"
         format: CHOREONOID-BODY
-        rootPosition: [ 4.06386724, 2.24022949, 0 ]
+        rootPosition: [ 2.55634744, 1.29002743, 0 ]
         rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
+          0.686910083, 0.726742415, -0,
+          -0.726742415, 0.686910083, 0,
           0, 0, 1 ]
-        initialRootPosition: [ 4.06386724, 2.24022949, 0 ]
+        initialRootPosition: [ 2.55634744, 1.29002743, 0 ]
         initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
+          0.686910083, 0.726742415, -0,
+          -0.726742415, 0.686910083, 0,
           0, 0, 1 ]
         fix_root: true
         collisionDetection: true
@@ -62,15 +63,15 @@ items:
       data:
         file: "../model/Building-M1/Debris1.body"
         format: CHOREONOID-BODY
-        rootPosition: [ 2.58885761, -2.22041284, 0 ]
+        rootPosition: [ 0.261384305, -1.45148548, 0 ]
         rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
+          0.741493098, -0.670960495, 0,
+          0.670960495, 0.741493098, -0,
           0, 0, 1 ]
-        initialRootPosition: [ 2.58885761, -2.22041284, 0 ]
+        initialRootPosition: [ 0.261384305, -1.45148548, 0 ]
         initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
+          0.741493098, -0.670960495, 0,
+          0.670960495, 0.741493098, 0,
           0, 0, 1 ]
         fix_root: true
         collisionDetection: true
@@ -96,31 +97,6 @@ items:
           1, 0, 0,
           0, 1, 0,
           0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 5
-      name: "Target1"
-      plugin: Body
-      class: BodyItem
-      is_selected: true
-      is_checked: true
-      data:
-        file: "../model/Building-M1/Target1.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 5, 0.6, 1.2 ]
-        rootAttitude: [
-          6.123234e-17, 0, -1,
-          0, 1, 0,
-          1, -0, 6.123234e-17 ]
-        initialRootPosition: [ 5, 0.6, 1.2 ]
-        initialRootAttitude: [
-          2.22044605e-16, 0, -1,
-          0, 1, 0,
-          1, -0, 2.22044605e-16 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -165,7 +141,7 @@ views:
     class: SceneView
     mounted: true
     state:
-      editMode: true
+      editMode: false
       viewpointOperationMode: thirdPerson
       visible_polygon_elements: [ face ]
       highlighting: false
@@ -174,9 +150,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -1.75899, 1.85496, 2.05454 ]
-          direction: [ 0.951805, -0.227644, -0.205538 ]
-          up: [ 0.1999, -0.0478101, 0.978649 ]
+          eye: [ -16.2406, 7.83963, 12.4935 ]
+          direction: [ 0.779306, -0.361906, -0.511572 ]
+          up: [ 0.463981, -0.215471, 0.85924 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 2.70671
@@ -280,8 +256,8 @@ toolbars:
     lazyCollisionDetectionMode: true
 Body:
   "BodySelectionManager":
-    current_body_item: 5
-    current_link: "BASE"
+    current_body_item: 1
+    current_link: "A1_Floor"
   "KinematicFaultChecker":
     checkJointPositions: true
     angleMargin: 0
@@ -310,11 +286,6 @@ Body:
         show_zmp: false
       -
         body_item: 4
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 5
         show_cm: false
         show_cm_projection: false
         show_zmp: false
