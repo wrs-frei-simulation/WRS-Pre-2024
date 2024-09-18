@@ -25,7 +25,7 @@ registrations:
 #    enable_recording: true
   - &Mission2
     name: M2
-    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, ContainmentVessel, Structures ]
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, ContainmentVessel, Structures, M2-SG ]
 #    robot_project: [ ]
     robot_alignment: X+
     start_position: [ -10.0, -7.0, 0.0 ]
@@ -34,22 +34,16 @@ registrations:
 #    enable_recording: true
   - <<: *Mission2
     name: M2-A1
-    task_project: [ M2-A1, ContainmentVessel, Structures ]
+    task_project: [ M2-A1, M2-A2, ContainmentVessel, Structures, M2-SGA1 ]
   - <<: *Mission2
     name: M2-A2
-    task_project: [ M2-A2, ContainmentVessel, Structures ]
+    task_project: [ M2-A2, M2-A3, ContainmentVessel, Structures, M2-SGA2 ]
   - <<: *Mission2
     name: M2-A3
-    task_project: [ M2-A3, ContainmentVessel, Structures ]
+    task_project: [ M2-A3, M2-A4, ContainmentVessel, Structures, M2-SGA3 ]
   - <<: *Mission2
     name: M2-A4
-    task_project: [ M2-A4, ContainmentVessel, Structures ]
-  - <<: *Mission2
-    name: M2-A12
-    task_project: [ M2-A1, M2-A2, ContainmentVessel, Structures ]
-  - <<: *Mission2
-    name: M2-A34
-    task_project: [ M2-A3, M2-A4, ContainmentVessel, Structures ]
+    task_project: [ M2-A4, M2-A1, ContainmentVessel, Structures, M2-SGA4 ]
   - <<: *Mission2
     name: M2-AizuSpiderSA
     robot_project: [ AizuSpiderSA ]

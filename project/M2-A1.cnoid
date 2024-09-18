@@ -256,7 +256,7 @@ items:
         initialRootPosition: [ -6.15, -2.566, 1 ]
         initialRootAttitude: [
           0.866025404, 0.353553391, 0.353553391,
-          -1.21855914e-10, 0.707106781, -0.707106781,
+          -1.82783871e-10, 0.707106781, -0.707106781,
           -0.5, 0.612372436, 0.612372436 ]
         fix_root: true
         collisionDetection: true
@@ -328,8 +328,8 @@ items:
         initialRootPosition: [ -1.1, -7.65989778, 1.22745994 ]
         initialRootAttitude: [
           1, -0, 0,
-          0, -0.0871557427, 0.996194698,
-          -0, -0.996194698, -0.0871557427 ]
+          0, -0.0871557425, 0.996194698,
+          -0, -0.996194698, -0.0871557425 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -359,22 +359,6 @@ items:
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
-    -
-      id: 15
-      name: "SimpleCollider"
-      plugin: SimpleCollider
-      class: SimpleColliderItem
-      is_checked: true
-      data:
-        translation: [ -9.196, -7.5, -0.06 ]
-        rotation: [ 0, -0, 0 ]
-        size: [ 3, 3, 0.2 ]
-        diffuse_color: [ 0, 0, 1 ]
-        radius: 0.5
-        height: 1
-        specular_exponent: 25
-        transparency: 0.5
-        scene_type: Box
 views:
   -
     id: 0
@@ -619,7 +603,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 518, 518 ]
+              sizes: [ 504, 504 ]
               children:
                 -
                   type: pane
@@ -631,7 +615,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 778, 258 ]
+              sizes: [ 757, 251 ]
               children:
                 -
                   type: pane
@@ -643,7 +627,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 228, 808 ]
+          sizes: [ 222, 786 ]
           children:
             -
               type: pane
@@ -651,7 +635,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 315, 489 ]
+              sizes: [ 306, 476 ]
               children:
                 -
                   type: pane

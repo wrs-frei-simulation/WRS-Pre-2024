@@ -173,9 +173,9 @@ items:
           0, 1, 6.123234e-17 ]
         initialRootPosition: [ 7.70699307, -6.70699307, 0.0996171246 ]
         initialRootAttitude: [
-          0.707106781, 0, 0.707106781,
-          0.707106781, 1.54541047e-10, -0.707106781,
-          0, 1, 1.54541047e-10 ]
+          0.707106781, -6.40130171e-11, 0.707106781,
+          0.707106781, 3.35597217e-10, -0.707106781,
+          -6.40130171e-11, 1, 3.35597217e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -342,7 +342,7 @@ items:
         initialRootPosition: [ 6.1954317, -11.3827302, 0.666746827 ]
         initialRootAttitude: [
           -0.5, 1.11022302e-16, 0.866025404,
-          0.866025404, -1.24454447e-10, 0.5,
+          0.866025404, -1.24454225e-10, 0.5,
           -1.11022302e-16, 1, -1.24454669e-10 ]
         fix_root: true
         collisionDetection: true
@@ -399,22 +399,6 @@ items:
         scene_sensitive: true
     -
       id: 16
-      name: "SimpleCollider"
-      plugin: SimpleCollider
-      class: SimpleColliderItem
-      is_checked: true
-      data:
-        translation: [ 7, 0.5, -0.06 ]
-        rotation: [ 0, -0, 0 ]
-        size: [ 3, 3, 0.2 ]
-        diffuse_color: [ 1, 0, 0 ]
-        radius: 0.5
-        height: 1
-        specular_exponent: 25
-        transparency: 0.5
-        scene_type: Box
-    -
-      id: 17
       name: "robot2"
       plugin: Body
       class: BodyItem
@@ -432,14 +416,14 @@ items:
         initialRootAttitude: [
           0.69610295, 0.707106781, 0.124260548,
           0.696102949, -0.707106781, 0.124260548,
-          0.175730952, -6.96512639e-11, -0.984438231 ]
+          0.175730952, -1.04476948e-10, -0.984438231 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
     -
-      id: 18
+      id: 17
       name: "Rack1"
       plugin: Body
       class: BodyItem
@@ -463,7 +447,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 19
+      id: 18
       name: "Rack3"
       plugin: Body
       class: BodyItem
@@ -714,17 +698,17 @@ Body:
         show_cm_projection: false
         show_zmp: false
       -
+        body_item: 16
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
         body_item: 17
         show_cm: false
         show_cm_projection: false
         show_zmp: false
       -
         body_item: 18
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 19
         show_cm: false
         show_cm_projection: false
         show_zmp: false
@@ -750,7 +734,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 518, 518 ]
+              sizes: [ 504, 504 ]
               children:
                 -
                   type: pane
@@ -762,7 +746,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 778, 258 ]
+              sizes: [ 757, 251 ]
               children:
                 -
                   type: pane
@@ -774,7 +758,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 228, 808 ]
+          sizes: [ 222, 786 ]
           children:
             -
               type: pane
@@ -782,7 +766,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 315, 489 ]
+              sizes: [ 306, 476 ]
               children:
                 -
                   type: pane
