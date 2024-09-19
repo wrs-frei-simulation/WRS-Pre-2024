@@ -1,0 +1,16 @@
+format: ChoreonoidBody
+formatVersion: 1.0
+name: M1-Area1
+links:
+  -
+    name: Root
+    translation: [ 0, 0, 0 ]
+    jointType: fixed
+  -
+    type: SubBody
+    uri: "floor.body"
+    parent: Root
+    prefix: A1_
+    joint_type: fixed
+
+
