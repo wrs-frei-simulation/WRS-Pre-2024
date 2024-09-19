@@ -1,0 +1,34 @@
+robot_list: &RobotList [ project_test/Crawler, SampleDrone-ROS2 ]
+# robot_list: &RobotList [ project_test/Crawler, SampleDrone-ROS2 ]
+
+registrations:
+  - &Mission2
+    name: M2
+    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, ContainmentVessel, Structures, M2-SG ]
+    robot_project: *RobotList
+    start_position: [ -9.5, -7.0, 0.0 ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
+#    view_project: SingleSceneView
+    enable_recording: true
+  - <<: *Mission2
+    name: M2-A1
+    task_project: [ M2-A1, M2-A2, ContainmentVessel, Structures, M2-SGA1 ]
+    robot_project: *RobotList
+    start_position: [ -9.5, -7.0, 0.0 ]
+  - <<: *Mission2
+    name: M2-A2
+    task_project: [ M2-A2, M2-A3, ContainmentVessel, Structures, M2-SGA2 ]
+    robot_project: *RobotList
+    start_position: [ 4.0, -7.0, 0.0 ]
+  - <<: *Mission2
+    name: M2-A3
+    task_project: [ M2-A3, M2-A4, ContainmentVessel, Structures, M2-SGA3 ]
+    robot_project: *RobotList
+    robot_alignment: Y+
+    start_position: [ 7.0, 4.0, 0.0 ]
+  - <<: *Mission2
+    name: M2-A4
+    task_project: [ M2-A4, M2-A1, ContainmentVessel, Structures, M2-SGA4 ]
+    robot_project: *RobotList
+    robot_alignment: X-
+    start_position: [ -4.0, 7.0, 0.0 ]

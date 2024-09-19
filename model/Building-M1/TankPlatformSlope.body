@@ -1,0 +1,24 @@
+format: ChoreonoidBody
+format_version: 2.0
+angle_unit: degree
+name: TankPlatformSlope
+links:
+  -
+    name: Root
+    joint_type: fixed
+    center_of_mass: [ 0, 0, 0 ]
+    mass: 1
+    material: Ground
+    inertia: [ 0.197408, 0, 0, 0, 0.447408, 0, 0, 0, 0.416667 ]
+    elements:
+      -
+        type: Shape
+        geometry:
+          type: Extrusion
+          cross_section: [
+            -1, -0.585,
+            1, -0.585,
+            1, 0.585,
+            -1, -0.585 ]
+          spine: [ 0, -0.5, 0, 0, 0.5, 0 ]
+        appearance: { material: { diffuse: [ 0.25, 0.25, 0.25 ] } }
