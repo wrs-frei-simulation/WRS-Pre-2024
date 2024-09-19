@@ -68,9 +68,13 @@
 また，各エリアにおけるタスクの遂行においては最大２台のロボットを投入し，それらを連携させることができます．
 
 World Robot Summit 2025 シミュレーション災害チャレンジではChoreonoidをシミュレータとして使用します．
+また，シミュレーションにはAGX Dynamicsを使用します．
 
 #### 競技環境の構築方法
 - https://k38-suzuki.github.io/hairo-world-plugin-doc/wrsutil/index.html
+
+#### AGX Dynamicsのインストール
+- https://choreonoid.org/ja/documents/latest/agxdynamics/install/install-agx-ubuntu.html
 
 #### Choreonoidのインストール方法
 - 前提条件
