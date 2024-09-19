@@ -89,7 +89,7 @@ $ cd
 $ git clone https://github.com/choreonoid/choreonoid.git
 $ git clone https://github.com/wrs-frei-simulation/WRS-Pre-2024.git choreonoid/ext/WRS2024PRE
 $ git clone https://github.com/k38-suzuki/hairo-world-plugin.git choreonoid/ext/hairo-world-plugin
-choreonoid/misc/script/install-requisites-ubuntu-22.04.sh
+$ choreonoid/misc/script/install-requisites-ubuntu-22.04.sh
 $ cd ~/choreonoid && mkdir build && cd build
 $ cmake .. -DBUILD_AGX_DYNAMICS_PLUGIN=ON -DBUILD_AGX_BODYEXTENSION_PLUGIN=ON -DBUILD_WRS2018=ON -DBUILD_SCENE_EFFECTS_PLUGIN=ON -DBUILD_HAIRO_WORLD_PLUGIN=ON
 $ make -j8 # CPUが8コアの場合は-j8，CPUがNコアの場合は-jN
@@ -140,7 +140,7 @@ $ git clone https://github.com/choreonoid/choreonoid.git
 $ git clone https://github.com/choreonoid/choreonoid_ros.git
 $ git clone https://github.com/choreonoid/choreonoid_ros2_mobile_robot_tutorial.git
 $ git clone https://github.com/wrs-frei-simulation/WRS-Pre-2024.git choreonoid/ext/WRS2024PRE
-$ git clone https://github.com/k38-suzuki/hairo-world-plugin.git
+$ git clone https://github.com/k38-suzuki/hairo-world-plugin.git choreonoid/ext/hairo-world-plugin
 $ git clone https://github.com/k38-suzuki/choreonoid_ros2_sample_drone_tutorial.git
 $ choreonoid/misc/script/install-requisites-ubuntu-22.04.sh
 $ cd ~/ros2_ws
