@@ -73,7 +73,7 @@ World Robot Summit 2025 シミュレーション災害チャレンジではChore
 #### 競技環境の構築方法
 - https://k38-suzuki.github.io/hairo-world-plugin-doc/wrsutil/index.html
 
-#### AGX Dynamicsのインストール
+#### AGX Dynamicsインストールの参考URL
 - https://choreonoid.org/ja/documents/latest/agxdynamics/install/install-agx-ubuntu.html
 
 #### Choreonoidのインストール方法
