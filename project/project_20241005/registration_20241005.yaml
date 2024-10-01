@@ -34,11 +34,11 @@ registrations:
     start_position: [ -4.0, 7.0, 0.0 ]
   - <<: *Mission2
     name: M2-A12
-    task_project: [ M2-A1, M2-A2, ContainmentVessel, Structures, project_1005/M2-SGA12 ]
+    task_project: [ M2-A1, M2-A2, ContainmentVessel, Structures, project_20241005/M2-SGA12 ]
     robot_alignment: X-
     start_position: [ -4.0, -7.0, 0.0 ]
   - <<: *Mission2
     name: M2-A34
-    task_project: [ M2-A3, M2-A4, ContainmentVessel, Structures, project_1005/M2-SGA34 ]
+    task_project: [ M2-A3, M2-A4, ContainmentVessel, Structures, project_20241005/M2-SGA34 ]
     robot_alignment: X+
     start_position: [ 4.0, 7.0, 0.0 ]
