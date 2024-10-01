@@ -45,6 +45,12 @@ registrations:
     name: M2-A4
     task_project: [ M2-A4, M2-A1, ContainmentVessel, Structures, M2-SGA4 ]
   - <<: *Mission2
+    name: M2-A12-1005
+    task_project: [ M2-A1, M2-A2, ContainmentVessel, Structures, M2-SGA12-1005 ]
+  - <<: *Mission2
+    name: M2-A34-1005
+    task_project: [ M2-A3, M2-A4, ContainmentVessel, Structures, M2-SGA34-1005 ]
+  - <<: *Mission2
     name: M2-AizuSpiderSA
     robot_project: [ AizuSpiderSA ]
     simulator_project: [ AGXSimulatorCV ]
