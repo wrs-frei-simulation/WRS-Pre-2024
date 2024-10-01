@@ -45,6 +45,105 @@ items:
             export_symbols: false
     -
       id: 3
+      name: "Fire"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2018/model/Fire.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 8, 8, 0 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        jointDisplacements: [ 4.58366 ]
+        initialRootPosition: [ 8, 8, 0 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+      children:
+        -
+          id: 4
+          name: "FireController"
+          plugin: Body
+          class: SimpleControllerItem
+          data:
+            isNoDelayMode: false
+            controllerOptions: ""
+            controller: "FireController"
+            base_directory: "Controller directory"
+            reloading: false
+            export_symbols: false
+    -
+      id: 5
+      name: "FireCabinet"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2018/model/FullFeaturedFireCabinet.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 8, 11.5, 0 ]
+        rootAttitude: [
+          6.123234e-17, 1, -0,
+          -1, 6.123234e-17, 0,
+          0, 0, 1 ]
+        jointDisplacements: [ 0, 0, 0, 0, 45, 0, 0, 0, 0 ]
+        initialRootPosition: [ 8, 11.5, 0 ]
+        initialRootAttitude: [
+          2.22044605e-16, 1, -0,
+          -1, 2.22044605e-16, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: true
+        lock_location: false
+        scene_sensitive: true
+      children:
+        -
+          id: 6
+          name: "HoseNozzleController"
+          plugin: Body
+          class: SimpleControllerItem
+          data:
+            isNoDelayMode: false
+            controllerOptions: ""
+            controller: "HoseNozzleController"
+            base_directory: "Controller directory"
+            reloading: false
+            export_symbols: false
+    -
+      id: 7
+      name: "FireCircle"
+      plugin: Body
+      class: BodyItem
+      data:
+        file: "${SHARE}/WRS2018/model/T5_NoEntryAreaCircle.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 8, 8, 0 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ 8, 8, 0 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 8
       name: "MultiCollider"
       plugin: SimpleCollider
       class: MultiColliderItem
@@ -82,7 +181,7 @@ items:
         mosaic_chance: 1
         kernel: 16
     -
-      id: 4
+      id: 9
       name: "VFXCollider3"
       plugin: SimpleCollider
       class: MultiColliderItem
@@ -120,7 +219,7 @@ items:
         mosaic_chance: 0.1
         kernel: 16
     -
-      id: 5
+      id: 10
       name: "Block"
       plugin: Body
       class: BodyItem
@@ -144,7 +243,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 6
+      id: 11
       name: "TargetTS4_35-50-C1"
       plugin: Body
       class: BodyItem
@@ -168,7 +267,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 7
+      id: 12
       name: "TargetTS4_35-50-C2"
       plugin: Body
       class: BodyItem
@@ -192,7 +291,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 8
+      id: 13
       name: "TargetTS4_35-50-C3"
       plugin: Body
       class: BodyItem
@@ -216,7 +315,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 9
+      id: 14
       name: "TargetTS4_35-50-C4"
       plugin: Body
       class: BodyItem
@@ -240,7 +339,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 10
+      id: 15
       name: "TargetTS4_35-50-C5"
       plugin: Body
       class: BodyItem
@@ -264,7 +363,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 11
+      id: 16
       name: "TargetTS4_35-100-C1"
       plugin: Body
       class: BodyItem
@@ -288,7 +387,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 12
+      id: 17
       name: "TargetTS4_35-100-C2"
       plugin: Body
       class: BodyItem
@@ -312,7 +411,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 13
+      id: 18
       name: "TargetTS4_35-100-C3"
       plugin: Body
       class: BodyItem
@@ -336,7 +435,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 14
+      id: 19
       name: "TargetTS4_35-100-C4"
       plugin: Body
       class: BodyItem
@@ -360,7 +459,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 15
+      id: 20
       name: "TargetTS4_35-100-C5"
       plugin: Body
       class: BodyItem
@@ -384,7 +483,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 16
+      id: 21
       name: "Rack2"
       plugin: Body
       class: BodyItem
@@ -408,7 +507,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 17
+      id: 22
       name: "robot3"
       plugin: Body
       class: BodyItem
@@ -416,17 +515,17 @@ items:
       data:
         file: "../model/Obstacle/robot3.body"
         format: CHOREONOID-BODY
-        rootPosition: [ 7.61822239, 10.2372075, 0.1 ]
+        rootPosition: [ 5.42600316, 8.36110773, 0.1 ]
         rootAttitude: [
-          0.707106781, 0.707106781, -0,
+          0.707106781, 0.707106781, 0,
           -0.707106781, 0.707106781, 0,
           0, 0, 1 ]
         jointDisplacements: [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
-        initialRootPosition: [ 7.61822239, 10.2372075, 0.1 ]
+        initialRootPosition: [ 5.42600316, 8.36110773, 0.1 ]
         initialRootAttitude: [
-          0.707106781, 0.707106781, -0,
-          -0.707106781, 0.707106781, 0,
-          0, 0, 1 ]
+          0.707106781, 0.707106781, 0,
+          -0.707106781, 0.707106781, -0,
+          -0, 0, 1 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -448,7 +547,7 @@ views:
     class: ItemTreeView
     mounted: true
     state:
-      expanded: [ 1 ]
+      expanded: [ 1, 3, 5 ]
   -
     id: 3
     plugin: Base
@@ -480,9 +579,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -4.53276, -6.4985, 12.6892 ]
-          direction: [ 0.498944, 0.62264, -0.602806 ]
-          up: [ 0.376953, 0.470406, 0.797888 ]
+          eye: [ -4.68926, 17.9659, 12.3682 ]
+          direction: [ 0.531594, -0.586845, -0.610754 ]
+          up: [ 0.410034, -0.452651, 0.79182 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -605,27 +704,17 @@ Body:
         show_cm_projection: false
         show_zmp: false
       -
+        body_item: 3
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
         body_item: 5
         show_cm: false
         show_cm_projection: false
         show_zmp: false
       -
-        body_item: 6
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
         body_item: 7
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 8
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 9
         show_cm: false
         show_cm_projection: false
         show_zmp: false
@@ -669,6 +758,31 @@ Body:
         show_cm: false
         show_cm_projection: false
         show_zmp: false
+      -
+        body_item: 18
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 19
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 20
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 21
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 22
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
   "SplineFilterDialog":
     isInputFrameRateSpecified: false
     inputFrameRate: 200
@@ -681,17 +795,17 @@ viewAreas:
     contents:
       type: splitter
       orientation: horizontal
-      sizes: [ 1401, 445 ]
+      sizes: [ 1887, 599 ]
       children:
         -
           type: splitter
           orientation: horizontal
-          sizes: [ 362, 1035 ]
+          sizes: [ 488, 1395 ]
           children:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 504, 504 ]
+              sizes: [ 704, 704 ]
               children:
                 -
                   type: pane
@@ -703,7 +817,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 757, 251 ]
+              sizes: [ 1057, 351 ]
               children:
                 -
                   type: pane
@@ -715,7 +829,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 222, 786 ]
+          sizes: [ 310, 1098 ]
           children:
             -
               type: pane
@@ -723,7 +837,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 306, 476 ]
+              sizes: [ 428, 666 ]
               children:
                 -
                   type: pane
