@@ -12,7 +12,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/model/AizuSpider/AizuSpiderSS.body"
+        file: "${SHARE}/model/AizuSpider/AizuSpiderDA.body"
         format: CHOREONOID-BODY
         currentBaseLink: "CHASSIS"
         rootPosition: [ 0, 0, 0.035 ]
@@ -21,8 +21,10 @@ items:
           0, 1, 0,
           0, 0, 1 ]
         jointDisplacements: [
-          0, 0, 0, 0, -90, 50, 50, 0, 0, 0,
-          0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+          0, 0, 0, 0, -90, 151, 27, -93, 6.00001, 100,
+          0, 0, 0, -90, 151, 27, -93, 6.00001, 100, 0,
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0, 0 ]
         initialRootPosition: [ 0, 0, 0.035 ]
         initialRootAttitude: [
           1, 0, 0,
@@ -34,7 +36,7 @@ items:
         lock_location: false
         scene_sensitive: true
         link_kinematics:
-          "FINGER1_TIP":
+          "ARM1_FINGER1_TIP":
             base_frame: 0
             offset_frame: 0
       children:
@@ -53,49 +55,60 @@ items:
           children:
             -
               id: 3
-              name: "Jaco2Controller"
+              name: "Arm1Controller"
+              plugin: Body
+              class: SimpleControllerItem
+              data:
+                isNoDelayMode: false
+                controllerOptions: "ARM1_"
+                controller: "Jaco2Controller"
+                base_directory: "Controller directory"
+                reloading: true
+                export_symbols: false
+            -
+              id: 4
+              name: "Arm2Controller"
+              plugin: Body
+              class: SimpleControllerItem
+              data:
+                isNoDelayMode: false
+                controllerOptions: "ARM2_"
+                controller: "Jaco2Controller"
+                base_directory: "Controller directory"
+                reloading: true
+                export_symbols: false
+            -
+              id: 5
+              name: "JoyTopicSubController"
               plugin: Body
               class: SimpleControllerItem
               data:
                 isNoDelayMode: false
                 controllerOptions: ""
-                controller: "Jaco2Controller"
+                controller: "JoyTopicSubscriberController"
                 base_directory: "Controller directory"
-                reloading: true
+                reloading: false
                 export_symbols: false
-              children:
-                -
-                  id: 4
-                  name: "JoyTopicSubController"
-                  plugin: Body
-                  class: SimpleControllerItem
-                  data:
-                    isNoDelayMode: false
-                    controllerOptions: ""
-                    controller: "JoyTopicSubscriberController"
-                    base_directory: "Controller directory"
-                    reloading: false
-                    export_symbols: false
         -
-          id: 5
+          id: 6
           name: "BodyTrackingCamera"
           plugin: Body
           class: BodySyncCameraItem
           is_checked: true
           data:
             camera_type: Perspective
-            translation: [ -1.5435, -0.414704, 0.842134 ]
-            rotation: [ 0.585982, -0.503027, -0.635287, 106.993 ]
+            translation: [ -1.93309, -0.66541, 1.04896 ]
+            rotation: [ 0.600421, -0.483958, -0.636615, 103.396 ]
             field_of_view: 0.785398
-            near_clip_distance: 0.05
-            far_clip_distance: 200
+            near_clip_distance: 0.01
+            far_clip_distance: 100
             interactive_viewpoint_change: true
             target_link: ""
-            parallel_tracking: true
-            local_translation: [ -1.5435, -0.414704, 0.807134 ]
-            local_rotation: [ 0.585982, -0.503027, -0.635287, 106.993 ]
+            parallel_tracking: false
+            local_translation: [ -1.93309, -0.66541, 1.01396 ]
+            local_rotation: [ 0.600421, -0.483958, -0.636615, 103.396 ]
         -
-          id: 6
+          id: 7
           name: "BodyROS2"
           plugin: ROS2
           class: BodyROS2Item
@@ -118,7 +131,7 @@ views:
     class: ItemTreeView
     mounted: true
     state:
-      expanded: [ 1, 2, 3 ]
+      expanded: [ 1, 2 ]
   -
     id: 3
     plugin: Base
@@ -151,7 +164,7 @@ views:
           camera: [ System, Perspective ]
           eye: [ 3, 1.5, 1.2 ]
           direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787497, 0.984374 ]
+          up: [ -0.1575, -0.0787495, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -171,7 +184,7 @@ views:
       shadow_lights:
         - { index: 0, enabled: false }
         - { index: 1, enabled: false }
-      background_color: [ 0.100008, 0.100008, 0.300008 ]
+      background_color: [ 0.1, 0.1, 0.3 ]
       line_width: 1
       point_size: 1
       field_of_view: 45
@@ -214,7 +227,7 @@ views:
     class: LinkDeviceListView
     mounted: true
     state:
-      element_type: all
+      element_type: link
       listing_mode: list
   -
     id: 9
@@ -328,7 +341,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 310, 1098 ]
+          sizes: [ 309, 1099 ]
           children:
             -
               type: pane
@@ -336,7 +349,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 429, 665 ]
+              sizes: [ 428, 667 ]
               children:
                 -
                   type: pane
