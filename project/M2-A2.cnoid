@@ -19,7 +19,7 @@ items:
           1, 0, 0,
           0, 1, 0,
           0, 0, 1 ]
-        jointDisplacements: [ 0, 0 ]
+        jointDisplacements: [ -360, 0 ]
         initialRootPosition: [ 0, 0, 0 ]
         initialRootAttitude: [
           1, 0, 0,
@@ -173,9 +173,9 @@ items:
           0, 1, 6.123234e-17 ]
         initialRootPosition: [ 7.70699307, -6.70699307, 0.0996171246 ]
         initialRootAttitude: [
-          0.707106781, -6.40130171e-11, 0.707106781,
-          0.707106781, 3.35597217e-10, -0.707106781,
-          -6.40130171e-11, 1, 3.35597217e-10 ]
+          0.707106781, 0, 0.707106781,
+          0.707106781, 1.54541047e-10, -0.707106781,
+          0, 1, 1.54541047e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -342,7 +342,7 @@ items:
         initialRootPosition: [ 6.1954317, -11.3827302, 0.666746827 ]
         initialRootAttitude: [
           -0.5, 1.11022302e-16, 0.866025404,
-          0.866025404, -1.24454225e-10, 0.5,
+          0.866025404, -1.24454447e-10, 0.5,
           -1.11022302e-16, 1, -1.24454669e-10 ]
         fix_root: true
         collisionDetection: true
@@ -416,7 +416,7 @@ items:
         initialRootAttitude: [
           0.69610295, 0.707106781, 0.124260548,
           0.696102949, -0.707106781, 0.124260548,
-          0.175730952, -1.04476948e-10, -0.984438231 ]
+          0.175730952, -6.96512639e-11, -0.984438231 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -724,17 +724,17 @@ viewAreas:
     contents:
       type: splitter
       orientation: horizontal
-      sizes: [ 1401, 445 ]
+      sizes: [ 1887, 599 ]
       children:
         -
           type: splitter
           orientation: horizontal
-          sizes: [ 362, 1035 ]
+          sizes: [ 488, 1395 ]
           children:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 504, 504 ]
+              sizes: [ 704, 704 ]
               children:
                 -
                   type: pane
@@ -746,7 +746,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 757, 251 ]
+              sizes: [ 1057, 351 ]
               children:
                 -
                   type: pane
@@ -758,7 +758,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 222, 786 ]
+          sizes: [ 310, 1098 ]
           children:
             -
               type: pane
@@ -766,7 +766,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 306, 476 ]
+              sizes: [ 428, 666 ]
               children:
                 -
                   type: pane

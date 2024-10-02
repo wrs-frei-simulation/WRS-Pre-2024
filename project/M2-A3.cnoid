@@ -19,7 +19,7 @@ items:
           1, 0, 0,
           0, 1, 0,
           0, 0, 1 ]
-        jointDisplacements: [ 0, 0 ]
+        jointDisplacements: [ -360, 0 ]
         initialRootPosition: [ 0, 0, 0 ]
         initialRootAttitude: [
           1, 0, 0,
