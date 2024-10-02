@@ -58,6 +58,24 @@ items:
                 export_symbols: false
         -
           id: 4
+          name: "BodySyncCamera"
+          plugin: Body
+          class: BodySyncCameraItem
+          is_checked: true
+          data:
+            camera_type: Perspective
+            translation: [ -1.42885, -1.0245, 1.3098 ]
+            rotation: [ 0.698341, -0.358582, -0.619467, 79.3108 ]
+            field_of_view: 0.785398
+            near_clip_distance: 0.04
+            far_clip_distance: 200
+            interactive_viewpoint_change: true
+            target_link: ""
+            parallel_tracking: false
+            local_translation: [ -1.42885, -1.0245, 1.0098 ]
+            local_rotation: [ 0.698341, -0.358582, -0.619467, 79.3108 ]
+        -
+          id: 5
           name: "BodyROS2"
           plugin: ROS2
           class: BodyROS2Item
@@ -111,13 +129,15 @@ views:
       cameras:
         -
           camera: [ System, Perspective ]
-          isCurrent: true
           eye: [ -1.42885, -1.0245, 1.3098 ]
           direction: [ 0.70472, 0.505294, -0.498044 ]
           up: [ 0.404752, 0.290213, 0.867152 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
+        -
+          camera: BodySyncCamera
+          isCurrent: true
       lighting_mode: normal
       culling_mode: enabled
       shading_mode: smooth
