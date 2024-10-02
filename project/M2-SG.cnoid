@@ -12,9 +12,9 @@ items:
       class: SimpleColliderItem
       is_checked: true
       data:
-        translation: [ -9.5, -7, -0.06 ]
+        translation: [ -9.5, -7, 0 ]
         rotation: [ 0, -0, 0 ]
-        size: [ 3, 4.5, 0.2 ]
+        size: [ 3, 4.5, 0.001 ]
         diffuse_color: [ 0, 0, 1 ]
         radius: 0.5
         height: 1
@@ -28,9 +28,9 @@ items:
       class: SimpleColliderItem
       is_checked: true
       data:
-        translation: [ 4, -7, -0.06 ]
+        translation: [ 4, -7, 0 ]
         rotation: [ 0, -0, 0 ]
-        size: [ 3, 4.5, 0.2 ]
+        size: [ 3, 4.5, 0.001 ]
         diffuse_color: [ 1, 0, 0 ]
         radius: 0.5
         height: 1
@@ -44,9 +44,9 @@ items:
       class: SimpleColliderItem
       is_checked: true
       data:
-        translation: [ 4, -7, -0.06 ]
+        translation: [ 4, -7, 0 ]
         rotation: [ 0, -0, 0 ]
-        size: [ 3, 4.5, 0.2 ]
+        size: [ 3, 4.5, 0.001 ]
         diffuse_color: [ 0, 0, 1 ]
         radius: 0.5
         height: 1
@@ -60,9 +60,9 @@ items:
       class: SimpleColliderItem
       is_checked: true
       data:
-        translation: [ 7, 4, -0.06 ]
+        translation: [ 7, 4, 0 ]
         rotation: [ 0, -0, 0 ]
-        size: [ 4.5, 3, 0.2 ]
+        size: [ 4.5, 3, 0.001 ]
         diffuse_color: [ 1, 0, 0 ]
         radius: 0.5
         height: 1
@@ -76,9 +76,9 @@ items:
       class: SimpleColliderItem
       is_checked: true
       data:
-        translation: [ 7, 4, -0.06 ]
+        translation: [ 7, 4, 0 ]
         rotation: [ 0, -0, 0 ]
-        size: [ 4.5, 3, 0.2 ]
+        size: [ 4.5, 3, 0.001 ]
         diffuse_color: [ 0, 0, 1 ]
         radius: 0.5
         height: 1
@@ -92,9 +92,9 @@ items:
       class: SimpleColliderItem
       is_checked: true
       data:
-        translation: [ -4, 7, -0.06 ]
+        translation: [ -4, 7, 0 ]
         rotation: [ 0, -0, 0 ]
-        size: [ 3, 4.5, 0.2 ]
+        size: [ 3, 4.5, 0.001 ]
         diffuse_color: [ 1, 0, 0 ]
         radius: 0.5
         height: 1
@@ -108,9 +108,9 @@ items:
       class: SimpleColliderItem
       is_checked: true
       data:
-        translation: [ -4, 7, -0.06 ]
+        translation: [ -4, 7, 0 ]
         rotation: [ 0, -0, 0 ]
-        size: [ 3, 4.5, 0.2 ]
+        size: [ 3, 4.5, 0.001 ]
         diffuse_color: [ 0, 0, 1 ]
         radius: 0.5
         height: 1
@@ -124,9 +124,9 @@ items:
       class: SimpleColliderItem
       is_checked: true
       data:
-        translation: [ -7, 4, -0.06 ]
+        translation: [ -7, 4, 0 ]
         rotation: [ 0, -0, 0 ]
-        size: [ 4.5, 3, 0.2 ]
+        size: [ 4.5, 3, 0.001 ]
         diffuse_color: [ 1, 0, 0 ]
         radius: 0.5
         height: 1
