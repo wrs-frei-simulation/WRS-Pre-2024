@@ -1,28 +1,55 @@
 registrations:
-  -
-    name: M1-1-AizuSpiderSA
+  - &Mission1-1
+    name: M1-1
     task_project: [ M1-A1-1, M1-A2-1, M1-A3-1 ]
-    robot_project: [ AizuSpiderSA ]
+#    robot_project: [ ]
+    robot_alignment: X+
     start_position: [ -2.0, 0.0, 0.0 ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
 #    view_project: SingleSceneView
 #    enable_recording: true
-  -
-    name: M1-2-AizuSpiderSA
-    task_project: [ M1-A1-2, M1-A2-2, M1-A3-2 ]
+  - <<: *Mission1-1
+    name: M1-1-AizuSpiderSA
     robot_project: [ AizuSpiderSA ]
-    start_position: [ -2.0, 0.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
-#    view_project: SingleSceneView
-#    enable_recording: true
-  -
-    name: M1-AizuSpiderSA-ROS2
-    task_project: [ M1-A1, M1-A2, M1-A3 ]
+  - <<: *Mission1-1
+    name: M1-1-AizuSpiderSA-ROS2
     robot_project: [ AizuSpiderSA-ROS2 ]
-    start_position: [ -2.0, 0.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV ]
+  - <<: *Mission1-1
+    name: M1-1-AizuSpiderSS
+    robot_project: [ AizuSpiderSS ]
+    simulator_project: [ AISTSimulatorCV ]
+  - <<: *Mission1-1
+    name: M1-1-AizuSpiderSS-ROS2
+    robot_project: [ AizuSpiderSS-ROS2 ]
+    simulator_project: [ AISTSimulatorCV ]
+
+  - &Mission1-2
+    name: M1-2
+    task_project: [ M1-A1-2, M1-A2-2, M1-A3-2 ]
+#    robot_project: [ ]
+    start_position: [ -2.0, 0.0, 0.0 ]
+    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
 #    view_project: SingleSceneView
 #    enable_recording: true
+  - <<: *Mission1-2
+    name: M1-2-AizuSpiderSA
+    robot_project: [ AizuSpiderSA ]
+    simulator_project: [ AGXSimulatorCV ]
+  - <<: *Mission1-2
+    name: M1-2-AizuSpiderSA-ROS2
+    robot_project: [ AizuSpiderSA-ROS2 ]
+    simulator_project: [ AGXSimulatorCV ]
+  - <<: *Mission1-2
+    name: M1-2-AizuSpiderSS
+    robot_project: [ AizuSpiderSS ]
+    simulator_project: [ AISTSimulatorCV ]
+  - <<: *Mission1-2
+    name: M1-2-AizuSpiderSS-ROS2
+    robot_project: [ AizuSpiderSS-ROS2 ]
+    simulator_project: [ AISTSimulatorCV ]
+
   - &Mission2
     name: M2
     task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, ContainmentVessel, Structures, M2-SG ]
