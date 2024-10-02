@@ -167,6 +167,7 @@ $ ros2 run choreonoid_ros choreonoid
 	- https://k38-suzuki.github.io/hairo-world-plugin-doc/wrs/index.html
 - ChoreonoidとROS2との連携
 	- https://choreonoid.org/ja/documents/latest/ros2/index.html
+ 	- https://github.com/choreonoid/choreonoid_ros2_mobile_robot_tutorial/blob/main/doc/ros2_mobile_robot_tutorial_ja.pdf 
 	- https://k38-suzuki.github.io/hairo-world-plugin-doc/ros2/index.html
 ##### Choreonoid遠隔操作チュートリアル参考URL
 - https://choreonoid.org/ja/documents/latest/wrs2018/teleoperation-ros.html
