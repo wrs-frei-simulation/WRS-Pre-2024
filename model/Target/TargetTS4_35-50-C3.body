@@ -27,7 +27,7 @@ links:
             texCoordIndex: [ 0, 1, 2, 3, -1 ]
           appearance:
             texture:
-              url: "resource2/QRM2-C3.png"
+              url: "resource/QRM2-C3.png"
       - # Base
         type: Shape
         rotation: [ 1, 0, 0, 90 ]
