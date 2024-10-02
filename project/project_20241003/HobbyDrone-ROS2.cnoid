@@ -51,7 +51,7 @@ items:
               class: SimpleControllerItem
               data:
                 isNoDelayMode: false
-                controllerOptions: ""
+                controllerOptions: "topic joy2"
                 controller: "JoyTopicSubscriberController"
                 base_directory: "Controller directory"
                 reloading: false
