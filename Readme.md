@@ -7,6 +7,20 @@
 
 ![Stage](./fig/stage.png)
 
+- サンプル動画（画像をクリックすることでyoutubeで確認できます）
+	- エリア全体概要
+   
+  	[![](https://img.youtube.com/vi/Oi1t4SQqD-A/0.jpg)](https://www.youtube.com/watch?v=Oi1t4SQqD-A)
+
+ 
+ 	- ロボットシミュレーション
+   
+  	[![](https://img.youtube.com/vi/b9BqyA2T81Y/0.jpg)](https://www.youtube.com/watch?v=b9BqyA2T81Y)
+
+  	- ダクト侵入シミュレーション（気流あり）
+  	  
+  	[![](https://img.youtube.com/vi/iCsacqRvRAQ/0.jpg)](https://www.youtube.com/watch?v=iCsacqRvRAQ)  
+
 ## エリア紹介
 
 ### エリア1: レバー操作
