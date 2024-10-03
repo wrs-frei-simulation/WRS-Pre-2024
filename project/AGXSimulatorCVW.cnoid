@@ -7,36 +7,31 @@ items:
   children:
     -
       id: 1
-      name: "AISTSimulator"
-      plugin: Body
-      class: AISTSimulatorItem
+      name: "AGXSimulator"
+      plugin: AGXDynamics
+      class: AGXSimulatorItem
       data:
-        time_step: 0.001
+        time_step: 0.005
         realtime_sync_mode: compensatory
         recording: full
         time_range_mode: unlimited
         time_length: 180
         is_active_control_time_range_mode: false
-        output_all_link_positions: false
+        output_all_link_positions: true
         output_device_states: true
         use_controller_threads: true
         record_collision_data: false
-        controller_options: ""
+        controller_options: "position"
         block_scene_view_edit_mode: false
-        dynamicsMode: "Forward dynamics"
-        integrationMode: semi-implicit_euler
-        gravity: [ 0, 0, -9.80665 ]
-        min_friction_coefficient: 0
-        max_friction_coefficient: 100
-        cullingThresh: 0.005
-        contactCullingDepth: 0.05
-        errorCriterion: 0.001
-        maxNumIterations: 25
-        contactCorrectionDepth: 0.00025
-        contactCorrectionVelocityRatio: 5
-        kinematicWalking: false
-        2Dmode: false
-        oldAccelSensorMode: false
+        Gravity: [ 0, 0, -9.80665 ]
+        NumThreads: 4
+        ContactReduction: true
+        ContactReductionBinResolution: 3
+        ContactReductionThreshhold: 12
+        ContactWarmstarting: true
+        AutoSleep: false
+        SaveToAGXFileOnStart: false
+        DebugMessageOnConsole: 4
       children:
         -
           id: 2
@@ -61,7 +56,7 @@ items:
             range_sensor_precision_ratio: 2
             depth_error: 0
             background_color: [ 0, 0, 0 ]
-            enable_head_light: true
+            enable_head_light: false
             enable_world_light: true
             enable_additional_lights: true
             antialiasing: false
@@ -70,21 +65,17 @@ views:
   -
     id: 0
     plugin: Base
-    class: GeneralSliderView
-  -
-    id: 1
-    plugin: Base
     class: ItemPropertyView
     mounted: true
   -
-    id: 2
+    id: 1
     plugin: Base
     class: ItemTreeView
     mounted: true
     state:
       expanded: [ 1 ]
   -
-    id: 3
+    id: 2
     plugin: Base
     class: LocationView
     mounted: true
@@ -95,12 +86,12 @@ views:
       show_rotation_matrix: false
       coordinate: parent
   -
-    id: 4
+    id: 3
     plugin: Base
     class: MessageView
     mounted: true
   -
-    id: 5
+    id: 4
     plugin: Base
     class: SceneView
     mounted: true
@@ -151,7 +142,7 @@ views:
       xz_grid_color: [ 0.9, 0.9, 0.9 ]
       yz_grid_color: [ 0.9, 0.9, 0.9 ]
   -
-    id: 6
+    id: 5
     plugin: Body
     class: JointDisplacementView
     mounted: true
@@ -165,7 +156,7 @@ views:
       limit_ranges: false
       show_selected_joints: false
   -
-    id: 7
+    id: 6
     plugin: Body
     class: LinkDeviceListView
     mounted: true
@@ -173,7 +164,7 @@ views:
       element_type: all
       listing_mode: list
   -
-    id: 8
+    id: 7
     plugin: Body
     class: LinkPositionView
     mounted: true
@@ -186,12 +177,12 @@ views:
       show_rotation_matrix: false
       target_link_type: ik_link
   -
-    id: 9
+    id: 8
     plugin: Body
     class: LinkPropertyView
     mounted: true
   -
-    id: 10
+    id: 9
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -241,57 +232,57 @@ viewAreas:
     contents:
       type: splitter
       orientation: horizontal
-      sizes: [ 1887, 599 ]
+      sizes: [ 1401, 445 ]
       children:
         -
           type: splitter
           orientation: horizontal
-          sizes: [ 488, 1395 ]
+          sizes: [ 362, 1035 ]
           children:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 704, 704 ]
+              sizes: [ 504, 504 ]
               children:
                 -
                   type: pane
-                  views: [ 2 ]
+                  views: [ 1 ]
                 -
                   type: pane
-                  views: [ 1, 9 ]
-                  current: 1
+                  views: [ 0, 8 ]
+                  current: 0
             -
               type: splitter
               orientation: vertical
-              sizes: [ 1057, 351 ]
+              sizes: [ 757, 251 ]
               children:
                 -
                   type: pane
-                  views: [ 5 ]
+                  views: [ 4 ]
                 -
                   type: pane
-                  views: [ 4, 10 ]
-                  current: 4
+                  views: [ 3, 9 ]
+                  current: 3
         -
           type: splitter
           orientation: vertical
-          sizes: [ 310, 1098 ]
+          sizes: [ 222, 786 ]
           children:
             -
               type: pane
-              views: [ 3 ]
+              views: [ 2 ]
             -
               type: splitter
               orientation: vertical
-              sizes: [ 429, 665 ]
+              sizes: [ 306, 476 ]
               children:
                 -
                   type: pane
-                  views: [ 8 ]
+                  views: [ 7 ]
                 -
                   type: pane
-                  views: [ 7, 6 ]
-                  current: 6
+                  views: [ 6, 5 ]
+                  current: 5
 layoutOfToolBars:
   rows:
     -

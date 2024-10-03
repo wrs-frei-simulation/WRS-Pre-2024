@@ -27,7 +27,7 @@ views:
       unique_rpy: false
       show_quaternion: false
       show_rotation_matrix: false
-      coordinate: parent
+      coordinate: world
   -
     id: 3
     plugin: Base
@@ -48,9 +48,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ 3, 1.5, 1.2 ]
-          direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787499, 0.984374 ]
+          eye: [ 26.8195, 16.6872, 18.7119 ]
+          direction: [ -0.693768, -0.428842, -0.578601 ]
+          up: [ -0.492166, -0.304225, 0.81561 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -86,56 +86,10 @@ views:
       yz_grid_color: [ 0.9, 0.9, 0.9 ]
   -
     id: 5
-    name: "シーン 2"
-    plugin: Base
-    class: SceneView
-    mounted: true
+    plugin: Body
+    class: BodyLinkView
     state:
-      editMode: false
-      viewpointOperationMode: thirdPerson
-      visible_polygon_elements: [ face ]
-      highlighting: false
-      collisionLines: false
-      cameras:
-        -
-          camera: [ System, Perspective ]
-          isCurrent: true
-          eye: [ 3, 1.5, 1.2 ]
-          direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787499, 0.984374 ]
-        -
-          camera: [ System, Orthographic ]
-          orthoHeight: 20
-      lighting_mode: normal
-      culling_mode: enabled
-      shading_mode: smooth
-      world_light: true
-      world_light_intensity: 0.5
-      ambient_light: true
-      ambient_light_intensity: 0.5
-      head_light: true
-      head_light_intensity: 0.5
-      world_light_shadow: true
-      shadow_lights:
-        - { index: 0, enabled: false }
-        - { index: 1, enabled: false }
-      background_color: [ 0.1, 0.1, 0.3 ]
-      line_width: 1
-      point_size: 1
-      field_of_view: 35
-      clip_distances: [ 0.04, 200 ]
-      floorGrid: true
-      floorGridSpan: 10
-      floorGridInterval: 0.5
-      xzGrid: false
-      xzGridSpan: 10
-      xzGridInterval: 0.5
-      yzGrid: false
-      yzGridSpan: 10
-      yzGridInterval: 0.5
-      xy_grid_color: [ 0.9, 0.9, 0.9 ]
-      xz_grid_color: [ 0.9, 0.9, 0.9 ]
-      yz_grid_color: [ 0.9, 0.9, 0.9 ]
+      showRotationMatrix: false
   -
     id: 6
     plugin: Body
@@ -252,16 +206,8 @@ viewAreas:
               sizes: [ 756, 252 ]
               children:
                 -
-                  type: splitter
-                  orientation: horizontal
-                  sizes: [ 680, 680 ]
-                  children:
-                    -
-                      type: pane
-                      views: [ 4 ]
-                    -
-                      type: pane
-                      views: [ 5 ]
+                  type: pane
+                  views: [ 4 ]
                 -
                   type: pane
                   views: [ 3, 10 ]

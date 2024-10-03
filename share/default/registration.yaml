@@ -6,7 +6,7 @@ registrations:
     robot_alignment: X+
     start_position: [ -2.0, 0.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
-#    view_project: SingleSceneView
+    view_project: M2-RefereeView
 #    enable_recording: true
   - <<: *Mission1-1
     name: M1-1-AizuSpiderDA
@@ -40,7 +40,7 @@ registrations:
     robot_alignment: X+
     start_position: [ -2.0, 0.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
-#    view_project: SingleSceneView
+    view_project: M2-RefereeView
 #    enable_recording: true
   - <<: *Mission1-2
     name: M1-2-AizuSpiderDA
@@ -74,7 +74,7 @@ registrations:
     robot_alignment: X+
     start_position: [ -9.5, -7.0, 0.0 ]
     simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
-#    view_project: SingleSceneView
+    view_project: M2-RefereeView
 #    enable_recording: true
   - <<: *Mission2
     name: M2-A1

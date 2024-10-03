@@ -7,20 +7,20 @@ items:
   children:
     -
       id: 1
-      name: "Crawler"
+      name: "HobbyDrone"
       plugin: Body
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/model_test/crawler.body"
+        file: "${SHARE}/HobbyDrone/model/HobbyDrone.body"
         format: CHOREONOID-BODY
-        rootPosition: [ 0, 0, 0.1 ]
+        currentBaseLink: "CHASSIS"
+        rootPosition: [ 0, 0, 0.3 ]
         rootAttitude: [
           1, 0, 0,
           0, 1, 0,
           0, 0, 1 ]
-        jointDisplacements: [ 0, 0 ]
-        initialRootPosition: [ 0, 0, 0.1 ]
+        initialRootPosition: [ 0, 0, 0.3 ]
         initialRootAttitude: [
           1, 0, 0,
           0, 1, 0,
@@ -39,10 +39,31 @@ items:
           data:
             isNoDelayMode: false
             controllerOptions: ""
-            controller: "SampleCrawlerJoystickController"
+            controller: "HobbyDroneJoystickController.so"
             base_directory: "Controller directory"
             reloading: false
             export_symbols: false
+          children:
+            -
+              id: 3
+              name: "JoyTopicSubController"
+              plugin: Body
+              class: SimpleControllerItem
+              data:
+                isNoDelayMode: false
+                controllerOptions: "topic joy2"
+                controller: "JoyTopicSubscriberController"
+                base_directory: "Controller directory"
+                reloading: false
+                export_symbols: false
+        -
+          id: 4
+          name: "BodyROS2"
+          plugin: ROS2
+          class: BodyROS2Item
+          data:
+            body_ros_version: 0
+            joint_state_update_rate: 100
 views:
   -
     id: 0
@@ -55,7 +76,7 @@ views:
     class: ItemTreeView
     mounted: true
     state:
-      expanded: [ 1 ]
+      expanded: [ 1, 2 ]
   -
     id: 2
     plugin: Base
@@ -87,9 +108,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ 3, 1.5, 1.2 ]
-          direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787497, 0.984374 ]
+          eye: [ -1.42885, -1.0245, 1.3098 ]
+          direction: [ 0.70472, 0.505294, -0.498044 ]
+          up: [ 0.404752, 0.290213, 0.867152 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -99,9 +120,9 @@ views:
       world_light: true
       world_light_intensity: 0.5
       ambient_light: true
-      ambient_light_intensity: 0.5
+      ambient_light_intensity: 0.3
       head_light: true
-      head_light_intensity: 0.5
+      head_light_intensity: 0.75
       world_light_shadow: true
       shadow_lights:
         - { index: 0, enabled: false }
@@ -109,8 +130,8 @@ views:
       background_color: [ 0.1, 0.1, 0.3 ]
       line_width: 1
       point_size: 1
-      field_of_view: 35
-      clip_distances: [ 0.04, 200 ]
+      field_of_view: 40
+      clip_distances: [ 0.01, 100 ]
       floorGrid: true
       floorGridSpan: 10
       floorGridInterval: 0.5
@@ -126,11 +147,17 @@ views:
   -
     id: 5
     plugin: Body
+    class: BodyLinkView
+    state:
+      showRotationMatrix: false
+  -
+    id: 6
+    plugin: Body
     class: JointDisplacementView
     mounted: true
     state:
-      show_joint_ids: true
-      show_joint_names: false
+      show_joint_ids: false
+      show_joint_names: true
       overlap_joint_names: false
       show_sliders: true
       show_dials: false
@@ -138,15 +165,15 @@ views:
       limit_ranges: false
       show_selected_joints: false
   -
-    id: 6
+    id: 7
     plugin: Body
     class: LinkDeviceListView
     mounted: true
     state:
-      element_type: all
+      element_type: link
       listing_mode: list
   -
-    id: 7
+    id: 8
     plugin: Body
     class: LinkPositionView
     mounted: true
@@ -159,12 +186,12 @@ views:
       show_rotation_matrix: false
       target_link_type: ik_link
   -
-    id: 8
+    id: 9
     plugin: Body
     class: LinkPropertyView
     mounted: true
   -
-    id: 9
+    id: 10
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -194,7 +221,7 @@ toolbars:
 Body:
   "BodySelectionManager":
     current_body_item: 1
-    current_link: "BODY"
+    current_link: "CHASSIS"
   "KinematicFaultChecker":
     checkJointPositions: true
     angleMargin: 0
@@ -240,7 +267,7 @@ viewAreas:
                   views: [ 1 ]
                 -
                   type: pane
-                  views: [ 0, 8 ]
+                  views: [ 0, 9 ]
                   current: 0
             -
               type: splitter
@@ -252,12 +279,12 @@ viewAreas:
                   views: [ 4 ]
                 -
                   type: pane
-                  views: [ 3, 9 ]
+                  views: [ 3, 10 ]
                   current: 3
         -
           type: splitter
           orientation: vertical
-          sizes: [ 222, 786 ]
+          sizes: [ 221, 787 ]
           children:
             -
               type: pane
@@ -265,15 +292,15 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 306, 476 ]
+              sizes: [ 306, 477 ]
               children:
                 -
                   type: pane
-                  views: [ 7 ]
+                  views: [ 8 ]
                 -
                   type: pane
-                  views: [ 6, 5 ]
-                  current: 5
+                  views: [ 7, 6 ]
+                  current: 6
 layoutOfToolBars:
   rows:
     -

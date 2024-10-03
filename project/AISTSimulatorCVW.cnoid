@@ -4,6 +4,68 @@ items:
   plugin: Base
   class: RootItem
   is_builtin_item: true
+  children:
+    -
+      id: 1
+      name: "AISTSimulator"
+      plugin: Body
+      class: AISTSimulatorItem
+      data:
+        time_step: 0.005
+        realtime_sync_mode: compensatory
+        recording: full
+        time_range_mode: unlimited
+        time_length: 180
+        is_active_control_time_range_mode: false
+        output_all_link_positions: false
+        output_device_states: true
+        use_controller_threads: true
+        record_collision_data: false
+        controller_options: ""
+        block_scene_view_edit_mode: false
+        dynamicsMode: "Forward dynamics"
+        integrationMode: semi-implicit_euler
+        gravity: [ 0, 0, -9.80665 ]
+        min_friction_coefficient: 0
+        max_friction_coefficient: 100
+        cullingThresh: 0.005
+        contactCullingDepth: 0.05
+        errorCriterion: 0.001
+        maxNumIterations: 25
+        contactCorrectionDepth: 0.00025
+        contactCorrectionVelocityRatio: 5
+        kinematicWalking: false
+        2Dmode: false
+        oldAccelSensorMode: false
+      children:
+        -
+          id: 2
+          name: "CFDSimulator"
+          plugin: CFD
+          class: CFDSimulatorItem
+          data:
+            enabled: true
+        -
+          id: 3
+          name: "VFXVisionSimulator"
+          plugin: VFX
+          class: VFXVisionSimulatorItem
+          data:
+            enabled: true
+            max_frame_rate: 1000
+            max_latency: 1
+            record_vision_data: false
+            thread_mode: Sensor
+            best_effort: true
+            all_scene_objects: true
+            range_sensor_precision_ratio: 2
+            depth_error: 0
+            background_color: [ 0, 0, 0 ]
+            enable_head_light: false
+            enable_world_light: true
+            enable_additional_lights: true
+            antialiasing: false
+            dynamics_type: All process
 views:
   -
     id: 0
@@ -16,7 +78,7 @@ views:
     class: ItemTreeView
     mounted: true
     state:
-      expanded: [ ]
+      expanded: [ 1 ]
   -
     id: 2
     plugin: Base
@@ -50,7 +112,7 @@ views:
           isCurrent: true
           eye: [ 3, 1.5, 1.2 ]
           direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787499, 0.984374 ]
+          up: [ -0.1575, -0.0787495, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -175,12 +237,12 @@ viewAreas:
     contents:
       type: splitter
       orientation: horizontal
-      sizes: [ 1846, 0 ]
+      sizes: [ 1401, 445 ]
       children:
         -
           type: splitter
           orientation: horizontal
-          sizes: [ 478, 1364 ]
+          sizes: [ 362, 1035 ]
           children:
             -
               type: splitter
@@ -197,7 +259,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 756, 252 ]
+              sizes: [ 757, 251 ]
               children:
                 -
                   type: pane
