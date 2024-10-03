@@ -7,7 +7,7 @@
 
 ![Stage](./fig/stage.png)
 
-[![使用方法](https://img.youtube.com/vi/b9BqyA2T81Y/0.jpg)](https://www.youtube.com/watch?v=b9BqyA2T81Y)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b9BqyA2T81Y?si=E-XhaXBFW8cy0oIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## エリア紹介
 
