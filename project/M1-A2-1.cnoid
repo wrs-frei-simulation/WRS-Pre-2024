@@ -263,8 +263,8 @@ items:
           0, 0, 1 ]
         initialRootPosition: [ 6.13153944, -2.21447664, 0 ]
         initialRootAttitude: [
-          -0.0631648676, -0.998003106, 0,
-          0.998003106, -0.0631648676, 0,
+          -0.0631648677, -0.998003106, 0,
+          0.998003106, -0.0631648677, 0,
           0, 0, 1 ]
         fix_root: true
         collisionDetection: true
@@ -335,7 +335,7 @@ items:
           0.179379726, 0.777384663, 0.602906294 ]
         initialRootPosition: [ 6.2020105, 1.93082058, 0.798239522 ]
         initialRootAttitude: [
-          0.95595284, -0.282466789, 0.0797914885,
+          0.95595284, -0.282466789, 0.0797914886,
           0.232329684, 0.562037009, -0.793811891,
           0.179379726, 0.777384663, 0.602906294 ]
         fix_root: true
@@ -407,7 +407,7 @@ items:
           0.179379726, -0.791528496, 0.58421362 ]
         initialRootPosition: [ 6.10183165, -1.17094324, 0.413623725 ]
         initialRootAttitude: [
-          0.95595284, -1.46900464e-10, -0.293520303,
+          0.95595284, -2.20350668e-10, -0.293520303,
           0.232329684, 0.611132261, 0.756663913,
           0.179379726, -0.791528496, 0.58421362 ]
         fix_root: true
@@ -433,7 +433,7 @@ items:
         initialRootAttitude: [
           -0.551686637, 0.799865472, -0.236341025,
           -0.83405147, -0.529074174, 0.156328704,
-          2.05568063e-10, 0.283365037, 0.959012125 ]
+          3.08352094e-10, 0.283365037, 0.959012125 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -491,21 +491,17 @@ views:
   -
     id: 0
     plugin: Base
-    class: GeneralSliderView
-  -
-    id: 1
-    plugin: Base
     class: ItemPropertyView
     mounted: true
   -
-    id: 2
+    id: 1
     plugin: Base
     class: ItemTreeView
     mounted: true
     state:
       expanded: [ 1, 4, 12, 15 ]
   -
-    id: 3
+    id: 2
     plugin: Base
     class: LocationView
     mounted: true
@@ -516,12 +512,12 @@ views:
       show_rotation_matrix: false
       coordinate: world
   -
-    id: 4
+    id: 3
     plugin: Base
     class: MessageView
     mounted: true
   -
-    id: 5
+    id: 4
     plugin: Base
     class: SceneView
     mounted: true
@@ -571,6 +567,12 @@ views:
       xy_grid_color: [ 0.9, 0.9, 0.9 ]
       xz_grid_color: [ 0.9, 0.9, 0.9 ]
       yz_grid_color: [ 0.9, 0.9, 0.9 ]
+  -
+    id: 5
+    plugin: Body
+    class: BodyLinkView
+    state:
+      showRotationMatrix: false
   -
     id: 6
     plugin: Body
@@ -776,39 +778,39 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 444, 444 ]
+              sizes: [ 504, 504 ]
               children:
                 -
                   type: pane
-                  views: [ 2 ]
+                  views: [ 1 ]
                 -
                   type: pane
-                  views: [ 1, 9 ]
-                  current: 1
+                  views: [ 0, 9 ]
+                  current: 0
             -
               type: splitter
               orientation: vertical
-              sizes: [ 666, 222 ]
+              sizes: [ 756, 252 ]
               children:
                 -
                   type: pane
-                  views: [ 5 ]
+                  views: [ 4 ]
                 -
                   type: pane
-                  views: [ 4, 10 ]
-                  current: 4
+                  views: [ 3, 10 ]
+                  current: 3
         -
           type: splitter
           orientation: vertical
-          sizes: [ 198, 690 ]
+          sizes: [ 225, 783 ]
           children:
             -
               type: pane
-              views: [ 3 ]
+              views: [ 2 ]
             -
               type: splitter
               orientation: vertical
-              sizes: [ 284, 402 ]
+              sizes: [ 323, 456 ]
               children:
                 -
                   type: pane

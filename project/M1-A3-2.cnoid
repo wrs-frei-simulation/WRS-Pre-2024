@@ -10,7 +10,6 @@ items:
       name: "M1-Area3"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/M1-Area3.body"
@@ -35,7 +34,6 @@ items:
       name: "M1_A3_Wall"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/M1-Area3-Wall.body"
@@ -60,7 +58,6 @@ items:
       name: "TankB"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/TankB.body"
@@ -85,7 +82,6 @@ items:
       name: "Target1"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/Target1.body"
@@ -97,9 +93,9 @@ items:
           0.544611264, -0.838041442, 0.0329410476 ]
         initialRootPosition: [ 9.80679263, -13.6644109, 1.18486266 ]
         initialRootAttitude: [
-          0.458447487, 0.330357557, 0.825039264,
-          -0.702299418, -0.434223937, 0.56411444,
-          0.544611265, -0.838041442, 0.0329410469 ]
+          0.458447486, 0.330357557, 0.825039265,
+          -0.702299418, -0.434223939, 0.56411444,
+          0.544611266, -0.838041442, 0.0329410453 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -110,7 +106,6 @@ items:
       name: "CapsuleTerrain"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/CapsuleTerrain.body"
@@ -124,7 +119,7 @@ items:
         initialRootAttitude: [
           0.866025404, -0.498097349, -0.0435778714,
           0.5, 0.862729916, 0.0754790873,
-          2.38615308e-11, -0.0871557427, 0.996194698 ]
+          3.57922997e-11, -0.0871557427, 0.996194698 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -135,7 +130,6 @@ items:
       name: "Debris1"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/Debris1.body"
@@ -160,7 +154,6 @@ items:
       name: "Debris1"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/Debris1.body"
@@ -185,7 +178,6 @@ items:
       name: "JungleGym1"
       plugin: Body
       class: BodyItem
-      is_selected: true
       is_checked: true
       data:
         file: "../model/Building-M1/JungleGymM1.body"
@@ -199,7 +191,7 @@ items:
         initialRootAttitude: [
           0.76007656, 0.633904325, 0.142999751,
           -0.649804644, 0.739337011, 0.176450301,
-          0.00612760066, -0.22703764, 0.973866707 ]
+          0.00612760056, -0.22703764, 0.973866707 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -209,21 +201,17 @@ views:
   -
     id: 0
     plugin: Base
-    class: GeneralSliderView
-  -
-    id: 1
-    plugin: Base
     class: ItemPropertyView
     mounted: true
   -
-    id: 2
+    id: 1
     plugin: Base
     class: ItemTreeView
     mounted: true
     state:
       expanded: [ 1 ]
   -
-    id: 3
+    id: 2
     plugin: Base
     class: LocationView
     mounted: true
@@ -234,12 +222,12 @@ views:
       show_rotation_matrix: false
       coordinate: world
   -
-    id: 4
+    id: 3
     plugin: Base
     class: MessageView
     mounted: true
   -
-    id: 5
+    id: 4
     plugin: Base
     class: SceneView
     mounted: true
@@ -289,6 +277,12 @@ views:
       xy_grid_color: [ 0.9, 0.9, 0.9 ]
       xz_grid_color: [ 0.9, 0.9, 0.9 ]
       yz_grid_color: [ 0.9, 0.9, 0.9 ]
+  -
+    id: 5
+    plugin: Body
+    class: BodyLinkView
+    state:
+      showRotationMatrix: false
   -
     id: 6
     plugin: Body
@@ -434,39 +428,39 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 444, 444 ]
+              sizes: [ 504, 504 ]
               children:
                 -
                   type: pane
-                  views: [ 2 ]
+                  views: [ 1 ]
                 -
                   type: pane
-                  views: [ 1, 9 ]
-                  current: 1
+                  views: [ 0, 9 ]
+                  current: 0
             -
               type: splitter
               orientation: vertical
-              sizes: [ 888, 0 ]
+              sizes: [ 1008, 0 ]
               children:
                 -
                   type: pane
-                  views: [ 5 ]
+                  views: [ 4 ]
                 -
                   type: pane
-                  views: [ 4, 10 ]
-                  current: 4
+                  views: [ 3, 10 ]
+                  current: 3
         -
           type: splitter
           orientation: vertical
-          sizes: [ 198, 690 ]
+          sizes: [ 225, 783 ]
           children:
             -
               type: pane
-              views: [ 3 ]
+              views: [ 2 ]
             -
               type: splitter
               orientation: vertical
-              sizes: [ 284, 402 ]
+              sizes: [ 323, 456 ]
               children:
                 -
                   type: pane

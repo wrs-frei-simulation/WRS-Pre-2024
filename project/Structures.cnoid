@@ -10,7 +10,6 @@ items:
       name: "Structures"
       plugin: Body
       class: BodyItem
-      is_checked: true
       data:
         file: "${SHARE}/WRS2024PRE/model/MockupPlant/structures.body"
         format: CHOREONOID-BODY
@@ -52,7 +51,7 @@ views:
       unique_rpy: false
       show_quaternion: false
       show_rotation_matrix: false
-      coordinate: parent
+      coordinate: world
   -
     id: 3
     plugin: Base
@@ -112,6 +111,12 @@ views:
   -
     id: 5
     plugin: Body
+    class: BodyLinkView
+    state:
+      showRotationMatrix: false
+  -
+    id: 6
+    plugin: Body
     class: JointDisplacementView
     mounted: true
     state:
@@ -124,7 +129,7 @@ views:
       limit_ranges: false
       show_selected_joints: false
   -
-    id: 6
+    id: 7
     plugin: Body
     class: LinkDeviceListView
     mounted: true
@@ -132,7 +137,7 @@ views:
       element_type: all
       listing_mode: list
   -
-    id: 7
+    id: 8
     plugin: Body
     class: LinkPositionView
     mounted: true
@@ -145,12 +150,12 @@ views:
       show_rotation_matrix: false
       target_link_type: ik_link
   -
-    id: 8
+    id: 9
     plugin: Body
     class: LinkPropertyView
     mounted: true
   -
-    id: 9
+    id: 10
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -178,6 +183,9 @@ toolbars:
     penetrationBlockDepth: 0.0005
     lazyCollisionDetectionMode: true
 Body:
+  "BodySelectionManager":
+    current_body_item: 1
+    current_link: "Root"
   "KinematicFaultChecker":
     checkJointPositions: true
     angleMargin: 0
@@ -216,31 +224,31 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 518, 518 ]
+              sizes: [ 504, 504 ]
               children:
                 -
                   type: pane
                   views: [ 1 ]
                 -
                   type: pane
-                  views: [ 0, 8 ]
+                  views: [ 0, 9 ]
                   current: 0
             -
               type: splitter
               orientation: vertical
-              sizes: [ 777, 259 ]
+              sizes: [ 756, 252 ]
               children:
                 -
                   type: pane
                   views: [ 4 ]
                 -
                   type: pane
-                  views: [ 3, 9 ]
+                  views: [ 3, 10 ]
                   current: 3
         -
           type: splitter
           orientation: vertical
-          sizes: [ 228, 808 ]
+          sizes: [ 222, 786 ]
           children:
             -
               type: pane
@@ -248,15 +256,15 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 315, 489 ]
+              sizes: [ 306, 476 ]
               children:
                 -
                   type: pane
-                  views: [ 7 ]
+                  views: [ 8 ]
                 -
                   type: pane
-                  views: [ 6, 5 ]
-                  current: 5
+                  views: [ 7, 6 ]
+                  current: 6
 layoutOfToolBars:
   rows:
     -

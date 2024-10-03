@@ -137,21 +137,17 @@ views:
   -
     id: 0
     plugin: Base
-    class: GeneralSliderView
-  -
-    id: 1
-    plugin: Base
     class: ItemPropertyView
     mounted: true
   -
-    id: 2
+    id: 1
     plugin: Base
     class: ItemTreeView
     mounted: true
     state:
       expanded: [ 2, 4, 6 ]
   -
-    id: 3
+    id: 2
     plugin: Base
     class: LocationView
     mounted: true
@@ -162,12 +158,12 @@ views:
       show_rotation_matrix: false
       coordinate: world
   -
-    id: 4
+    id: 3
     plugin: Base
     class: MessageView
     mounted: true
   -
-    id: 5
+    id: 4
     plugin: Base
     class: SceneView
     mounted: true
@@ -217,6 +213,12 @@ views:
       xy_grid_color: [ 0.9, 0.9, 0.9 ]
       xz_grid_color: [ 0.9, 0.9, 0.9 ]
       yz_grid_color: [ 0.9, 0.9, 0.9 ]
+  -
+    id: 5
+    plugin: Body
+    class: BodyLinkView
+    state:
+      showRotationMatrix: false
   -
     id: 6
     plugin: Body
@@ -322,11 +324,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 2 ]
+                  views: [ 1 ]
                 -
                   type: pane
-                  views: [ 1, 9 ]
-                  current: 1
+                  views: [ 0, 9 ]
+                  current: 0
             -
               type: splitter
               orientation: vertical
@@ -334,11 +336,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 5 ]
+                  views: [ 4 ]
                 -
                   type: pane
-                  views: [ 4, 10 ]
-                  current: 4
+                  views: [ 3, 10 ]
+                  current: 3
         -
           type: splitter
           orientation: vertical
@@ -346,7 +348,7 @@ viewAreas:
           children:
             -
               type: pane
-              views: [ 3 ]
+              views: [ 2 ]
             -
               type: splitter
               orientation: vertical

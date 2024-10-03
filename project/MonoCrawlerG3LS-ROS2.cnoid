@@ -77,24 +77,6 @@ items:
                     export_symbols: false
         -
           id: 5
-          name: "BodySyncCamera"
-          plugin: Body
-          class: BodySyncCameraItem
-          is_checked: true
-          data:
-            camera_type: Perspective
-            translation: [ -1.66562, -0.548923, 1.0361 ]
-            rotation: [ 0.579836, -0.477947, -0.659815, 102.647 ]
-            field_of_view: 0.785398
-            near_clip_distance: 0.04
-            far_clip_distance: 200
-            interactive_viewpoint_change: true
-            target_link: ""
-            parallel_tracking: false
-            local_translation: [ -1.66562, -0.548923, 0.936103 ]
-            local_rotation: [ 0.579836, -0.477947, -0.659815, 102.647 ]
-        -
-          id: 6
           name: "BodyROS2"
           plugin: ROS2
           class: BodyROS2Item
@@ -144,15 +126,13 @@ views:
       cameras:
         -
           camera: [ System, Perspective ]
+          isCurrent: true
           eye: [ 3, 1.5, 1.2 ]
           direction: [ -0.880451, -0.440225, -0.17609 ]
           up: [ -0.1575, -0.0787495, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
-        -
-          camera: BodySyncCamera
-          isCurrent: true
       lighting_mode: normal
       culling_mode: enabled
       shading_mode: smooth
@@ -186,6 +166,12 @@ views:
   -
     id: 5
     plugin: Body
+    class: BodyLinkView
+    state:
+      showRotationMatrix: false
+  -
+    id: 6
+    plugin: Body
     class: JointDisplacementView
     mounted: true
     state:
@@ -198,7 +184,7 @@ views:
       limit_ranges: false
       show_selected_joints: false
   -
-    id: 6
+    id: 7
     plugin: Body
     class: LinkDeviceListView
     mounted: true
@@ -206,7 +192,7 @@ views:
       element_type: all
       listing_mode: list
   -
-    id: 7
+    id: 8
     plugin: Body
     class: LinkPositionView
     mounted: true
@@ -219,12 +205,12 @@ views:
       show_rotation_matrix: false
       target_link_type: ik_link
   -
-    id: 8
+    id: 9
     plugin: Body
     class: LinkPropertyView
     mounted: true
   -
-    id: 9
+    id: 10
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -293,31 +279,31 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 518, 518 ]
+              sizes: [ 504, 504 ]
               children:
                 -
                   type: pane
                   views: [ 1 ]
                 -
                   type: pane
-                  views: [ 0, 8 ]
+                  views: [ 0, 9 ]
                   current: 0
             -
               type: splitter
               orientation: vertical
-              sizes: [ 777, 259 ]
+              sizes: [ 756, 252 ]
               children:
                 -
                   type: pane
                   views: [ 4 ]
                 -
                   type: pane
-                  views: [ 3, 9 ]
+                  views: [ 3, 10 ]
                   current: 3
         -
           type: splitter
           orientation: vertical
-          sizes: [ 228, 808 ]
+          sizes: [ 222, 786 ]
           children:
             -
               type: pane
@@ -325,15 +311,15 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 315, 489 ]
+              sizes: [ 306, 476 ]
               children:
                 -
                   type: pane
-                  views: [ 7 ]
+                  views: [ 8 ]
                 -
                   type: pane
-                  views: [ 6, 5 ]
-                  current: 5
+                  views: [ 7, 6 ]
+                  current: 6
 layoutOfToolBars:
   rows:
     -

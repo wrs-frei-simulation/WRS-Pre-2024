@@ -173,9 +173,9 @@ items:
           0, 1, 6.123234e-17 ]
         initialRootPosition: [ 7.70699307, -6.70699307, 0.0996171246 ]
         initialRootAttitude: [
-          0.707106781, 0, 0.707106781,
-          0.707106781, 1.54541047e-10, -0.707106781,
-          0, 1, 1.54541047e-10 ]
+          0.707106781, -6.40130171e-11, 0.707106781,
+          0.707106781, 3.35597217e-10, -0.707106781,
+          -6.40130171e-11, 1, 3.35597217e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -342,7 +342,7 @@ items:
         initialRootPosition: [ 6.1954317, -11.3827302, 0.666746827 ]
         initialRootAttitude: [
           -0.5, 1.11022302e-16, 0.866025404,
-          0.866025404, -1.24454447e-10, 0.5,
+          0.866025404, -1.24454225e-10, 0.5,
           -1.11022302e-16, 1, -1.24454669e-10 ]
         fix_root: true
         collisionDetection: true
@@ -416,7 +416,7 @@ items:
         initialRootAttitude: [
           0.69610295, 0.707106781, 0.124260548,
           0.696102949, -0.707106781, 0.124260548,
-          0.175730952, -6.96512639e-11, -0.984438231 ]
+          0.175730952, -1.04476948e-10, -0.984438231 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -474,21 +474,17 @@ views:
   -
     id: 0
     plugin: Base
-    class: GeneralSliderView
-  -
-    id: 1
-    plugin: Base
     class: ItemPropertyView
     mounted: true
   -
-    id: 2
+    id: 1
     plugin: Base
     class: ItemTreeView
     mounted: true
     state:
       expanded: [ 1 ]
   -
-    id: 3
+    id: 2
     plugin: Base
     class: LocationView
     mounted: true
@@ -499,12 +495,12 @@ views:
       show_rotation_matrix: false
       coordinate: world
   -
-    id: 4
+    id: 3
     plugin: Base
     class: MessageView
     mounted: true
   -
-    id: 5
+    id: 4
     plugin: Base
     class: SceneView
     mounted: true
@@ -554,6 +550,12 @@ views:
       xy_grid_color: [ 0.9, 0.9, 0.9 ]
       xz_grid_color: [ 0.9, 0.9, 0.9 ]
       yz_grid_color: [ 0.9, 0.9, 0.9 ]
+  -
+    id: 5
+    plugin: Body
+    class: BodyLinkView
+    state:
+      showRotationMatrix: false
   -
     id: 6
     plugin: Body
@@ -724,49 +726,49 @@ viewAreas:
     contents:
       type: splitter
       orientation: horizontal
-      sizes: [ 1887, 599 ]
+      sizes: [ 1401, 445 ]
       children:
         -
           type: splitter
           orientation: horizontal
-          sizes: [ 488, 1395 ]
+          sizes: [ 362, 1035 ]
           children:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 704, 704 ]
+              sizes: [ 504, 504 ]
               children:
                 -
                   type: pane
-                  views: [ 2 ]
+                  views: [ 1 ]
                 -
                   type: pane
-                  views: [ 1, 9 ]
-                  current: 1
+                  views: [ 0, 9 ]
+                  current: 0
             -
               type: splitter
               orientation: vertical
-              sizes: [ 1057, 351 ]
+              sizes: [ 757, 251 ]
               children:
                 -
                   type: pane
-                  views: [ 5 ]
+                  views: [ 4 ]
                 -
                   type: pane
-                  views: [ 4, 10 ]
-                  current: 4
+                  views: [ 3, 10 ]
+                  current: 3
         -
           type: splitter
           orientation: vertical
-          sizes: [ 310, 1098 ]
+          sizes: [ 222, 786 ]
           children:
             -
               type: pane
-              views: [ 3 ]
+              views: [ 2 ]
             -
               type: splitter
               orientation: vertical
-              sizes: [ 428, 666 ]
+              sizes: [ 306, 476 ]
               children:
                 -
                   type: pane
