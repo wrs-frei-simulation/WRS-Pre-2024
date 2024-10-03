@@ -95,7 +95,7 @@ $ git clone https://github.com/wrs-frei-simulation/WRS-Pre-2024.git choreonoid/e
 $ git clone https://github.com/k38-suzuki/hairo-world-plugin.git choreonoid/ext/hairo-world-plugin
 $ choreonoid/misc/script/install-requisites-ubuntu-22.04.sh
 $ cd ~/choreonoid && mkdir build && cd build
-$ cmake .. -DBUILD_AGX_DYNAMICS_PLUGIN=ON -DBUILD_AGX_BODYEXTENSION_PLUGIN=ON -DBUILD_WRS2018=ON -DBUILD_SCENE_EFFECTS_PLUGIN=ON -DBUILD_HAIRO_WORLD_PLUGIN=ON
+$ cmake .. -DBUILD_AGX_DYNAMICS_PLUGIN=ON -DBUILD_AGX_BODYEXTENSION_PLUGIN=ON -DBUILD_WRS2018=ON -DBUILD_SCENE_EFFECTS_PLUGIN=ON -DBUILD_HAIRO_WORLD_PLUGIN=ON -DENABLE_INSTALL_RPATH_USE_LINK_PATH=ON
 $ make -j8 # CPUが8コアの場合は-j8，CPUがNコアの場合は-jN
 
 # Run Choreonoid Without ROS2
@@ -110,7 +110,7 @@ $ cd ~
 $ git clone https://github.com/wrs-frei-simulation/WRS-Pre-2024.git choreonoid/ext/WRS2024PRE
 $ git clone https://github.com/k38-suzuki/hairo-world-plugin.git choreonoid/ext/hairo-world-plugin
 $ cd ~/choreonoid/build
-$ cmake .. -DBUILD_AGX_DYNAMICS_PLUGIN=ON -DBUILD_AGX_BODYEXTENSION_PLUGIN=ON -DBUILD_WRS2018=ON -DBUILD_SCENE_EFFECTS_PLUGIN=ON -DBUILD_HAIRO_WORLD_PLUGIN=ON
+$ cmake .. -DBUILD_AGX_DYNAMICS_PLUGIN=ON -DBUILD_AGX_BODYEXTENSION_PLUGIN=ON -DBUILD_WRS2018=ON -DBUILD_SCENE_EFFECTS_PLUGIN=ON -DBUILD_HAIRO_WORLD_PLUGIN=ON -DENABLE_INSTALL_RPATH_USE_LINK_PATH=ON
 $ make -j8 # CPUが8コアの場合は-j8，CPUがNコアの場合は-jN
 ```
 #### 3. Choreonoidのプレ大会向けクリーンインストール（ROS2との連携あり）
@@ -128,6 +128,7 @@ $ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros
 $ sudo apt update
 $ sudo apt upgrade
 $ sudo apt install ros-humble-desktop
+$ sudo apt install ros-humble-compressed-image-transport
 $ sudo apt install python3-colcon-common-extensions
 
 # Sourcing the setup script (for bash)
@@ -148,7 +149,7 @@ $ git clone https://github.com/k38-suzuki/hairo-world-plugin.git choreonoid/ext/
 $ git clone https://github.com/k38-suzuki/choreonoid_ros2_sample_drone_tutorial.git
 $ choreonoid/misc/script/install-requisites-ubuntu-22.04.sh
 $ cd ~/ros2_ws
-$ colcon build --symlink-install --cmake-args -DBUILD_AGX_DYNAMICS_PLUGIN=ON -DBUILD_AGX_BODYEXTENSION_PLUGIN=ON -DBUILD_WRS2018=ON -DBUILD_SCENE_EFFECTS_PLUGIN=ON -DBUILD_HAIRO_WORLD_PLUGIN=ON
+$ colcon build --symlink-install --cmake-args -DBUILD_AGX_DYNAMICS_PLUGIN=ON -DBUILD_AGX_BODYEXTENSION_PLUGIN=ON -DBUILD_WRS2018=ON -DBUILD_SCENE_EFFECTS_PLUGIN=ON -DBUILD_HAIRO_WORLD_PLUGIN=ON -DENABLE_INSTALL_RPATH_USE_LINK_PATH=ON
 
 # Run Choreonoid With ROS2
 $ source install/setup.bash
