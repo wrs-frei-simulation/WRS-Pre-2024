@@ -7,8 +7,6 @@
 
 ![Stage](./fig/stage.png)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/b9BqyA2T81Y?si=E-XhaXBFW8cy0oIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## エリア紹介
 
 ### エリア1: レバー操作
