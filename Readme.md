@@ -7,6 +7,8 @@
 
 ![Stage](./fig/stage.png)
 
+[![使用方法](https://img.youtube.com/vi/b9BqyA2T81Y/0.jpg)](https://www.youtube.com/watch?v=b9BqyA2T81Y)
+
 ## エリア紹介
 
 ### エリア1: レバー操作
