@@ -12,7 +12,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/MockupPlant/M2-A3.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/M2-A3.body"
         format: CHOREONOID-BODY
         rootPosition: [ 0, 0, 0 ]
         rootAttitude: [
@@ -187,7 +187,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/MockupPlant/subbody/block.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/subbody/block.body"
         format: CHOREONOID-BODY
         rootPosition: [ 5.3, 7, 0.1 ]
         rootAttitude: [
@@ -211,7 +211,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-50-C1.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/Target/TargetTS4_35-50-C1.body"
         format: CHOREONOID-BODY
         rootPosition: [ 5.76183523, 6.89752787, 1.57476365 ]
         rootAttitude: [
@@ -235,7 +235,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-50-C2.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/Target/TargetTS4_35-50-C2.body"
         format: CHOREONOID-BODY
         rootPosition: [ 4.80833596, 6.6987053, 0.0360027282 ]
         rootAttitude: [
@@ -259,7 +259,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-50-C3.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/Target/TargetTS4_35-50-C3.body"
         format: CHOREONOID-BODY
         rootPosition: [ 9, 2.65146632, 0 ]
         rootAttitude: [
@@ -283,7 +283,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-50-C4.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/Target/TargetTS4_35-50-C4.body"
         format: CHOREONOID-BODY
         rootPosition: [ 11, 9.41784954, 1.9 ]
         rootAttitude: [
@@ -307,7 +307,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-50-C5.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/Target/TargetTS4_35-50-C5.body"
         format: CHOREONOID-BODY
         rootPosition: [ 5.83040487, 9.49085429, 1.5 ]
         rootAttitude: [
@@ -331,7 +331,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-100-C1.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/Target/TargetTS4_35-100-C1.body"
         format: CHOREONOID-BODY
         rootPosition: [ 9.26786095, 9.42060819, 0.0249681858 ]
         rootAttitude: [
@@ -355,7 +355,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-100-C2.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/Target/TargetTS4_35-100-C2.body"
         format: CHOREONOID-BODY
         rootPosition: [ 3, 5.10739141, 0.946834163 ]
         rootAttitude: [
@@ -379,7 +379,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-100-C3.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/Target/TargetTS4_35-100-C3.body"
         format: CHOREONOID-BODY
         rootPosition: [ 3.67956436, 10.1098858, 0 ]
         rootAttitude: [
@@ -403,7 +403,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-100-C4.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/Target/TargetTS4_35-100-C4.body"
         format: CHOREONOID-BODY
         rootPosition: [ -0.792262639, 7.5845225, 0.0854285639 ]
         rootAttitude: [
@@ -427,7 +427,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/Target/TargetTS4_35-100-C5.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/Target/TargetTS4_35-100-C5.body"
         format: CHOREONOID-BODY
         rootPosition: [ -0.0385249389, 6.09762999, 1.12604401 ]
         rootAttitude: [
@@ -451,7 +451,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../model/Obstacle/rack2.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/Obstacle/rack2.body"
         format: CHOREONOID-BODY
         rootPosition: [ 8.77142679, 6.34577417, 0 ]
         rootAttitude: [
@@ -475,7 +475,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../model/Obstacle/robot3.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/Obstacle/robot3.body"
         format: CHOREONOID-BODY
         rootPosition: [ 5.42600316, 8.36110773, 0.1 ]
         rootAttitude: [

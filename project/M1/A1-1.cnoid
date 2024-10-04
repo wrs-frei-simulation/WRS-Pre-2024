@@ -12,7 +12,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../model/Building-M1/M1-Area1.body"
+        file: "${SHARE}/WRS2024PRE/model/M1/M1-Area1.body"
         format: CHOREONOID-BODY
         rootPosition: [ 0, 0, 0 ]
         rootAttitude: [
@@ -36,7 +36,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../model/Building-M1/Debris1.body"
+        file: "${SHARE}/WRS2024PRE/model/M1/Debris1.body"
         format: CHOREONOID-BODY
         rootPosition: [ 4.06386724, 2.24022949, 0 ]
         rootAttitude: [
@@ -60,7 +60,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../model/Building-M1/Debris1.body"
+        file: "${SHARE}/WRS2024PRE/model/M1/Debris1.body"
         format: CHOREONOID-BODY
         rootPosition: [ 2.58885761, -2.22041284, 0 ]
         rootAttitude: [
@@ -84,7 +84,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../model/Building-M1/ChocoTerrain.body"
+        file: "${SHARE}/WRS2024PRE/model/M1/ChocoTerrain.body"
         format: CHOREONOID-BODY
         rootPosition: [ 0, 0.1, 0 ]
         rootAttitude: [

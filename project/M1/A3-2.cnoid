@@ -12,7 +12,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../model/Building-M1/M1-Area3.body"
+        file: "${SHARE}/WRS2024PRE/model/M1/M1-Area3.body"
         format: CHOREONOID-BODY
         rootPosition: [ 10, -10, 0 ]
         rootAttitude: [
@@ -36,7 +36,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../model/Building-M1/M1-Area3-Wall.body"
+        file: "${SHARE}/WRS2024PRE/model/M1/M1-Area3-Wall.body"
         format: CHOREONOID-BODY
         rootPosition: [ 10, -10, 0 ]
         rootAttitude: [
@@ -60,7 +60,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../model/Building-M1/TankB.body"
+        file: "${SHARE}/WRS2024PRE/model/M1/TankB.body"
         format: CHOREONOID-BODY
         rootPosition: [ 7, -16, 0 ]
         rootAttitude: [
@@ -84,7 +84,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../model/Building-M1/Target1.body"
+        file: "${SHARE}/WRS2024PRE/model/M1/Target1.body"
         format: CHOREONOID-BODY
         rootPosition: [ 9.80679263, -13.6644109, 1.18486266 ]
         rootAttitude: [
@@ -108,7 +108,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../model/Building-M1/CapsuleTerrain.body"
+        file: "${SHARE}/WRS2024PRE/model/M1/CapsuleTerrain.body"
         format: CHOREONOID-BODY
         rootPosition: [ 8.20767381, -12.2635634, -5.55111512e-17 ]
         rootAttitude: [
@@ -132,7 +132,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../model/Building-M1/Debris1.body"
+        file: "${SHARE}/WRS2024PRE/model/M1/Debris1.body"
         format: CHOREONOID-BODY
         rootPosition: [ 8.63910854, -11.6241197, -0.2 ]
         rootAttitude: [
@@ -156,7 +156,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../model/Building-M1/Debris1.body"
+        file: "${SHARE}/WRS2024PRE/model/M1/Debris1.body"
         format: CHOREONOID-BODY
         rootPosition: [ 10.9210454, -8.11766685, -0.2 ]
         rootAttitude: [
@@ -180,7 +180,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../model/Building-M1/JungleGymM1.body"
+        file: "${SHARE}/WRS2024PRE/model/M1/JungleGymM1.body"
         format: CHOREONOID-BODY
         rootPosition: [ 7.77369409, -8.71966907, 0.805885059 ]
         rootAttitude: [
