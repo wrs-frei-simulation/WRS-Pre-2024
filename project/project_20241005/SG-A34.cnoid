@@ -44,7 +44,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/Obstacle/black_smoke.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/Obstacle/black_smoke.body"
         format: CHOREONOID-BODY
         rootPosition: [ 2.6, -2.6, 2 ]
         rootAttitude: [
@@ -68,7 +68,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/Obstacle/white_smoke.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/Obstacle/white_smoke.body"
         format: CHOREONOID-BODY
         rootPosition: [ -4.5, 3.6, 3 ]
         rootAttitude: [

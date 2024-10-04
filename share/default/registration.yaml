@@ -113,22 +113,6 @@ registrations:
     robot_project: [ AizuSpiderSS-ROS2 ]
     simulator_project: [ AISTSimulator ]
   - <<: *Mission2
-    name: M2-DoubleArmV7A
-    robot_project: [ DoubleArmV7A ]
-    simulator_project: [ AGXSimulator ]
-  - <<: *Mission2
-    name: M2-DoubleArmV7A-ROS2
-    robot_project: [ DoubleArmV7A-ROS2 ]
-    simulator_project: [ AGXSimulator ]
-  - <<: *Mission2
-    name: M2-DoubleArmV7S
-    robot_project: [ DoubleArmV7S ]
-    simulator_project: [ AISTSimulator ]
-  - <<: *Mission2
-    name: M2-DoubleArmV7S-ROS2
-    robot_project: [ DoubleArmV7S-ROS2 ]
-    simulator_project: [ AISTSimulator ]
-  - <<: *Mission2
     name: M2-SampleDroneA-ROS2
     robot_project: [ SampleDrone-ROS2 ]
     simulator_project: [ AGXSimulator ]
