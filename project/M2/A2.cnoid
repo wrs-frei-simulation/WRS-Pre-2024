@@ -12,7 +12,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/M2/M2-A2.body"
+        file: "${SHARE}/WRS2024PRE/model/M2/M2-Area2.body"
         format: CHOREONOID-BODY
         rootPosition: [ 0, 0, 0 ]
         rootAttitude: [
