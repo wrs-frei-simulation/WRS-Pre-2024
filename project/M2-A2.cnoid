@@ -45,44 +45,6 @@ items:
             export_symbols: false
     -
       id: 3
-      name: "MultiCollider"
-      plugin: SimpleCollider
-      class: MultiColliderItem
-      data:
-        translation: [ 7, -7, 0 ]
-        rotation: [ 0, -0, 0 ]
-        size: [ 14, 14, 30 ]
-        diffuse_color: [ 0, 1, 1 ]
-        radius: 0.5
-        height: 1
-        specular_exponent: 25
-        transparency: 1
-        scene_type: Box
-        collider_type: CFD
-        density: 0
-        viscosity: 0
-        steady_flow: [ 0, 0, 0 ]
-        inbound_delay: 0
-        inbound_rate: 0
-        inbound_loss: 0
-        outbound_delay: 0
-        outbound_rate: 0
-        outbound_loss: 0
-        source: 0.0.0.0/0
-        destination: 0.0.0.0/0
-        hsv: [ 0, 0, 0 ]
-        rgb: [ 0, 0, 0 ]
-        coef_b: 0
-        coef_d: 0
-        std_dev: 0
-        salt_amount: 0
-        salt_chance: 1
-        pepper_amount: 0
-        pepper_chance: 1
-        mosaic_chance: 1
-        kernel: 16
-    -
-      id: 4
       name: "VFXCollider2"
       plugin: SimpleCollider
       class: MultiColliderItem
@@ -120,7 +82,7 @@ items:
         mosaic_chance: 0
         kernel: 16
     -
-      id: 5
+      id: 4
       name: "MultiCollider"
       plugin: SimpleCollider
       class: MultiColliderItem
@@ -158,7 +120,7 @@ items:
         mosaic_chance: 1
         kernel: 16
     -
-      id: 6
+      id: 5
       name: "TargetTS4_35-50-B1"
       plugin: Body
       class: BodyItem
@@ -173,16 +135,16 @@ items:
           0, 1, 6.123234e-17 ]
         initialRootPosition: [ 7.70699307, -6.70699307, 0.0996171246 ]
         initialRootAttitude: [
-          0.707106781, -6.40130171e-11, 0.707106781,
-          0.707106781, 3.35597217e-10, -0.707106781,
-          -6.40130171e-11, 1, 3.35597217e-10 ]
+          0.707106781, -1.39008915e-10, 0.707106781,
+          0.707106781, 5.21202526e-10, -0.707106781,
+          -1.39008915e-10, 1, 5.21202526e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
     -
-      id: 7
+      id: 6
       name: "TargetTS4_35-50-B2"
       plugin: Body
       class: BodyItem
@@ -206,7 +168,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 8
+      id: 7
       name: "TargetTS4_35-50-B3"
       plugin: Body
       class: BodyItem
@@ -230,7 +192,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 9
+      id: 8
       name: "TargetTS4_35-50-B4"
       plugin: Body
       class: BodyItem
@@ -254,7 +216,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 10
+      id: 9
       name: "TargetTS4_35-50-B5"
       plugin: Body
       class: BodyItem
@@ -278,7 +240,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 11
+      id: 10
       name: "TargetTS4_35-100-B1"
       plugin: Body
       class: BodyItem
@@ -302,7 +264,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 12
+      id: 11
       name: "TargetTS4_35-100-B2"
       plugin: Body
       class: BodyItem
@@ -326,7 +288,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 13
+      id: 12
       name: "TargetTS4_35-100-B3"
       plugin: Body
       class: BodyItem
@@ -350,7 +312,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 14
+      id: 13
       name: "TargetTS4_35-100-B4"
       plugin: Body
       class: BodyItem
@@ -374,7 +336,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 15
+      id: 14
       name: "TargetTS4_35-100-B5"
       plugin: Body
       class: BodyItem
@@ -398,7 +360,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 16
+      id: 15
       name: "robot2"
       plugin: Body
       class: BodyItem
@@ -416,14 +378,14 @@ items:
         initialRootAttitude: [
           0.69610295, 0.707106781, 0.124260548,
           0.696102949, -0.707106781, 0.124260548,
-          0.175730952, -1.04476948e-10, -0.984438231 ]
+          0.175730952, -1.2188979e-10, -0.984438231 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
     -
-      id: 17
+      id: 16
       name: "Rack1"
       plugin: Body
       class: BodyItem
@@ -447,7 +409,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 18
+      id: 17
       name: "Rack3"
       plugin: Body
       class: BodyItem
@@ -474,17 +436,21 @@ views:
   -
     id: 0
     plugin: Base
+    class: GeneralSliderView
+  -
+    id: 1
+    plugin: Base
     class: ItemPropertyView
     mounted: true
   -
-    id: 1
+    id: 2
     plugin: Base
     class: ItemTreeView
     mounted: true
     state:
       expanded: [ 1 ]
   -
-    id: 2
+    id: 3
     plugin: Base
     class: LocationView
     mounted: true
@@ -495,12 +461,12 @@ views:
       show_rotation_matrix: false
       coordinate: world
   -
-    id: 3
+    id: 4
     plugin: Base
     class: MessageView
     mounted: true
   -
-    id: 4
+    id: 5
     plugin: Base
     class: SceneView
     mounted: true
@@ -514,7 +480,7 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -6.83345, -10.692, 8.54427 ]
+          eye: [ -8.58301, -11.3648, 9.5452 ]
           direction: [ 0.813882, 0.241085, -0.528654 ]
           up: [ 0.506883, 0.150147, 0.848838 ]
         -
@@ -551,13 +517,13 @@ views:
       xz_grid_color: [ 0.9, 0.9, 0.9 ]
       yz_grid_color: [ 0.9, 0.9, 0.9 ]
   -
-    id: 5
+    id: 6
     plugin: Body
     class: BodyLinkView
     state:
       showRotationMatrix: false
   -
-    id: 6
+    id: 7
     plugin: Body
     class: JointDisplacementView
     mounted: true
@@ -571,7 +537,7 @@ views:
       limit_ranges: false
       show_selected_joints: false
   -
-    id: 7
+    id: 8
     plugin: Body
     class: LinkDeviceListView
     mounted: true
@@ -584,7 +550,7 @@ views:
           id: 1
           selected_links: [ 0 ]
   -
-    id: 8
+    id: 9
     plugin: Body
     class: LinkPositionView
     mounted: true
@@ -597,12 +563,12 @@ views:
       show_rotation_matrix: false
       target_link_type: ik_link
   -
-    id: 9
+    id: 10
     plugin: Body
     class: LinkPropertyView
     mounted: true
   -
-    id: 10
+    id: 11
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -646,6 +612,11 @@ Body:
     scene_bodies:
       -
         body_item: 1
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 5
         show_cm: false
         show_cm_projection: false
         show_zmp: false
@@ -709,11 +680,6 @@ Body:
         show_cm: false
         show_cm_projection: false
         show_zmp: false
-      -
-        body_item: 18
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
   "SplineFilterDialog":
     isInputFrameRateSpecified: false
     inputFrameRate: 200
@@ -740,11 +706,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 1 ]
+                  views: [ 2 ]
                 -
                   type: pane
-                  views: [ 0, 9 ]
-                  current: 0
+                  views: [ 1, 10 ]
+                  current: 1
             -
               type: splitter
               orientation: vertical
@@ -752,11 +718,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 4 ]
+                  views: [ 5 ]
                 -
                   type: pane
-                  views: [ 3, 10 ]
-                  current: 3
+                  views: [ 4, 11 ]
+                  current: 4
         -
           type: splitter
           orientation: vertical
@@ -764,7 +730,7 @@ viewAreas:
           children:
             -
               type: pane
-              views: [ 2 ]
+              views: [ 3 ]
             -
               type: splitter
               orientation: vertical
@@ -772,11 +738,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 8 ]
+                  views: [ 9 ]
                 -
                   type: pane
-                  views: [ 7, 6 ]
-                  current: 6
+                  views: [ 8, 7 ]
+                  current: 7
 layoutOfToolBars:
   rows:
     -
