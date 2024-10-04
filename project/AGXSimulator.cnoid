@@ -32,6 +32,35 @@ items:
         AutoSleep: false
         SaveToAGXFileOnStart: false
         DebugMessageOnConsole: 4
+      children:
+        -
+          id: 2
+          name: "CFDSimulator"
+          plugin: CFD
+          class: CFDSimulatorItem
+          data:
+            enabled: true
+        -
+          id: 3
+          name: "VFXVisionSimulator"
+          plugin: VFX
+          class: VFXVisionSimulatorItem
+          data:
+            enabled: true
+            max_frame_rate: 1000
+            max_latency: 1
+            record_vision_data: false
+            thread_mode: Sensor
+            best_effort: true
+            all_scene_objects: true
+            range_sensor_precision_ratio: 2
+            depth_error: 0
+            background_color: [ 0, 0, 0 ]
+            enable_head_light: false
+            enable_world_light: false
+            enable_additional_lights: true
+            antialiasing: false
+            dynamics_type: All process
 views:
   -
     id: 0

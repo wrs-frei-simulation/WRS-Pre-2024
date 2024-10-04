@@ -8,7 +8,7 @@ registrations:
     robot_project: *RobotList
     robot_alignment: X+
     start_position: [ -9.5, -7.0, 0.0 ]
-    simulator_project: [ AGXSimulatorCVHW, AISTSimulatorCVHW ]
+    simulator_project: [ AGXSimulatorHW, AISTSimulatorHW ]
     view_project: M2/RefereeView
     enable_recording: true
   - <<: *Mission2
