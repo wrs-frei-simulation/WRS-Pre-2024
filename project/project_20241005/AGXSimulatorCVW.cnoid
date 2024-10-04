@@ -7,42 +7,61 @@ items:
   children:
     -
       id: 1
-      name: "CFDCollider"
-      plugin: SimpleCollider
-      class: MultiColliderItem
+      name: "AGXSimulator"
+      plugin: AGXDynamics
+      class: AGXSimulatorItem
       data:
-        translation: [ 0, 0, 0 ]
-        rotation: [ 0, -0, 0 ]
-        size: [ 50, 50, 50 ]
-        diffuse_color: [ 0, 1, 1 ]
-        radius: 0.5
-        height: 1
-        specular_exponent: 25
-        transparency: 1
-        scene_type: Box
-        collider_type: CFD
-        density: 0
-        viscosity: 0
-        steady_flow: [ 0, 0, 0 ]
-        inbound_delay: 0
-        inbound_rate: 0
-        inbound_loss: 0
-        outbound_delay: 0
-        outbound_rate: 0
-        outbound_loss: 0
-        source: 0.0.0.0/0
-        destination: 0.0.0.0/0
-        hsv: [ 0, 0, 0 ]
-        rgb: [ 0, 0, 0 ]
-        coef_b: 0
-        coef_d: 0
-        std_dev: 0
-        salt_amount: 0
-        salt_chance: 1
-        pepper_amount: 0
-        pepper_chance: 1
-        mosaic_chance: 1
-        kernel: 16
+        time_step: 0.005
+        realtime_sync_mode: compensatory
+        recording: full
+        time_range_mode: unlimited
+        time_length: 180
+        is_active_control_time_range_mode: false
+        output_all_link_positions: true
+        output_device_states: true
+        use_controller_threads: true
+        record_collision_data: false
+        controller_options: "position"
+        block_scene_view_edit_mode: false
+        Gravity: [ 0, 0, -9.80665 ]
+        NumThreads: 4
+        ContactReduction: true
+        ContactReductionBinResolution: 3
+        ContactReductionThreshhold: 12
+        ContactWarmstarting: true
+        AutoSleep: false
+        SaveToAGXFileOnStart: false
+        DebugMessageOnConsole: 4
+      children:
+        -
+          id: 2
+          name: "CFDSimulator"
+          plugin: CFD
+          class: CFDSimulatorItem
+          data:
+            enabled: true
+        -
+          id: 3
+          name: "VFXVisionSimulator"
+          plugin: VFX
+          class: VFXVisionSimulatorItem
+          data:
+            enabled: true
+            max_frame_rate: 1000
+            max_latency: 1
+            record_vision_data: false
+            thread_mode: Sensor
+            best_effort: true
+            all_scene_objects: true
+            range_sensor_precision_ratio: 2
+            depth_error: 0
+            background_color: [ 0, 0, 0 ]
+            enable_head_light: false
+            enable_world_light: true
+            enable_additional_lights: true
+            antialiasing: false
+            dynamics_type: All process
+            vfx_event_file_path: "vfx_events.yaml"
 views:
   -
     id: 0
@@ -59,7 +78,7 @@ views:
     class: ItemTreeView
     mounted: true
     state:
-      expanded: [ ]
+      expanded: [ 1 ]
   -
     id: 3
     plugin: Base
@@ -70,7 +89,7 @@ views:
       unique_rpy: false
       show_quaternion: false
       show_rotation_matrix: false
-      coordinate: world
+      coordinate: parent
   -
     id: 4
     plugin: Base
@@ -91,9 +110,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ 120.916, 60.458, 24.1832 ]
+          eye: [ 3, 1.5, 1.2 ]
           direction: [ -0.880451, -0.440225, -0.17609 ]
-          up: [ -0.1575, -0.0787499, 0.984374 ]
+          up: [ -0.1575, -0.0787495, 0.984374 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -240,7 +259,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 756, 252 ]
+              sizes: [ 757, 251 ]
               children:
                 -
                   type: pane
@@ -283,3 +302,4 @@ layoutOfToolBars:
       - { name: "GraphBar", x: 0, priority: 3 }
       - { name: "CaptureBar", x: 0, priority: 4 }
       - { name: "DisplayValueFormatBar", x: 0, priority: 5 }
+      - { name: "WRS2024PreBar", x: 1600, priority: 0 }
