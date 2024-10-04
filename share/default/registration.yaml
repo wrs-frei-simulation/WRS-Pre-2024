@@ -79,15 +79,19 @@ registrations:
   - <<: *Mission2
     name: M2-A1
     task_project: [ M2/A1, M2/A2, M2/Common, M2/SG-A1 ]
+    start_position: [ -9.5, -7.0, 0.0 ]
   - <<: *Mission2
     name: M2-A2
     task_project: [ M2/A2, M2/A3, M2/Common, M2/SG-A2 ]
+    start_position: [ 4.0, -7.0, 0.0 ]
   - <<: *Mission2
     name: M2-A3
     task_project: [ M2/A3, M2/A4, M2/Common, M2/SG-A3 ]
+    start_position: [ 7.0, 4.0, 0.0 ]
   - <<: *Mission2
     name: M2-A4
     task_project: [ M2/A4, M2/A1, M2/Common, M2/SG-A4 ]
+    start_position: [ -4.0, 7.0, 0.0 ]
   - <<: *Mission2
     name: M2-AizuSpiderDA
     robot_project: [ AizuSpiderDA ]
@@ -119,4 +123,12 @@ registrations:
   - <<: *Mission2
     name: M2-SampleDroneS-ROS2
     robot_project: [ SampleDrone-ROS2 ]
+    simulator_project: [ AISTSimulator ]
+  - <<: *Mission2
+    name: M2-HobbyDroneA-ROS2
+    robot_project: [ HobbyDrone-ROS2 ]
+    simulator_project: [ AGXSimulator ]
+  - <<: *Mission2
+    name: M2-HobbyDroneS-ROS2
+    robot_project: [ HobbyDrone-ROS2 ]
     simulator_project: [ AISTSimulator ]
