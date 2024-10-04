@@ -5,33 +5,33 @@ registrations:
 #    robot_project: [ ]
     robot_alignment: X+
     start_position: [ -2.0, 0.0, 0.0 ]
-    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
+    simulator_project: [ AGXSimulator, AISTSimulator ]
     view_project: M2/RefereeView
 #    enable_recording: true
   - <<: *Mission1-1
     name: M1-1-AizuSpiderDA
     robot_project: [ AizuSpiderDA ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission1-1
     name: M1-1-AizuSpiderDA-ROS2
     robot_project: [ AizuSpiderDA-ROS2 ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission1-1
     name: M1-1-AizuSpiderSA
     robot_project: [ AizuSpiderSA ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission1-1
     name: M1-1-AizuSpiderSA-ROS2
     robot_project: [ AizuSpiderSA-ROS2 ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission1-1
     name: M1-1-AizuSpiderSS
     robot_project: [ AizuSpiderSS ]
-    simulator_project: [ AISTSimulatorCV ]
+    simulator_project: [ AISTSimulator ]
   - <<: *Mission1-1
     name: M1-1-AizuSpiderSS-ROS2
     robot_project: [ AizuSpiderSS-ROS2 ]
-    simulator_project: [ AISTSimulatorCV ]
+    simulator_project: [ AISTSimulator ]
 
   - &Mission1-2
     name: M1-2
@@ -39,33 +39,33 @@ registrations:
 #    robot_project: [ ]
     robot_alignment: X+
     start_position: [ -2.0, 0.0, 0.0 ]
-    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
+    simulator_project: [ AGXSimulator, AISTSimulator ]
     view_project: M2/RefereeView
 #    enable_recording: true
   - <<: *Mission1-2
     name: M1-2-AizuSpiderDA
     robot_project: [ AizuSpiderDA ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission1-2
     name: M1-2-AizuSpiderDA-ROS2
     robot_project: [ AizuSpiderDA-ROS2 ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission1-2
     name: M1-2-AizuSpiderSA
     robot_project: [ AizuSpiderSA ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission1-2
     name: M1-2-AizuSpiderSA-ROS2
     robot_project: [ AizuSpiderSA-ROS2 ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission1-2
     name: M1-2-AizuSpiderSS
     robot_project: [ AizuSpiderSS ]
-    simulator_project: [ AISTSimulatorCV ]
+    simulator_project: [ AISTSimulator ]
   - <<: *Mission1-2
     name: M1-2-AizuSpiderSS-ROS2
     robot_project: [ AizuSpiderSS-ROS2 ]
-    simulator_project: [ AISTSimulatorCV ]
+    simulator_project: [ AISTSimulator ]
 
   - &Mission2
     name: M2
@@ -73,7 +73,7 @@ registrations:
 #    robot_project: [ ]
     robot_alignment: X+
     start_position: [ -9.5, -7.0, 0.0 ]
-    simulator_project: [ AGXSimulatorCV, AISTSimulatorCV ]
+    simulator_project: [ AGXSimulator, AISTSimulator ]
     view_project: M2/RefereeView
 #    enable_recording: true
   - <<: *Mission2
@@ -91,48 +91,48 @@ registrations:
   - <<: *Mission2
     name: M2-AizuSpiderDA
     robot_project: [ AizuSpiderDA ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission2
     name: M2-AizuSpiderDA-ROS2
     robot_project: [ AizuSpiderDA-ROS2 ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission2
     name: M2-AizuSpiderSA
     robot_project: [ AizuSpiderSA ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission2
     name: M2-AizuSpiderSA-ROS2
     robot_project: [ AizuSpiderSA-ROS2 ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission2
     name: M2-AizuSpiderSS
     robot_project: [ AizuSpiderSS ]
-    simulator_project: [ AISTSimulatorCV ]
+    simulator_project: [ AISTSimulator ]
   - <<: *Mission2
     name: M2-AizuSpiderSS-ROS2
     robot_project: [ AizuSpiderSS-ROS2 ]
-    simulator_project: [ AISTSimulatorCV ]
+    simulator_project: [ AISTSimulator ]
   - <<: *Mission2
     name: M2-DoubleArmV7A
     robot_project: [ DoubleArmV7A ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission2
     name: M2-DoubleArmV7A-ROS2
     robot_project: [ DoubleArmV7A-ROS2 ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission2
     name: M2-DoubleArmV7S
     robot_project: [ DoubleArmV7S ]
-    simulator_project: [ AISTSimulatorCV ]
+    simulator_project: [ AISTSimulator ]
   - <<: *Mission2
     name: M2-DoubleArmV7S-ROS2
     robot_project: [ DoubleArmV7S-ROS2 ]
-    simulator_project: [ AISTSimulatorCV ]
+    simulator_project: [ AISTSimulator ]
   - <<: *Mission2
     name: M2-SampleDroneA-ROS2
     robot_project: [ SampleDrone-ROS2 ]
-    simulator_project: [ AGXSimulatorCV ]
+    simulator_project: [ AGXSimulator ]
   - <<: *Mission2
     name: M2-SampleDroneS-ROS2
     robot_project: [ SampleDrone-ROS2 ]
-    simulator_project: [ AISTSimulatorCV ]
+    simulator_project: [ AISTSimulator ]
