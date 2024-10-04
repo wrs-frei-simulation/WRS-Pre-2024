@@ -238,9 +238,9 @@ items:
           0, 1, 0 ]
         initialRootPosition: [ 3.43692008, 3.43692008, 5 ]
         initialRootAttitude: [
-          0.707106781, 2.15889195e-10, -0.707106781,
-          -0.707106781, 7.07588654e-10, -0.707106781,
-          2.15889195e-10, 1, 7.07588654e-10 ]
+          0.707106781, 2.93092717e-10, -0.707106781,
+          -0.707106781, 8.94108121e-10, -0.707106781,
+          2.93092717e-10, 1, 8.94108121e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -262,9 +262,9 @@ items:
           -0.0204433021, 0.942109017, -0.334682942 ]
         initialRootPosition: [ -3.14355066, 3.38946035, 7.45623217 ]
         initialRootAttitude: [
-          0.758446275, 0.232722239, 0.608768927,
-          0.651414859, -0.241393774, -0.719296685,
-          -0.0204433043, 0.942109016, -0.334682932 ]
+          0.758446277, 0.232722234, 0.608768924,
+          0.651414854, -0.241393761, -0.719296686,
+          -0.0204433073, 0.942109015, -0.334682919 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -289,7 +289,7 @@ items:
         initialRootAttitude: [
           0.707106781, -0.663305325, -0.245002135,
           -0.707106781, -0.663305325, -0.245002135,
-          -2.54740951e-11, 0.346485342, -0.938055386 ]
+          -2.63232353e-11, 0.346485342, -0.938055386 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -299,21 +299,17 @@ views:
   -
     id: 0
     plugin: Base
-    class: GeneralSliderView
-  -
-    id: 1
-    plugin: Base
     class: ItemPropertyView
     mounted: true
   -
-    id: 2
+    id: 1
     plugin: Base
     class: ItemTreeView
     mounted: true
     state:
       expanded: [ ]
   -
-    id: 3
+    id: 2
     plugin: Base
     class: LocationView
     mounted: true
@@ -324,12 +320,12 @@ views:
       show_rotation_matrix: false
       coordinate: world
   -
-    id: 4
+    id: 3
     plugin: Base
     class: MessageView
     mounted: true
   -
-    id: 5
+    id: 4
     plugin: Base
     class: SceneView
     mounted: true
@@ -380,13 +376,13 @@ views:
       xz_grid_color: [ 0.9, 0.9, 0.9 ]
       yz_grid_color: [ 0.9, 0.9, 0.9 ]
   -
-    id: 6
+    id: 5
     plugin: Body
     class: BodyLinkView
     state:
       showRotationMatrix: false
   -
-    id: 7
+    id: 6
     plugin: Body
     class: JointDisplacementView
     mounted: true
@@ -400,7 +396,7 @@ views:
       limit_ranges: false
       show_selected_joints: false
   -
-    id: 8
+    id: 7
     plugin: Body
     class: LinkDeviceListView
     mounted: true
@@ -408,7 +404,7 @@ views:
       element_type: all
       listing_mode: list
   -
-    id: 9
+    id: 8
     plugin: Body
     class: LinkPositionView
     mounted: true
@@ -421,12 +417,12 @@ views:
       show_rotation_matrix: false
       target_link_type: ik_link
   -
-    id: 10
+    id: 9
     plugin: Body
     class: LinkPropertyView
     mounted: true
   -
-    id: 11
+    id: 10
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -554,11 +550,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 2 ]
+                  views: [ 1 ]
                 -
                   type: pane
-                  views: [ 1, 10 ]
-                  current: 1
+                  views: [ 0, 9 ]
+                  current: 0
             -
               type: splitter
               orientation: vertical
@@ -566,11 +562,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 5 ]
+                  views: [ 4 ]
                 -
                   type: pane
-                  views: [ 4, 11 ]
-                  current: 4
+                  views: [ 3, 10 ]
+                  current: 3
         -
           type: splitter
           orientation: vertical
@@ -578,7 +574,7 @@ viewAreas:
           children:
             -
               type: pane
-              views: [ 3 ]
+              views: [ 2 ]
             -
               type: splitter
               orientation: vertical
@@ -586,11 +582,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 9 ]
+                  views: [ 8 ]
                 -
                   type: pane
-                  views: [ 8, 7 ]
-                  current: 7
+                  views: [ 7, 6 ]
+                  current: 6
 layoutOfToolBars:
   rows:
     -
