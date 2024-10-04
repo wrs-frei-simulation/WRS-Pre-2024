@@ -144,44 +144,6 @@ items:
         scene_sensitive: true
     -
       id: 8
-      name: "VFXCollider3"
-      plugin: SimpleCollider
-      class: MultiColliderItem
-      data:
-        translation: [ 7, 7, 0 ]
-        rotation: [ 0, -0, 0 ]
-        size: [ 10, 10, 10 ]
-        diffuse_color: [ 1, 0, 1 ]
-        radius: 0.5
-        height: 1
-        specular_exponent: 25
-        transparency: 1
-        scene_type: Box
-        collider_type: VFX
-        density: 0
-        viscosity: 0
-        steady_flow: [ 0, 0, 0 ]
-        inbound_delay: 0
-        inbound_rate: 0
-        inbound_loss: 0
-        outbound_delay: 0
-        outbound_rate: 0
-        outbound_loss: 0
-        source: 0.0.0.0/0
-        destination: 0.0.0.0/0
-        hsv: [ 0, 0, 0 ]
-        rgb: [ 0, 0, 0 ]
-        coef_b: 0
-        coef_d: 0
-        std_dev: 0
-        salt_amount: 0
-        salt_chance: 1
-        pepper_amount: 0
-        pepper_chance: 1
-        mosaic_chance: 0.1
-        kernel: 16
-    -
-      id: 9
       name: "Block"
       plugin: Body
       class: BodyItem
@@ -205,7 +167,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 10
+      id: 9
       name: "TargetTS4_35-50-C1"
       plugin: Body
       class: BodyItem
@@ -229,7 +191,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 11
+      id: 10
       name: "TargetTS4_35-50-C2"
       plugin: Body
       class: BodyItem
@@ -253,7 +215,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 12
+      id: 11
       name: "TargetTS4_35-50-C3"
       plugin: Body
       class: BodyItem
@@ -277,7 +239,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 13
+      id: 12
       name: "TargetTS4_35-50-C4"
       plugin: Body
       class: BodyItem
@@ -301,7 +263,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 14
+      id: 13
       name: "TargetTS4_35-50-C5"
       plugin: Body
       class: BodyItem
@@ -325,7 +287,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 15
+      id: 14
       name: "TargetTS4_35-100-C1"
       plugin: Body
       class: BodyItem
@@ -349,7 +311,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 16
+      id: 15
       name: "TargetTS4_35-100-C2"
       plugin: Body
       class: BodyItem
@@ -373,7 +335,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 17
+      id: 16
       name: "TargetTS4_35-100-C3"
       plugin: Body
       class: BodyItem
@@ -397,7 +359,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 18
+      id: 17
       name: "TargetTS4_35-100-C4"
       plugin: Body
       class: BodyItem
@@ -421,7 +383,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 19
+      id: 18
       name: "TargetTS4_35-100-C5"
       plugin: Body
       class: BodyItem
@@ -445,7 +407,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 20
+      id: 19
       name: "Rack2"
       plugin: Body
       class: BodyItem
@@ -469,7 +431,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 21
+      id: 20
       name: "robot3"
       plugin: Body
       class: BodyItem
@@ -687,6 +649,11 @@ Body:
         show_cm_projection: false
         show_zmp: false
       -
+        body_item: 8
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
         body_item: 9
         show_cm: false
         show_cm_projection: false
@@ -743,11 +710,6 @@ Body:
         show_zmp: false
       -
         body_item: 20
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 21
         show_cm: false
         show_cm_projection: false
         show_zmp: false

@@ -45,44 +45,6 @@ items:
             export_symbols: false
     -
       id: 3
-      name: "VFXCollider1"
-      plugin: SimpleCollider
-      class: MultiColliderItem
-      data:
-        translation: [ -7, -7, 0 ]
-        rotation: [ 0, -0, 0 ]
-        size: [ 10, 10, 10 ]
-        diffuse_color: [ 1, 0, 1 ]
-        radius: 0.5
-        height: 1
-        specular_exponent: 25
-        transparency: 1
-        scene_type: Box
-        collider_type: VFX
-        density: 0
-        viscosity: 0
-        steady_flow: [ 0, 0, 0 ]
-        inbound_delay: 0
-        inbound_rate: 0
-        inbound_loss: 0
-        outbound_delay: 0
-        outbound_rate: 0
-        outbound_loss: 0
-        source: 0.0.0.0/0
-        destination: 0.0.0.0/0
-        hsv: [ 0, 0, 0 ]
-        rgb: [ 0, 0, 0 ]
-        coef_b: 0
-        coef_d: 0
-        std_dev: 0
-        salt_amount: 0
-        salt_chance: 1
-        pepper_amount: 0
-        pepper_chance: 1
-        mosaic_chance: 0
-        kernel: 16
-    -
-      id: 4
       name: "TargetTS4_35-50-A1"
       plugin: Body
       class: BodyItem
@@ -106,7 +68,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 5
+      id: 4
       name: "TargetTS4_35-50-A2"
       plugin: Body
       class: BodyItem
@@ -130,7 +92,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 6
+      id: 5
       name: "TargetTS4_35-50-A3"
       plugin: Body
       class: BodyItem
@@ -154,7 +116,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 7
+      id: 6
       name: "TargetTS4_35-50-A4"
       plugin: Body
       class: BodyItem
@@ -178,7 +140,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 8
+      id: 7
       name: "TargetTS4_35-50-A5"
       plugin: Body
       class: BodyItem
@@ -202,7 +164,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 9
+      id: 8
       name: "TargetTS4_35-100-A1"
       plugin: Body
       class: BodyItem
@@ -218,7 +180,7 @@ items:
         initialRootPosition: [ -6.15, -2.566, 1 ]
         initialRootAttitude: [
           0.866025404, 0.353553391, 0.353553391,
-          -2.28479818e-10, 0.707106781, -0.707106781,
+          -2.39903819e-10, 0.707106781, -0.707106781,
           -0.5, 0.612372436, 0.612372436 ]
         fix_root: true
         collisionDetection: true
@@ -226,7 +188,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 10
+      id: 9
       name: "TargetTS4_35-100-A2"
       plugin: Body
       class: BodyItem
@@ -250,7 +212,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 11
+      id: 10
       name: "TargetTS4_35-100-A3"
       plugin: Body
       class: BodyItem
@@ -274,7 +236,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 12
+      id: 11
       name: "TargetTS4_35-100-A4"
       plugin: Body
       class: BodyItem
@@ -290,15 +252,15 @@ items:
         initialRootPosition: [ -1.1, -7.65989778, 1.22745994 ]
         initialRootAttitude: [
           1, -0, 0,
-          0, -0.087155742, 0.996194698,
-          -0, -0.996194698, -0.087155742 ]
+          0, -0.0871557413, 0.996194698,
+          -0, -0.996194698, -0.0871557413 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
     -
-      id: 13
+      id: 12
       name: "TargetTS4_35-100-A5"
       plugin: Body
       class: BodyItem
@@ -369,7 +331,7 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -25.6003, 2.21701, 12.3254 ]
+          eye: [ -24.2073, 0.94938, 10.8947 ]
           direction: [ 0.794805, -0.312636, -0.520138 ]
           up: [ 0.484038, -0.190396, 0.854082 ]
         -
@@ -500,6 +462,11 @@ Body:
         show_cm_projection: false
         show_zmp: false
       -
+        body_item: 3
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
         body_item: 4
         show_cm: false
         show_cm_projection: false
@@ -541,11 +508,6 @@ Body:
         show_zmp: false
       -
         body_item: 12
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 13
         show_cm: false
         show_cm_projection: false
         show_zmp: false

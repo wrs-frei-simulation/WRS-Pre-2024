@@ -32,44 +32,6 @@ items:
         scene_sensitive: true
     -
       id: 2
-      name: "VFXCollider4"
-      plugin: SimpleCollider
-      class: MultiColliderItem
-      data:
-        translation: [ -7, 7, 0 ]
-        rotation: [ 0, -0, 0 ]
-        size: [ 10, 10, 10 ]
-        diffuse_color: [ 1, 0, 1 ]
-        radius: 0.5
-        height: 1
-        specular_exponent: 25
-        transparency: 1
-        scene_type: Box
-        collider_type: VFX
-        density: 0
-        viscosity: 0
-        steady_flow: [ 0, 0, 0 ]
-        inbound_delay: 0
-        inbound_rate: 0
-        inbound_loss: 0
-        outbound_delay: 0
-        outbound_rate: 0
-        outbound_loss: 0
-        source: 0.0.0.0/0
-        destination: 0.0.0.0/0
-        hsv: [ 0, 0, 0 ]
-        rgb: [ 0, 0, 0 ]
-        coef_b: 0
-        coef_d: 0
-        std_dev: 0
-        salt_amount: 0.01
-        salt_chance: 0.1
-        pepper_amount: 0
-        pepper_chance: 1
-        mosaic_chance: 0.1
-        kernel: 16
-    -
-      id: 3
       name: "TargetTS4_35-50-D1"
       plugin: Body
       class: BodyItem
@@ -93,7 +55,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 4
+      id: 3
       name: "TargetTS4_35-50-D2"
       plugin: Body
       class: BodyItem
@@ -117,7 +79,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 5
+      id: 4
       name: "TargetTS4_35-50-D3"
       plugin: Body
       class: BodyItem
@@ -141,7 +103,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 6
+      id: 5
       name: "TargetTS4_35-50-D4"
       plugin: Body
       class: BodyItem
@@ -165,7 +127,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 7
+      id: 6
       name: "TargetTS4_35-50-D5"
       plugin: Body
       class: BodyItem
@@ -189,7 +151,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 8
+      id: 7
       name: "TargetTS4_35-100-D1"
       plugin: Body
       class: BodyItem
@@ -213,7 +175,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 9
+      id: 8
       name: "TargetTS4_35-100-D2"
       plugin: Body
       class: BodyItem
@@ -237,7 +199,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 10
+      id: 9
       name: "TargetTS4_35-100-D3"
       plugin: Body
       class: BodyItem
@@ -261,7 +223,7 @@ items:
         lock_location: false
         scene_sensitive: true
     -
-      id: 11
+      id: 10
       name: "TargetTS4_35-100-D4"
       plugin: Body
       class: BodyItem
@@ -276,16 +238,16 @@ items:
           0, 1, 0 ]
         initialRootPosition: [ 3.43692008, 3.43692008, 5 ]
         initialRootAttitude: [
-          0.707106781, 1.39008915e-10, -0.707106781,
-          -0.707106781, 5.21202526e-10, -0.707106781,
-          1.39008915e-10, 1, 5.21202526e-10 ]
+          0.707106781, 2.15889195e-10, -0.707106781,
+          -0.707106781, 7.07588654e-10, -0.707106781,
+          2.15889195e-10, 1, 7.07588654e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
     -
-      id: 12
+      id: 11
       name: "TargetTS4_35-100-D5"
       plugin: Body
       class: BodyItem
@@ -300,16 +262,16 @@ items:
           -0.0204433021, 0.942109017, -0.334682942 ]
         initialRootPosition: [ -3.14355066, 3.38946035, 7.45623217 ]
         initialRootAttitude: [
-          0.758446274, 0.232722241, 0.608768928,
-          0.651414861, -0.241393779, -0.719296684,
-          -0.0204433032, 0.942109017, -0.334682938 ]
+          0.758446275, 0.232722239, 0.608768927,
+          0.651414859, -0.241393774, -0.719296685,
+          -0.0204433043, 0.942109016, -0.334682932 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
     -
-      id: 13
+      id: 12
       name: "robot1"
       plugin: Body
       class: BodyItem
@@ -327,7 +289,7 @@ items:
         initialRootAttitude: [
           0.707106781, -0.663305325, -0.245002135,
           -0.707106781, -0.663305325, -0.245002135,
-          -2.37758285e-11, 0.346485342, -0.938055386 ]
+          -2.54740951e-11, 0.346485342, -0.938055386 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -512,6 +474,11 @@ Body:
         show_cm_projection: false
         show_zmp: false
       -
+        body_item: 2
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
         body_item: 3
         show_cm: false
         show_cm_projection: false
@@ -558,11 +525,6 @@ Body:
         show_zmp: false
       -
         body_item: 12
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 13
         show_cm: false
         show_cm_projection: false
         show_zmp: false
