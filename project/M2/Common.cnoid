@@ -28,6 +28,106 @@ items:
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
+    -
+      id: 2
+      name: "ContainmentVessel"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data:
+        file: "${SHARE}/WRS2024PRE/model/MockupPlant/ContainmentVessel.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 0, 0, 0 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ 0, 0, 0 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 3
+      name: "CFDCollider"
+      plugin: SimpleCollider
+      class: MultiColliderItem
+      data:
+        translation: [ 0, 0, 0 ]
+        rotation: [ 0, -0, 0 ]
+        size: [ 50, 50, 50 ]
+        diffuse_color: [ 0, 1, 1 ]
+        radius: 0.5
+        height: 1
+        specular_exponent: 25
+        transparency: 1
+        scene_type: Box
+        collider_type: CFD
+        density: 0
+        viscosity: 0
+        steady_flow: [ 0, 0, 0 ]
+        inbound_delay: 0
+        inbound_rate: 0
+        inbound_loss: 0
+        outbound_delay: 0
+        outbound_rate: 0
+        outbound_loss: 0
+        source: 0.0.0.0/0
+        destination: 0.0.0.0/0
+        hsv: [ 0, 0, 0 ]
+        rgb: [ 0, 0, 0 ]
+        coef_b: 0
+        coef_d: 0
+        std_dev: 0
+        salt_amount: 0
+        salt_chance: 1
+        pepper_amount: 0
+        pepper_chance: 1
+        mosaic_chance: 1
+        kernel: 16
+    -
+      id: 4
+      name: "VFXCollider"
+      plugin: SimpleCollider
+      class: MultiColliderItem
+      data:
+        translation: [ 0, 0, 0 ]
+        rotation: [ 0, -0, 0 ]
+        size: [ 50, 50, 50 ]
+        diffuse_color: [ 1, 0, 1 ]
+        radius: 0.5
+        height: 1
+        specular_exponent: 25
+        transparency: 1
+        scene_type: Box
+        collider_type: VFX
+        density: 0
+        viscosity: 0
+        steady_flow: [ 0, 0, 0 ]
+        inbound_delay: 0
+        inbound_rate: 0
+        inbound_loss: 0
+        outbound_delay: 0
+        outbound_rate: 0
+        outbound_loss: 0
+        source: 0.0.0.0/0
+        destination: 0.0.0.0/0
+        hsv: [ 0, 0, 0 ]
+        rgb: [ 0, 0, 0 ]
+        coef_b: 0
+        coef_d: 0
+        std_dev: 0
+        salt_amount: 0
+        salt_chance: 0
+        pepper_amount: 0
+        pepper_chance: 0
+        mosaic_chance: 0
+        kernel: 16
 views:
   -
     id: 0
@@ -72,9 +172,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ 31.9581, 19.7083, 23.8864 ]
-          direction: [ -0.694635, -0.448822, -0.562175 ]
-          up: [ -0.472186, -0.305092, 0.827018 ]
+          eye: [ 24.6768, 23.0867, 18.0454 ]
+          direction: [ -0.660668, -0.619992, -0.423235 ]
+          up: [ -0.308622, -0.289621, 0.90602 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -111,12 +211,6 @@ views:
   -
     id: 5
     plugin: Body
-    class: BodyLinkView
-    state:
-      showRotationMatrix: false
-  -
-    id: 6
-    plugin: Body
     class: JointDisplacementView
     mounted: true
     state:
@@ -129,7 +223,7 @@ views:
       limit_ranges: false
       show_selected_joints: false
   -
-    id: 7
+    id: 6
     plugin: Body
     class: LinkDeviceListView
     mounted: true
@@ -137,7 +231,7 @@ views:
       element_type: all
       listing_mode: list
   -
-    id: 8
+    id: 7
     plugin: Body
     class: LinkPositionView
     mounted: true
@@ -150,12 +244,12 @@ views:
       show_rotation_matrix: false
       target_link_type: ik_link
   -
-    id: 9
+    id: 8
     plugin: Body
     class: LinkPropertyView
     mounted: true
   -
-    id: 10
+    id: 9
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -202,6 +296,11 @@ Body:
         show_cm: false
         show_cm_projection: false
         show_zmp: false
+      -
+        body_item: 2
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
   "SplineFilterDialog":
     isInputFrameRateSpecified: false
     inputFrameRate: 200
@@ -231,7 +330,7 @@ viewAreas:
                   views: [ 1 ]
                 -
                   type: pane
-                  views: [ 0, 9 ]
+                  views: [ 0, 8 ]
                   current: 0
             -
               type: splitter
@@ -243,7 +342,7 @@ viewAreas:
                   views: [ 4 ]
                 -
                   type: pane
-                  views: [ 3, 10 ]
+                  views: [ 3, 9 ]
                   current: 3
         -
           type: splitter
@@ -260,11 +359,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 8 ]
+                  views: [ 7 ]
                 -
                   type: pane
-                  views: [ 7, 6 ]
-                  current: 6
+                  views: [ 6, 5 ]
+                  current: 5
 layoutOfToolBars:
   rows:
     -
@@ -279,3 +378,4 @@ layoutOfToolBars:
       - { name: "GraphBar", x: 0, priority: 3 }
       - { name: "CaptureBar", x: 0, priority: 4 }
       - { name: "DisplayValueFormatBar", x: 0, priority: 5 }
+      - { name: "WRS2024PreBar", x: 1600, priority: 0 }

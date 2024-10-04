@@ -1,23 +1,23 @@
 robot_list: &RobotList [ AizuSpiderDA-ROS2, HobbyDrone-ROS2 ]
-# robot_list: &RobotList [ project_test/Crawler, SampleDrone-ROS2 ]
+# robot_list: &RobotList [ project_test/Crawler, HobbyDrone-ROS2 ]
 
 registrations:
   - &Mission2
     name: M2
-    task_project: [ M2-A1, M2-A2, M2-A3, M2-A4, ContainmentVessel, Structures, M2-Colliders, M2-SG ]
+    task_project: [ M2/A1, M2/A2, M2/A3, M2/A4, M2/Common, M2/SG ]
     robot_project: *RobotList
     robot_alignment: X+
     start_position: [ -9.5, -7.0, 0.0 ]
     simulator_project: [ project_20241005/AGXSimulatorCVW, project_20241005/AISTSimulatorCVW ]
-    view_project: M2-RefereeView
+    view_project: M2/RefereeView
     enable_recording: true
   - <<: *Mission2
     name: M2-A12
-    task_project: [ M2-A1, M2-A2, ContainmentVessel, Structures, M2-Colliders, project_20241005/M2-SGA12 ]
+    task_project: [ M2/A1, M2/A2, M2/Common, project_20241005/SG-A12 ]
     robot_alignment: X-
     start_position: [ -4.0, -7.0, 0.0 ]
   - <<: *Mission2
     name: M2-A34
-    task_project: [ M2-A3, M2-A4, ContainmentVessel, Structures, M2-Colliders, project_20241005/M2-SGA34 ]
+    task_project: [ M2/A3, M2/A4, M2/Common, project_20241005/SG-A34 ]
     robot_alignment: X+
     start_position: [ 4.0, 7.0, 0.0 ]
