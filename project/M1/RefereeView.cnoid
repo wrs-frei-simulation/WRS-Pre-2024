@@ -4,87 +4,6 @@ items:
   plugin: Base
   class: RootItem
   is_builtin_item: true
-  children:
-    -
-      id: 1
-      name: "SimpleCollider-A34S"
-      plugin: SimpleCollider
-      class: SimpleColliderItem
-      is_checked: true
-      data:
-        translation: [ 4, 7, 0 ]
-        rotation: [ 0, -0, -90 ]
-        size: [ 3, 4.5, 0.001 ]
-        diffuse_color: [ 0, 0, 1 ]
-        radius: 0.5
-        height: 1
-        specular_exponent: 25
-        transparency: 0.5
-        scene_type: Box
-    -
-      id: 2
-      name: "SimpleCollider-A34G"
-      plugin: SimpleCollider
-      class: SimpleColliderItem
-      is_checked: true
-      data:
-        translation: [ -4, 7, 0 ]
-        rotation: [ 0, -0, 0 ]
-        size: [ 3, 4.5, 0.001 ]
-        diffuse_color: [ 1, 0, 0 ]
-        radius: 0.5
-        height: 1
-        specular_exponent: 25
-        transparency: 0.5
-        scene_type: Box
-    -
-      id: 3
-      name: "BlackSmoke"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
-      data:
-        file: "${SHARE}/WRS2024PRE/model/M2/Obstacle/black_smoke.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 2.6, -2.6, 2 ]
-        rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        initialRootPosition: [ 2.6, -2.6, 2 ]
-        initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 4
-      name: "WhiteSmoke"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
-      data:
-        file: "${SHARE}/WRS2024PRE/model/M2/Obstacle/white_smoke.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ -4.5, 3.6, 3 ]
-        rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        initialRootPosition: [ -4.5, 3.6, 3 ]
-        initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
 views:
   -
     id: 0
@@ -129,9 +48,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ 0.0996975, 17.3895, 10.9148 ]
-          direction: [ -0.00499608, -0.698828, -0.715272 ]
-          up: [ -0.00511351, -0.715254, 0.698846 ]
+          eye: [ -15.4826, -13.3565, 10.878 ]
+          direction: [ 0.818428, 0.407585, -0.405031 ]
+          up: [ 0.362559, 0.180558, 0.914303 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -240,9 +159,6 @@ toolbars:
     penetrationBlockDepth: 0.0005
     lazyCollisionDetectionMode: true
 Body:
-  "BodySelectionManager":
-    current_body_item: 3
-    current_link: "Base"
   "KinematicFaultChecker":
     checkJointPositions: true
     angleMargin: 0
@@ -252,18 +168,7 @@ Body:
     targetJoints: all
     checkSelfCollisions: true
     onlyTimeBarRange: false
-  "OperableSceneBody":
-    scene_bodies:
-      -
-        body_item: 3
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 4
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
+  "OperableSceneBody": { }
   "SplineFilterDialog":
     isInputFrameRateSpecified: false
     inputFrameRate: 200
@@ -276,12 +181,12 @@ viewAreas:
     contents:
       type: splitter
       orientation: horizontal
-      sizes: [ 1401, 445 ]
+      sizes: [ 1846, 0 ]
       children:
         -
           type: splitter
           orientation: horizontal
-          sizes: [ 362, 1035 ]
+          sizes: [ 478, 1364 ]
           children:
             -
               type: splitter
@@ -318,7 +223,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 307, 475 ]
+              sizes: [ 306, 476 ]
               children:
                 -
                   type: pane
@@ -341,4 +246,3 @@ layoutOfToolBars:
       - { name: "GraphBar", x: 0, priority: 3 }
       - { name: "CaptureBar", x: 0, priority: 4 }
       - { name: "DisplayValueFormatBar", x: 0, priority: 5 }
-      - { name: "WRS2024PreBar", x: 1600, priority: 0 }

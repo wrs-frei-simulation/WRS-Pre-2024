@@ -97,9 +97,9 @@ items:
           0, 1, 6.123234e-17 ]
         initialRootPosition: [ 7.70699307, -6.70699307, 0.0996171246 ]
         initialRootAttitude: [
-          0.707106781, -2.15889195e-10, 0.707106781,
-          0.707106781, 7.07588654e-10, -0.707106781,
-          -2.15889195e-10, 1, 7.07588654e-10 ]
+          0.707106781, -2.93092717e-10, 0.707106781,
+          0.707106781, 8.94108121e-10, -0.707106781,
+          -2.93092717e-10, 1, 8.94108121e-10 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -340,7 +340,7 @@ items:
         initialRootAttitude: [
           0.69610295, 0.707106781, 0.124260548,
           0.696102949, -0.707106781, 0.124260548,
-          0.175730952, -1.30596214e-10, -0.984438231 ]
+          0.175730952, -1.3494942e-10, -0.984438231 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -398,21 +398,17 @@ views:
   -
     id: 0
     plugin: Base
-    class: GeneralSliderView
-  -
-    id: 1
-    plugin: Base
     class: ItemPropertyView
     mounted: true
   -
-    id: 2
+    id: 1
     plugin: Base
     class: ItemTreeView
     mounted: true
     state:
       expanded: [ 1 ]
   -
-    id: 3
+    id: 2
     plugin: Base
     class: LocationView
     mounted: true
@@ -423,12 +419,12 @@ views:
       show_rotation_matrix: false
       coordinate: world
   -
-    id: 4
+    id: 3
     plugin: Base
     class: MessageView
     mounted: true
   -
-    id: 5
+    id: 4
     plugin: Base
     class: SceneView
     mounted: true
@@ -479,13 +475,13 @@ views:
       xz_grid_color: [ 0.9, 0.9, 0.9 ]
       yz_grid_color: [ 0.9, 0.9, 0.9 ]
   -
-    id: 6
+    id: 5
     plugin: Body
     class: BodyLinkView
     state:
       showRotationMatrix: false
   -
-    id: 7
+    id: 6
     plugin: Body
     class: JointDisplacementView
     mounted: true
@@ -499,7 +495,7 @@ views:
       limit_ranges: false
       show_selected_joints: false
   -
-    id: 8
+    id: 7
     plugin: Body
     class: LinkDeviceListView
     mounted: true
@@ -512,7 +508,7 @@ views:
           id: 1
           selected_links: [ 0 ]
   -
-    id: 9
+    id: 8
     plugin: Body
     class: LinkPositionView
     mounted: true
@@ -525,12 +521,12 @@ views:
       show_rotation_matrix: false
       target_link_type: ik_link
   -
-    id: 10
+    id: 9
     plugin: Body
     class: LinkPropertyView
     mounted: true
   -
-    id: 11
+    id: 10
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -668,11 +664,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 2 ]
+                  views: [ 1 ]
                 -
                   type: pane
-                  views: [ 1, 10 ]
-                  current: 1
+                  views: [ 0, 9 ]
+                  current: 0
             -
               type: splitter
               orientation: vertical
@@ -680,11 +676,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 5 ]
+                  views: [ 4 ]
                 -
                   type: pane
-                  views: [ 4, 11 ]
-                  current: 4
+                  views: [ 3, 10 ]
+                  current: 3
         -
           type: splitter
           orientation: vertical
@@ -692,7 +688,7 @@ viewAreas:
           children:
             -
               type: pane
-              views: [ 3 ]
+              views: [ 2 ]
             -
               type: splitter
               orientation: vertical
@@ -700,11 +696,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 9 ]
+                  views: [ 8 ]
                 -
                   type: pane
-                  views: [ 8, 7 ]
-                  current: 7
+                  views: [ 7, 6 ]
+                  current: 6
 layoutOfToolBars:
   rows:
     -
