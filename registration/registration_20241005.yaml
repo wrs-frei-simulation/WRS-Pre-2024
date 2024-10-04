@@ -8,7 +8,7 @@ registrations:
     robot_project: *RobotList
     robot_alignment: X+
     start_position: [ -9.5, -7.0, 0.0 ]
-    simulator_project: [ project_20241005/AGXSimulatorW, project_20241005/AISTSimulatorW ]
+    simulator_project: [ project_20241005/AGXSimulatorNL, project_20241005/AISTSimulatorNL ]
     view_project: M2/RefereeView
     enable_recording: true
   - <<: *Mission2
@@ -21,3 +21,4 @@ registrations:
     task_project: [ M2/A3, M2/A4, M2/Common, project_20241005/SG-A34 ]
     robot_alignment: X+
     start_position: [ 4.0, 7.0, 0.0 ]
+    simulator_project: [ project_20241005/AGXSimulatorWL, project_20241005/AISTSimulatorWL ]
