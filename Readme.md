@@ -169,6 +169,12 @@ $ colcon build --symlink-install --cmake-args -DBUILD_AGX_DYNAMICS_PLUGIN=ON -DB
 $ source install/setup.bash
 $ ros2 run choreonoid_ros choreonoid
 ```
+
+##### ブランチ名
+- 1003: 10/04午前に使用した予選環境一式
+- 1004: 10/04午後に使用した予選環境一式
+- master: 10/05に使用した決勝環境一式
+
 ##### インストール関連参考URL
 - Choreonoidインストール方法
 	- https://choreonoid.org/ja/documents/latest/install/build-ubuntu.html
