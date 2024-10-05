@@ -11,27 +11,9 @@ registrations:
   - <<: *Mission1-1
     name: M1-1-AizuSpiderDA
     robot_project: [ AizuSpiderDA ]
-    simulator_project: [ AGXSimulator ]
   - <<: *Mission1-1
     name: M1-1-AizuSpiderDA-ROS2
     robot_project: [ AizuSpiderDA-ROS2 ]
-    simulator_project: [ AGXSimulator ]
-  - <<: *Mission1-1
-    name: M1-1-AizuSpiderSA
-    robot_project: [ AizuSpiderSA ]
-    simulator_project: [ AGXSimulator ]
-  - <<: *Mission1-1
-    name: M1-1-AizuSpiderSA-ROS2
-    robot_project: [ AizuSpiderSA-ROS2 ]
-    simulator_project: [ AGXSimulator ]
-  - <<: *Mission1-1
-    name: M1-1-AizuSpiderSS
-    robot_project: [ AizuSpiderSS ]
-    simulator_project: [ AISTSimulator ]
-  - <<: *Mission1-1
-    name: M1-1-AizuSpiderSS-ROS2
-    robot_project: [ AizuSpiderSS-ROS2 ]
-    simulator_project: [ AISTSimulator ]
 
   - &Mission1-2
     name: M1-2
@@ -45,27 +27,9 @@ registrations:
   - <<: *Mission1-2
     name: M1-2-AizuSpiderDA
     robot_project: [ AizuSpiderDA ]
-    simulator_project: [ AGXSimulator ]
   - <<: *Mission1-2
     name: M1-2-AizuSpiderDA-ROS2
     robot_project: [ AizuSpiderDA-ROS2 ]
-    simulator_project: [ AGXSimulator ]
-  - <<: *Mission1-2
-    name: M1-2-AizuSpiderSA
-    robot_project: [ AizuSpiderSA ]
-    simulator_project: [ AGXSimulator ]
-  - <<: *Mission1-2
-    name: M1-2-AizuSpiderSA-ROS2
-    robot_project: [ AizuSpiderSA-ROS2 ]
-    simulator_project: [ AGXSimulator ]
-  - <<: *Mission1-2
-    name: M1-2-AizuSpiderSS
-    robot_project: [ AizuSpiderSS ]
-    simulator_project: [ AISTSimulator ]
-  - <<: *Mission1-2
-    name: M1-2-AizuSpiderSS-ROS2
-    robot_project: [ AizuSpiderSS-ROS2 ]
-    simulator_project: [ AISTSimulator ]
 
   - &Mission2
     name: M2
@@ -95,40 +59,15 @@ registrations:
   - <<: *Mission2
     name: M2-AizuSpiderDA
     robot_project: [ AizuSpiderDA ]
-    simulator_project: [ AGXSimulator ]
   - <<: *Mission2
     name: M2-AizuSpiderDA-ROS2
     robot_project: [ AizuSpiderDA-ROS2 ]
-    simulator_project: [ AGXSimulator ]
   - <<: *Mission2
-    name: M2-AizuSpiderSA
-    robot_project: [ AizuSpiderSA ]
-    simulator_project: [ AGXSimulator ]
+    name: M2-HobbyDrone
+    robot_project: [ HobbyDrone ]
   - <<: *Mission2
-    name: M2-AizuSpiderSA-ROS2
-    robot_project: [ AizuSpiderSA-ROS2 ]
-    simulator_project: [ AGXSimulator ]
-  - <<: *Mission2
-    name: M2-AizuSpiderSS
-    robot_project: [ AizuSpiderSS ]
-    simulator_project: [ AISTSimulator ]
-  - <<: *Mission2
-    name: M2-AizuSpiderSS-ROS2
-    robot_project: [ AizuSpiderSS-ROS2 ]
-    simulator_project: [ AISTSimulator ]
-  - <<: *Mission2
-    name: M2-SampleDroneA-ROS2
-    robot_project: [ SampleDrone-ROS2 ]
-    simulator_project: [ AGXSimulator ]
-  - <<: *Mission2
-    name: M2-SampleDroneS-ROS2
-    robot_project: [ SampleDrone-ROS2 ]
-    simulator_project: [ AISTSimulator ]
-  - <<: *Mission2
-    name: M2-HobbyDroneA-ROS2
+    name: M2-HobbyDrone-ROS2
     robot_project: [ HobbyDrone-ROS2 ]
-    simulator_project: [ AGXSimulator ]
   - <<: *Mission2
-    name: M2-HobbyDroneS-ROS2
-    robot_project: [ HobbyDrone-ROS2 ]
-    simulator_project: [ AISTSimulator ]
+    name: M2-SampleDrone-ROS2
+    robot_project: [ SampleDrone-ROS2 ]

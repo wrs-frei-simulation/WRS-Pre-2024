@@ -12,7 +12,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "../../../../choreonoid_ros2_sample_drone_tutorial/model/sample_drone.body"
+        file: "${HOME}/ros2_ws/src/choreonoid_ros2_sample_drone_tutorial/model/sample_drone.body"
         format: CHOREONOID-BODY
         rootPosition: [ 0, 0, 0.1 ]
         rootAttitude: [
@@ -44,6 +44,24 @@ items:
             export_symbols: false
         -
           id: 3
+          name: "BodySyncCamera"
+          plugin: Body
+          class: BodySyncCameraItem
+          is_checked: true
+          data:
+            camera_type: Perspective
+            translation: [ 3, 1.5, 1.2 ]
+            rotation: [ 0.368727, 0.596612, 0.712808, 132.449 ]
+            field_of_view: 0.785398
+            near_clip_distance: 0.04
+            far_clip_distance: 200
+            interactive_viewpoint_change: true
+            target_link: ""
+            parallel_tracking: false
+            local_translation: [ 3, 1.5, 1.1 ]
+            local_rotation: [ 0.368727, 0.596612, 0.712808, 132.449 ]
+        -
+          id: 4
           name: "BodyROS2"
           plugin: ROS2
           class: BodyROS2Item
@@ -54,17 +72,21 @@ views:
   -
     id: 0
     plugin: Base
+    class: GeneralSliderView
+  -
+    id: 1
+    plugin: Base
     class: ItemPropertyView
     mounted: true
   -
-    id: 1
+    id: 2
     plugin: Base
     class: ItemTreeView
     mounted: true
     state:
       expanded: [ 1 ]
   -
-    id: 2
+    id: 3
     plugin: Base
     class: LocationView
     mounted: true
@@ -75,12 +97,12 @@ views:
       show_rotation_matrix: false
       coordinate: world
   -
-    id: 3
+    id: 4
     plugin: Base
     class: MessageView
     mounted: true
   -
-    id: 4
+    id: 5
     plugin: Base
     class: SceneView
     mounted: true
@@ -131,13 +153,13 @@ views:
       xz_grid_color: [ 0.9, 0.9, 0.9 ]
       yz_grid_color: [ 0.9, 0.9, 0.9 ]
   -
-    id: 5
+    id: 6
     plugin: Body
     class: BodyLinkView
     state:
       showRotationMatrix: false
   -
-    id: 6
+    id: 7
     plugin: Body
     class: JointDisplacementView
     mounted: true
@@ -151,7 +173,7 @@ views:
       limit_ranges: false
       show_selected_joints: false
   -
-    id: 7
+    id: 8
     plugin: Body
     class: LinkDeviceListView
     mounted: true
@@ -159,7 +181,7 @@ views:
       element_type: all
       listing_mode: list
   -
-    id: 8
+    id: 9
     plugin: Body
     class: LinkPositionView
     mounted: true
@@ -172,12 +194,12 @@ views:
       show_rotation_matrix: false
       target_link_type: ik_link
   -
-    id: 9
+    id: 10
     plugin: Body
     class: LinkPropertyView
     mounted: true
   -
-    id: 10
+    id: 11
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -250,11 +272,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 1 ]
+                  views: [ 2 ]
                 -
                   type: pane
-                  views: [ 0, 9 ]
-                  current: 0
+                  views: [ 1, 10 ]
+                  current: 1
             -
               type: splitter
               orientation: vertical
@@ -262,11 +284,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 4 ]
+                  views: [ 5 ]
                 -
                   type: pane
-                  views: [ 3, 10 ]
-                  current: 3
+                  views: [ 4, 11 ]
+                  current: 4
         -
           type: splitter
           orientation: vertical
@@ -274,7 +296,7 @@ viewAreas:
           children:
             -
               type: pane
-              views: [ 2 ]
+              views: [ 3 ]
             -
               type: splitter
               orientation: vertical
@@ -282,11 +304,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 8 ]
+                  views: [ 9 ]
                 -
                   type: pane
-                  views: [ 7, 6 ]
-                  current: 6
+                  views: [ 8, 7 ]
+                  current: 7
 layoutOfToolBars:
   rows:
     -
