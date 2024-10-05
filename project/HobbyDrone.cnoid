@@ -43,21 +43,8 @@ items:
             base_directory: "Controller directory"
             reloading: false
             export_symbols: false
-          children:
-            -
-              id: 3
-              name: "JoyTopicSubController"
-              plugin: Body
-              class: SimpleControllerItem
-              data:
-                isNoDelayMode: false
-                controllerOptions: "topic joy2"
-                controller: "JoyTopicSubscriberController"
-                base_directory: "Controller directory"
-                reloading: false
-                export_symbols: false
         -
-          id: 4
+          id: 3
           name: "BodySyncCamera"
           plugin: Body
           class: BodySyncCameraItem
