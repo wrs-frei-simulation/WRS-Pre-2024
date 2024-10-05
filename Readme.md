@@ -21,6 +21,10 @@
   	  
   	[![](https://img.youtube.com/vi/iCsacqRvRAQ/0.jpg)](https://www.youtube.com/watch?v=iCsacqRvRAQ)  
 
+## プレ大会の様子
+- 予選動画: https://www.youtube.com/watch?v=bKAUXahBdgg
+- 決勝動画: https://www.youtube.com/watch?v=ruW7kajVFAw
+
 ## エリア紹介
 
 ### エリア1: レバー操作
