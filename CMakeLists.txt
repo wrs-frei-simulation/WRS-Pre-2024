@@ -27,3 +27,4 @@ install(DIRECTORY
   DESTINATION ${CHOREONOID_SHARE_SUBDIR}/WRS2024PRE)
 
 add_subdirectory(controller)
+add_subdirectory(src)
