@@ -12,6 +12,8 @@ registrations:
     simulator_project: [ project_20241005/AGXSimulatorNL, project_20241005/AISTSimulatorNL ]
     view_project: M2/RefereeView
     enable_recording: true
+    # enable_tracking: true
+    enable_ros: true
   - <<: *Mission2
     name: M2-A12
     task_project: [ M2/A1, M2/A2, M2/Common, project_20241005/SG-A12 ]

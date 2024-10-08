@@ -12,7 +12,7 @@ items:
       class: BodyItem
       is_checked: true
       data:
-        file: "${HOME}/ros2_ws/src/choreonoid_ros2_sample_drone_tutorial/model/sample_drone.body"
+        file: "${SHARE}/WRS2024PRE/model/model_ex1/sample_drone.body"
         format: CHOREONOID-BODY
         rootPosition: [ 0, 0, 0.1 ]
         rootAttitude: [
@@ -44,24 +44,6 @@ items:
             export_symbols: false
         -
           id: 3
-          name: "BodySyncCamera"
-          plugin: Body
-          class: BodySyncCameraItem
-          is_checked: true
-          data:
-            camera_type: Perspective
-            translation: [ 3, 1.5, 1.2 ]
-            rotation: [ 0.368727, 0.596612, 0.712808, 132.449 ]
-            field_of_view: 0.785398
-            near_clip_distance: 0.04
-            far_clip_distance: 200
-            interactive_viewpoint_change: true
-            target_link: ""
-            parallel_tracking: false
-            local_translation: [ 3, 1.5, 1.1 ]
-            local_rotation: [ 0.368727, 0.596612, 0.712808, 132.449 ]
-        -
-          id: 4
           name: "BodyROS2"
           plugin: ROS2
           class: BodyROS2Item
@@ -155,12 +137,6 @@ views:
   -
     id: 6
     plugin: Body
-    class: BodyLinkView
-    state:
-      showRotationMatrix: false
-  -
-    id: 7
-    plugin: Body
     class: JointDisplacementView
     mounted: true
     state:
@@ -173,7 +149,7 @@ views:
       limit_ranges: false
       show_selected_joints: false
   -
-    id: 8
+    id: 7
     plugin: Body
     class: LinkDeviceListView
     mounted: true
@@ -181,7 +157,7 @@ views:
       element_type: all
       listing_mode: list
   -
-    id: 9
+    id: 8
     plugin: Body
     class: LinkPositionView
     mounted: true
@@ -194,12 +170,12 @@ views:
       show_rotation_matrix: false
       target_link_type: ik_link
   -
-    id: 10
+    id: 9
     plugin: Body
     class: LinkPropertyView
     mounted: true
   -
-    id: 11
+    id: 10
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -275,7 +251,7 @@ viewAreas:
                   views: [ 2 ]
                 -
                   type: pane
-                  views: [ 1, 10 ]
+                  views: [ 1, 9 ]
                   current: 1
             -
               type: splitter
@@ -287,7 +263,7 @@ viewAreas:
                   views: [ 5 ]
                 -
                   type: pane
-                  views: [ 4, 11 ]
+                  views: [ 4, 10 ]
                   current: 4
         -
           type: splitter
@@ -304,11 +280,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 9 ]
+                  views: [ 8 ]
                 -
                   type: pane
-                  views: [ 8, 7 ]
-                  current: 7
+                  views: [ 7, 6 ]
+                  current: 6
 layoutOfToolBars:
   rows:
     -

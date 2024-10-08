@@ -180,7 +180,7 @@ items:
         initialRootPosition: [ -6.15, -2.566, 1 ]
         initialRootAttitude: [
           0.866025404, 0.353553391, 0.353553391,
-          -2.41807824e-10, 0.707106781, -0.707106781,
+          -2.4275984e-10, 0.707106781, -0.707106781,
           -0.5, 0.612372436, 0.612372436 ]
         fix_root: true
         collisionDetection: true
@@ -252,8 +252,8 @@ items:
         initialRootPosition: [ -1.1, -7.65989778, 1.22745994 ]
         initialRootAttitude: [
           1, -0, 0,
-          0, -0.0871557408, 0.996194698,
-          -0, -0.996194698, -0.0871557408 ]
+          0, -0.0871557402, 0.996194698,
+          -0, -0.996194698, -0.0871557402 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -287,17 +287,21 @@ views:
   -
     id: 0
     plugin: Base
+    class: GeneralSliderView
+  -
+    id: 1
+    plugin: Base
     class: ItemPropertyView
     mounted: true
   -
-    id: 1
+    id: 2
     plugin: Base
     class: ItemTreeView
     mounted: true
     state:
       expanded: [ 1 ]
   -
-    id: 2
+    id: 3
     plugin: Base
     class: LocationView
     mounted: true
@@ -308,12 +312,12 @@ views:
       show_rotation_matrix: false
       coordinate: world
   -
-    id: 3
+    id: 4
     plugin: Base
     class: MessageView
     mounted: true
   -
-    id: 4
+    id: 5
     plugin: Base
     class: SceneView
     mounted: true
@@ -363,12 +367,6 @@ views:
       xy_grid_color: [ 0.9, 0.9, 0.9 ]
       xz_grid_color: [ 0.9, 0.9, 0.9 ]
       yz_grid_color: [ 0.9, 0.9, 0.9 ]
-  -
-    id: 5
-    plugin: Body
-    class: BodyLinkView
-    state:
-      showRotationMatrix: false
   -
     id: 6
     plugin: Body
@@ -533,11 +531,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 1 ]
+                  views: [ 2 ]
                 -
                   type: pane
-                  views: [ 0, 9 ]
-                  current: 0
+                  views: [ 1, 9 ]
+                  current: 1
             -
               type: splitter
               orientation: vertical
@@ -545,11 +543,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 4 ]
+                  views: [ 5 ]
                 -
                   type: pane
-                  views: [ 3, 10 ]
-                  current: 3
+                  views: [ 4, 10 ]
+                  current: 4
         -
           type: splitter
           orientation: vertical
@@ -557,7 +555,7 @@ viewAreas:
           children:
             -
               type: pane
-              views: [ 2 ]
+              views: [ 3 ]
             -
               type: splitter
               orientation: vertical

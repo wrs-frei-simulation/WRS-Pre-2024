@@ -11,7 +11,9 @@ registrations:
     start_position: [ -9.5, -7.0, 0.0 ]
     simulator_project: [ AGXSimulator, AISTSimulator ]
     view_project: M2/RefereeView
-#    enable_recording: true
+    # enable_recording: true
+    # enable_tracking: true
+    enable_ros: true
   - <<: *Mission2
     name: M2-A1
     task_project: [ M2/A1, M2/A2, M2/Common, M2/SG-A1 ]
