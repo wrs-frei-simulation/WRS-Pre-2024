@@ -29,7 +29,7 @@ registrations:
   - &Mission2
     name: M2
     task_project: [ M2/A1, M2/A2, M2/A3, M2/A4, M2/Common, M2/SG ]
-    robot_project: *RobotList
+    # robot_project: *RobotList
     robot_alignment: X+
     start_position: [ -9.5, -7.0, 0.0 ]
     simulator_project: [ AGXSimulator, AISTSimulator ]
