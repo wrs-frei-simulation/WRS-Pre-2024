@@ -1,5 +1,5 @@
 format_version: 1.0
-# robot_list: &RobotList [ AizuSpiderDA-ROS2, HobbyDrone-ROS2 ]
+robot_list: &RobotList [ AizuSpiderDA-ROS2, HobbyDrone-ROS2 ]
 
 registrations:
   -
