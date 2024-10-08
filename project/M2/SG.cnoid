@@ -216,12 +216,6 @@ views:
   -
     id: 5
     plugin: Body
-    class: BodyLinkView
-    state:
-      showRotationMatrix: false
-  -
-    id: 6
-    plugin: Body
     class: JointDisplacementView
     mounted: true
     state:
@@ -234,7 +228,7 @@ views:
       limit_ranges: false
       show_selected_joints: false
   -
-    id: 7
+    id: 6
     plugin: Body
     class: LinkDeviceListView
     mounted: true
@@ -242,7 +236,7 @@ views:
       element_type: all
       listing_mode: list
   -
-    id: 8
+    id: 7
     plugin: Body
     class: LinkPositionView
     mounted: true
@@ -255,12 +249,12 @@ views:
       show_rotation_matrix: false
       target_link_type: ik_link
   -
-    id: 9
+    id: 8
     plugin: Body
     class: LinkPropertyView
     mounted: true
   -
-    id: 10
+    id: 9
     plugin: Python
     class: PythonConsoleView
     mounted: true
@@ -327,7 +321,7 @@ viewAreas:
                   views: [ 1 ]
                 -
                   type: pane
-                  views: [ 0, 9 ]
+                  views: [ 0, 8 ]
                   current: 0
             -
               type: splitter
@@ -339,7 +333,7 @@ viewAreas:
                   views: [ 4 ]
                 -
                   type: pane
-                  views: [ 3, 10 ]
+                  views: [ 3, 9 ]
                   current: 3
         -
           type: splitter
@@ -356,11 +350,11 @@ viewAreas:
               children:
                 -
                   type: pane
-                  views: [ 8 ]
+                  views: [ 7 ]
                 -
                   type: pane
-                  views: [ 7, 6 ]
-                  current: 6
+                  views: [ 6, 5 ]
+                  current: 5
 layoutOfToolBars:
   rows:
     -

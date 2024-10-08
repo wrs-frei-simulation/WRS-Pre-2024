@@ -1,47 +1,41 @@
 format_version: 1.0
 
 registrations:
-  - &Mission1-1
-    name: M1-1
-    task_project: [ M1/A1-1, M1/A2-1, M1/A3-1 ]
-#    robot_project: [ ]
-    robot_alignment: X+
-    start_position: [ -2.0, 0.0, 0.0 ]
-    simulator_project: [ AGXSimulator, AISTSimulator ]
-    view_project: M1/RefereeView
-#    enable_recording: true
-  - <<: *Mission1-1
-    name: M1-1-AizuSpiderDA
-    robot_project: [ AizuSpiderDA ]
-  - <<: *Mission1-1
+  -
     name: M1-1-AizuSpiderDA-ROS2
+    task_project: [ M1/A1-1, M1/A2-1, M1/A3-1 ]
     robot_project: [ AizuSpiderDA-ROS2 ]
-
-  - &Mission1-2
-    name: M1-2
-    task_project: [ M1/A1-2, M1/A2-2, M1/A3-2 ]
-#    robot_project: [ ]
     robot_alignment: X+
     start_position: [ -2.0, 0.0, 0.0 ]
     simulator_project: [ AGXSimulator, AISTSimulator ]
     view_project: M1/RefereeView
-#    enable_recording: true
-  - <<: *Mission1-2
-    name: M1-2-AizuSpiderDA
-    robot_project: [ AizuSpiderDA ]
-  - <<: *Mission1-2
+    # enable_recording: true
+    # enable_tracking: true
+    enable_ros: true
+
+  -
     name: M1-2-AizuSpiderDA-ROS2
+    task_project: [ M1/A1-2, M1/A2-2, M1/A3-2 ]
     robot_project: [ AizuSpiderDA-ROS2 ]
+    robot_alignment: X+
+    start_position: [ -2.0, 0.0, 0.0 ]
+    simulator_project: [ AGXSimulator, AISTSimulator ]
+    view_project: M1/RefereeView
+    # enable_recording: true
+    # enable_tracking: true
+    enable_ros: true
 
   - &Mission2
     name: M2
     task_project: [ M2/A1, M2/A2, M2/A3, M2/A4, M2/Common, M2/SG ]
-#    robot_project: [ ]
+    # robot_project: [ ]
     robot_alignment: X+
     start_position: [ -9.5, -7.0, 0.0 ]
     simulator_project: [ AGXSimulator, AISTSimulator ]
     view_project: M2/RefereeView
-#    enable_recording: true
+    # enable_recording: true
+    # enable_tracking: true
+    enable_ros: true
   - <<: *Mission2
     name: M2-A1
     task_project: [ M2/A1, M2/A2, M2/Common, M2/SG-A1 ]
@@ -59,14 +53,8 @@ registrations:
     task_project: [ M2/A4, M2/A1, M2/Common, M2/SG-A4 ]
     start_position: [ -4.0, 7.0, 0.0 ]
   - <<: *Mission2
-    name: M2-AizuSpiderDA
-    robot_project: [ AizuSpiderDA ]
-  - <<: *Mission2
     name: M2-AizuSpiderDA-ROS2
     robot_project: [ AizuSpiderDA-ROS2 ]
-  - <<: *Mission2
-    name: M2-HobbyDrone
-    robot_project: [ HobbyDrone ]
   - <<: *Mission2
     name: M2-HobbyDrone-ROS2
     robot_project: [ HobbyDrone-ROS2 ]
