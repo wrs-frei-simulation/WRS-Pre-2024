@@ -7,19 +7,19 @@ items:
   children:
     -
       id: 1
-      name: "T1-Area1"
+      name: "Structures"
       plugin: Body
       class: BodyItem
-      is_checked: true
+      is_selected: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/M1/M1-Area1.body"
+        file: "${SHARE}/WRS2024PRE/model/M1/structures.body"
         format: CHOREONOID-BODY
-        rootPosition: [ 0, 0, 0 ]
+        rootPosition: [ 0, 0, 4.6 ]
         rootAttitude: [
           1, 0, 0,
           0, 1, 0,
           0, 0, 1 ]
-        initialRootPosition: [ 0, 0, 0 ]
+        initialRootPosition: [ 0, 0, 4.6 ]
         initialRootAttitude: [
           1, 0, 0,
           0, 1, 0,
@@ -31,76 +31,80 @@ items:
         scene_sensitive: true
     -
       id: 2
-      name: "Debris1"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
+      name: "CFDCollider"
+      plugin: SimpleCollider
+      class: MultiColliderItem
       data:
-        file: "${SHARE}/WRS2024PRE/model/M1/Debris1.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 4.06386724, 2.24022949, 0 ]
-        rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        initialRootPosition: [ 4.06386724, 2.24022949, 0 ]
-        initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
+        translation: [ 0, 0, 0 ]
+        rotation: [ 0, -0, 0 ]
+        size: [ 50, 50, 50 ]
+        diffuse_color: [ 0, 1, 1 ]
+        radius: 0.5
+        height: 1
+        specular_exponent: 25
+        transparency: 1
+        scene_type: Box
+        collider_type: CFD
+        density: 0
+        viscosity: 0
+        steady_flow: [ 0, 0, 0 ]
+        inbound_delay: 0
+        inbound_rate: 0
+        inbound_loss: 0
+        outbound_delay: 0
+        outbound_rate: 0
+        outbound_loss: 0
+        source: 0.0.0.0/0
+        destination: 0.0.0.0/0
+        hsv: [ 0, 0, 0 ]
+        rgb: [ 0, 0, 0 ]
+        coef_b: 0
+        coef_d: 0
+        std_dev: 0
+        salt_amount: 0
+        salt_chance: 1
+        pepper_amount: 0
+        pepper_chance: 1
+        mosaic_chance: 1
+        kernel: 16
     -
       id: 3
-      name: "Debris1"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
+      name: "VFXCollider"
+      plugin: SimpleCollider
+      class: MultiColliderItem
       data:
-        file: "${SHARE}/WRS2024PRE/model/M1/Debris1.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 2.58885761, -2.22041284, 0 ]
-        rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        initialRootPosition: [ 2.58885761, -2.22041284, 0 ]
-        initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 4
-      name: "ChocoTerrain"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
-      data:
-        file: "${SHARE}/WRS2024PRE/model/M1/ChocoTerrain.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 0, 0.1, 0 ]
-        rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        initialRootPosition: [ 0, 0.1, 0 ]
-        initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
+        translation: [ 0, 0, 0 ]
+        rotation: [ 0, -0, 0 ]
+        size: [ 50, 50, 50 ]
+        diffuse_color: [ 1, 0, 1 ]
+        radius: 0.5
+        height: 1
+        specular_exponent: 25
+        transparency: 1
+        scene_type: Box
+        collider_type: VFX
+        density: 0
+        viscosity: 0
+        steady_flow: [ 0, 0, 0 ]
+        inbound_delay: 0
+        inbound_rate: 0
+        inbound_loss: 0
+        outbound_delay: 0
+        outbound_rate: 0
+        outbound_loss: 0
+        source: 0.0.0.0/0
+        destination: 0.0.0.0/0
+        hsv: [ 0, 0, 0 ]
+        rgb: [ 0, 0, 0 ]
+        coef_b: 0
+        coef_d: 0
+        std_dev: 0
+        salt_amount: 0
+        salt_chance: 0
+        pepper_amount: 0
+        pepper_chance: 0
+        mosaic_chance: 0
+        kernel: 16
 views:
   -
     id: 0
@@ -117,7 +121,7 @@ views:
     class: ItemTreeView
     mounted: true
     state:
-      expanded: [ 1 ]
+      expanded: [ ]
   -
     id: 3
     plugin: Base
@@ -140,7 +144,7 @@ views:
     class: SceneView
     mounted: true
     state:
-      editMode: true
+      editMode: false
       viewpointOperationMode: thirdPerson
       visible_polygon_elements: [ face ]
       highlighting: false
@@ -149,12 +153,12 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -10.4434, 3.93202, 3.9299 ]
-          direction: [ 0.951805, -0.227644, -0.205538 ]
-          up: [ 0.1999, -0.0478101, 0.978649 ]
+          eye: [ 40.1046, -21.3534, 33.0745 ]
+          direction: [ -0.712685, 0.358756, -0.602806 ]
+          up: [ -0.538435, 0.27104, 0.797888 ]
         -
           camera: [ System, Orthographic ]
-          orthoHeight: 2.70671
+          orthoHeight: 20
       lighting_mode: normal
       culling_mode: enabled
       shading_mode: smooth
@@ -256,7 +260,7 @@ toolbars:
 Body:
   "BodySelectionManager":
     current_body_item: 1
-    current_link: "A1_Floor"
+    current_link: "Root"
   "KinematicFaultChecker":
     checkJointPositions: true
     angleMargin: 0
@@ -270,21 +274,6 @@ Body:
     scene_bodies:
       -
         body_item: 1
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 2
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 3
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 4
         show_cm: false
         show_cm_projection: false
         show_zmp: false
@@ -310,7 +299,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 504, 504 ]
+              sizes: [ 444, 444 ]
               children:
                 -
                   type: pane
@@ -322,7 +311,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 756, 252 ]
+              sizes: [ 666, 222 ]
               children:
                 -
                   type: pane
@@ -334,7 +323,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 225, 783 ]
+          sizes: [ 198, 690 ]
           children:
             -
               type: pane
@@ -342,7 +331,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 323, 456 ]
+              sizes: [ 284, 402 ]
               children:
                 -
                   type: pane
@@ -365,3 +354,4 @@ layoutOfToolBars:
       - { name: "GraphBar", x: 0, priority: 3 }
       - { name: "CaptureBar", x: 0, priority: 4 }
       - { name: "DisplayValueFormatBar", x: 0, priority: 5 }
+      - { name: "WRSUtilBar", x: 1600, priority: 0 }

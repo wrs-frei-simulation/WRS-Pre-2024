@@ -7,19 +7,20 @@ items:
   children:
     -
       id: 1
-      name: "T1-Area1"
+      name: "Floor_M1_2"
       plugin: Body
       class: BodyItem
+      is_selected: true
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/M1/M1-Area1.body"
+        file: "../../model/M1/floor_M1.body"
         format: CHOREONOID-BODY
-        rootPosition: [ 0, 0, 0 ]
+        rootPosition: [ -5.9918365, 6.0056576, -0.1 ]
         rootAttitude: [
           1, 0, 0,
           0, 1, 0,
           0, 0, 1 ]
-        initialRootPosition: [ 0, 0, 0 ]
+        initialRootPosition: [ -5.9918365, 6.0056576, -0.1 ]
         initialRootAttitude: [
           1, 0, 0,
           0, 1, 0,
@@ -31,70 +32,23 @@ items:
         scene_sensitive: true
     -
       id: 2
-      name: "Debris1"
+      name: "concource_A4"
       plugin: Body
       class: BodyItem
+      is_selected: true
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/M1/Debris1.body"
+        file: "../../model/M1/concource_A4.body"
         format: CHOREONOID-BODY
-        rootPosition: [ 2.55634744, 1.29002743, 0 ]
+        rootPosition: [ -12.4, 11.2, 4.4 ]
         rootAttitude: [
-          0.686910083, 0.726742415, -0,
-          -0.726742415, 0.686910083, 0,
+          -1, -1.2246468e-16, 0,
+          1.2246468e-16, -1, 0,
           0, 0, 1 ]
-        initialRootPosition: [ 2.55634744, 1.29002743, 0 ]
+        initialRootPosition: [ -12.4, 11.2, 4.4 ]
         initialRootAttitude: [
-          0.686910083, 0.726742415, -0,
-          -0.726742415, 0.686910083, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 3
-      name: "Debris1"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
-      data:
-        file: "${SHARE}/WRS2024PRE/model/M1/Debris1.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 0.261384305, -1.45148548, 0 ]
-        rootAttitude: [
-          0.741493098, -0.670960495, 0,
-          0.670960495, 0.741493098, -0,
-          0, 0, 1 ]
-        initialRootPosition: [ 0.261384305, -1.45148548, 0 ]
-        initialRootAttitude: [
-          0.741493098, -0.670960495, 0,
-          0.670960495, 0.741493098, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 4
-      name: "CapsuleTerrain"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
-      data:
-        file: "${SHARE}/WRS2024PRE/model/M1/CapsuleTerrain.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ -1, -2.5, -0.4 ]
-        rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        initialRootPosition: [ -1, -2.5, -0.4 ]
-        initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
+          -1, -1.2246468e-16, 0,
+          1.2246468e-16, -1, 0,
           0, 0, 1 ]
         fix_root: true
         collisionDetection: true
@@ -117,7 +71,7 @@ views:
     class: ItemTreeView
     mounted: true
     state:
-      expanded: [ 1, 4 ]
+      expanded: [ 1 ]
   -
     id: 3
     plugin: Base
@@ -149,12 +103,12 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ -16.2406, 7.83963, 12.4935 ]
-          direction: [ 0.779306, -0.361906, -0.511572 ]
-          up: [ 0.463981, -0.215471, 0.85924 ]
+          eye: [ -19.6283, 23.6169, 17.7117 ]
+          direction: [ 0.522578, -0.543216, -0.657136 ]
+          up: [ 0.455582, -0.473574, 0.753772 ]
         -
           camera: [ System, Orthographic ]
-          orthoHeight: 2.70671
+          orthoHeight: 20
       lighting_mode: normal
       culling_mode: enabled
       shading_mode: smooth
@@ -255,8 +209,8 @@ toolbars:
     lazyCollisionDetectionMode: true
 Body:
   "BodySelectionManager":
-    current_body_item: 1
-    current_link: "A1_Floor"
+    current_body_item: 2
+    current_link: "SB1_Root"
   "KinematicFaultChecker":
     checkJointPositions: true
     angleMargin: 0
@@ -275,16 +229,6 @@ Body:
         show_zmp: false
       -
         body_item: 2
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 3
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 4
         show_cm: false
         show_cm_projection: false
         show_zmp: false
@@ -310,7 +254,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 504, 504 ]
+              sizes: [ 444, 444 ]
               children:
                 -
                   type: pane
@@ -322,7 +266,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 756, 252 ]
+              sizes: [ 667, 221 ]
               children:
                 -
                   type: pane
@@ -334,7 +278,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 225, 783 ]
+          sizes: [ 198, 690 ]
           children:
             -
               type: pane
@@ -342,7 +286,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 323, 456 ]
+              sizes: [ 284, 402 ]
               children:
                 -
                   type: pane

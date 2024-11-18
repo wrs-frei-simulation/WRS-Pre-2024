@@ -1,0 +1,191 @@
+format: ChoreonoidBody
+format_version: 2.0
+angle_unit: degree
+name: scaffold2
+
+COLOR_POLE: &COLOR_POLE
+  material:
+    diffuseColor: [ 0.5, 0.5, 0.5 ]
+    specularColor: [ 0, 0, 0 ]
+    shinines: 0
+
+links:
+  -
+    name: Root
+    joint_type: fixed
+    material: Ground
+  -
+    type: SubBody
+    uri: "subbody/stairs1.body"
+    parent: Root
+    prefix: SB1_
+    translation: [ 0.0, 0.425, 0 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/stairs1.body"
+    parent: Root
+    prefix: SB2_
+    translation: [ 0.0, 0.425, 2.0 ]
+    #rotation: [ 0, 0, 1, 180 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/stairs1.body"
+    parent: Root
+    prefix: SB3_
+    translation: [ 0.0, 0.425, 4.0 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/landing2.body"
+    parent: Root
+    prefix: SB10_
+    translation: [ 0, -0.4, 1.99 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/landing2.body"
+    parent: Root
+    prefix: SB11_
+    translation: [ 0.0, -0.4, 3.99 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/landing2.body"
+    parent: Root
+    prefix: SB12_
+    translation: [ 0.0, -0.4, 5.99 ]
+    joint_type: fixed
+  - &VPole1
+    name: VPole1
+    parent: Root
+    translation: [ 0, 0, -0.1 ]
+    jointType: fixed
+    material: Ground
+    AMOR: true
+    ##translation: [ -1.1, -0.4, 5.99 ]
+    translation: [ -0.9, -0.9, 3.995 ]
+    rotation: [ 1, 0, 0, 90 ]
+    elements: 
+      - 
+        type: Shape
+        #geometry: { type: Box, size: [ 0.6, 0.8, 0.02 ] }
+        geometry: { type: Cylinder, height: 8.4, radius: 0.048 }
+        ##appearance: { material: { diffuseColor: [ 0.5, 0.5, 0.5 ] }}
+        appearance: *COLOR_POLE
+  - <<: *VPole1
+    name: VPole2
+    translation: [ -0.9, 0.9, 3.995 ]
+  - <<: *VPole1
+    name: VPole3
+    translation: [ 0.9, 0.9, 3.995 ]
+  - <<: *VPole1
+    name: PVole4
+    translation: [ 0.9, -0.9, 3.995 ]
+
+  - &HPoleS
+    name: HPole1
+    parent: Root
+    translation: [ 0, 0, -0.1 ]
+    jointType: fixed
+    material: Ground
+    AMOR: true
+    translation: [ 0.9, 0, 1 ]
+    elements: 
+      - 
+        type: Shape
+        geometry: { type: Cylinder, height: 1.8, radius: 0.048 }
+        #appearance: { material: { diffuseColor: [ 0.5, 0.5, 0.5 ] }}
+        appearance: *COLOR_POLE
+  - <<: *HPoleS
+    name: HPole2
+    translation: [ 0.9, 0, 2.0 ]
+  - <<: *HPoleS
+    name: HPole3
+    translation: [ 0.9, 0, 3.0 ]
+  - <<: *HPoleS
+    name: HPole4
+    translation: [ 0.9, 0, 4.0 ]
+  - <<: *HPoleS
+    name: HPole5
+    translation: [ 0.9, 0, 5.0 ]
+  - <<: *HPoleS
+    name: HPole6
+    translation: [ 0.9, 0, 6.0 ]
+  - <<: *HPoleS
+    name: HPole7
+    translation: [ 0.9, 0, 7.0 ]
+  - <<: *HPoleS
+    name: HPole8
+    translation: [ 0.9, 0, 8.0 ]
+
+#  - <<: *HPoleS
+#    name: HPole9
+#    translation: [ -0.9, 0, 1.0 ]
+  - <<: *HPoleS
+    name: HPole10
+    translation: [ -0.9, 0, 2.0 ]
+  - <<: *HPoleS
+    name: HPole11
+    translation: [ -0.9, 0, 3.0 ]
+  - <<: *HPoleS
+    name: HPole12
+    translation: [ -0.9, 0, 4.0 ]
+#  - <<: *HPoleS
+#    name: HPole13
+#    translation: [ -0.9, 0, 5.0 ]
+  - <<: *HPoleS
+    name: HPole14
+    #translation: [ -0.9, 0, 6.0 ]
+    translation: [ -0.9, 0, 5.95 ]
+#  - <<: *HPoleS
+#    name: HPole15
+#    translation: [ -0.9, 0, 7.0 ]
+  - <<: *HPoleS
+    name: HPole16
+    translation: [ -0.9, 0, 8.0 ]
+
+  - &HPoleL
+    name: HPole17
+    parent: Root
+    translation: [ 0, 0, -0.1 ]
+    jointType: fixed
+    material: Ground
+    AMOR: true
+    translation: [ 0, 0.9, 1 ]
+    rotation: [ 0, 0, 1, 90 ]
+    elements: 
+      - 
+        type: Shape
+        geometry: { type: Cylinder, height: 2, radius: 0.048 }
+        appearance: *COLOR_POLE
+  - <<: *HPoleL
+    name: HPole18
+    translation: [ 0, 0.9, 3 ]
+  - <<: *HPoleL
+    name: HPole19
+    translation: [ 0, 0.9, 5 ]
+  - <<: *HPoleL
+    name: HPole20
+    translation: [ 0, 0.9, 7 ]
+  - <<: *HPoleL
+    name: HPole21
+    translation: [ 0, 0.9, 8 ]
+
+  - <<: *HPoleL
+    name: HPole22
+    translation: [ 0, -0.9, 1 ]
+  - <<: *HPoleL
+    name: HPole23
+    translation: [ 0, -0.9, 3 ]
+  - <<: *HPoleL
+    name: HPole24
+    translation: [ 0, -0.9, 5 ]
+  - <<: *HPoleL
+    name: HPole25
+    translation: [ 0, -0.9, 7 ]
+  - <<: *HPoleL
+    name: HPole26
+    translation: [ 0, -0.9, 8 ]
+

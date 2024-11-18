@@ -7,19 +7,20 @@ items:
   children:
     -
       id: 1
-      name: "M1-Area3"
+      name: "Floor_M1_2"
       plugin: Body
       class: BodyItem
+      is_selected: true
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/M1/M1-Area3.body"
+        file: "../../model/M1/floor_M1.body"
         format: CHOREONOID-BODY
-        rootPosition: [ 10, -10, 0 ]
+        rootPosition: [ -6, -6, -0.1 ]
         rootAttitude: [
           1, 0, 0,
           0, 1, 0,
           0, 0, 1 ]
-        initialRootPosition: [ 10, -10, 0 ]
+        initialRootPosition: [ -6, -6, -0.1 ]
         initialRootAttitude: [
           1, 0, 0,
           0, 1, 0,
@@ -31,22 +32,23 @@ items:
         scene_sensitive: true
     -
       id: 2
-      name: "M1_A3_Wall"
+      name: "stairs3"
       plugin: Body
       class: BodyItem
+      is_selected: true
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/M1/M1-Area3-Wall.body"
+        file: "../../model/M1/subbody/stairs3.body"
         format: CHOREONOID-BODY
-        rootPosition: [ 10, -10, 0 ]
+        rootPosition: [ -5, -9.55, 0 ]
         rootAttitude: [
-          2.22044605e-16, 1, -0,
-          -1, 2.22044605e-16, 0,
+          -1, -1.2246468e-16, 0,
+          1.2246468e-16, -1, 0,
           0, 0, 1 ]
-        initialRootPosition: [ 10, -10, 0 ]
+        initialRootPosition: [ -5, -9.55, 0 ]
         initialRootAttitude: [
-          2.22044605e-16, 1, -0,
-          -1, 2.22044605e-16, 0,
+          -1, -1.2246468e-16, 0,
+          1.2246468e-16, -1, 0,
           0, 0, 1 ]
         fix_root: true
         collisionDetection: true
@@ -55,143 +57,24 @@ items:
         scene_sensitive: true
     -
       id: 3
-      name: "TankB"
+      name: "concource"
       plugin: Body
       class: BodyItem
+      is_selected: true
       is_checked: true
       data:
-        file: "${SHARE}/WRS2024PRE/model/M1/TankB.body"
+        file: "../../model/M1/concource_A1.body"
         format: CHOREONOID-BODY
-        rootPosition: [ 7, -16, 0 ]
+        rootPosition: [ -11.2, -12.4, 4.4 ]
         rootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
+          -1.8369702e-16, 1, 0,
+          -1, -1.8369702e-16, 0,
           0, 0, 1 ]
-        initialRootPosition: [ 7, -16, 0 ]
+        initialRootPosition: [ -11.2, -12.4, 4.4 ]
         initialRootAttitude: [
-          1, 0, 0,
-          0, 1, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 4
-      name: "Target1"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
-      data:
-        file: "${SHARE}/WRS2024PRE/model/M1/Target1.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 9.80679263, -13.6644109, 1.18486266 ]
-        rootAttitude: [
-          0.458447487, 0.330357557, 0.825039263,
-          -0.702299418, -0.434223936, 0.56411444,
-          0.544611264, -0.838041442, 0.0329410476 ]
-        initialRootPosition: [ 9.80679263, -13.6644109, 1.18486266 ]
-        initialRootAttitude: [
-          0.458447483, 0.330357556, 0.825039268,
-          -0.702299419, -0.434223946, 0.564114439,
-          0.544611269, -0.838041443, 0.0329410411 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 5
-      name: "CapsuleTerrain"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
-      data:
-        file: "${SHARE}/WRS2024PRE/model/M1/CapsuleTerrain.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 8.20767381, -12.2635634, -5.55111512e-17 ]
-        rootAttitude: [
-          0.866025404, -0.498097349, -0.0435778714,
-          0.5, 0.862729916, 0.0754790873,
-          0, -0.0871557427, 0.996194698 ]
-        initialRootPosition: [ 8.20767381, -12.2635634, -5.55111512e-17 ]
-        initialRootAttitude: [
-          0.866025404, -0.498097349, -0.0435778714,
-          0.5, 0.862729916, 0.0754790873,
-          4.17576841e-11, -0.0871557427, 0.996194698 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 6
-      name: "Debris1"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
-      data:
-        file: "${SHARE}/WRS2024PRE/model/M1/Debris1.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 8.63910854, -11.6241197, -0.2 ]
-        rootAttitude: [
-          0.686829176, 0.726818879, -0,
-          -0.726818879, 0.686829176, 0,
-          0, 0, 1 ]
-        initialRootPosition: [ 8.63910854, -11.6241197, -0.2 ]
-        initialRootAttitude: [
-          0.686829176, 0.726818879, -0,
-          -0.726818879, 0.686829176, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 7
-      name: "Debris1"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
-      data:
-        file: "${SHARE}/WRS2024PRE/model/M1/Debris1.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 10.9210454, -8.11766685, -0.2 ]
-        rootAttitude: [
-          0.888639012, 0.458607355, -0,
-          -0.458607355, 0.888639012, 0,
-          0, 0, 1 ]
-        initialRootPosition: [ 10.9210454, -8.11766685, -0.2 ]
-        initialRootAttitude: [
-          0.888639012, 0.458607355, -0,
-          -0.458607355, 0.888639012, 0,
-          0, 0, 1 ]
-        fix_root: true
-        collisionDetection: true
-        selfCollisionDetection: false
-        lock_location: false
-        scene_sensitive: true
-    -
-      id: 8
-      name: "JungleGym1"
-      plugin: Body
-      class: BodyItem
-      is_checked: true
-      data:
-        file: "${SHARE}/WRS2024PRE/model/M1/JungleGymM1.body"
-        format: CHOREONOID-BODY
-        rootPosition: [ 7.77369409, -8.71966907, 0.805885059 ]
-        rootAttitude: [
-          0.76007656, 0.633904325, 0.142999751,
-          -0.649804644, 0.739337011, 0.176450301,
-          0.00612760066, -0.22703764, 0.973866707 ]
-        initialRootPosition: [ 7.77369409, -8.71966907, 0.805885059 ]
-        initialRootAttitude: [
-          0.76007656, 0.633904325, 0.142999751,
-          -0.649804644, 0.739337011, 0.176450301,
-          0.00612760051, -0.22703764, 0.973866707 ]
+          -2.22044605e-16, 1, 0,
+          -1, -2.22044605e-16, -0,
+          -0, 0, 1 ]
         fix_root: true
         collisionDetection: true
         selfCollisionDetection: false
@@ -244,13 +127,13 @@ views:
       cameras:
         -
           camera: [ System, Perspective ]
-          isCurrent: true
-          eye: [ 12.774, -1.64421, 17.3148 ]
-          direction: [ -0.139367, -0.37715, -0.915606 ]
-          up: [ -0.317366, -0.858844, 0.402076 ]
+          eye: [ 3.93818, 17.0788, 17.4132 ]
+          direction: [ -0.408687, -0.822353, -0.395868 ]
+          up: [ -0.176178, -0.354503, 0.918307 ]
         -
           camera: [ System, Orthographic ]
-          orthoHeight: 2.70671
+          isCurrent: true
+          orthoHeight: 8.79806
       lighting_mode: normal
       culling_mode: enabled
       shading_mode: smooth
@@ -352,7 +235,7 @@ toolbars:
 Body:
   "BodySelectionManager":
     current_body_item: 1
-    current_link: "A3_Floor"
+    current_link: "Floor"
   "KinematicFaultChecker":
     checkJointPositions: true
     angleMargin: 0
@@ -379,31 +262,6 @@ Body:
         show_cm: false
         show_cm_projection: false
         show_zmp: false
-      -
-        body_item: 4
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 5
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 6
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 7
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
-      -
-        body_item: 8
-        show_cm: false
-        show_cm_projection: false
-        show_zmp: false
   "SplineFilterDialog":
     isInputFrameRateSpecified: false
     inputFrameRate: 200
@@ -426,7 +284,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 504, 504 ]
+              sizes: [ 444, 444 ]
               children:
                 -
                   type: pane
@@ -438,7 +296,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 1008, 0 ]
+              sizes: [ 667, 221 ]
               children:
                 -
                   type: pane
@@ -450,7 +308,7 @@ viewAreas:
         -
           type: splitter
           orientation: vertical
-          sizes: [ 225, 783 ]
+          sizes: [ 198, 690 ]
           children:
             -
               type: pane
@@ -458,7 +316,7 @@ viewAreas:
             -
               type: splitter
               orientation: vertical
-              sizes: [ 323, 456 ]
+              sizes: [ 284, 402 ]
               children:
                 -
                   type: pane

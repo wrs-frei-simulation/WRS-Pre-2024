@@ -1,0 +1,33 @@
+format: ChoreonoidBody
+format_version: 2.0
+angle_unit: degree
+name: concource_corner
+links:
+  -
+    name: Root
+    joint_type: fixed
+    material: Ground
+  -
+    type: SubBody
+    uri: "concource_short_nohandle.body"
+    parent: Root
+    prefix: SB1_
+    #translation: [ 1.5, -0.8, 0 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "concource_short.body"
+    parent: Root
+    prefix: SB2_
+    translation: [ -4.0, 0.0, 0 ]
+    rotation: [ 0, 0, 1, 180 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "concource_short.body"
+    parent: Root
+    prefix: SB3_
+    translation: [ -1.2, 1.2, 0 ]
+    rotation: [ 0, 0, 1, 270 ]
+    joint_type: fixed
+

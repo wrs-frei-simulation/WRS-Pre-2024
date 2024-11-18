@@ -1,0 +1,65 @@
+format: ChoreonoidBody
+format_version: 2.0
+angle_unit: degree
+name: concource_A1
+links:
+  -
+    name: Root
+    joint_type: fixed
+    material: Ground
+  -
+    type: SubBody
+    uri: "subbody/concource_corner.body"
+    parent: Root
+    prefix: SB1_
+    #translation: [ 1.5, -0.8, 0 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/concource_short_A1.body"
+    parent: Root
+    prefix: SB2_
+    translation: [ -4.0, 0.0, 0 ]
+    rotation: [ 0, 0, 1, 180 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/concource_short.body"
+    parent: Root
+    prefix: SB3_
+    translation: [ -1.2, 1.2, 0 ]
+    rotation: [ 0, 0, 1, 270 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/concource_straight.body"
+    parent: Root
+    prefix: SB4_
+    translation: [ -6.4, 0.0, 0 ]
+    rotation: [ 0, 0, 1, 180 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/concource_straight.body"
+    parent: Root
+    prefix: SB5_
+    translation: [ -10.4, 0, 0 ]
+    rotation: [ 0, 0, 1, 180 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/concource_straight.body"
+    parent: Root
+    prefix: SB6_
+    translation: [ -1.2, 5.2, 0 ]
+    rotation: [ 0, 0, 1, 270 ]
+    joint_type: fixed
+  -
+    type: SubBody
+    uri: "subbody/concource_straight.body"
+    parent: Root
+    prefix: SB7_
+    translation: [ -1.2, 9.2, 0 ]
+    rotation: [ 0, 0, 1, 270 ]
+    joint_type: fixed
+
