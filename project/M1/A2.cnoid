@@ -80,6 +80,56 @@ items:
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
+    -
+      id: 4
+      name: "Floor_M1_2"
+      plugin: Body
+      class: BodyItem
+      is_selected: true
+      is_checked: true
+      data:
+        file: "../../model/M1/floor_M1.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 6, -18, -0.1 ]
+        rootAttitude: [
+          1, 2.4492936e-16, -0,
+          -2.4492936e-16, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ 6, -18, -0.1 ]
+        initialRootAttitude: [
+          1, 2.4492936e-16, -0,
+          -2.4492936e-16, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 5
+      name: "StructuresM1A2"
+      plugin: Body
+      class: BodyItem
+      is_selected: true
+      is_checked: true
+      data:
+        file: "../../model/M1/structures_A2.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 6, -18, 0 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ 6, -18, 0 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
 views:
   -
     id: 0
@@ -128,9 +178,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ 39.4373, -35.9766, 23.9927 ]
-          direction: [ -0.63057, 0.583674, -0.511573 ]
-          up: [ -0.375427, 0.347506, 0.85924 ]
+          eye: [ -29.3569, 12.1935, 32.6355 ]
+          direction: [ 0.695754, -0.580343, -0.423236 ]
+          up: [ 0.325013, -0.2711, 0.906019 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -259,6 +309,16 @@ Body:
         show_zmp: false
       -
         body_item: 3
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 4
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 5
         show_cm: false
         show_cm_projection: false
         show_zmp: false

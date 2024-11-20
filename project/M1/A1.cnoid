@@ -80,6 +80,182 @@ items:
         selfCollisionDetection: false
         lock_location: false
         scene_sensitive: true
+    -
+      id: 4
+      name: "Floor_M1_2"
+      plugin: Body
+      class: BodyItem
+      is_selected: true
+      is_checked: true
+      data:
+        file: "../../model/M1/floor_M1.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -18, -6, -0.1 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ -18, -6, -0.1 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 5
+      name: "Door"
+      plugin: Body
+      class: BodyItem
+      is_selected: true
+      is_checked: true
+      data:
+        file: "../../model/M1/Door.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -12, -6.48, 0 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        jointDisplacements: [ 0 ]
+        initialRootPosition: [ -12, -6.48, 0 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 6
+      name: "TankA"
+      plugin: Body
+      class: BodyItem
+      is_selected: true
+      is_checked: true
+      data:
+        file: "../../model/M1/TankA.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -15.2344043, -15.2371939, 0 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ -15.2344043, -15.2371939, 0 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 7
+      name: "Debris1"
+      plugin: Body
+      class: BodyItem
+      is_selected: true
+      is_checked: true
+      data:
+        file: "../../model/M1/Debris1.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -8.25507816, -9.18961252, 0 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ -8.25507816, -9.18961252, 0 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 8
+      name: "CapsuleTerrain"
+      plugin: Body
+      class: BodyItem
+      is_selected: true
+      is_checked: true
+      data:
+        file: "../../model/M1/CapsuleTerrain.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -17.376412, -7.97363015, -0.389944589 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ -17.376412, -7.97363015, -0.389944589 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 9
+      name: "CapsuleTerrain"
+      plugin: Body
+      class: BodyItem
+      is_selected: true
+      is_checked: true
+      data:
+        file: "../../model/M1/CapsuleTerrain.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -16.9461664, -10.3725295, -0.4 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ -16.9461664, -10.3725295, -0.4 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 10
+      name: "CapsuleTerrain"
+      plugin: Body
+      class: BodyItem
+      is_selected: true
+      is_checked: true
+      data:
+        file: "../../model/M1/CapsuleTerrain.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -16.6091604, -5.26321338, -0.4 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ -16.6091604, -5.26321338, -0.4 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
 views:
   -
     id: 0
@@ -96,7 +272,7 @@ views:
     class: ItemTreeView
     mounted: true
     state:
-      expanded: [ 1 ]
+      expanded: [ 1, 4 ]
   -
     id: 3
     plugin: Base
@@ -127,13 +303,13 @@ views:
       cameras:
         -
           camera: [ System, Perspective ]
-          eye: [ 3.93818, 17.0788, 17.4132 ]
-          direction: [ -0.408687, -0.822353, -0.395868 ]
-          up: [ -0.176178, -0.354503, 0.918307 ]
+          eye: [ -19.8645, -17.792, 5.40238 ]
+          direction: [ 0.135715, 0.707081, -0.693987 ]
+          up: [ 0.130814, 0.681547, 0.719987 ]
         -
           camera: [ System, Orthographic ]
           isCurrent: true
-          orthoHeight: 8.79806
+          orthoHeight: 21.1937
       lighting_mode: normal
       culling_mode: enabled
       shading_mode: smooth
@@ -186,6 +362,29 @@ views:
     state:
       element_type: all
       listing_mode: list
+      current_body_item: 1
+      body_items:
+        -
+          id: 9
+          selected_links: [ 5 ]
+        -
+          id: 6
+          selected_links: [ 0 ]
+        -
+          id: 8
+          selected_links: [ 6 ]
+        -
+          id: 10
+          selected_links: [ 4 ]
+        -
+          id: 7
+          selected_links: [ 0 ]
+        -
+          id: 4
+          selected_links: [ 0 ]
+        -
+          id: 1
+          selected_links: [ 0 ]
   -
     id: 8
     plugin: Body
@@ -262,6 +461,41 @@ Body:
         show_cm: false
         show_cm_projection: false
         show_zmp: false
+      -
+        body_item: 4
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 5
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 6
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 7
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 8
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 9
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 10
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
   "SplineFilterDialog":
     isInputFrameRateSpecified: false
     inputFrameRate: 200
@@ -324,7 +558,7 @@ viewAreas:
                 -
                   type: pane
                   views: [ 7, 6 ]
-                  current: 6
+                  current: 7
 layoutOfToolBars:
   rows:
     -

@@ -12,16 +12,79 @@ links:
     uri: "subbody/wall.body"
     parent: Root
     prefix: SB1_
-    translation: [ 0, -12.0, 0 ]
+    translation: [ 0, 12.0, 0 ]
     joint_type: fixed
   - <<: *Wall
     prefix: SB2_
     translation: [ 12.0, 0, 0 ]
     rotation: [ 0, 0, 1, 90 ]
-  - <<: *Wall
-    prefix: SB3_
-    translation: [ 0, 12.0, 0 ]
-  - <<: *Wall
-    prefix: SB4_
-    translation: [ -12.0, 0, 0 ]
+#  - <<: *Wall
+#    prefix: SB3_
+#    translation: [ 0, -12.0, 0 ]
+#  - <<: *Wall
+#    prefix: SB4_
+#    translation: [ -12.0, 0, 0 ]
+#    rotation: [ 0, 0, 1, 90 ]
+  - #A1 Side
+    name: Wall1
+    parent: Root
+    translation: [ 0, 0, 0 ]
+    joint_type: fixed
+    material: Ground
+    #translation: [ -12.0, 0, 0 ]
     rotation: [ 0, 0, 1, 90 ]
+    elements:
+## left side
+      -
+        type: Shape
+        translation: [ 6.0, 12.0, 0 ]
+        geometry: { type: Box, size: [ 12.0, 0.2, 9.2 ] }
+        appearance: { material: { diffuse: [ 0.5, 0.5, 0.5 ] } }
+      -
+        type: Shape
+        translation: [ -2.76, 12.0, 0 ]
+        geometry: { type: Box, size: [ 5.52.0, 0.2, 9.2 ] }
+        appearance: { material: { diffuse: [ 0.5, 0.5, 0.5 ] } }
+      -
+        type: Shape
+        translation: [ -6, 12.0, 0.9 ]
+        geometry: { type: Box, size: [ 0.96, 0.2, 7.4 ] }
+        appearance: { material: { diffuse: [ 0.5, 0.5, 0.5 ] } }
+      -
+        type: Shape
+        translation: [ -9.22, 12.0, 0 ]
+        geometry: { type: Box, size: [ 5.52.0, 0.2, 9.2 ] }
+        appearance: { material: { diffuse: [ 0.5, 0.5, 0.5 ] } }
+#####
+## A2 Side
+
+  - #A1 Side
+    name: Wall2
+    parent: Root
+    translation: [ 0, 0, 0 ]
+    joint_type: fixed
+    material: Ground
+    translation: [ 0, 0, 0 ]
+    rotation: [ 0, 0, 1, 180 ]
+    elements:
+## left side
+      -
+        type: Shape
+        translation: [ 6.0, 12.0, 0 ]
+        geometry: { type: Box, size: [ 12.0, 0.2, 9.2 ] }
+        appearance: { material: { diffuse: [ 0.5, 0.5, 0.5 ] } }
+      -
+        type: Shape
+        translation: [ -2.0, 12.0, 2.0 ]
+        geometry: { type: Box, size: [ 4.0, 0.2, 5.2 ] }
+        appearance: { material: { diffuse: [ 0.5, 0.5, 0.5 ] } }
+#      -
+#        type: Shape
+#        translation: [ -6, 12.0, 0.9 ]
+#        geometry: { type: Box, size: [ 0.96, 0.2, 7.4 ] }
+#        appearance: { material: { diffuse: [ 0.5, 0.5, 0.5 ] } }
+      -
+        type: Shape
+        translation: [ -8, 12.0, 0 ]
+        geometry: { type: Box, size: [ 8.0, 0.2, 9.2 ] }
+        appearance: { material: { diffuse: [ 0.5, 0.5, 0.5 ] } }
