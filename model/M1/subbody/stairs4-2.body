@@ -1,0 +1,57 @@
+format: ChoreonoidBody
+format_version: 2.0
+angle_unit: degree
+name: stairs4-2
+links:
+  -
+    name: Root
+    translation: [ 0, 0, 0 ]
+    joint_type: fixed
+    material: Ground
+    AMOR: true
+    elements:
+      -
+        type: Transform
+        translation: [ 0, 0.425, 0 ]
+        elements: &A0
+          -
+            type: Shape
+            geometry:
+              type: Extrusion
+              cross_section: [
+                -2.5, 0,
+                2.5, 4,
+                2.5, 4.2,
+                -2.5, 0.2,
+                -2.5, 0 ]
+              spine: [ 0, -0.025, 0, 0, 0.025, 0 ]
+            appearance: { material: { diffuse: [ 0.5, 0.5, 0.5 ] } }
+      - { type: Transform, translation: [ 0, -0.425, 0 ], elements: *A0 }
+      -
+        type: Transform
+        translation: [ -2.5, 0, 0.2 ]
+        elements: &A1
+          -
+            type: Shape
+            translation: [ 0.125, 0, -0.01 ]
+            geometry: { type: Box, size: [ 0.25, 0.8, 0.02 ] }
+            appearance: { material: { diffuse: [ 0.5, 0.5, 0.5 ] } }
+      - { type: Transform, translation: [ -2.25, 0, 0.4 ], elements: *A1 }
+      - { type: Transform, translation: [ -2, 0, 0.6 ], elements: *A1 }
+      - { type: Transform, translation: [ -1.75, 0, 0.8 ], elements: *A1 }
+      - { type: Transform, translation: [ -1.5, 0, 1 ], elements: *A1 }
+      - { type: Transform, translation: [ -1.25, 0, 1.2 ], elements: *A1 }
+      - { type: Transform, translation: [ -1, 0, 1.4 ], elements: *A1 }
+      - { type: Transform, translation: [ -0.75, 0, 1.6 ], elements: *A1 }
+      - { type: Transform, translation: [ -0.5, 0, 1.8 ], elements: *A1 }
+      - { type: Transform, translation: [ -0.25, 0, 2 ], elements: *A1 }
+      - { type: Transform, translation: [ 0, 0, 2.2 ], elements: *A1 }
+      - { type: Transform, translation: [ 0.25, 0, 2.4 ], elements: *A1 }
+      - { type: Transform, translation: [ 0.5, 0, 2.6 ], elements: *A1 }
+      - { type: Transform, translation: [ 0.75, 0, 2.8 ], elements: *A1 }
+      - { type: Transform, translation: [ 1, 0, 3 ], elements: *A1 }
+      - { type: Transform, translation: [ 1.25, 0, 3.2 ], elements: *A1 }
+      - { type: Transform, translation: [ 1.5, 0, 3.4 ], elements: *A1 }
+      - { type: Transform, translation: [ 1.75, 0, 3.6 ], elements: *A1 }
+      - { type: Transform, translation: [ 2, 0, 3.8 ], elements: *A1 }
+      - { type: Transform, translation: [ 2.25, 0, 4 ], elements: *A1 }

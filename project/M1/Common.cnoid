@@ -31,9 +31,35 @@ items:
         scene_sensitive: true
     -
       id: 2
+      name: "ContainmentVessel"
+      plugin: Body
+      class: BodyItem
+      is_selected: true
+      is_checked: true
+      data:
+        file: "../../model/M1/ContainmentVessel.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 0, 0, 3.2 ]
+        rootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ 0, 0, 3.2 ]
+        initialRootAttitude: [
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 3
       name: "CFDCollider"
       plugin: SimpleCollider
       class: MultiColliderItem
+      is_selected: true
       data:
         translation: [ 0, 0, 0 ]
         rotation: [ 0, -0, 0 ]
@@ -68,10 +94,11 @@ items:
         mosaic_chance: 1
         kernel: 16
     -
-      id: 3
+      id: 4
       name: "VFXCollider"
       plugin: SimpleCollider
       class: MultiColliderItem
+      is_selected: true
       data:
         translation: [ 0, 0, 0 ]
         rotation: [ 0, -0, 0 ]
@@ -105,6 +132,81 @@ items:
         pepper_chance: 0
         mosaic_chance: 0
         kernel: 16
+    -
+      id: 5
+      name: "stairs4"
+      plugin: Body
+      class: BodyItem
+      is_selected: true
+      is_checked: true
+      data:
+        file: "../../model/M1/subbody/stairs4.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -4.988, -2.066, 0 ]
+        rootAttitude: [
+          0.382683432, 0.923879533, -0,
+          -0.923879533, 0.382683432, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ -4.988, -2.066, 0 ]
+        initialRootAttitude: [
+          0.382683432, 0.923879533, -0,
+          -0.923879533, 0.382683432, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 6
+      name: "stairs4"
+      plugin: Body
+      class: BodyItem
+      is_selected: true
+      is_checked: true
+      data:
+        file: "../../model/M1/subbody/stairs4.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ -2.066, -4.988, 3 ]
+        rootAttitude: [
+          0.923879533, 0.382683432, -0,
+          -0.382683432, 0.923879533, 0,
+          0, 0, 1 ]
+        initialRootPosition: [ -2.066, -4.988, 3 ]
+        initialRootAttitude: [
+          0.923879533, 0.382683432, -0,
+          -0.382683432, 0.923879533, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
+    -
+      id: 7
+      name: "stairs4"
+      plugin: Body
+      class: BodyItem
+      is_selected: true
+      is_checked: true
+      data:
+        file: "../../model/M1/subbody/stairs4.body"
+        format: CHOREONOID-BODY
+        rootPosition: [ 2.066, -4.988, 6 ]
+        rootAttitude: [
+          0.923879533, -0.382683432, 0,
+          0.382683432, 0.923879533, -0,
+          0, 0, 1 ]
+        initialRootPosition: [ 2.066, -4.988, 6 ]
+        initialRootAttitude: [
+          0.923879533, -0.382683432, 0,
+          0.382683432, 0.923879533, 0,
+          0, 0, 1 ]
+        fix_root: true
+        collisionDetection: true
+        selfCollisionDetection: false
+        lock_location: false
+        scene_sensitive: true
 views:
   -
     id: 0
@@ -121,7 +223,7 @@ views:
     class: ItemTreeView
     mounted: true
     state:
-      expanded: [ ]
+      expanded: [ 1 ]
   -
     id: 3
     plugin: Base
@@ -153,9 +255,9 @@ views:
         -
           camera: [ System, Perspective ]
           isCurrent: true
-          eye: [ 40.1046, -21.3534, 33.0745 ]
-          direction: [ -0.712685, 0.358756, -0.602806 ]
-          up: [ -0.538435, 0.27104, 0.797888 ]
+          eye: [ -20.6561, -22.6, 9.98413 ]
+          direction: [ 0.721345, 0.661374, -0.205538 ]
+          up: [ 0.151498, 0.138903, 0.978649 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -259,7 +361,7 @@ toolbars:
     lazyCollisionDetectionMode: true
 Body:
   "BodySelectionManager":
-    current_body_item: 1
+    current_body_item: 7
     current_link: "Root"
   "KinematicFaultChecker":
     checkJointPositions: true
@@ -274,6 +376,26 @@ Body:
     scene_bodies:
       -
         body_item: 1
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 2
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 5
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 6
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
+      -
+        body_item: 7
         show_cm: false
         show_cm_projection: false
         show_zmp: false
