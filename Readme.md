@@ -12,14 +12,14 @@ The competition was divided into each area.
 - Sample movie (Click on the image to view simulation on youtube)
 	- Overview of the entire area
 
-  	[![](https://img.youtube.com/vi/Oi1t4SQqD-A/0.jpg)](https://www.youtube.com/watch?v=Oi1t4SQqD-A)
+   	[![](https://img.youtube.com/vi/Oi1t4SQqD-A/0.jpg)](https://www.youtube.com/watch?v=Oi1t4SQqD-A)
  
-- Robot simulation
-   
-  	[![](https://img.youtube.com/vi/b9BqyA2T81Y/0.jpg)](https://www.youtube.com/watch?v=b9BqyA2T81Y)
+	- Robot simulation
 
-  - Simulation of air duct intrusion affected by air flow
-  	  	  
+   	[![](https://img.youtube.com/vi/b9BqyA2T81Y/0.jpg)](https://www.youtube.com/watch?v=b9BqyA2T81Y)
+
+  	- Simulation of air duct intrusion affected by air flow
+  
   	[![](https://img.youtube.com/vi/iCsacqRvRAQ/0.jpg)](https://www.youtube.com/watch?v=iCsacqRvRAQ)  
 
 ## プレ大会の様子
