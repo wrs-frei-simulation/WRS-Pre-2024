@@ -1,24 +1,25 @@
-# World Robot Summit 2025 シミュレーション災害チャレンジ 2024プレ大会
+# World Robot Summit 2025 Harsh Environment F-REI Challenge, Simulation Disaster Challenge, 2024 Pre-tournament
 
-## タスク概要
-2024プレ大会で行う競技は，「プラント災害を想定した 過酷環境下での情報収集，緊急対応」という設定で競技を設定しました．
-このような設定の下，具体的には以下の示すエリア1〜エリア4からなる4つのエリアで競技が構成しています．
-競技を各エリアごとに分けて行います．
+Japanese Pages（日本語ページ）: https://github.com/wrs-frei-simulation/WRS-Pre-2024/blob/main/Readme-ja.md
+
+## Overview
+The competition at the 2024 Pre-tournament was set up with the scenario of “Information gathering and emergency response in a harsh environment, assuming a plant disaster".
+Under these settings, the simulation environment consisted of four areas, Area 1 to Area 4, as shown below.
+The competition was divided into each area.
 
 ![Stage](./fig/stage.png)
 
-- サンプル動画（画像をクリックすることでyoutubeで確認できます）
-	- エリア全体概要
-   
-  	[![](https://img.youtube.com/vi/Oi1t4SQqD-A/0.jpg)](https://www.youtube.com/watch?v=Oi1t4SQqD-A)
+- - Sample movie (Click on the image to view simulation on youtube)
+	- Overview of the entire area
 
+  	[![](https://img.youtube.com/vi/Oi1t4SQqD-A/0.jpg)](https://www.youtube.com/watch?v=Oi1t4SQqD-A)
  
- 	- ロボットシミュレーション
+ 	- Robot simulation
    
   	[![](https://img.youtube.com/vi/b9BqyA2T81Y/0.jpg)](https://www.youtube.com/watch?v=b9BqyA2T81Y)
 
-  	- ダクト侵入シミュレーション（気流あり）
-  	  
+  - Simulation of air duct intrusion affected by air flow
+  	  	  
   	[![](https://img.youtube.com/vi/iCsacqRvRAQ/0.jpg)](https://www.youtube.com/watch?v=iCsacqRvRAQ)  
 
 ## プレ大会の様子
