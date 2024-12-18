@@ -1,6 +1,6 @@
 # World Robot Summit 2025 Harsh Environment F-REI Challenge, Simulation Disaster Challenge, 2024 Pre-tournament
 
-Japanese Pages（日本語ページ）: https://github.com/wrs-frei-simulation/WRS-Pre-2024/blob/main/Readme-ja.md
+Japanese Page（日本語ページ）: https://github.com/wrs-frei-simulation/WRS-Pre-2024/blob/main/Readme-ja.md
 
 ## Overview
 The competition at the 2024 Pre-tournament was set up with the scenario of “Information gathering and emergency response in a harsh environment, assuming a plant disaster".
