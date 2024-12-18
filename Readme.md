@@ -22,17 +22,17 @@ The competition was divided into each area.
   
   	[![](https://img.youtube.com/vi/iCsacqRvRAQ/0.jpg)](https://www.youtube.com/watch?v=iCsacqRvRAQ)  
 
-## プレ大会の様子
-- 予選動画: https://www.youtube.com/watch?v=bKAUXahBdgg
-- 決勝動画: https://www.youtube.com/watch?v=ruW7kajVFAw
+## Live Broadcast
+- Preliminary contest: https://www.youtube.com/watch?v=bKAUXahBdgg
+- Final: https://www.youtube.com/watch?v=ruW7kajVFAw
 
-## エリア紹介
+## Introduction to each area
 
-### エリア1: レバー操作
+### Area1: Lever control, Turning on the light
 
 ![Area1](./fig/area1.jpg)
 
-#### 内容
+#### Scenario
 プラント災害後で想定される物体が散乱したエリアを探索する．エリア自体が暗くなっているため，レバーを操作することで，周辺を明るくする電灯を付けることができる．
 また，周辺を把握するために，制限時間以内にエリア内に散らばっているマーカー（QRコード）読みとり，
 スタート領域からゴール領域に移動を終える必要がある．
@@ -47,7 +47,7 @@ The competition was divided into each area.
 
   ![qr2](./fig/qr2.jpg)![qr](./fig/qr.jpg)
 
-### エリア2, 3: バルブ操作
+### Area2, Area3: バルブ操作
 
 ![Area2](./fig/area2.jpg)
 	
@@ -89,13 +89,13 @@ The competition was divided into each area.
 World Robot Summit 2025 シミュレーション災害チャレンジではChoreonoidをシミュレータとして使用します．
 また，シミュレーションにはAGX Dynamicsを使用します．
 
-#### 競技環境の構築方法
+#### How to set up a simulation environment for 2024 Pre-tournament
 - https://k38-suzuki.github.io/hairo-world-plugin-doc/wrsutil/index.html
 
-#### AGX Dynamicsインストールの参考URL
+#### AGX Dynamics installation reference
 - https://choreonoid.org/ja/documents/latest/agxdynamics/install/install-agx-ubuntu.html
 
-#### Choreonoidのインストール方法
+#### How to install Choreonoid
 - 前提条件
 	- OSはUbuntu22.04，CPUはamd64系(Intel, Ryzen)であるとする
 	- ROS2のバージョンはHumble Hawksbill 
