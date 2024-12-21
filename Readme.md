@@ -177,9 +177,9 @@ $ ros2 run choreonoid_ros choreonoid
 
 ##### Course Used for the Pre-Tournament
 - https://github.com/wrs-frei-simulation/WRS-Pre-2024/tags
-	- 1003: 10/04午前に使用した予選環境一式
-	- 1004: 10/04午後に使用した予選環境一式
-	- 1005: 10/05に使用した決勝環境一式
+	- 1003: The complete set of simulation course model for the preliminary contest used in the morning of 10/04
+	- 1004: The complete set of simulation course model for the preliminary contest used in the afternoon of 10/04
+	- 1005: The complete set of simulation course model for the final used on 10/05
 
 ##### Reference URLs for installation
 - How to install Choreonoid
