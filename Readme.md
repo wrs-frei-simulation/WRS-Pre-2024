@@ -175,31 +175,31 @@ $ source install/setup.bash
 $ ros2 run choreonoid_ros choreonoid
 ```
 
-##### プレ大会使用コース
+##### Course Used for the Pre-Tournament
 - https://github.com/wrs-frei-simulation/WRS-Pre-2024/tags
 	- 1003: 10/04午前に使用した予選環境一式
 	- 1004: 10/04午後に使用した予選環境一式
 	- 1005: 10/05に使用した決勝環境一式
 
-##### インストール関連参考URL
-- Choreonoidインストール方法
+##### Reference URLs for installation
+- How to install Choreonoid
 	- https://choreonoid.org/ja/documents/latest/install/build-ubuntu.html
-- ROS2インストール方法
+- How to install ROS2
 	- https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html#install-ros-2-packages
-- ChoreonoidとROS2との連携
+- Integration for Choreonoid and ROS2 
 	- https://choreonoid.org/ja/documents/latest/ros2/install-ros2.html
-##### Choreonoidチュートリアル参考URL
-- Choreonoidを使う方法（ROS2連携無し）
+##### Choreonoid Tutorial Reference URL
+- How to use Choreonoid (without ROS2)
 	- https://choreonoid.org/ja/documents/latest/simulation/tank-tutorial/index.htm
 	- https://k38-suzuki.github.io/hairo-world-plugin-doc/wrs/index.html
-- ChoreonoidとROS2との連携
+- How to use Choreonoid (with ROS2)
 	- https://choreonoid.org/ja/documents/latest/ros2/index.html
  	- https://github.com/choreonoid/choreonoid_ros2_mobile_robot_tutorial/blob/main/doc/ros2_mobile_robot_tutorial_ja.pdf 
 	- https://k38-suzuki.github.io/hairo-world-plugin-doc/ros2/index.html
-##### Choreonoid遠隔操作チュートリアル参考URL
+##### Choreonoid Remote Control Tutorial Reference URLs
 - https://choreonoid.org/ja/documents/latest/wrs2018/teleoperation-ros.html
 - https://k38-suzuki.github.io/hairo-world-plugin-doc/ros2/teleop.html
-##### 過去のWRS関連URL
+##### Past WRS-related URLs
 - WRS2018
 	- https://choreonoid.org/ja/documents/latest/wrs2018/index.html
 - WRS2020
