@@ -69,17 +69,17 @@ In addition, it is necessary to assume that the field of vision will be reduced 
 
 ![Area4](./fig/area4-en.png)
 
-#### 内容
-プラント災害後で想定される物体が散乱したエリアを探索する．エリア内で火災が発生しているため，消火ホースを取り出して，火災箇所の消火を行う．
-また，UAVを使用して，ダクト内を侵入し，ダクトに繋がっているタンクの調査を行う．ダクトからは気流が発生しており，バルブを操作することで気流の流れを止めることができる．
-また，周辺を把握するために，制限時間以内にエリア内に散らばっているマーカー（QRコード）読みとり， スタート領域からゴール領域に移動を終える必要がある． 
-このエリアではロボットの移動能力，マニュピレーション，探索能力が試される． さらに，遠隔操作における通信の影響で視界が悪くなることや，突如停電が起こることを想定する必要もある．
+#### Scenario
+You must explore this area where objects are scattered after a plant disaster. Since there is a fire in the area, the robots take out a fire hose from the fire extinguisher box and put out the fire. You also use the robot, which is UAV, to enter the duct and investigate the tank connected to the duct. Airflow is generated from the duct, and the robot can stop the airflow by operating the valve.
+In order to explore the area, you must read as many QR codes as possible, which are scattered around the area, and move the robot from the start area to the goal area within the time limit.
+This area is constructed to measure the movement, manipulation and search abilities of the robots.
+In addition, it is necessary to assume that the field of vision will be reduced due to the effects of communication in remote control, and that there may be sudden power outages.
 
-- 消火栓ボックスからホースを取り出し，消火を行う．
+- The robot takes out the fire hose from the fire extinguisher box and put out the fire.
 
   ![Fire](./fig/task4-en.png)
 
-- ダクトから侵入し，タンク内を調査する．（気流などがある場合，バルブを先に閉める）
+- The UAV enters through the duct and inspects the inside of the tank. (If there is air flow, etc., the robot close the valve first.)
 
   ![Duct](./fig/task5-en.png)
 
