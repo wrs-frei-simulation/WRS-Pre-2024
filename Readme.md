@@ -47,24 +47,25 @@ In addition, it is necessary to assume that the field of vision will be reduced 
 
   ![qr2](./fig/qr-en.png)![qr](./fig/qr2-en.png)
 
-### Area2, Area3: バルブ操作
+### Area 2, Area 3: Valve manipulation
 
 ![Area2](./fig/area2-en.png)
 	
 ![Area3](./fig/area3-en.png)
 
-#### 内容
-プラント災害後で想定される物体が散乱したエリアを探索する．エリア内にあるパイプから気体（煙），液体（水流）が漏れているため，バルブを操作することで，漏れている流体を止めることができる．
-また，周辺を把握するために，制限時間以内にエリア内に散らばっているマーカー（QRコード）読みとり， スタート領域からゴール領域に移動を終える必要がある． 
-このエリアではロボットの移動能力，マニュピレーション，探索能力が試される． さらに，遠隔操作における通信の影響で視界が悪くなることや，突如停電が起こることを想定する必要もある．
+#### Scenario
+As in Area 1, you must explore an area where objects are scattered around after a plant disaster. Gases (smoke) and liquids (water) leak from pipes in the area, so the robot can stop the leaking fluids by operating the valves.
+In order to explore the area, you must read as many QR codes as possible, which are scattered around the area, and move the robot from the start area to the goal area within the time limit.
+This area is constructed to measure the movement, manipulation and search abilities of the robots.
+In addition, it is necessary to assume that the field of vision will be reduced due to the effects of communication in remote control, and that there may be sudden power outages.
 
-- バルブを回すことで，漏れている流体（煙・水流など）を止めることができる．
+- By turning the valve, the robot can stop the leaking fluid (smoke, water, etc.).
 
   ![Valve](./fig/task2-en.png)
 	
   ![Fluid](./fig/task3-en.png)
 
-### エリア4: 消火作業，ダクト侵入，タンク内調査
+### Area 4: Firefighting, entering ducts, tank inspections
 
 ![Area4](./fig/area4-en.png)
 
