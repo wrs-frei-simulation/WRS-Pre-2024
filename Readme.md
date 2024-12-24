@@ -30,7 +30,7 @@ The competition was divided into each area.
 
 ### Area1: Lever control, Turning on the light
 
-![Area1](./fig/area1.jpg)
+![Area1](./fig/area1-en.png)
 
 #### Scenario
 プラント災害後で想定される物体が散乱したエリアを探索する．エリア自体が暗くなっているため，レバーを操作することで，周辺を明るくする電灯を付けることができる．
@@ -49,9 +49,9 @@ The competition was divided into each area.
 
 ### Area2, Area3: バルブ操作
 
-![Area2](./fig/area2.jpg)
+![Area2](./fig/area2-en.png)
 	
-![Area3](./fig/area3.jpg)
+![Area3](./fig/area3-en.png)
 
 #### 内容
 プラント災害後で想定される物体が散乱したエリアを探索する．エリア内にあるパイプから気体（煙），液体（水流）が漏れているため，バルブを操作することで，漏れている流体を止めることができる．
@@ -66,7 +66,7 @@ The competition was divided into each area.
 
 ### エリア4: 消火作業，ダクト侵入，タンク内調査
 
-![Area4](./fig/area4.jpg)
+![Area4](./fig/area4-en.png)
 
 #### 内容
 プラント災害後で想定される物体が散乱したエリアを探索する．エリア内で火災が発生しているため，消火ホースを取り出して，火災箇所の消火を行う．
