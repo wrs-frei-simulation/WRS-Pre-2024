@@ -41,11 +41,11 @@ The competition was divided into each area.
 
 - スイッチを上げることで，電灯が付く
 
-  ![Switch](./fig/task1.jpg)
+  ![Switch](./fig/task1-en.png)
   
 - エリア全域を探索し，設置されていてるQRコードを探索する
 
-  ![qr2](./fig/qr2.jpg)![qr](./fig/qr.jpg)
+  ![qr2](./fig/qr-en.png)![qr](./fig/qr2-en.png)
 
 ### Area2, Area3: バルブ操作
 
