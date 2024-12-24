@@ -97,18 +97,17 @@ Moreover, AGX Dynamics is used as a physics engine.
 - https://choreonoid.org/ja/documents/latest/agxdynamics/install/install-agx-ubuntu.html
 
 #### How to install Choreonoid
-- 前提条件
-	- OSはUbuntu22.04，CPUはamd64系(Intel, Ryzen)であるとする
-	- ROS2のバージョンはHumble Hawksbill 
-	- AppleSiliconのMacでの仮想環境上ではインストールできない(CPUがarm系なので)
--  競技者用計算機の環境構築について
-	1. Choreonoidを初めてインストールする場合（ROS2との連携無し）
-	2. Choreonoidを既にインストール済みで，プレ大会の環境を追加する場合（ROS2との連携無し）
-	3. Choreonoidのプレ大会向けクリーンインストール（ROS2との連携あり）
+- Requirements
+	- OS: Ubuntu22.04，CPU: amd64 (Intel CPU, Ryzen CPU)
+	- ROS2: Humble Hawksbill 
+	- Cannot be installed on a virtual environment on an Apple Silicon Mac (because the CPU is arm-based)
+- Building Choreonoid for the competitor's computer 
+	1. Building Choreonoid Without ROS2 for the first time
+	2. Rebuilding Choreonoid Without ROS2 For Pre-competition (Already Choreonoid built)
+	3. Building Choreonoid for pre-tournament (with ROS2 integration)
 
-#### 1.  Choreonoidを初めてインストールする場合（ROS2との連携無し）
+#### 1. Building Choreonoid Without ROS2 for the first time
 ```bash
-# Build Choreonoid Without ROS2 for 1st Time
 $ cd
 $ git clone https://github.com/choreonoid/choreonoid.git
 $ git clone https://github.com/wrs-frei-simulation/WRS-Pre-2024.git choreonoid/ext/WRS2024PRE
@@ -116,26 +115,23 @@ $ git clone https://github.com/k38-suzuki/hairo-world-plugin.git choreonoid/ext/
 $ choreonoid/misc/script/install-requisites-ubuntu-22.04.sh
 $ cd ~/choreonoid && mkdir build && cd build
 $ cmake .. -DBUILD_AGX_DYNAMICS_PLUGIN=ON -DBUILD_AGX_BODYEXTENSION_PLUGIN=ON -DBUILD_WRS2018=ON -DBUILD_SCENE_EFFECTS_PLUGIN=ON -DBUILD_HAIRO_WORLD_PLUGIN=ON -DENABLE_INSTALL_RPATH_USE_LINK_PATH=ON
-$ make -j8 # CPUが8コアの場合は-j8，CPUがNコアの場合は-jN
+$ make -j8 # -j8 for 8-core CPU, -jN for N-core CPU
 
 # Run Choreonoid Without ROS2
 $ ./bin/choreonoid
 ```
 
-#### 2.  Choreonoidを既にインストール済みで，プレ大会の環境を追加する場合（ROS2との連携無し）
-
+#### 2. Rebuilding Choreonoid Without ROS2 For 2024 Pre-tournament (Already Choreonoid built)
 ```bash
-# Rebuild Choreonoid Without ROS2 For Pre-competition (Already built Choreonoid)
 $ cd ~
 $ git clone https://github.com/wrs-frei-simulation/WRS-Pre-2024.git choreonoid/ext/WRS2024PRE
 $ git clone https://github.com/k38-suzuki/hairo-world-plugin.git choreonoid/ext/hairo-world-plugin
 $ cd ~/choreonoid/build
 $ cmake .. -DBUILD_AGX_DYNAMICS_PLUGIN=ON -DBUILD_AGX_BODYEXTENSION_PLUGIN=ON -DBUILD_WRS2018=ON -DBUILD_SCENE_EFFECTS_PLUGIN=ON -DBUILD_HAIRO_WORLD_PLUGIN=ON -DENABLE_INSTALL_RPATH_USE_LINK_PATH=ON
-$ make -j8 # CPUが8コアの場合は-j8，CPUがNコアの場合は-jN
+$ make -j8 # -j8 for 8-core CPU, -jN for N-core CPU
 ```
-#### 3. Choreonoidのプレ大会向けクリーンインストール（ROS2との連携あり）
-
-1. ROS2(Humble Hawksbill)を先にインストールしておく
+#### 3. Building Choreonoid for pre-tournament (with ROS2 integration)
+1. Install ROS2 (Humble Hawksbill) first.
 ```Bash
 # Add the ROS 2 apt repository
 $ sudo apt install software-properties-common
@@ -156,7 +152,7 @@ $ echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 $ source ~/.bashrc
 ```
 
-2. Choreonoidのインストールを行う
+2. Install Choreonoid
 ```bash
 # Clean-Build Choreonoid With ROS2
 $ mkdir -p ~/ros2_ws/src
