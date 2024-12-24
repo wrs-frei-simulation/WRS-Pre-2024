@@ -28,22 +28,22 @@ The competition was divided into each area.
 
 ## Introduction to each area
 
-### Area1: Lever control, Turning on the light
+### Area 1: Lever control, Turning on the light
 
 ![Area1](./fig/area1-en.png)
 
 #### Scenario
-プラント災害後で想定される物体が散乱したエリアを探索する．エリア自体が暗くなっているため，レバーを操作することで，周辺を明るくする電灯を付けることができる．
-また，周辺を把握するために，制限時間以内にエリア内に散らばっているマーカー（QRコード）読みとり，
-スタート領域からゴール領域に移動を終える必要がある．
-このエリアではロボットの移動能力，マニュピレーション，探索能力が試される．
-さらに，遠隔操作における通信の影響で視界が悪くなることや，突如停電が起こることを想定する必要もある．
+The operator explores an area where objects are scattered after a plant disaster using robots by remote-control. 
+As this area is dark, the robots can turn on lights to brighten the area by operating the switch.
+In order to explore the area, you must read as many QR codes as possible, which are scattered around the area, and move the robot from the start area to the goal area within the time limit.
+This area is constructed to measure the movement, manipulation and search abilities of the robots.
+In addition, it is necessary to assume that the field of vision will be reduced due to the effects of communication in remote control, and that there may be sudden power outages.
 
-- スイッチを上げることで，電灯が付く
+- When the robot turns the switch up, the light comes on the area.
 
   ![Switch](./fig/task1-en.png)
   
-- エリア全域を探索し，設置されていてるQRコードを探索する
+- You explore the entire area and search for the QR codes as possible. The QR codes are inside the tubes.
 
   ![qr2](./fig/qr-en.png)![qr](./fig/qr2-en.png)
 
