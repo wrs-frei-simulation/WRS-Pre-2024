@@ -7,7 +7,7 @@ The competition at the 2024 Pre-tournament was set up with the scenario of “In
 Under these settings, the simulation environment consisted of four areas, Area 1 to Area 4, as shown below.
 The competition was divided into each area.
 
-![Stage](./fig/stage.png)
+![Stage](./fig/stage-en.png)
 
 - Sample movie (Click on the image to view simulation on youtube)
 	- Overview of the entire area
