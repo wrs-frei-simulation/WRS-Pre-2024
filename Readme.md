@@ -83,12 +83,12 @@ In addition, it is necessary to assume that the field of vision will be reduced 
 
   ![Duct](./fig/task5-en.png)
 
-このリポジトリにはエリア1，エリア2，エリア3，エリア4の各エリアモデルを用意しております．
-また，これらのエリアは練習用としてご利用できます．これらのエリアの難易度は意図的に低く設定されています．
-また，各エリアにおけるタスクの遂行においては最大２台のロボットを投入し，それらを連携させることができます．
+This github repository contains area models for Areas 1, 2, 3 and 4.
+These areas can be used for practice. The difficulty level of these areas has been intentionally set low.
+In addition, up to two robots can be deployed to carry out tasks in each area, and they can be made to work together.
 
-World Robot Summit 2025 シミュレーション災害チャレンジではChoreonoidをシミュレータとして使用します．
-また，シミュレーションにはAGX Dynamicsを使用します．
+Choreonoid is used as the robot simulator in the World Robot Summit 2025 Simulation Disaster Challenge.
+Moreover, AGX Dynamics is used as a physics engine.
 
 #### How to set up a simulation environment for 2024 Pre-tournament
 - https://k38-suzuki.github.io/hairo-world-plugin-doc/wrsutil/index.html
