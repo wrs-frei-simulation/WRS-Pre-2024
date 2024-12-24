@@ -60,9 +60,9 @@ The competition was divided into each area.
 
 - バルブを回すことで，漏れている流体（煙・水流など）を止めることができる．
 
-  ![Valve](./fig/task2.jpg)
+  ![Valve](./fig/task2-en.png)
 	
-  ![Fluid](./fig/task3.jpg)
+  ![Fluid](./fig/task3-en.png)
 
 ### エリア4: 消火作業，ダクト侵入，タンク内調査
 
@@ -76,11 +76,11 @@ The competition was divided into each area.
 
 - 消火栓ボックスからホースを取り出し，消火を行う．
 
-  ![Fire](./fig/task4.jpg)
+  ![Fire](./fig/task4-en.png)
 
 - ダクトから侵入し，タンク内を調査する．（気流などがある場合，バルブを先に閉める）
 
-  ![Duct](./fig/task5.jpg)
+  ![Duct](./fig/task5-en.png)
 
 このリポジトリにはエリア1，エリア2，エリア3，エリア4の各エリアモデルを用意しております．
 また，これらのエリアは練習用としてご利用できます．これらのエリアの難易度は意図的に低く設定されています．
