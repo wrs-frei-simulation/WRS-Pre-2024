@@ -14,6 +14,7 @@ public:
     WRS2024PrePlugin() : Plugin("WRS2024Pre")
     {
         require("Body");
+        require("WRSUtil");
     }
     
     virtual bool initialize() override
