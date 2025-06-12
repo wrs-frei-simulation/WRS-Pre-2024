@@ -47,12 +47,10 @@ In addition, it is necessary to assume that the field of vision will be reduced 
 
   ![qr2](./fig/qr-en.png)![qr](./fig/qr2-en.png)
 
-### Area 2, Area 3: Valve manipulation
+### Area 2: Valve manipulation
 
 ![Area2](./fig/area2-en.png)
 	
-![Area3](./fig/area3-en.png)
-
 #### Scenario
 As in Area 1, you must explore an area where objects are scattered around after a plant disaster. Gases (smoke) and liquids (water) leak from pipes in the area, so the robot can stop the leaking fluids by operating the valves.
 In order to explore the area, you must read as many QR codes as possible, which are scattered around the area, and move the robot from the start area to the goal area within the time limit.
@@ -65,12 +63,12 @@ In addition, it is necessary to assume that the field of vision will be reduced 
 	
   ![Fluid](./fig/task3-en.png)
 
-### Area 4: Firefighting, entering ducts, tank inspections
+### Area 3: Firefighting
 
-![Area4](./fig/area4-en.png)
+![Area3](./fig/area3-en.png)
 
 #### Scenario
-You must explore this area where objects are scattered after a plant disaster. Since there is a fire in the area, the robots take out a fire hose from the fire extinguisher box and put out the fire. You also use the robot, which is UAV, to enter the duct and investigate the tank connected to the duct. Airflow is generated from the duct, and the robot can stop the airflow by operating the valve.
+You must explore this area where objects are scattered after a plant disaster. Since there is a fire in the area, the robots take out a fire hose from the fire extinguisher box and put out the fire.
 In order to explore the area, you must read as many QR codes as possible, which are scattered around the area, and move the robot from the start area to the goal area within the time limit.
 This area is constructed to measure the movement, manipulation and search abilities of the robots.
 In addition, it is necessary to assume that the field of vision will be reduced due to the effects of communication in remote control, and that there may be sudden power outages.
@@ -78,6 +76,18 @@ In addition, it is necessary to assume that the field of vision will be reduced 
 - The robot takes out the fire hose from the fire extinguisher box and put out the fire.
 
   ![Fire](./fig/task4-en.png)
+
+
+### Area 4: Entering ducts, tank inspections
+
+![Area4](./fig/area4-en.png)
+
+#### Scenario
+You use the robot, which is UAV, to enter the duct and investigate the tank connected to the duct. Airflow is generated from the duct, and the robot can stop the airflow by operating the valve.
+In order to explore the area, you must read as many QR codes as possible, which are scattered around the area, and move the robot from the start area to the goal area within the time limit.
+This area is constructed to measure the movement, manipulation and search abilities of the robots.
+In addition, it is necessary to assume that the field of vision will be reduced due to the effects of communication in remote control, and that there may be sudden power outages.
+
 
 - The UAV enters through the duct and inspects the inside of the tank. (If there is air flow, etc., the robot close the valve first.)
 
