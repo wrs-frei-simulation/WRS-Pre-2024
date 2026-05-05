@@ -101,7 +101,7 @@ Choreonoid is used as the robot simulator in the World Robot Summit 2025 Simulat
 Moreover, AGX Dynamics is used as a physics engine.
 
 #### How to set up a simulation environment for 2024 Pre-tournament
-- https://k38-suzuki.github.io/hairo-world-plugin-doc/wrsutil/index.html
+- https://k38-suzuki.github.io/hairo-world-plugin-doc/wrs2024/index.html
 
 #### AGX Dynamics installation reference
 - https://choreonoid.org/ja/documents/latest/agxdynamics/install/install-agx-ubuntu.html
